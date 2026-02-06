@@ -1,0 +1,28 @@
+\begin{figure}[h!]
+    \centering 
+    \begin{tikzpicture}
+        \draw 
+            [->, black, line width=1pt](-2,0)--(2,0);
+        \draw 
+            (0,0) node[anchor = south]{$x$};
+        \fill 
+            (-1,0) circle[radius=2pt];
+        \draw 
+            [->, black] (-1,0) coordinate (c)--(-1,-0.5) node[anchor=north]{$\;F_{\perp}$};
+        \fill 
+            (1,-1) circle[radius=2pt];
+        \draw
+            (1,-1)--(1,0) coordinate (a);
+        \draw 
+            (1,-0.5) node[anchor=west]{$b$};
+        \draw 
+            (1,-1) coordinate (b)--(-1,0);
+        \draw 
+            (0.1,-0.8) node[anchor=east]{$r$};
+        \draw 
+            pic["$\theta$", draw=black, -, angle eccentricity=1.4, angle radius=15pt]
+        {angle=a--b--c};
+    \end{tikzpicture}
+    \caption{A field star approaches another star at speed $v$ and impact parameter $b$.}
+    \label{fig:star_impact}
+\end{figure}

@@ -1,0 +1,77 @@
+%% This style file was created by Luca Fossati
+
+%% This style file is called by
+%%    \usepackage{phdtitle}
+
+\ProvidesPackage{title}[2009/05/05 v1.0 PhD Thesis Title]
+\RequirePackage{graphicx}
+
+% Macros for setting the advisor, etc of the phd
+%\def\@advisor{\space}
+%\def\@tutor{\space}
+%\def\@supervisor{\space}
+\newcommand{\department}[1]{\def\@department{#1}}
+\newcommand{\program}[1]{\def\@phdprogram{#1}}
+\newcommand{\advisor}[1]{\def\@advisor{#1}}
+\newcommand{\tutor}[1]{\def\@tutor{#1}}
+\newcommand{\supervisor}[1]{\def\@supervisor{#1}}
+\newcommand{\titleimage}[1]{\def\@titleimage{#1}}
+\newcommand{\month}[1]{\def\@month{#1}}
+\newcommand{\year}[1]{\def\@year{#1}}
+\newcommand{\cycle}[1]{\def\@cycle{#1}}
+
+\renewcommand{\maketitle}{
+\thispagestyle{empty}
+\vspace*{1cm}
+\begin{center}
+\bfseries
+\vspace*{-2.5cm}
+  \begin{figure}[htbp]
+    \begin{center}
+    \includegraphics[scale=0.4]{\@titleimage}
+    \end{center}
+  \end{figure}
+%\vspace*{-0.2cm}
+  \large{\sc University of Pisa \\%}\\
+  %\normalsize
+  \@department}\\
+  %\large{\sc 
+%  \@phdprogram}\\
+  \normalsize
+%\vspace*{0.5cm}
+%\hrule
+\vspace*{3cm}
+ \LARGE\sc
+  \@title\\
+\end{center}
+%\vspace*{1cm}
+\begin{center}
+\large{\sc Master Degree} %cambialo per adattarlo all'occorrenza
+\end{center}
+\vspace*{1cm}
+\large
+\begin{flushright}
+  \normalsize Author\\
+  \large \textbf{\@author}\\
+\end{flushright}
+\vspace*{1cm}
+\begin{flushleft}
+  \normalsize Co-Authors \\ % (s)
+  \large \textbf{\@supervisor}\\
+  \large \textbf{\@tutor}\\
+  \large \textbf{\@advisor}\\
+ \end{flushleft}
+%%\begin{flushleft}
+  %%\normalsize The Coordinator of the PhD Program\\
+  %%\large \textbf{Prof. Marco Luise}\\
+ %%\end{flushleft}
+ \vfill
+\begin{center}
+Pisa, \@month \hspace{0.1 cm}\@year
+\end{center}
+\begin{center}
+\@cycle
+\end{center}
+\cleardoublepage
+\setcounter{page}{1}
+}

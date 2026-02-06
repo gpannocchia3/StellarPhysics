@@ -1,0 +1,36 @@
+## Core LaTeX auxiliary files
+*.aux
+*.log
+*.out
+*.toc
+*.lof
+*.lot
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.synctex
+*.bbl
+*.blg
+
+## Intermediate files
+*.dvi
+*.ps
+*.nav
+*.snm
+*.vrb
+*.idx
+*.ilg
+*.ind
+
+## PDFTeX / LuaTeX / XeTeX
+*.pdfsync
+
+## Editors (optional)
+# VSCode
+.vscode/
+
+# TeXShop
+*.texpadtmp
+
+# TeXworks
+*.auxlock
