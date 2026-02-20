@@ -24,7 +24,7 @@ As the Earth moves around the Sun, the "nearby" stars seem to change their posit
 \par Consider the construction shown in Fig.\ref{fgr:stellarparallax}. 
 \begin{figure}[h!]
     \centering
-    \includegraphics[width = 0.5\textwidth]{img/stellarparallax.svg.png}
+    \includegraphics[width = 0.4\textwidth]{img/stellarparallax.svg.png}
     \caption{Defintion of parsec. Credits: Wikipedia.}
     \label{fgr:stellarparallax}
 \end{figure} 
@@ -121,7 +121,7 @@ from which deducing the expression from internal energy is straightforward. Reme
     \label{fgr:planckfunction}
 \end{figure}
 \par It's important to notice that, in principle, such a fundamental result holds only in \emph{strict thermodynamic equilibrium} (STE), but we'll soon see how to generalize this formulation for less "restrictive" environments.
-\par An incredible number of important results descends from (\ref{blackbody}), and it may be worthwhile to cite at least some of them, starting from Stefan-Boltzmann law. We'll use the following result without proving it 
+\par An incredible number of important results descends from (\ref{eq:blackbodyintensity}), and it may be worthwhile to cite at least some of them, starting from Stefan-Boltzmann law. We'll use the following result without proving it 
 \begin{equation*}
 	\int_{0}^{+\infty} B_{\nu}(T)\,\text{d}\nu = \frac{2h}{c^{2}}\frac{\pi^{4}}{15}\left(\frac{kT}{h}\right)^{4}
 \end{equation*}
@@ -215,3 +215,24 @@ More often than not, it is customary to measure magnitudes in given wavelengths'
     \label{eq:absolutemagnitude}
 \end{equation}
 The difference $m-M$ is often called \emph{distance module} (DM) and is sometimes used as an indirect way to express a distance.
+\par For classifying stars according to their color it's often used the so-called UBV photometric system (from \emph{Ultraviolet}, \emph{Blue}, \emph{Visual}), also called the Johnson system (or Johnson-Morgan system), which makes use of filters so that the mean wavelengths of response functions (at which magnitudes are measured to mean precision) are $364\, \text{nm}$ for U, $442\, \text{nm}$ for B, $540\, \text{nm}$ for V.
+\par Given this setup, we can easily calculate the magnitudes, say, in the Blue and Visible light-bands, so that the relative magnitudes are
+\begin{equation*}
+    m_{B}-m_{V} = -2.5\log_{10}\left(\frac{F_{B}}{F_{V}}\right) := B-V
+\end{equation*}
+where $B-V$ is said \emph{color index}.
+\par When passing through interstellar dust\footnote{The interstellar dust, which is usually referred to as ISM, consists in small particles of silicates, graphite, amorphous carbon, ices and organical mixtures of size $10^{-2}-1\,\mu\text{m}$} the intensity of radiation gets modified. The dust that makes the ISM absorbs light in the V-UV bands to later re-emit it as InfraRed radiation or scatters the "short" wavelength, producing a net-effect that essentially "increases" the wavelength of the incoming radiation and decreases its intensity.
+\par These two phenomena are known as \emph{reddening} (do not confuse it with \emph{redshift}) and \emph{extinction}.
+\par The absolute magnitude in the, say, blue and visible bands, will thus be modified
+\begin{align*}
+    M_{V} &= M_{V}^{0}+A_{V}\\
+    M_{B} &= M_{B}^{0}+A_{B}
+\end{align*} 
+where the quantities with the "0" superscript are the un-reddened magnitudes. We can define the new color index
+\begin{equation*}
+    B-V = (B-V)^{0}+E[B-V]
+\end{equation*}
+where $E[B-V] = A_{B}-A_{V}$ is the extinction. Within our galaxy, the ratio of reddening to the extinction is a well-known quantity
+\begin{equation*}
+    R = \frac{A}{E[B-V]} \approx 3.0
+\end{equation*}
