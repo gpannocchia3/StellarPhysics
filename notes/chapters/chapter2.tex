@@ -1,0 +1,284 @@
+\chapter{Stellar Structures}\label{ch:ii}
+
+\section{Radiative Transfer}
+Most of our knowledge about the Universe is based on the electromagnetic radiation that reaches us from far far away. EM radiation is obviusly not the only way we can probe the Universe we live in but, in respect to neutrinos, cosmic rays or even gravitational waves, it's not a long stretch to claim it is by far the most understood.
+\par It is most important then that an astrophysicist worthy of his (or her) name has a good grasp of the theory of radiative transfer and of its applications.
+\par Apart from a few more key differences, I'll follow the description of radiative transfer of \cite{choudhuri} and \cite{1986rpa..book.....R}, but I won't fail to emphasize whenever I'll be doing otherwise.
+
+\subsection{Radiative transfer equation}
+In the presence of matter, it is not immediately obvious what changes may occur in the specific intensity as we move along a ray path. The aim of this section will be to eviscerate the matter.
+\par Let's consider the following geometric construction
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.7\textwidth]{img/rtvacuum.png}
+	\caption{Geometrical construction for ray paths propagating in empty space. \\ Credits: G. Rybicki, A. Lightman.}
+\end{figure}
+\par It won't take a lot of effort to convince yourself that in empty space the monochromatic intensity $I_{\nu}$ is actually conserved. In fact, from simply writing down the definitions and imposing the conservation of energy
+\begin{equation*}
+	I_{\nu_{2}}\,\text{d}A_{2}\,\text{d}t\,\text{d}\Omega_{2}\,\text{d}\nu = I_{\nu_{1}}\,\text{d}A_{1}\,\text{d}t\,\text{d}\Omega_{1}\,\text{d}\nu
+\end{equation*}
+the conclusion follows observing that $\text{d}A_{2}\,\text{d}\Omega_{2} = \text{d}A_{1}\,\text{d}\Omega_{1}$.
+\par If we consider an affine parameter of the form $\vec{x} = \vec{x}_{0}+\textbf{$\hat{k}$}s$, we may as well write the previous results in a more familiar fashion
+\begin{equation}
+	\frac{\text{d}I_{\nu}}{\text{d}s} = 0 \implies (\textbf{$\hat{k}$}\cdot \textbf{$\nabla$}) I_{\nu} = 0
+	\label{rtvoid}
+\end{equation}
+\par What changes if matter is present along the ray path? Clearly it will no longer be true that $(\textbf{$\hat{k}$}\cdot \textbf{$\nabla$}) I_{\nu} = 0$, but we're not that far off. All that we need is some little work on both terms.
+\par How the right hand side of the equation should change is obvious: It needs to keep track of the "creation" and "destruction" of photons in the considered volume of spacetime.
+\par The left hand side of the equation requires a little more care. Consider infinitesimal time and space displacements along the ray path, respectively $\text{d}t$ and $\text{d}\vec{x}$
+\begin{equation*}
+	\Delta E_{\nu}\,\text{d}\nu = \left(I_{\nu}(\vec{x}+\text{d}\vec{x}, t+\text{d}t, \hat{k})-I_{\nu}(\vec{x}, t, \hat{k})\right)\, \text{d}t \, \text{d}\Omega \, \text{d}A \, \text{d}\nu
+\end{equation*}
+\par Taking a first order expansion in respect to the affine parameter $s$ along the ray path yields
+\begin{equation*}
+	\left(\frac{1}{c}\partial_{t}I_{\nu}+\partial_{s}I_{\nu}\right)\, \text{d}t \, \text{d}s\, \text{d}\Omega \, \text{d}A \, \text{d}\nu = \text{photon addition}-\text{photon removal}
+\end{equation*}
+\par This equation is a generalization of eq.\ref{rtvoid} for non-stationary radiative transport and in the presence of matter. It's about time we get to know what "lives" in the right hand side of the equation.
+\subsection{Monochromatic emission coefficient}
+For the moment, we'll define the \emph{spontaneous} monochromatic emission coefficient $j_{\nu}$ as
+\begin{equation}
+	\text{d}E_{\nu}\,\text{d}\nu = j_{\nu}\,\text{d}V\,\text{d}t \, \text{d}\Omega \, \text{d}\nu
+	\label{eq:jnu}
+\end{equation}
+which in general has a non-zero dependence on the emission direction. Sometimes the spontaneous emission coefficient is defined by the \emph{emissivity} $\epsilon_{\nu}$ (\textbf{please note} that often the two names are used almost interchangeably), which is the energy emitted spontaneously per unit frequency per unit time per unit mass
+\begin{equation*}
+	j_{\nu} = \frac{\epsilon_{\nu}\rho}{4\pi}
+\end{equation*}
+where $\rho$ is the mass density of the emitting medium.
+\par If we perform the decomposition $\text{d}V = \text{d}A\,\text{d}s$, the contribution of spontaneous emission to the specific intensity is
+\begin{equation*}
+	\text{d}I_{\nu} = j_{\nu}\,\text{d}s
+\end{equation*}
+\subsection{Absorption coefficient}
+Similarly, we can consider the energy that is absorbed from the radiation when passing through a medium. There exists various definitions; I'll use the one we gave in class and that is incidentally the one used in \cite{choudhuri} and \cite{1986rpa..book.....R} as well.
+\par We define the \emph{absorption coefficient} $\alpha_{\nu}$ through the following expression
+\begin{equation}
+	\text{d}I_{\nu} = -\alpha_{\nu}I_{\nu}\,\text{d}s
+	\label{alpha}
+\end{equation}
+\par If we use a microscopic model, then the absorption coefficient can be understood as particles with numeric density $n$ presenting an effective absorbing area, the \emph{cross section} $\sigma_{\nu}$. The coefficient $\alpha_{\nu}$ can thus be rewritten in terms of
+\begin{equation*}
+	\alpha_{\nu} = n\sigma_{\nu} = \rho \kappa_{\nu}
+\end{equation*}
+where $\kappa_{\nu}$ is called the mass absorption coefficient or the \emph{mass-weighed opacity coefficient}.
+\par Note that in eq.\ref{alpha}, we consider “absorption” to include both “true absorption” and stimulated emission, because both are proportional to the intensity of the incoming beam. Depending on the entity of the contribution, the $\alpha_{\nu}$ coefficient may be positive or even negative, giving raise to curious phenomena.
+\vspace{0.5cm}
+\par Making full use of what we've just defined, we can finally present the celebrated \emph{equation of radiative transfer} (although in the notable absence of scattering)
+\begin{equation}
+	\frac{\text{d}I_{\nu}}{\text{d}s} = -\alpha_{\nu}I_{\nu}+j_{\nu}
+	\label{eq:rt}
+\end{equation}
+which is actually fairly easy to solve when one of the two coefficients vanishes.
+\subsubsection*{Emission only}
+We set $\alpha_{\nu} = 0$ and the equation may be solved by direct integration
+\begin{equation*}
+	I_{\nu}(s) = I_{\nu}(s_{0})+\int_{s_{0}}^{s} j_{\nu}(s')\,\text{d}s'
+\end{equation*}
+the result is not that interesting per se.
+\subsubsection*{Absorption only}
+This time we set $j_{\nu} = 0$. The equation is easily solved this time as well 
+\begin{equation*}
+	I_{\nu}(s) = I_{\nu}(s_{0})\exp\left(-\int_{s_{0}}^{s} \alpha_{\nu}(s')\,\text{d}s'\right)
+\end{equation*}
+\par In this case, it's rather common to write down the equation in terms of a new variable, the \emph{optical depth} $\tau_{\nu}$
+\begin{equation}
+	\text{d}\tau_{\nu} = \alpha_{\nu}\,\text{d}s
+\end{equation}
+Given this definition we'll say that if
+\begin{itemize}
+	\item $\tau_{\nu} \gg 1$: the medium is \emph{optically thick or opaque}
+	\item $\tau_{\nu} \ll 1$: the medium is \emph{optically thin or transparent}
+\end{itemize}
+This has some crucial implications we'll be going through in a moment.
+\par In the stationary limit, the equation of radiative transport may be written as 
+\begin{equation*}
+	(\hat{k}\cdot \nabla)I_{\nu}(\hat{k}, \vec{x}\,) = j_{\nu}(\vec{x}\,)-\alpha_{\nu}(\vec{x}\,)I_{\nu}(\hat{k}, \vec{x}\,)
+\end{equation*}
+In terms of the \emph{source function} $S_{\nu} = j_{\nu}/\alpha_{\nu}$ it becomes
+\begin{equation}
+	\frac{\text{d}I_{\nu}}{\text{d}\tau_{\nu}} = -I_{\nu}+S_{\nu}
+\end{equation}
+which can be integrated to yield the formal solution
+\begin{equation*}
+	I_{\nu}(\hat{k}, \tau_{\nu}) = I_{\nu}(\tau_{\nu,\,0})\exp(-\tau_{\nu})+\int_{\tau_{\nu,\,0}}^{\tau_{\nu}} d\tau_{\nu}'\,S_{\nu}\exp(-(\tau_{\nu}-\tau_{\nu}'))
+\end{equation*}
+Assume for the moment that the matter through which radiation is passing has constant properties and has no background source. Then the source function $S_{\nu}$ is constant and the formal equation becomes
+\begin{equation*}
+	I_{\nu} = S_{\nu}(1-e^{-\tau_{\nu}})
+\end{equation*}
+If the medium  and is optically thin, then the equation is reduced to 
+\begin{equation}
+	I_{\nu} = S_{\nu}\tau_{\nu} = j_{\nu}L
+\end{equation}
+by taking the Taylor expansion of the exponential term and calling $L$ some typical length of the medium.
+\par If, on the other hand, the medium is optically thick, we can neglect the exponential $e^{-\tau_{\nu}}$ to obtain
+\begin{equation}
+	I_{\nu} = S_{\nu}
+	\label{k1}
+\end{equation}
+\section{Kirchhoff's Law and LTE}
+The most notable implication of eq.\ref{k1} is if we consider the specific intensity coming out of a small hole on a box kept in thermodynamic equilibrium. We know that what's going to come out of there is the blackbody radiation
+\begin{equation*}
+	I_{\nu} = B_{\nu}(T)
+\end{equation*}
+but what if we were to put an optically thick object just behind the hole?
+\par If the object is in thermodynamic equilibrium with the surroundings (and it \emph{will} be, given an appropriate amount of time), then the radiation coming out of the hole will still be blackbody radiation. But eq.\ref{k1} tells us that the source function will tend to be equal to the specific intensity, hence
+\begin{equation}
+	S_{\nu} = B_{\nu}(T)
+\end{equation}
+which actually puts a constraint on the possible values of the emission coefficient in terms of the absorption coefficient. This is exactly what is expressed in Kirchhoff's law 
+\begin{equation}
+	j_{\nu} = \alpha_{\nu}B_{\nu}
+	\label{Kirchhoff}
+\end{equation}
+Let us briefly consider what we have just derived. Matter often tends to emit and absorb at specific frequencies corresponding to what are commonly called \emph{spectral lines}. We would expect then  both $j_{\nu}$ and $\alpha_{\nu}$ to have peaks (or depression) around these lines. But Kirchhoff's law forces their ratio to be equal to a smooth blackbody profile.
+\par Thus we can expect to observe two very different scenarios if the medium is optically thin rather than optically thick. In the former, the radiation emerging from the medium is essentially determined by its emission coefficient; since $j_{\nu}$ is expected to present peaks, so will the radiation spectrum, which will be appear in spectral lines, as shown in Fig.\ref{fig:emission} and Fig.\ref{fig:absorption}.
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.8\textwidth]{img/img2.pdf}
+	\caption{An example of emission features formation for different temperatures and different values of $\tau$. Credits: Prof. Walter del Pozzo.}
+	\label{fig:emission}
+\end{figure}
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.8\textwidth]{img/img1.pdf}
+	\caption{An example of absorption features formation for different temperatures and different values of $\tau$. Credits: Prof. Walter del Pozzo.}
+	\label{fig:absorption}
+\end{figure}
+\par On the other hand, the intensity coming out of an optically thick body is its source function, which must be equal to the blackbody function. Hence we expect the medium to emit in a continuum, like a blackbody.
+\par All throughout this description, we've been assuming the medium to have constant properties, which has the perk of being a good approximation for many objects of interest, but still turns out to be a really poor one for many other objects. Stars, for example. 
+\par Ingenuously, we may expect stars to emit radiation like blackbodies, but they're not. Actually, stars present absorption lines, many, even, depending on the class of star. What we cannot assume in stars is them having constant properties, starting from temperature.
+\par In fact, we could take a guess and claim that stars are in \emph{strict} thermodynamic equilibrium. It would be a very bad guess indeed.
+\subsection{Local Thermodynamic Equilibrium (LTE)}
+Let's be honest: In a realistic situation, we \emph{rarely} have strict thermodynamic equilibrium. If a body is in thermodynamic equilibrium, we can assume a number of important physical principles to hold, like the Maxwellian distribution 
+\begin{equation}
+	\text{d}n_{v} = 4\pi n \left(\frac{m}{2\pi k T}\right)^{3/2}v^{2}\exp\left(-\frac{mv^{2}}{2kT}\right)\,\text{d}v
+	\label{maxwell}
+\end{equation}
+where $n$ is the total number of particles per unit volume and $m$ is the mass of each particle. Similarly, we can expect certain laws to hold, like Boltzmann's law for occupation numbers
+\begin{equation}
+	\frac{n_{E}}{n_{0}} = \frac{g_{E}}{g_{0}}\exp\left(-\frac{E-E_{0}}{kT}\right)
+	\label{boltmann-occ}
+\end{equation}
+and Saha's equation
+\begin{equation}
+	\frac{N_{j+1}n_{e}}{N_{j}} = 2\frac{Z_{j+1}(T)}{Z_{j}(T)}\left(\frac{2\pi m k T}{h^{2}}\right)^{3/2}\exp\left(-\frac{\chi_{j,\,j+1}}{kT}\right)
+	\label{saha}
+\end{equation}
+where $n_{e}$ is the density of electrons and $\chi_{j,\,j+1}$ is the ionization potential. Saha's equation in particular is expected to be crucial in interpreting the effect that ionization has on the emission/absorption spectrum.
+\par The proverbial "one-million-dollar-question" then is: When can we expect a system to be in thermodynamic equilibrium and when can we expect the previous principles to hold?
+\par Even if the system initially does not obey the, say, Maxwellian distribution, it will eventually relax to it after undergoing some \emph{collisions}.
+\par \textbf{Collisions are crucial in establishing thermodynamic equilibrium}. 
+\par When collisions are frequent, the mean free path of particles will be small, and particles will interact more effectively. When this happens, we can expect the principles aforementioned to hold. Since we're physicists, vague sentences like "\emph{the mean free path of particles will be small}" are destined to elicit a deep sense of unease and distress. How small does the free path have to be? One meter? Two micrometers? Below the Planck lengthscale?
+\par When we've defined the absorption coefficient $\alpha_{\nu}$, the sharpest among my four readers total may have noticed that $\alpha_{\nu}$ has the dimension of the inverse of a length. It is safe to assume that $\alpha_{\nu}^{-1}$ may define some distance over which a significant fraction of the radiation would get absorbed by matter.
+\par Such a "mean-distance" is defined in a homogeneous medium as 
+\begin{equation*}
+	<\tau_{\nu}> = \alpha_{\nu}l_{\nu} = 1
+\end{equation*}
+\par Thus, if $l_{\nu}$ is sufficiently small such that the temperature can be taken as a constant over such distance, we can safely say that the useful relations we have defined earlier still hold, although only locally.
+\par In such a fortunate scenario, known as \emph{Local Thermodynamic Equilibrium} (LTE), all the important laws requiring thermodynamic equilibrium are expected to hold, provided that we use the local temperature $T(\vec{x}\,)$.
+\par In the interiors of stars, for example, LTE will prove to be a very good approximation, that will get progressively worse as we approach the "surface" of the star.
+\section{Parallel Plane Approximation}
+One useful approximation that may be worthwhile to dedicate some of our time to is the \emph{plane parallel atmosphere}, that will allow us to obtain notable results for describing how radiation travels through, say, the inner regions of the stellar atmosphere.
+\par In the following, we're going to neglect the curvature of the stellar atmosphere and assume the various thermodynamic quantities to be constant over horizontal planes.
+\input{chapters/ppa}
+\par Using Fig.\ref{fig:ppa} as a reference, we see that 
+\begin{equation*}
+	\text{d}s = \frac{\text{d}z}{\cos\theta} = \frac{\text{d}z}{\mu}
+\end{equation*}
+where we used the customary notation in astrophysics $\mu = \cos\theta$.
+\par We shall consider a scattering free, stationary situation for the equation of radiative transport (\ref{eq:rt}). Hence, due to planar symmetry, we expect the specific intensity to depend only on $z$ and $\mu$. For the sake of the current discussion, we perform a slight modification to the definition of optical depth, so that 
+\begin{equation*}
+	\text{d}\tau_{\nu} = -\alpha_{\nu}\,\text{d}z
+\end{equation*}
+This way the equation of radiative transfer may be cast in the following form 
+\begin{equation*}
+	\mu\partial_{\tau_{\nu}}I_{\nu}(\tau_{\nu}, \mu) = I_{\nu}- S_{\nu}
+\end{equation*}
+which has a formal solution easily computed 
+\begin{equation}
+	I_{\nu}\exp\left(-\frac{t_{\nu}}{\mu}\right)|^{\tau_{\nu}}_{\tau_{\nu,0}} = -\int_{\tau_{\nu,0}}^{\tau_{\nu}} \frac{S_{\nu}}{\mu}\exp\left(-\frac{t_{\nu}}{\mu}\right)\,\text{d}t_{\nu}
+	\label{eq:ppart}
+\end{equation}
+This is customarily solved considering two distinct intervals for $\mu$: (I) $\mu\in[0,1]$ and (II) $\mu\in[-1,0]$. In case (I) we can assume the ray path to begin from a great depth inside the star, so that $\tau_{\nu,0}\to\infty$, while in case (II) we assume the ray to receive contributions beginning from the top of the atmosphere, where $\tau_{\nu,0}\approx 0$. For case (II), we're also assuming no radiation to be coming from \emph{outside the star}\footnote{Please note that this condition may be not valid at all in close binary systems.}.
+\par Now we can assume LTE throughout the stellar atmosphere so that eq.\ref{Kirchhoff} is verified. The source function at some optical depth shall then be equal to $B_{\nu}(T(\tau_{\nu}))$. For the source function at a nearby optical depth we can simply compute a Taylor expansion around the optical depth $\tau_{\nu}$
+\begin{equation*}
+	S(t_{\nu}) = B_{\nu}(\tau_{\nu})-(t_{\nu}-\tau_{\nu})\frac{\text{d}B_{\nu}}{\text{d}\tau_{\nu}} +\text{o}(t^{2}_{\nu})
+\end{equation*}
+We can use this to solve (\ref{eq:ppart}), finding for both positive and negative values of $\mu$ a very important equation 
+\begin{equation}
+	I_{\nu}(\tau_{\nu}, \mu) = B_{\nu}(\tau_{\nu})+\mu\,\frac{\text{d}B_{\nu}}{\text{d}\tau_{\nu}}
+	\label{eq:staratmo}
+\end{equation}
+provided the point considered is sufficiently inside the atmosphere so that $\tau_{\nu}\gg 1$\footnote{You can see \cite{choudhuri}, §2.4.1 for more detailed calculations.}. Using this simple result, we can compute the three momenta of the equation of transport
+\begin{align}
+	U_{\nu} &= \frac{4\pi}{c}B_{\nu}(\tau_{\nu})\\
+	F_{\nu} &= \frac{4\pi}{3}\frac{\text{d}B_{\nu}}{\text{d}\tau_{\nu}}\\
+	P_{\nu} &= \frac{4\pi}{3c}B_{\nu}(\tau_{\nu})
+\end{align}
+\subsection{The Grey Atmosphere}
+If we consider the absorption coefficient $\alpha_{\nu}$ constant over all frequencies, then the atmosphere is called a "grey atmosphere". This implies that the value of the optical depth at some physical depth is constant for all frequencies. Under this assumption, we could solve 
+\begin{equation*}
+	\mu \frac{\partial I}{\partial\tau} = I-S
+\end{equation*}
+I'll skip the explicit calculation (which is actually fairly easy for once) and present just the final result. Two more assumptions are to be made, however: The first is to assume \emph{radiative equilibrium}, which roughly translates into requiring that there are no sources nor sinks of energy in the atmosphere, thus $\partial_{\tau} F = 0$; as a further semplification, we assume the \emph{Eddington approximation} to hold everywhere in the atmosphere\footnote{I find most intriguing that Eddington's approximation essentially assumes that $T^{\mu}_{\;\;\mu} = 0$, with $T^{\mu\nu}$ the electromagnetic energy-momentum tensor if we are to treat electromagnetic radiation as a perfect fluid.}, so that 
+\begin{equation*}
+	P = \frac{1}{3}U
+\end{equation*}
+It should be evident that this last equation is verified automatically in presence of an isotropic source of radiation, also in its frequency-dependent form.
+\par We then come to the following conclusion 
+\begin{equation}
+	I_{obs}(\tau = 0,\mu) = \frac{3F}{4\pi}\left(\mu+\frac{2}{3}\right)
+\end{equation}
+from which we deduce the equation for the \emph{limb darkening}
+\begin{equation*}
+	\frac{I(0,\mu)}{I(0,1)} = \frac{3}{5}\left(\mu+\frac{2}{3}\right)
+\end{equation*}
+which roughly translates into saying that the radiation that we observe at the surface is the one equivalent at a source function $S$ evaluated at $\tau = 2/3$. This is known as the \emph{Eddington-Barbier estimation}.
+\par A somewhat more general way to solve the problem is assuming the following functional relation for the specific intensity 
+\begin{equation*}
+	I_{\nu}(\tau,\mu) = a_{\nu}(\tau_{\nu})+b_{\nu}(\tau_{\nu})\mu
+\end{equation*}
+and compute the three momenta proper
+\begin{align}
+	J_{\nu} &= \frac{1}{2}\int_{-1}^{+1} I_{\nu}\,\text{d}\mu = a_{\nu}\\
+	H_{\nu} &= \frac{1}{2}\int_{-1}^{+1} I_{\nu}\mu\,\text{d}\mu = \frac{b_{\nu}}{3}\\
+	K_{\nu} &= \frac{1}{2}\int_{-1}^{+1} I_{\nu}\mu^{2}\,\text{d}\mu = \frac{a_{\nu}}{3}
+\end{align}
+Now we assume a stronger version of the \emph{Eddington approximation} $K_{\nu} = J_{\nu}/3$ so that the two following expressions can be written 
+\begin{align}
+	\frac{\partial H_{\nu}}{\partial \tau_{\nu}} &= J_{\nu}-S_{\nu}\\
+	\frac{\partial K_{\nu}}{\partial \tau_{\nu}} &= H_{\nu} = \frac{1}{3}\frac{\partial J_{\nu}}{\partial \tau_{\nu}}
+\end{align}
+The mixing of the two gives us a second order PDE that it's still (approximately) valid even in the outer regions of the stellar atmosphere.
+\section{Radiative Diffusion Approximation}
+This section would probably be clearer if you take a brief detour to Chapter \ref{ch:iii} to build some groundwork for scattering processes, but it still suits better the main subject of this chapter.
+\par For the sake of coherence (and personal laziness) I'm going to talk about the radiative diffusion approximation right here, also because it makes use of the plane parallel approximation we just went through.
+\par In Chapter \ref{ch:iii} we will use random walk arguments to show that $S_{\nu}$ approaches $B_{\nu}$ at large \emph{effective optical depths} in a homogeneous medium. Real media are seldom homogeneous, but often, as in the interiors of stars, there is a high degree of local homogeneity. 
+\par The equation of radiative transport in presence of scattering (\ref{eq:rtscattering}) may be cast in a slightly different form 
+\begin{equation*}
+	I_{\nu} = S_{\nu}-\frac{\mu}{\alpha_{\nu}+\sigma_{\nu}}\partial_{z}I_{\nu}
+\end{equation*}
+We shall then assume that over a distance $l_{*}$ (the thermalization length) $I_{\nu}$ is constant and at zero-th order is $I_{\nu}^{(0)}=S_{\nu}^{(0)} = B_{\nu}$. Plugging this in the equation of radiative transfer gives us $I_{\nu}^{(1)}$ by a simple iterative procedure
+\begin{equation}
+	I_{\nu}^{(1)} = B_{\nu} -\frac{\mu}{\alpha_{\nu}+\sigma_{\nu}}\partial_{z}B_{\nu}
+	\label{eq:intfirstorder}
+\end{equation}
+With the simple redefining $\text{d}\tau_{\nu} = -(\alpha_{\nu}+\sigma_{\nu})\,\text{d}z$, we can put eq.(\ref{eq:intfirstorder}) in a form functionally equal to (\ref{eq:staratmo}).
+\par Let us now compute the flux $F_{\nu}$ using the above form for the intensity
+\begin{equation*}
+	F_{\nu}(z) = 2\pi\int_{-1}^{+1} I_{\nu}^{(1)}\mu\,\text{d}\mu = -\frac{4\pi}{3}\frac{\partial_{z}B_{\nu}}{\alpha_{\nu}+\sigma_{\nu}} = -\frac{4\pi}{3}\frac{\partial_{T}B_{\nu}}{\alpha_{\nu}+\sigma_{\nu}}\partial_{z}T
+\end{equation*}
+Recalling the result
+\begin{equation*}
+	\partial_{T}\int_{0}^{+\infty}B_{\nu}\,\text{d}\nu = \frac{4\sigma_{SB}T^{3}}{\pi}
+\end{equation*}
+we can define a \emph{mean absorption coefficient} using the \emph{Rosseland approximation for radiative diffusion}
+\begin{equation}
+	\frac{1}{\alpha_{R}} := \frac{\int_{0}^{+\infty}\frac{1}{\alpha_{\nu}+\sigma_{\nu}}\,\partial_{T}B_{\nu}\,\text{d}\nu}{\int_{0}^{+\infty}\partial_{T}B_{\nu}\,\text{d}\nu}
+\end{equation}
+If we integrate the monochromatic flux over the frequencies and make use of the Rosseland mean, we find a useful expression used in stellar structure models
+\begin{equation}
+	F(z) = -\frac{16\sigma_{SB}T^{3}}{3\alpha_{R}}\partial_{z}T
+	\label{eq:sstr4}
+\end{equation}

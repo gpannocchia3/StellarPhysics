@@ -1,7 +1,217 @@
 
 %============================= HEADER =================================
-\chapter{Chapter 1}\label{ch:i}
+\chapter{Astrophysics' Building Blocks}\label{ch:i}
 
 \section{Introduction}
+As per the name of this chapter, in this first chapter we're going to introduce a series of important quantities and concepts that are going to be particularly useful later on, for this first introductory part I'm going to follow \cite{choudhuri}, §1.
+\par For expressing astrophysical measurements, it should be clear that the units that we customarily use for our everyday life wouldn't be doing a really good job. For example, most of the times, it isn't particularly convient to have masses expressed in gramms or kilogramms, for the masses we'll be usually concerned with are so large that saying that a star weighs $10^{33}\,\text{g}$ isn't particularly insightful, since we don't have an everyday-life object to compare it with.
+\par What often happens in astrophysics is that masses are usually expressed in terms of \emph{solar masses} $M_{\odot}$, which has value
+\begin{equation}
+    M_{\odot} = 1.99 \cdot 10^{33}\,\text{g}
+    \label{eq:solarmass}
+\end{equation}
+For example Vega, a bright white star in the Lyra constellation, has a mass roughly estimated to $M_{\text{Vega}} = 2.15^{+0.10}_{-0.15}\, M_{\odot}$. The masses of most stars lie within a relatively narrow range from $0.1-20\,M_{\odot}$.
+\par Stars are formed in clusters, which are predominantely composed of neutral Hydrogen. Thanks to a whole series of mechanisms interplaying in said clusters, it's often possible to assume that stars born within a given cluster are approximately coeval and have a similar chemical composition. What we can't assume, however, is them having the same masses.
+\par To describe how the masses of stars are distributed within a cluster, it is customary to invoke a IMF, an \emph{initial mass function}, which is essentially an empirical function that describes the mass distribution of stars for a given cloud.
+\par Similarly, it isn't particularly convenient to express distances with meters, centimeters, kilometers or, God forbids, miles and feet. For relatively "close" objects, it is often used the \emph{astronomical unit} (AU)
+\begin{equation}
+    1\, \text{AU} = 1.50 \cdot 10^{13}\,\text{cm}
+    \label{eq:astronomicalunit}
+\end{equation}
+which is the average distance of the Earth from the Sun. Although this is a rather useful quantity, we're not still up there. We have to kick it up a notch once more.
+As the Earth moves around the Sun, the "nearby" stars seem to change their position just slightly with respect to the faraway stars, which appear to be fixed in place.
+\par This phenomenon is called \emph{parallax}; it is not particularly different from what you experience observing your own finger first with one eye and then with the other.
+\par Consider the construction shown in Fig.\ref{fgr:stellarparallax}. 
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width = 0.5\textwidth]{img/stellarparallax.svg.png}
+    \caption{Defintion of parsec. Credits: Wikipedia.}
+    \label{fgr:stellarparallax}
+\end{figure} 
+\par Let us consider a star on the polar axis of the Earth's orbit at a distance $d$ from the center of the orbit. The angle $p$ in the picture is half of the angle by which this star appears to shift with the annual motion of the Earth on the distant stars' plane.
+\par With simple geometrical considerations, if we assume Earth's orbit to be circular\footnote{Actually, it is not. Earth's orbital eccentricity is roughly $e = 0.017$, which is sufficiently small to let us approximate it as circular.}, then we can write the following relation
+\begin{equation*}
+    \tan(p) = \frac{1\,\text{AU}}{d} \approx p
+\end{equation*}
+if we assume $d$ to be much larger than an astronomic unit (which for all relevant scenarios is a condition that is well satisfied).
+\par We can then define the \emph{parsec} (pc) as the distance the star has to be so that its geometrical parallax turns out to be $1\,\text{arcsec}$. Hence
+\begin{equation}
+    d = \frac{3.09 \cdot 10^{18}\,\text{cm}}{p \,[\text{arcsec}]} \implies 1\,\text{pc} = 3.09 \cdot 10^{18}\,\text{cm}
+    \label{eq:parsec}
+\end{equation}
+Obviously, for even larger distances the standard units are the \emph{kiloparsec} (roughly the measure of galactic sizes), the \emph{megaparsec} (the typical measure of galactic distances) and the \emph{gigaparsec} (the typical measure of the observable Universe).
 
-Dummy citation so that \LaTeX doesn't cry \cite{ParticleDataGroup:2024cfk}.
+\section{Relevant quantities for radiative transfer}
+Although some books often start their description of radiatively relevant quantities from the definition of \emph{monochromatic energy} and \emph{monochromatic intensity}, I found that it is most misleading, since, in all but a few cases, what we experimentally measure are fundamentally \emph{fluxes}. 
+\par We shall then consider the \emph{monochromatic flux} $F_{\nu}$ ($\text{erg}\,\text{s}^{-1}\,\text{Hz}^{-1}\,\text{cm}^{-2}$) produced by some source passing through a small area $\text{d}A$ located somewhere in space. 
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.7\textwidth]{img/radcostruction.png}
+	\caption{Schematic geometrical representation of the system. \\Credits: G. Rybicki, A. Lightman \cite{1986rpa..book.....R}.}
+    \label{fgr:radconstruction}
+\end{figure}
+\par If we call \textbf{$\hat{k}$} the propagation direction of the flux and \textbf{$\hat{n}$} the unit vector emerging from the surface $\text{d}A$, it's easy to get convinced that what is actually passing through the surface is something proportional to $F_{\nu} (\textbf{$\hat{k}$} \cdot \textbf{$\hat{n}$})$.
+\par From the monochromatic flux we can define the \emph{bolometric flux}, which is just the monochromatic flux integrated over all frequencies (or wavelengths)
+\begin{equation}
+	F = \int_{0}^{+\infty} F_{\nu}\, \text{d}\nu = \int_{0}^{+\infty} F_{\lambda}\, \text{d}\lambda
+    \label{eq:bolometricflux}
+\end{equation}
+This also tells us how to convert a flux per unit frequency to a flux per unit wavelength
+\begin{equation*}
+	 F_{\nu}\, \text{d}\nu = F_{\lambda}\, \text{d}\lambda
+\end{equation*}
+\par It should be clear that, despite being experimentally sensible for us to use the flux, we're losing much information sticking with it, namely directional information.
+\par We consider then the amount of radiation $E_{\nu}\,\text{d}\nu$ passing through the same area in time $\text{d}t$ and solid angle $\text{d}\Omega$. Hence we can write
+\begin{equation}
+	\text{d}E_{\nu}\,\text{d}\nu = I_{\nu}(\textbf{r}, t, \textbf{$\hat{k}$}) (\textbf{$\hat{k}$} \cdot \textbf{$\hat{n}$}) \, \text{d}t \, \text{d}\Omega \, \text{d}A \, \text{d}\nu
+    \label{eq:specificintensity}
+\end{equation}
+where the quantity $I_{\nu}(\textbf{r}, t, \textbf{$\hat{k}$})$ is called the \emph{specific monochromatic intensity}. If $I_{\nu}(\textbf{r}, t, \textbf{$\hat{k}$})$ is specified for all directions at every point in a certain region of spacetime, then we'd have a complete prescription of the radiation field we intend on studying.
+\par Capitalizing on the blatant similarities with distribution functions, we can evaluate the moments of the monochromatic intensity.
+\begin{definition}{Monochromatic mean intensity $J_{\nu}$}
+	\begin{equation*}
+		J_{\nu} = \frac{1}{4\pi} \int_{\Omega} I_{\nu}\, \text{d}\Omega = \frac{c}{4\pi} U_{\nu}
+	\end{equation*}
+	with $U_{\nu}$ the total energy density of radiation.
+	Note that $J_{\nu}$ is essentially just an average of the monochromatic intensity over all solid angles.
+\end{definition}
+\begin{definition}{Monochromatic flux $\vec{F}_{\nu}$}
+	\begin{equation*}
+		\vec{H}_{\nu} = \frac{1}{4\pi} \int_{\Omega} I_{\nu}(\textbf{$\hat{k}$})\textbf{$\hat{k}$}\, \text{d}\Omega \implies  \frac{1}{4\pi} F_{\nu} = \vec{H}_{\nu}\cdot \hat{n}
+	\end{equation*}
+	I haven't explicitly proved the last equality, but it shouldn't be hard for you to convince yourself (or prove it yourself) that it is indeed true.
+\end{definition}
+\begin{definition}{Monochromatic radiation pressure $p_{\nu}$}
+	The monochromatic pressure is defined starting from the different directions correlations of the monochromatic intensity 
+	\begin{equation*}
+		K_{\nu}^{ij} = \frac{1}{4\pi} \int_{\Omega} I_{\nu}(\textbf{$\hat{k}$})\textbf{$k^{i}$}\textbf{$k^{j}$}\, \text{d}\Omega 
+	\end{equation*}
+	The pressure in particular is usually expressed as
+	\begin{equation*}
+		P_{\nu} = \frac{1}{c} \int_{\Omega} I_{\nu}(\textbf{$\hat{k}$}) \cos^{2}\theta\,\text{d}\Omega
+	\end{equation*}
+	where $\cos^{2}\theta = (\textbf{$\hat{k}$} \cdot \textbf{$\hat{n}$})^{2}$.
+\end{definition}
+
+\subsection{Blackbody radiation}
+Even at an undergraduate level, we're all fairly familiar with \emph{blackbody radiation}. The easiest way to deduce the expression for the energy density of photons in \emph{thermal equilibrium} (STE) inside a cavity is by the means of statistical mechanics.
+\par Remember the Bose-Einstein distribution ($\mu = 0$)
+\begin{equation*}
+	n = \frac{1}{\exp(h\nu/kT)-1}
+\end{equation*}
+and the phase space density of states (per unit volume)
+\begin{equation*}
+	\rho(\nu)\,\text{d}\nu = \frac{4\pi h g \nu^{3}}{c^{3}}\,\text{d}\nu
+\end{equation*}
+from which deducing the expression from internal energy is straightforward. Remembering $g=2$ is the quantum degeneracy of photons, a simple moltiplication of the previous expressions yields
+\begin{equation*}
+	U_{\nu}\,\text{d}\nu = \frac{8\pi h}{c^{3}}\frac{\nu^{3}}{\exp(h\nu/kT)-1}\,\text{d}\nu
+\end{equation*}
+\par Since blackbody radiation is isotropic (it depends only on the absolute temperature $T$), the definition of mean monochromatic intensity yields
+\begin{equation}
+	\boxed{
+	B_{\nu}(T) = \frac{2h\nu^{3}}{c^{2}}\frac{1}{\exp(h\nu/kT)-1}
+	}
+	\label{eq:blackbodyintensity}
+\end{equation}
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.9\textwidth]{img/blackbody.pdf}
+	\caption{Blackbody frequency spectrum.}
+    \label{fgr:planckfunction}
+\end{figure}
+\par It's important to notice that, in principle, such a fundamental result holds only in \emph{strict thermodynamic equilibrium} (STE), but we'll soon see how to generalize this formulation for less "restrictive" environments.
+\par An incredible number of important results descends from (\ref{blackbody}), and it may be worthwhile to cite at least some of them, starting from Stefan-Boltzmann law. We'll use the following result without proving it 
+\begin{equation*}
+	\int_{0}^{+\infty} B_{\nu}(T)\,\text{d}\nu = \frac{2h}{c^{2}}\frac{\pi^{4}}{15}\left(\frac{kT}{h}\right)^{4}
+\end{equation*}
+\par Computing the bolometric flux and the bolometric energy density by integrating over all frequencies using what we've just written down, you find the following 
+\begin{equation*}
+	U(T) = aT^{4} \quad F(T) = \sigma_{SB}T^{4}
+\end{equation*}
+\par Clearly the two constants $a$ and $\sigma_{SB}$ cannot be independent, and are actually related by the integral we've previously calculated. Using for example\footnote{The emergent flux from an isotropically emitting surface (such as a blackbody) is $\pi\cdot \text{brightness}$ which is none other than the specific intensity.}
+\begin{equation*}
+	F(T) = \pi \int_{0}^{+\infty} B_{\nu}(T)\,\text{d}\nu
+\end{equation*}
+you can easily find out that the \emph{Stefan-Boltzmann constant} is equal to $$ \sigma_{SB} = \frac{2\pi^{5}k^{4}}{15c^{2}h^{3}}$$
+and the relation with $a$ is simply $\sigma_{SB} = ac/4$.
+\par The equation 
+\begin{equation}
+	F(T) = \frac{2\pi^{5}k^{4}}{15c^{2}h^{3}} T^{4}
+	\label{eq:SB}
+\end{equation}
+is what is usually known as the \emph{Stefan-Boltzmann law}.
+\par Let us now consider two different regimes for eq.\ref{eq:blackbodyintensity}: $h\nu/kT \ll 1$ and $h\nu/kT \gg 1$. The first yields what is commonly known as the Rayleigh-Jeans Law which is, sadly, pretty much relevant only for radioastronomy.
+\par Since 
+\begin{equation*}
+	\exp\left(\frac{h\nu}{kT}\right) = 1+\frac{h\nu}{kT}+o\left(\frac{h\nu}{kT}\right)^{2}
+\end{equation*} 
+the blackbody radiation assumes the much simpler form of
+\begin{equation*}
+	B_{\nu}^{RJ} = \frac{2\nu^{2}}{c^{2}}kT
+\end{equation*}
+\par Another important results is achieved in the opposite regime, when the exponential term is rather larger than unity
+\begin{equation*}
+	B_{\nu}^{W} = \frac{2h\nu^{3}}{c^{2}}\exp\left(-\frac{h\nu}{kT}\right)
+\end{equation*}
+This expression is known as Wien's Law.
+\subsection{Characteristic Temperatures}
+Starting from the blackbody spectrum we can give various definitions of temperature, that are going to be more and less useful when dealing with stars.
+\subsubsection*{Brightness Temperature}
+One way of characterizing brightness (specific intensity) at a certain frequency is to give the temperature of the blackbody having the same brightness at that frequency. That is, for any value $I_{\nu}$ we define $T_{b}(\nu)$ by the relation
+\begin{equation*}
+    I_{\nu} = B_{\nu}(T_{b})   
+\end{equation*}
+this way of specifying brightness has the advantage of being closely connected with the physical properties of the emitter, and has the simple unit (K).
+\par This procedure is used especially in radio astronomy, where the Rayleigh-Jeans law is usually applicable.
+\begin{equation}
+    T_{b} = \frac{c^{2}}{2\nu k}I_{\nu} \quad h\nu/kT \ll 1
+\end{equation}
+Note that the uniqueness of the definition of brightness temperature relies on the monotonicity property of Planck‘s law. Also note that, in general, the brightness temperature is a function of $\nu$.
+\subsubsection*{Color Temperature}
+Often a spectrum is measured to have a shape more or less of blackbody form, but not necessarily of the proper absolute value. For example, by measuring $F_{\nu}$, from an unresolved source we cannot find $I_{\nu}$, unless we know the distance to the source and its physical size.
+\par By fitting the data to a blackbody curve without regard to vertical scale, a color temperature $T_{c}$, is obtained. Often the “fitting” procedure is nothing more than estimating the peak of the spectrum and applying Wien’s displacement law to find a temperature.
+\subsubsection*{Effective Temperature}
+The effective temperature of a source $T_{eff}$ is derived from the total amount of flux, integrated over all frequencies, radiated at the source. We obtain $T_{eff}$ by equating the actual flux $F$ to the flux of a blackbody at temperature $T_{eff}$
+\begin{equation}
+    F = \int \cos\theta \,I_{\nu}\,\text{d}\nu\,\text{d}\Omega := \sigma T_{eff}^{4}
+    \label{eq:effectivetemperature} 
+\end{equation}
+
+\section{Magnitude Scales}
+When coming down to determining the properties of a star, there are two quantities that shine a little brighter than the others: The luminosity and the flux.
+\par The luminosity of a star is generally defined as the power emitted by a given star over time (potentially over a given wavelength) and its expression is given by the relation
+\begin{equation}
+    L = -\frac{\text{d}E}{\text{d}t} \quad \text{erg}\cdot\text{s}^{-1}
+    \label{eq:luminosity}
+\end{equation}
+\par As we'll see, stars often emit isotropically in space. It goes without saying, however, that an observer at distance $d$ from that star won't be able to collect all the light that is emitted. What we can measure is a flux, the fraction of energy that impinges on our detector. The flux is related to the luminosity through the following relation
+\begin{equation}
+    \phi = \frac{L}{4\pi r^{2}} \quad \text{erg}\cdot\text{s}^{-1}\cdot\text{cm}^{-2}
+    \label{eq:flux}
+\end{equation}
+The flux, however, doesn't tel us much about the characteristics of the star, differently from the luminosity. But since what we can measure are fluxes, it is then crucial that we find a way to accurately measure distances so to infer the luminosity of an object.
+\par Since ancient times, mankind has always tried to measure the brightness of stars. The efforts of those that came before us are nowadays crystallized in a quantities that is still in use: The \emph{magnitude}.
+\par The concept of magnitude is strictly related to the way the human eye was believed to perceive the differences in intensities.
+\par Hypparchus, back in ancient Greece, classified all stars into six classes according to their apparent brightness. This classes went from class I, the brightest stars, to class VI, the less bright. According to Hypparchus, the brightest and faintest stars had an apparent brightness that is in the ratio of 100.
+\par Let us consider a star with flux $F_{*}$ and some reference flux $F_{0}$. We define the \emph{apparent magnitude} as 
+\begin{equation*}
+    m_{*} = x \log_{10}\left(\frac{F_{*}}{F_{0}}\right)
+\end{equation*}
+Calculating the difference in apparent magnitude between the brigthest and faintest stars and making use of the aforementioned characteristics, we can find the correct values for the constant $x$ and define the apparent magnitude as
+\begin{equation}
+    m_{*} = -2.5\log_{10}\left(\frac{F_{*}}{F_{0}}\right)
+    \label{eq:apparentmagnitude}
+\end{equation}
+Obviously, unless a bolometer is used, you can't perform a measurement covering all wavelengths. What you're going to measure is actually a convolution of the flux emitted by the star (as a function of the wavelength) and the transmission curve of the detector you're using
+\begin{equation*}
+    S_{det} = \int_{0}^{\infty} \text{d}\lambda\, F(\lambda)T(\lambda)
+\end{equation*}
+More often than not, it is customary to measure magnitudes in given wavelengths' ranges, from which a "bolometric" magnitude can be inferred by adding a \emph{bolometric correction} that is given from stellar atmosphere models.
+\par Similarly, we can define the \emph{absolute magnitude} as the magnitude a star would have if it was located $10\,\text{pc}$ away.
+\par Using the fact that $F \propto r^{-2}$, we find a relation for the absolute magnitude $M$
+\begin{equation}
+    m-M = 5\log_{10}\left(\frac{d}{10\,[\text{pc}]}\right)
+    \label{eq:absolutemagnitude}
+\end{equation}
+The difference $m-M$ is often called \emph{distance module} (DM) and is sometimes used as an indirect way to express a distance.
