@@ -237,7 +237,7 @@ where $E[B-V] = A_{B}-A_{V}$ is the extinction. Within our galaxy, the ratio of 
     R = \frac{A}{E[B-V]} \approx 3.0
 \end{equation*}
 
-\section{Elements Abundancies}
+\section{Elements abundances}
 Observing the spectrum emitted by stars we may expect, a bit naively, to observe a blackbody spectrum, but that isn't quite the case. As we'll have the chance to discuss later on, the radiation field produced by stars is only approximately equal to a blackbody function in the inner regions of stars.
 \begin{figure}[h!]
 	\centering 
@@ -252,22 +252,21 @@ Observing the spectrum emitted by stars we may expect, a bit naively, to observe
 \par At this point, you may be objecting: Isn't the effect of nuclear reactions relevant only in the inner regions of stars?
 \par As customary in Physics, the correct answer is "It depends." Can we take for granted that the chemical composition we see in the photosphere is the same as the original one?
 \par Generally, no. As we'll see, stars in a certain range of masses and in some evolutionary stage of their life may develope convective or radiative envelopes, and the answer to our question we can find once we determine which of the two is going to win.
-\subsection{Universal Curve of Abundancies}
+\subsection{Universal Curve of abundances}
 A matter we're going to be most interested in discussing is the provenience of the various (chemical) elements we observe on Earth and all around the Universe and \emph{how} they are produced. For example, we now know that the almost entirety of Hydrogen was produced during the \emph{Primordial Nucleosynthesis} along with a bit of Helium. Metals, on the other hand, are entirely produced by \emph{Stellar Nucleosynthesis}. That's because in the early stages of the formation of the Universe, temperature dropped too fast below the critical threshold that allows the relevant nuclear reactions to produce efficiently Helium and metals. On top of that, light metals (Lithium, Beriullium and Boron) are generally destroyed for the sake of producing lighter elements like Helium (see Chapter \ref{ch:iv}) and the figure below (Fig.\ref{fgr:chondrites-photsphere}), which presents a comparison of chemical composition of the solar photosphere with that of CI chondrites.
 \begin{figure}[h!]
 	\centering 
 	\includegraphics[width=0.6\textwidth]{img/photosphericabundancies.png}
-	\caption{Comparison bewteen the recommended abundances by \cite{2021A&A...653A.141A} in present-day solar photosphere and CI chondrites.\\
-	Most elements agree well, with the exception of the highly volatile elements, which are depleted in meteorites, and Li, which has been largely destroyed in the Sun due to nuclear burning.}
+	\caption{Comparison bewteen the recommended abundances by \cite{2021A&A...653A.141A} in present-day solar photosphere and CI chondrites.Most elements agree well, with the exception of the highly volatile elements, which are depleted in meteorites, and Li, which has been largely destroyed in the Sun due to nuclear burning. Credits: \cite{2021A&A...653A.141A}.}
 	\label{fgr:chondrites-photsphere}
 \end{figure}
-\par Still, if this is actually the case, we may expect to measure a constant ratio between the various abundances of elements. Consider for example Fig.\ref{fgr:universalcurveabundancies}.
+\par Still, if this is actually the case, we may expect to measure a constant ratio between the various abundances of elements. Consider for example Fig.\ref{fgr:universalcurveabundances}.
 \par First of all: As anticipated, light metals have a relatively low abundance, which is consistent with them being burned for the sake of producing lighter elements (Hydrogen and Helium) which have above-average abundance.
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=0.9\textwidth]{img/SolarSystemAbundances.svg.png}
-	\caption{Universal curve of abundancies, normalized on the relative abundance of Silicon. It represents the average value in the galactic disk of chemical abundancies in stars. Credits: Wikipedia, but potentially \cite{2021A&A...653A.141A}.}
-	\label{fgr:universalcurveabundancies}
+	\caption{Universal curve of abundances, normalized on the relative abundance of Silicon. It represents the average value in the galactic disk of chemical abundances in stars. Credits: Wikipedia, but potentially \cite{2021A&A...653A.141A}.}
+	\label{fgr:universalcurveabundances}
 \end{figure}
 \par Similarly, the heavier elements which are produced by $\alpha$-particles capture have roughly the same relative abundance, dropping off only when crossing the peak of Iron. The formation of elements with $Z > 26$ can happen only with proton/neutron capture on the nucleus, which is a fairly rare process that can occur only in the late evolutionary stages of massive stars.
 \par As we have anticipated somewhere above, to model the evolution of a star, it's important to know the original chemical composition of the cluster the star was born from. You can think of it as "setting" the starting conditions for your system. In particular, it is of crucial importance to determine the primordial abundance of Helium.
@@ -288,7 +287,7 @@ We can also define the $[\text{Fe}\,|\,\text{H}]$ as
 	[\text{Fe}\,|\,\text{H}] = \log_{10}\left[\frac{(N_{\text{Fe}}/N_{\text{H}})_{*}}{(N_{\text{Fe}}/N_{\text{H}})_{\odot}}\right] = \log_{10}\left[\frac{(\text{Z}/\text{X})_{*}}{(\text{Z}/\text{X})_{\odot}}\right]
 	\label{eq:fe/h}
 \end{equation}
-where we've defined $N_{i} = X_{i}/A_{i}m_{\text{H}}$. From this definition is obvious then that if $[\text{Fe}\,|\,\text{H}] = 0$, the abundance of Iron is equal to that of the Sun. Doing a slight manipulation\footnote{Which makes use of $\text{X}+\text{Y}+\text{Z} = 1$.} we can also write
+where we've defined $N_{i} = X_{i}/A_{i}m_{\text{H}}$. From this definition is obvious then that if $[\text{Fe}\,|\,\text{H}] = 0$, the abundance of Iron is equal to that of the Sun. Doing a slight manipulation\footnote{We're making use of $\text{X}+\text{Y}+\text{Z} = 1$.} we can also write
 \begin{equation}
 	[\text{Fe}\,|\,\text{H}] \approx \log_{10}\left[\frac{(\frac{\text{Z}}{1-\text{Y}})_{*}}{(\frac{\text{Z}}{X})_{\odot}}\right] = \log_{10}(\text{Z}_{*})-\log_{10}(1-\text{Y}_{*}) - \log_{10}\left(\frac{\text{Z}}{X}\right)_{\odot}
 	\label{fe/h_metallicity}
@@ -299,3 +298,11 @@ which can be inverted to obtain an expression of the form $\log_{10}(\text{Z}_{*
 	[\alpha\,|\,\text{Fe}] = \log_{10}\left[\frac{(N_{\alpha}/N_{\text{Fe}})_{*}}{(N_{\alpha}/N_{\text{Fe}})_{\odot}}\right]
 \end{equation}
 which, on average, evaluates to $[\alpha\,|\,\text{Fe}] \sim 0.3$ for stars in galactic halos.
+\subsection{Stellar Trivia}
+In this subsection I'm going to anticipate some of the subjects that are going to be the main interest of many among the following chapters.
+\par Starting from dimensional considerations only (which, however, requires that you know the equations describing stellar structures), you can easily show that more massive stars are hotter and have a higher luminosity, hence them having a shorter lifespan. You may argue that more massive stars have more "fuel" to burn, thus "cancelling out" the effect of a higher luminosity.
+\par Although that is technically true, it doesn't take into account the fact that (effective) temperature is positively correlated with the mass of a star. That means that more massive stars are generally hotter, which in turn pumps up the efficiency of nuclear reactions\footnote{Nuclear reactions in stars can be shown to present a power-law dependency on the temperature, scaling at least as $T^{4}$.}. This means that more fuel gets burned to balance the collapse caused by gravitational pulls.
+\par This phenomenon can be generally summarized under the name of \emph{stellar thermostate}: When a star expands, its density decreases, and so its temperature; the efficiency of nuclear reactions thus decreases until its evenly balanced by gravitational collapse. Conversely, if the gravitational pull is stronger, the star contracts and gets hotter, the efficiency of the nuclear reactions ramps up along with the luminosity, halting the collapse.
+\par This inspires our first, important deduction: If in a cluster stars are predominantely blue, the cluster must be young! Since more massive stars have a shorter lifespan, if the cluster was older, then we wouldn't be able to observe such stars.
+\par It's important to distinguish to kinds of clusters: \emph{Globular clusters} are generally old clusters found in galactic halos; they have little gas, no (recent) star formation and are generally arranged spherically symmetrically around the GC. In globular clusters would be logical to expect a lower metallicity, for a lower number of generations of stars might have followed one another in that region.
+\par On the other hand \emph{open clusters} are now found in the galactic plane\footnote{Originally, they are likely to have formed in the halo, but their elliptic motion intersecting the GP have experienced numerous interactions with other stars and objects that have brought their trajectory to ultimately lie on the GP.}; they have much more gas available and there's continuous star formation. Generally, open clusters house a smaller number of stars, therefore allowing us to see only stars still in the \emph{main sequence} stage\footnote{The main sequence stage is an evolutionary stage of stars during which Hydrogen is burned in the core.}. In open clusters, it's sensible to expect a higher metallicity (with respect to globular clusters).
