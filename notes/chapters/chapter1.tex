@@ -236,3 +236,66 @@ where $E[B-V] = A_{B}-A_{V}$ is the extinction. Within our galaxy, the ratio of 
 \begin{equation*}
     R = \frac{A}{E[B-V]} \approx 3.0
 \end{equation*}
+
+\section{Elements Abundancies}
+Observing the spectrum emitted by stars we may expect, a bit naively, to observe a blackbody spectrum, but that isn't quite the case. As we'll have the chance to discuss later on, the radiation field produced by stars is only approximately equal to a blackbody function in the inner regions of stars.
+\begin{figure}[h!]
+	\centering 
+	\includegraphics[width=0.8\textwidth]{img/1920px-EffectiveTemperature_300dpi_e.png}
+	\caption{Deviation from blackbody behavior for the solar spectrum. \\
+	Credits: Unknown source.}
+	\label{fgr:solarbb}
+\end{figure}
+\par Although a tad annoying for the characterization of the radiation field, this deviation from ideal behavior allows us to infer the chemical composition of stars!
+\par Deviation from blackbody behavior in fact is usual to take the form of \emph{emission} and \emph{absorption} lines in the spectrum, which tend to stick out like sore thumbs. Clearly, different elements (and different species of the same element) will produce very different lines, allowing us to reconstruct the chemical composition of the photosphere, which is the region where the photons we observe are coming from.
+\par For our purposes, we'll be interested in the \emph{original} chemical composition of a star rather than its actual, or future, value, so that that is shed of the modifications induced by ongoing nuclear reactions.
+\par At this point, you may be objecting: Isn't the effect of nuclear reactions relevant only in the inner regions of stars?
+\par As customary in Physics, the correct answer is "It depends." Can we take for granted that the chemical composition we see in the photosphere is the same as the original one?
+\par Generally, no. As we'll see, stars in a certain range of masses and in some evolutionary stage of their life may develope convective or radiative envelopes, and the answer to our question we can find once we determine which of the two is going to win.
+\subsection{Universal Curve of Abundancies}
+A matter we're going to be most interested in discussing is the provenience of the various (chemical) elements we observe on Earth and all around the Universe and \emph{how} they are produced. For example, we now know that the almost entirety of Hydrogen was produced during the \emph{Primordial Nucleosynthesis} along with a bit of Helium. Metals, on the other hand, are entirely produced by \emph{Stellar Nucleosynthesis}. That's because in the early stages of the formation of the Universe, temperature dropped too fast below the critical threshold that allows the relevant nuclear reactions to produce efficiently Helium and metals. On top of that, light metals (Lithium, Beriullium and Boron) are generally destroyed for the sake of producing lighter elements like Helium (see Chapter \ref{ch:iv}) and the figure below (Fig.\ref{fgr:chondrites-photsphere}), which presents a comparison of chemical composition of the solar photosphere with that of CI chondrites.
+\begin{figure}[h!]
+	\centering 
+	\includegraphics[width=0.6\textwidth]{img/photosphericabundancies.png}
+	\caption{Comparison bewteen the recommended abundances by \cite{2021A&A...653A.141A} in present-day solar photosphere and CI chondrites.\\
+	Most elements agree well, with the exception of the highly volatile elements, which are depleted in meteorites, and Li, which has been largely destroyed in the Sun due to nuclear burning.}
+	\label{fgr:chondrites-photsphere}
+\end{figure}
+\par Still, if this is actually the case, we may expect to measure a constant ratio between the various abundances of elements. Consider for example Fig.\ref{fgr:universalcurveabundancies}.
+\par First of all: As anticipated, light metals have a relatively low abundance, which is consistent with them being burned for the sake of producing lighter elements (Hydrogen and Helium) which have above-average abundance.
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.9\textwidth]{img/SolarSystemAbundances.svg.png}
+	\caption{Universal curve of abundancies, normalized on the relative abundance of Silicon. It represents the average value in the galactic disk of chemical abundancies in stars. Credits: Wikipedia, but potentially \cite{2021A&A...653A.141A}.}
+	\label{fgr:universalcurveabundancies}
+\end{figure}
+\par Similarly, the heavier elements which are produced by $\alpha$-particles capture have roughly the same relative abundance, dropping off only when crossing the peak of Iron. The formation of elements with $Z > 26$ can happen only with proton/neutron capture on the nucleus, which is a fairly rare process that can occur only in the late evolutionary stages of massive stars.
+\par As we have anticipated somewhere above, to model the evolution of a star, it's important to know the original chemical composition of the cluster the star was born from. You can think of it as "setting" the starting conditions for your system. In particular, it is of crucial importance to determine the primordial abundance of Helium.
+\par For this purpose, blue galaxies hosting very bright, massive stars have been observed, where it's possible to study the recombination lines of Helium in metal-poor $\text{H}_{\text{II}}$ regions. A very recent study (Aver et al., 2026 \cite{aver2026lbtymathrmpprojectiv}) determined up to a precision of 0.5\% the primordial helium abundance
+\begin{equation*}
+	\text{Y}_{\text{p}} = 0.2458 \pm 0.0013
+\end{equation*}
+If, for whatever reason, we want to determine the abundance of non-primordial Helium, we have to consider stellar models. That is because, usually, stars presenting He-emission lines aren't particularly trustworthy due to sedimentation of Helium, which essentially causes the superficial abundance not to reflect the original one.
+\par To create a stellar model for this purpose, we consider solar-mass stars, whose original metal abundance has been corrected for diffusion\footnote{Don't worry, we're going to see this later on much more in detail.}, and an unknown abundance of Helium. Then you let the system evolve until the present-day age of the Sun and you cross-check if you've obtained the same luminosity $L_{\odot}$ and radius $R_{\odot}$. In particular the luminosity is going to be closely related to the Helium abundance.
+\subsubsection*{Metallicity and Enrichment ratio}
+Usually, the total abundance of Helium is expressed in terms of the metallicity of a given star 
+\begin{equation}
+	\text{Y}_{\text{X}} = \text{Y}_{\text{p}} + \frac{\Delta \text{Y}}{\Delta \text{Z}} \, \text{Z}_{*}
+	\label{eq:he-metal_enratio}
+\end{equation}
+We can also define the $[\text{Fe}\,|\,\text{H}]$ as 
+\begin{equation}
+	[\text{Fe}\,|\,\text{H}] = \log_{10}\left[\frac{(N_{\text{Fe}}/N_{\text{H}})_{*}}{(N_{\text{Fe}}/N_{\text{H}})_{\odot}}\right] = \log_{10}\left[\frac{(\text{Z}/\text{X})_{*}}{(\text{Z}/\text{X})_{\odot}}\right]
+	\label{eq:fe/h}
+\end{equation}
+where we've defined $N_{i} = X_{i}/A_{i}m_{\text{H}}$. From this definition is obvious then that if $[\text{Fe}\,|\,\text{H}] = 0$, the abundance of Iron is equal to that of the Sun. Doing a slight manipulation\footnote{Which makes use of $\text{X}+\text{Y}+\text{Z} = 1$.} we can also write
+\begin{equation}
+	[\text{Fe}\,|\,\text{H}] \approx \log_{10}\left[\frac{(\frac{\text{Z}}{1-\text{Y}})_{*}}{(\frac{\text{Z}}{X})_{\odot}}\right] = \log_{10}(\text{Z}_{*})-\log_{10}(1-\text{Y}_{*}) - \log_{10}\left(\frac{\text{Z}}{X}\right)_{\odot}
+	\label{fe/h_metallicity}
+\end{equation}
+which can be inverted to obtain an expression of the form $\log_{10}(\text{Z}_{*}) \sim [\text{Fe}\,|\,\text{H}]^{-1.85}_{-1.77}$, where we're assuming $\text{Y}\sim\text{Y}_{\odot}\sim 0.24$. The subscript comes from the estimate of \cite{2022A&A...661A.140M} (Magg et al, 2022), while the superscript comes from the estimate of \cite{2021A&A...653A.141A} (Asplund et al, 2021) of the solar metallicity.
+\par Similarly, we can define the \emph{alpha-enhancement} as 
+\begin{equation}
+	[\alpha\,|\,\text{Fe}] = \log_{10}\left[\frac{(N_{\alpha}/N_{\text{Fe}})_{*}}{(N_{\alpha}/N_{\text{Fe}})_{\odot}}\right]
+\end{equation}
+which, on average, evaluates to $[\alpha\,|\,\text{Fe}] \sim 0.3$ for stars in galactic halos.
