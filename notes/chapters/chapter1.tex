@@ -3,8 +3,8 @@
 \chapter{Astrophysics' Building Blocks}\label{ch:i}
 
 \section{Introduction}
-As per the name of this chapter, in this first chapter we're going to introduce a series of important quantities and concepts that are going to be particularly useful later on, for this first introductory part I'm going to follow \cite{choudhuri}, §1.
-\par For expressing astrophysical measurements, it should be clear that the units that we customarily use for our everyday life wouldn't be doing a really good job. For example, most of the times, it isn't particularly convient to have masses expressed in gramms or kilogramms, for the masses we'll be usually concerned with are so large that saying that a star weighs $10^{33}\,\text{g}$ isn't particularly insightful, since we don't have an everyday-life object to compare it with.
+As per the name of this chapter, we're going to introduce a series of important quantities and concepts that are going to be particularly useful later on, for this first introductory part I'm going to follow \cite{choudhuri}, §1.
+\par For expressing astrophysical measurements, it should be clear that the units that we customarily use for our everyday life wouldn't be doing a really good job. For example, most of the times, it isn't particularly convient to have masses expressed in grams or kilograms, for the masses we'll be usually concerned with are so large that saying that a star weighs $10^{33}\,\text{g}$ isn't particularly insightful, since we don't have an everyday-life object to compare it with.
 \par What often happens in astrophysics is that masses are usually expressed in terms of \emph{solar masses} $M_{\odot}$, which has value
 \begin{equation}
     M_{\odot} = 1.99 \cdot 10^{33}\,\text{g}
@@ -20,7 +20,7 @@ For example Vega, a bright white star in the Lyra constellation, has a mass roug
 \end{equation}
 which is the average distance of the Earth from the Sun. Although this is a rather useful quantity, we're not still up there. We have to kick it up a notch once more.
 As the Earth moves around the Sun, the "nearby" stars seem to change their position just slightly with respect to the faraway stars, which appear to be fixed in place.
-\par This phenomenon is called \emph{parallax}; it is not particularly different from what you experience observing your own finger first with one eye and then with the other.
+\par This phenomenon is called \emph{parallax}; it is not particularly different from what you experience when observing your own finger first with one eye and then with the other.
 \par Consider the construction shown in Fig.\ref{fgr:stellarparallax}. 
 \begin{figure}[h!]
     \centering
@@ -82,7 +82,7 @@ where the quantity $I_{\nu}(\textbf{r}, t, \textbf{$\hat{k}$})$ is called the \e
 	I haven't explicitly proved the last equality, but it shouldn't be hard for you to convince yourself (or prove it yourself) that it is indeed true.
 \end{definition}
 \begin{definition}{Monochromatic radiation pressure $p_{\nu}$}
-	The monochromatic pressure is defined starting from the different directions correlations of the monochromatic intensity 
+	\par The monochromatic pressure is defined starting from the different directions correlations of the monochromatic intensity 
 	\begin{equation*}
 		K_{\nu}^{ij} = \frac{1}{4\pi} \int_{\Omega} I_{\nu}(\textbf{$\hat{k}$})\textbf{$k^{i}$}\textbf{$k^{j}$}\, \text{d}\Omega 
 	\end{equation*}
@@ -174,7 +174,7 @@ Often a spectrum is measured to have a shape more or less of blackbody form, but
 \subsubsection*{Effective Temperature}
 The effective temperature of a source $T_{eff}$ is derived from the total amount of flux, integrated over all frequencies, radiated at the source. We obtain $T_{eff}$ by equating the actual flux $F$ to the flux of a blackbody at temperature $T_{eff}$
 \begin{equation}
-    F = \int \cos\theta \,I_{\nu}\,\text{d}\nu\,\text{d}\Omega := \sigma T_{eff}^{4}
+    F = \int I_{\nu}\cos\theta \,\text{d}\nu\,\text{d}\Omega := \sigma T_{eff}^{4}
     \label{eq:effectivetemperature} 
 \end{equation}
 
@@ -250,22 +250,25 @@ Observing the spectrum emitted by stars we may expect, a bit naively, to observe
 \par Deviation from blackbody behavior in fact is usual to take the form of \emph{emission} and \emph{absorption} lines in the spectrum, which tend to stick out like sore thumbs. Clearly, different elements (and different species of the same element) will produce very different lines, allowing us to reconstruct the chemical composition of the photosphere, which is the region where the photons we observe are coming from.
 \par For our purposes, we'll be interested in the \emph{original} chemical composition of a star rather than its actual, or future, value, so that that is shed of the modifications induced by ongoing nuclear reactions.
 \par At this point, you may be objecting: Isn't the effect of nuclear reactions relevant only in the inner regions of stars?
-\par As customary in Physics, the correct answer is "It depends." Can we take for granted that the chemical composition we see in the photosphere is the same as the original one?
+\par As often happens in Physics, the correct answer is "It depends." Can we take for granted that the chemical composition we see in the photosphere is the same as the original one?
 \par Generally, no. As we'll see, stars in a certain range of masses and in some evolutionary stage of their life may develope convective or radiative envelopes, and the answer to our question we can find once we determine which of the two is going to win.
+
 \subsection{Universal Curve of abundances}
-A matter we're going to be most interested in discussing is the provenience of the various (chemical) elements we observe on Earth and all around the Universe and \emph{how} they are produced. For example, we now know that the almost entirety of Hydrogen was produced during the \emph{Primordial Nucleosynthesis} along with a bit of Helium. Metals, on the other hand, are entirely produced by \emph{Stellar Nucleosynthesis}. That's because in the early stages of the formation of the Universe, temperature dropped too fast below the critical threshold that allows the relevant nuclear reactions to produce efficiently Helium and metals. On top of that, light metals (Lithium, Beriullium and Boron) are generally destroyed for the sake of producing lighter elements like Helium (see Chapter \ref{ch:iv}) and the figure below (Fig.\ref{fgr:chondrites-photsphere}), which presents a comparison of chemical composition of the solar photosphere with that of CI chondrites.
+
+A matter we're going to be most interested in discussing is the provenience of the various (chemical) elements we observe on Earth and all around the Universe and \emph{how} they are produced. For example, we now know that the almost entirety of Hydrogen was produced during the \emph{Primordial Nucleosynthesis} along with a bit of Helium.
+\par Metals, on the other hand, are entirely produced by \emph{Stellar Nucleosynthesis}. That's because in the early stages of the formation of the Universe, temperature dropped too fast below the critical threshold that allows the relevant nuclear reactions to produce efficiently Helium and metals. On top of that, light metals (Lithium, Beriullium and Boron) are generally destroyed for the sake of producing lighter elements like Helium (see Chapter \ref{ch:iv}). Fig.\ref{fgr:chondrites-photsphere} presents a comparison of chemical composition of the solar photosphere with that of CI chondrites.
 \begin{figure}[h!]
 	\centering 
 	\includegraphics[width=0.6\textwidth]{img/photosphericabundancies.png}
-	\caption{Comparison bewteen the recommended abundances by \cite{2021A&A...653A.141A} in present-day solar photosphere and CI chondrites.Most elements agree well, with the exception of the highly volatile elements, which are depleted in meteorites, and Li, which has been largely destroyed in the Sun due to nuclear burning. Credits: \cite{2021A&A...653A.141A}.}
+	\caption{Comparison bewteen the recommended abundances by \cite{2021A&A...653A.141A} in present-day solar photosphere and CI chondrites. Most elements agree well, with the exception of the highly volatile elements, which are depleted in meteorites, and Li, which has been largely destroyed in the Sun due to nuclear burning. Credits: \cite{2021A&A...653A.141A}.}
 	\label{fgr:chondrites-photsphere}
 \end{figure}
-\par Still, if this is actually the case, we may expect to measure a constant ratio between the various abundances of elements. Consider for example Fig.\ref{fgr:universalcurveabundances}.
+\par Since elements are (on avergae) produced essentially via the same producedures, we may expect to measure a constant ratio between the various abundances of elements. Consider for example Fig.\ref{fgr:universalcurveabundances}.
 \par First of all: As anticipated, light metals have a relatively low abundance, which is consistent with them being burned for the sake of producing lighter elements (Hydrogen and Helium) which have above-average abundance.
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=0.9\textwidth]{img/SolarSystemAbundances.svg.png}
-	\caption{Universal curve of abundances, normalized on the relative abundance of Silicon. It represents the average value in the galactic disk of chemical abundances in stars. Credits: Wikipedia, but potentially \cite{2021A&A...653A.141A}.}
+	\caption{Universal curve of abundances, normalized on the relative abundance of Silicon. It represents the average value in the galactic disk of chemical abundances in stars. Credits: Wikipedia, but see also \cite{2021A&A...653A.141A}.}
 	\label{fgr:universalcurveabundances}
 \end{figure}
 \par Similarly, the heavier elements which are produced by $\alpha$-particles capture have roughly the same relative abundance, dropping off only when crossing the peak of Iron. The formation of elements with $Z > 26$ can happen only with proton/neutron capture on the nucleus, which is a fairly rare process that can occur only in the late evolutionary stages of massive stars.
@@ -274,7 +277,7 @@ A matter we're going to be most interested in discussing is the provenience of t
 \begin{equation*}
 	\text{Y}_{\text{p}} = 0.2458 \pm 0.0013
 \end{equation*}
-If, for whatever reason, we want to determine the abundance of non-primordial Helium, we have to consider stellar models. That is because, usually, stars presenting He-emission lines aren't particularly trustworthy due to sedimentation of Helium, which essentially causes the superficial abundance not to reflect the original one.
+\par If, for whatever reason, we want to determine the abundance of non-primordial Helium, we have to consider stellar models. That is because, usually, stars presenting He-lines aren't particularly trustworthy due to sedimentation of Helium, which essentially causes the superficial abundance not to reflect the original one.
 \par To create a stellar model for this purpose, we consider solar-mass stars, whose original metal abundance has been corrected for diffusion\footnote{Don't worry, we're going to see this later on much more in detail.}, and an unknown abundance of Helium. Then you let the system evolve until the present-day age of the Sun and you cross-check if you've obtained the same luminosity $L_{\odot}$ and radius $R_{\odot}$. In particular the luminosity is going to be closely related to the Helium abundance.
 \subsubsection*{Metallicity and Enrichment ratio}
 Usually, the total abundance of Helium is expressed in terms of the metallicity of a given star 
@@ -292,7 +295,7 @@ where we've defined $N_{i} = X_{i}/A_{i}m_{\text{H}}$. From this definition is o
 	[\text{Fe}\,|\,\text{H}] \approx \log_{10}\left[\frac{(\frac{\text{Z}}{1-\text{Y}})_{*}}{(\frac{\text{Z}}{X})_{\odot}}\right] = \log_{10}(\text{Z}_{*})-\log_{10}(1-\text{Y}_{*}) - \log_{10}\left(\frac{\text{Z}}{X}\right)_{\odot}
 	\label{fe/h_metallicity}
 \end{equation}
-which can be inverted to obtain an expression of the form $\log_{10}(\text{Z}_{*}) \sim [\text{Fe}\,|\,\text{H}]^{-1.85}_{-1.77}$, where we're assuming $\text{Y}\sim\text{Y}_{\odot}\sim 0.24$. The subscript comes from the estimate of \cite{2022A&A...661A.140M} (Magg et al, 2022), while the superscript comes from the estimate of \cite{2021A&A...653A.141A} (Asplund et al, 2021) of the solar metallicity.
+which can be inverted to obtain an expression of the form $\log_{10}(\text{Z}_{*}) \sim [\text{Fe}\,|\,\text{H}]^{-1.85}_{-1.77}$, where we're assuming $\text{Y}\sim\text{Y}_{\odot}\approx 0.24$. The subscript comes from the estimate of \cite{2022A&A...661A.140M} (Magg et al, 2022), while the superscript comes from the estimate of \cite{2021A&A...653A.141A} (Asplund et al, 2021) of the solar metallicity.
 \par Similarly, we can define the \emph{alpha-enhancement} as 
 \begin{equation}
 	[\alpha\,|\,\text{Fe}] = \log_{10}\left[\frac{(N_{\alpha}/N_{\text{Fe}})_{*}}{(N_{\alpha}/N_{\text{Fe}})_{\odot}}\right]
