@@ -34,3 +34,10 @@
 
 # TeXworks
 *.auxlock
+
+# Images
+
+*.jpeg
+*.jpg
+*.png
+*.gif
