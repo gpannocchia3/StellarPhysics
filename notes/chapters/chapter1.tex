@@ -301,6 +301,32 @@ which can be inverted to obtain an expression of the form $\log_{10}(\text{Z}_{*
 	[\alpha\,|\,\text{Fe}] = \log_{10}\left[\frac{(N_{\alpha}/N_{\text{Fe}})_{*}}{(N_{\alpha}/N_{\text{Fe}})_{\odot}}\right]
 \end{equation}
 which, on average, evaluates to $[\alpha\,|\,\text{Fe}] \sim 0.3$ for stars in galactic halos.
+\subsection{Initial Mass Function (IMF)}
+As we mentioned somewhere above, stars are born in clusters. During the arduous process that is stacking bit after bit of Hydrogen (along with Helium and whatever the star my found in the cluster) to build its own body, it's clear that we cannot reasonably expect all stars to be born with the same masses, just like you wouldn't expect your brother/sister to weigh just as much as you did when you were born.
+\par What we experimentally observe is a \emph{distribution of mass} in the cluster, influenced by every little fluctuation occuring in a cluster.
+\par It is worth to notice, however, that the distribution we usually refer to as IMF (\emph{Initial Mass Function}) is not the \emph{Present Day Mass Function}, which gives the statistic of the masses of stars as seen at present day. That the two distributions must be different is evident if you consider more massive stars: These, that would appear in the IMF, \emph{would not} appear in the PDMF, because they are most likely dead. Using stellar evolution models, however, it is possible to pass from a given IMF to the PDMF.
+\par Evaluating the mass distribution of stars right away is a burdensome task, that, for all but a few rare cases\footnote{For example, one of the few systems we're able to "accurately" determine the mass of is that of spectroscopic binaries.}, proves to be quite impossible. For that reason, it is customary to study the distribution in luminosity, or, equivalently, the distribution in given magnitude bands.
+\par In fact, with a basic application of the chain rule, you can write
+\begin{equation}
+	\frac{\text{d}N}{\text{d}M_{\nu}} = \frac{\text{d}N}{\text{d}m} \cdot \frac{\text{d}m}{\text{d}M_{\nu}} 
+	\label{eq:luminosityfunction}
+\end{equation}
+Unable to directly measure our quantity of interest $\text{d}N/\text{d}m$, we can circumvent the problem by calculating the number of stars in a given luminosity range and calculating the relation between mass and luminosity, which is going to be one of the many jobs of stellar models.
+\par Once you're finally done, you'll probably find a relation of the form
+\begin{equation}
+	\frac{\text{d}N}{\text{d}m} \propto m^{-\alpha} \;\;(\alpha > 0)
+	\label{eq:imf}
+\end{equation}
+so less massive stars will be favored with respect to heavier stars.
+\par For example, at present day, the IMF that is customarily into use is that found by \cite{2013pss5.book..115K}
+\begin{align}
+	M\in (0.08, 0.5)\,M_{\odot} & \to \alpha = 1.3 \pm 0.3\\
+	M > 0.5\,M_{\odot} & \to \alpha \approx 2.3
+	\label{eq:kroupaimf}
+\end{align}
+\par Note that Kroupa's IMF is in good accord with Salpeter's IMF \cite{1955ApJ...121..161S}, which was one of the first proposals for a IMF.
+\par For the moment, although we know that it shouldn't actually be the case, we're observing a \emph{constant} IMF in galaxies, clusters and so on. Just recently, we're discovering that, luckily for us, our prediction of non-constancy is verified when you take into account regions with a high star formation rate and not too low metallicity.
+
 \subsection{Stellar Trivia}
 In this subsection I'm going to anticipate some of the subjects that are going to be the main interest of many among the following chapters.
 \par Starting from dimensional considerations only (which, however, requires that you know the equations describing stellar structures), you can easily show that more massive stars are hotter and have a higher luminosity, hence them having a shorter lifespan. You may argue that more massive stars have more "fuel" to burn, thus "cancelling out" the effect of a higher luminosity.
@@ -309,3 +335,24 @@ In this subsection I'm going to anticipate some of the subjects that are going t
 \par This inspires our first, important deduction: If in a cluster stars are predominantely blue, the cluster must be young! Since more massive stars have a shorter lifespan, if the cluster was older, then we wouldn't be able to observe such stars.
 \par It's important to distinguish to kinds of clusters: \emph{Globular clusters} are generally old clusters found in galactic halos; they have little gas, no (recent) star formation and are generally arranged spherically symmetrically around the GC. In globular clusters would be logical to expect a lower metallicity, for a lower number of generations of stars might have followed one another in that region.
 \par On the other hand \emph{open clusters} are now found in the galactic plane\footnote{Originally, they are likely to have formed in the halo, but their elliptic motion intersecting the GP have experienced numerous interactions with other stars and objects that have brought their trajectory to ultimately lie on the GP.}; they have much more gas available and there's continuous star formation. Generally, open clusters house a smaller number of stars, therefore allowing us to see only stars still in the \emph{main sequence} stage\footnote{The main sequence stage is an evolutionary stage of stars during which Hydrogen is burned in the core.}. In open clusters, it's sensible to expect a higher metallicity (with respect to globular clusters).
+\par As a further classification, astrophysicists are used to distinguish two (three) populations of stars, depending on their characteristics and the cluster they're found in:
+\begin{itemize}
+	\item \emph{PopI Stars}: These are typically young, blue stars, which are very bright and with a high metallicity content. They're found in open clusters.
+	\item \emph{PopII Stars}: These are typically old, reddish stars, which aren't particularly bright and have a low metallicity content. They're found in globular clusters.
+	\item \emph{PopIII Stars}: Allegedly, this population of star should be the first one to form after the Big Bang. As so, its metallicity content should be virtually zero. This would imply that they should have large masses\footnote{In fact, they should be massive enough to leave behind, after their death, an intermediate mass black hole.} and be very bright. As you might imagine, PopIII star wouldn't live for long.
+\end{itemize} 
+
+\subsubsection*{Thick Disk}
+
+Along with the halo, the buldge and the \emph{thin} disk, there's another structure in galaxies that is worth mentioning: The \emph{thick disk}.
+\par As the name suggests, the thick disk has a scale height that is greater than that of its thinner counterpart ($H_{\text{thick}} \sim 1\,\text{kpc}$ opposed to $H_{\text{thin}} \sim 0.1\,\text{kpc}$) but a shorter scale length ($l_{\text{thick}} \sim 3-4\,\text{kpc}$ opposed to $l_{\text{thin}} \sim 8-15\,\text{kpc}$). Like the halo, it is one of the more ancient structures, and presents characteristics that are hybrid between the halo and the thin disk, especially if you consider its rotational velocity and its metallicity content.
+\par It is difficult to trace a sharp boundary between the thick disk and the halo/thin disk; usually considerations are made taking into account the kinematic of the disk.
+
+
+\subsubsection*{Dwarf Galaxies}
+
+Dwarf galaxies are, unexpectedly, low-mass galaxies, in a range that can span from the typical mass of globular clusters ($10^{5}\,M_{\odot}$) to that of more "standard" galaxies ($10^{9}-10^{11}\,M_{\odot}$). An example of dwarf galaxies are the Large and Small Magellanic Clouds, that are both satellites of the MW.
+\par One way to indentify dwarf galaxies is by observing the \emph{streams} they leave in their wake as they move around their host galaxy, which are essentially groups of stars that get left behind when the smaller cloud gets gravitationally captured. The presence of streams is usually reflected into zones of (sensibly) different metallicity.
+\par Moreover, it has been observed that the $\alpha$-enhancement in dwarf galaxies is smaller than that of the MW's halo, making it quite improbable that they can make a relevant contribution.
+\par On a concluding note, I think it's worth to mention at least the existence of Ultra-Faint Dwarf Galaxies (UFDs), which are a class of galaxies that contain from a few hundred to one hundred thousand stars, making them the faintest galaxies in the Universe.\par UFDs resemble globular clusters in appearance but have very different properties. For once, UFDs contain a significant amount of dark matter and are more (spatially) extended.
+\par UFDs are the most dark matter-dominated systems known to present day.
