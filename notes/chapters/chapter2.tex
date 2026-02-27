@@ -1,5 +1,89 @@
 \chapter{Stellar Structures}\label{ch:ii}
 
+\section{Stellar Equilibrium Equations}
+
+In this chapter we're going to introduce and describe the so-called \emph{stellar equilibrium equations}, which account for the physical mechanisms that are interplaying within stellar structures, and compare it with what real-life observations tell us.
+\par The goal of stellar structure equations is making possible to predict instant after instant in every point of the star the value of each physical and chemical properties, so that once an initial condition is set, we're going to be virtually able to accurately determine the evoluition of those properties.
+\par On a first approximation, we can consider stars to be autogravitating mass conglomerates, for which the gravitational pull is evenly balanced by the pressure gradients (and possibly other forces) that set in within the star. Since gravity is a \emph{central force}, we can well expect the equilibrium configuration to be that of a sphere. This greatly simplifies the problem at hand, since from a three-dimensional configuration is reduced to a one-dimensional configuration by means of symmetry.
+\par The approximation of spherical symmetry allows us to formally decompose the star in a series of \emph{shells} of infinitesimal width $\text{d}r$, so that the physical properties of the star are approximately constant withing said shell. The quantities we'll be interested in considering are the pressure $p(r)$, the density $\rho(r)$, the temperature $T(r)$, the various relative abundances $X_{i}(r)$, the mass $M(r)$ (that is considered to be the mass contained in the sphere of radius $r$) and the luminosity $L(r)$ (the energy per unit time entering the shell at distance $r$ from the center of the star).
+\par Given this notation, the mass found inside radius $r+\text{d}r$ should be $M(r)+\text{d}M$, where $\text{d}M$ can be identified with the mass of the infinitesimal spherical shell. Said $\rho(r)$ the density, then the mass of this shell is
+\begin{equation*}
+	\text{d}M = 4\pi r^{2}\rho\,\text{d}r
+\end{equation*}
+which yields our first stellar structure equation
+\begin{equation}
+	\boxed{
+		\frac{\text{d}M}{\text{d}r} = 4\pi r^{2}\rho(r)
+	}
+	\label{eq:massconservation}
+\end{equation}
+Note that (\ref{eq:massconservation}) is essentially a restating of the continuity equation of mass.
+\par Let's stop for a moment to consider how sensible are the two approximations we're implementing in our description, that are the request of spherical symmetry and that only pressure gradients are balancing the gravitational pull. The former is generally met by the vast majority of stars, while for the latter it might be necessary to use some more care, especially when dealing with (highly) rotating stars, forcing us to add centrifugal forces to the picture\footnote{Note that in the presence of rotation, the equilibrium configuration is no longer spherically symmetric, since rather than the gravitational potential, we have now to consider a baroclyinic potential (gravitational+centrifugal).}.
+\par Generally, if the centrifugal acceleration at the surface is too high with respect to the surface gravitational acceleration, the necessity of modifying our equations to keep track of centrifugal forces may arise.
+\par For this purpose, we define the \emph{critical angular velocity} $\Omega_{c}$ so that
+\begin{equation}
+	\Omega_{c}^{2} \sim \frac{GM_{*}}{R_{*}^{3}} \implies v_{c} \sim \sqrt{\frac{GM_{*}}{R_{*}}}
+	\label{eq:critical_av}
+\end{equation}
+Note that depending on the mass and the radius of the star we're considering, critical velocities might get as high as $v_{c} \sim 300-600\,\text{km}/\text{s}$; for comparison, the equatorial velocity of the Sun is $v_{\odot}^{\text{eq}} \sim 2\, \text{km}/\text{s}$.
+\par To result in non-negligible effects, it is sufficient that the angular velocity gets as high as $\Omega_{\text{sup}} \gtrsim 0.5\Omega_{c}$; if, instead, $\Omega_{\text{sup}} \gtrsim 0.7\Omega_{c}$ you start observing deformations in the structure of the star, but this are fairly rare. As you may easily guess, these are problems that concern with the more massive stars, getting more and more relevant as the mass of the star gets bigger.
+\par About $20\%$ of the stars with mass in the range $10M_{\odot}\lesssim M \lesssim 19M_{\odot}$ (so typically stars of spectral class B or O) have velocities of order
+\begin{equation*}
+	150 < v_{\sin i} < 300-400\,\text{km}/\text{s}
+\end{equation*}
+Note that through Doppler effect, we're able to measure the velocity of objects along the line of sight, but in principle, the rotation axis of the object we're observing may be tilted of an angle $i$ with respect to the observer, hence the notation/factor $\sin i$.
+\par Increasing the mass, we find that about $30\%$ of the stars with mass in the range $20M_{\odot}\lesssim M \lesssim 40M_{\odot}$ have roughly the rotational velocities of the order of the ones we've written above.
+\par To "detect" the presence and relevance of rotation it is customary to perform a spectroscopic analysis of the star. In fact, it is clear that the presence of rotation issues the arising of convection motion within the star, which in turn implies a "mixing" of the star's contents.
+\par In principle, if we observe main sequence stars, the chemical composition of the surface should be roughly equal to the starting composition\footnote{If we neglect the effects of \emph{sedimentation}, that is. The characteristic times are however too short for sedimentation to occur, so it should be probably safe neglecting it.}, for temperature isn't high enough to start the nuclear processing on the surface. But, in presence of strong mixing mechanisms, we may observe an excess of Helium and Nitrogen that are brought to the surface from the inner regions of the star (where nuclear reactions are at least partially active).
+
+\subsection*{The Effect of Magnetic Fields (anticipation)}
+\par In principle, even particularly strong magnetic fields may influence the surface composition and structure of the star. This, however, requires
+\begin{equation*}
+	\beta = \frac{p_{\text{gas}}}{p_{\text{mag}}} \sim 1 \; \text{with} \; \beta = \frac{8\pi p}{B^{2}}
+\end{equation*}
+that in turn would mean having magnetic fields as high as $B \approx 3000-5000\,\text{Gauss}$. In general they are not relevant, but there exist very rare cases such that of \emph{magnetic stars} of class $A_{p}$ or $B_{p}$, where the subscript "p" is to indicate particular lines in the spectrum of such stars. For comparison
+\begin{equation*}
+	\langle B \rangle _{\odot} \sim 0.5-4\,\text{Gauss} \; \text{vs} \; \langle B \rangle _{MS} \sim 1-30\,\text{kGauss}
+\end{equation*}
+\par Magnetic fields that strong are assured to influence the external layers of such stars, inducing mixings that lead to a modification of the surface abundances.
+\par Another class of magnetic stars is that of \emph{magnetic white dwarves} that, although very rare, can reach magnetic fields of order $10^{6}-10^{9}\,\text{Gauss}$. Similarly, in \emph{magnetars} (magnetic neutron stars), magnetic fields can reach intensities of $10^{14}-10^{15}\,\text{Gauss}$.
+\par Note that in principle we're able to detect the presence of strong magnetic fields by studying the surface oscillation of the star, performing what's called \emph{asteroseismology}.
+
+\subsection{Free Fall Time}
+
+\par Our initial claim was that for the majority of their life, stars are in \emph{hydrostatic equilibrium}, in a configuration where pressure gradients are evenly matching the collapse forces. But can we be so sure that a star is, as a matter of fact, in equilibrium?
+\par We know, for example, that the Sun has been stable on timescales of at least a couple hundred years. On top of that, looking at the Milky way we can find billions of stars with characteristics similar to those of the Sun but in different stages of their life, so that we might have an idea of the whole life cycle of our dearest yellow dwarf.
+\par From those observations, we learn that the Sun must have been stable for times of the order of millions of years. Of course, to make sure it is indeed in hydrostatic equilibrium, we should compare with the \emph{dynamical timescales} the observation timescales over which we can safely claim that its characteristics (e.g., the luminosity and the radius) haven't changed.
+\par Let's consider a spherically symmetric star with constant density. In presence of gravity alone, we can write 
+\begin{equation*}
+	\ddot{r} = -\frac{GM}{r^{2}}
+\end{equation*}
+which can be immediately integrated to yield 
+\begin{align*}
+    \frac{1}{2}\dot{r}^{2} &= \frac{GM}{r}+\text{const.}\\
+    &= \frac{GM}{r}-\frac{GM}{R}
+\end{align*}
+where we have set the initial conditions for $t=0$: $r=R$ and $\dot{r} = 0$.
+\par The free-fall timescale can be thus obtained by committing a mathematical atrocity, but I (and, for extension, you too) don't care\footnote{It is actually less atrocious than I'm making it sound like.}
+\begin{align*}
+    \tau_{ff} &= \int_{0}^{t_{ff}} \text{d}t = \int_{R}^{0}\frac{1}{\dot{r}}\,\text{d}r \\
+    &= \int_{0}^{R} \frac{\text{d}r}{\sqrt{2GM\left(\frac{1}{r}-\frac{1}{R}\right)}} = \frac{\pi}{2\sqrt{2}}\sqrt{\frac{R^{3}}{GM}}
+\end{align*}
+thus, if we use $R^{3}/GM = 3/4\pi G\rho$
+\begin{equation}
+    \tau_{ff} = \sqrt{\frac{3\pi}{32G\rho}} \approx 1.63\,\text{Myr}\cdot\left(\frac{10^{3}\,\text{cm}^{-3}}{\mu n}\right)^{1/2}
+    \label{eq:ff_timescale}
+\end{equation}
+\par For the Sun, the free-fall timescale amounts to roughly $\tau_{ff} \sim 30\,\text{min}-1\,\text{h}$ depending on the calculation that has been used. So we can safely claim that the Sun is definitely not collapsing. What if, instead, it is exploding?\footnote{Read: expanding outwards.}
+\par To see that we can calculate the explosion time, sound time, or dynamical time as 
+\begin{equation}
+    \tau_{\text{sound}} = \frac{R}{c_{s}} \approx 0.5\,\text{Myr}\,\left(\frac{R}{0.1\,\text{pc}}\right)\left(\frac{0.2\,\text{km}\,\text{s}^{-1}}{c_{s}}\right)
+    \label{eq:sound_time}
+\end{equation}
+If $\tau_{ff}>\tau_{\text{sound}}$ the system returns to a stable equilibrium as the pressure forces can overcome gravity. Conversely, for $\tau_{ff}<\tau_{\text{sound}}$ gravitational collapse takes place.
+
+
+
 \section{Radiative Transfer}
 Most of our knowledge about the Universe is based on the electromagnetic radiation that reaches us from far far away. EM radiation is obviusly not the only way we can probe the Universe we live in but, in respect to neutrinos, cosmic rays or even gravitational waves, it's not a long stretch to claim it is by far the most understood.
 \par It is most important then that an astrophysicist worthy of his (or her) name has a good grasp of the theory of radiative transfer and of its applications.
