@@ -82,7 +82,243 @@ thus, if we use $R^{3}/GM = 3/4\pi G\rho$
 \end{equation}
 If $\tau_{ff}>\tau_{\text{sound}}$ the system returns to a stable equilibrium as the pressure forces can overcome gravity. Conversely, for $\tau_{ff}<\tau_{\text{sound}}$ gravitational collapse takes place.
 
+\subsection{Hydrostatic Equilibrium}
 
+In the last section we showed that is fair for us to assume that stars are in \emph{hydrostatic equilibrium} for most of their lives. We now turn to write an equation (the second of four) that will allow to characterize our star.
+\par Consider a star in which the only relevant forces acting on a spherical shell between $r$ and $r+\text{d}r$ and transverse area $\text{d}A$ are the gravitational pull and the pressure forces (both due to the gas and photons). It's not difficult to show that the balance condition for the mass of the small element is
+\begin{equation*}
+	-\text{d}p\text{d}A -\frac{GM_{r}}{r^{2}}\rho\text{d}r\text{d}A = 0
+\end{equation*}
+from which 
+\begin{equation}
+	\boxed{
+		\frac{\text{d}P}{\text{d}r} = -\frac{GM_{r}}{r^{2}}
+	}
+	\label{eq:mechanical_eq}
+\end{equation}
+A quick look at (\ref{eq:massconservation}) and (\ref{eq:mechanical_eq}) will convince you that we have more free variables (functions of the radial coordinate) than equations. This is one of the many cases in which the \emph{closure problem} pops out. To solve it we're gonna need to introduce an equation of state (EoS)
+\begin{equation}
+	\boxed{
+		p = p(\rho, T, X, Y, X_{i})
+	}
+	\label{eq:general_eos}
+\end{equation}
+where the various quantities have their obvious meaning. A particularly simple configuration (that we'll have the pleasure to look somewhere in the following) is the one where we're allowed to take a \emph{politropic equation of state}
+\begin{equation}
+	p = K\rho^{\gamma}
+	\label{eq:politropic_eos}
+\end{equation}
+with $K$ some constant and $\gamma$ some power that depends on the particular gas and its degenerate state.
+\par Let us now take a look at another particularly simple EoS, that is the equation of state of perfect (non degenerate) gas
+\begin{equation}
+	p = nkT = \frac{\rho(r)}{\mu(r) m_{H}}kT(r)
+	\label{eq:perfectgas_eos}
+\end{equation}
+with $\mu(r)$ the \emph{mean molecular weight}, which clearly depends on the elements present in the star and their ionization state, which can (hopefully) inferred from considering Saha's equation (\ref{eq:saha}). In general it's not easy to determine the exact form of $\mu(r)$ so it is customary to consider the easy scenario of a \emph{completely ionized} star\footnote{People tend to say that a star is completely ionized when its temperature is at least $T > 10^{6\,\text{K}}$, although that's a completely arbitrary lower limit. For instance, heavier elements like Iron, which have electrons to spare, are completely ionized at much higher temperatures.}
+\par If we consier $X$ the relative abundance of Hydrogen, $Y$ the relative abundance of Helium and $X_{i}$ the relative abundance of the metal with $i$ so that $A>4$\footnote{Sorry $^{4}_{3}\text{He}$, you're too less abundant to be considered. But your time will come soon.}. If we consider the number of ions and electrons that complete ionization generates:
+\begin{itemize}
+	\item Hydrogen: \#ions $X/m_{H}$, \#electrons $X/m_{H}$;
+	\item Helium: \#ions $Y/4m_{H}$, \#electrons $2Y/4m_{H}$;
+	\item Metal $i$-th: \#ions $X_{i}/A_{i}m_{H}$, \#electrons $Z_{i}X_{i}/A_{i}m_{H}$
+\end{itemize}
+so that the total number of particles (per unit volume) is just
+\begin{equation}
+	n = \left[2X+\frac{3Y}{4}+\sum_{i=4}^{N}\left(\frac{X_{i}}{A_{i}}+\frac{Z_{i}X_{i}}{A_{i}}\right)\right]\frac{\rho}{m_{H}}
+	\label{eq:completeionization_species}
+\end{equation}
+\par If we consider the following approximation for (\ref{eq:completeionization_species})
+\begin{equation*}
+	\frac{X_{i}}{A_{i}}\ll 1 \quad \frac{Z_{i}}{A_{i}}\sim \frac{1}{2}
+\end{equation*}
+we find
+\begin{equation}
+	\mu^{-1} \approx 2X + \frac{3Y}{4} + \frac{1}{2} \sum_{i=4}^{N} X_{i} = 2X + \frac{3Y}{4} + \frac{Z}{2}
+	\label{eq:molecularweight}
+\end{equation}
+where we've introduced the \emph{metallicity} $Z$.
+\par We can also consider the molecular weight restricted to ions only
+\begin{equation*}
+	\mu_{i}^{-1} = 2X + \frac{3Y}{4} +\sum_{i = 4}^{N}\frac{X_{i}}{A_{i}}
+\end{equation*}
+and consider an average charge for the mixture of elements $\bar{Z}$, so that $n_{e} = \bar{Z}n_{i} \approx \bar{Z}\rho/\mu_{i}m_{H}$. From this we can define the mean molecular weight of electrons as 
+\begin{equation*}
+	\frac{\mu_{i}}{\bar{Z}} \to n_{e} = \frac{\rho}{\mu_{e}m_{H}}
+\end{equation*}
+\par If we plug this all back in the EoS for the perfect gas 
+\begin{equation*}
+	p_{\text{gas}} = nkT = (n_{e}+n_{i})kT = \frac{\rho k T}{m_{h}}\left(\frac{1}{\mu_{i}}+\frac{1}{\mu_{e}}\right)
+\end{equation*}
+we conclude
+\begin{equation}
+	\frac{1}{\mu} = \frac{1}{\mu_{i}}+\frac{1}{\mu_{e}}
+	\label{eq:mwcomposition}
+\end{equation}
+
+\subsection{Temperature Gradients}
+
+\par As you probably know, in the inner regions of stars holds the so called \emph{Local Thermodynamic Equilibrium} (for friends, LTE): In these regions there is, as the name suggests, punctual and \emph{local} thermodynamic equilibrium between matter, which will be then well described by a Maxwell-Boltzmann distribution, and radiation, which can be described by (\ref{eq:blackbodyintensity}).
+\par This fact should also suggest you that, since we're able to observe temperature gradients within stars, it is not possible for stars to be in \emph{stric thermodynamic equilibrium} (STE) and thus emit like perfect blackbodies with fixed temperature.
+\par Let us try to give an order of magnitude estimate of the temperature gradient within, say, the Sun
+\begin{equation*}
+	\langle\,\frac{\text{d}T}{\text{d}r}\,\rangle = \frac{T_{c}-T_{S}}{R_{\odot}} \approx 10^{-4}\,\text{K}\,\text{cm}^{-1}
+\end{equation*}
+which means that over the average mean free path of a photon in the inner regions of stars ($\lambda\sim 0.1-1\,\text{cm}$), the difference in temperature will be
+\begin{equation*}
+	\Delta T = \langle\,\frac{\text{d}T}{\text{d}r}\,\rangle\cdot \lambda \approx 10^{-5}-10^{-4}\,\text{K}
+\end{equation*}
+which is very small. But to actually check if the assumption of LTE is valid (if at all sensible) we shall consider the variation in internal energy of the photons. We know that in thermal equilibrium $U = aT^{4}$, so 
+\begin{equation*}
+	\frac{\text{d}U}{U} = 4\frac{\text{d}T}{T} \sim 10^{-12}-10^{-11}
+\end{equation*}
+which means the deviation from isotropic (blackbody) behavior is negligibly small over the mean free path of photons, therefore allowing us to assume the LTE configuration. 
+\par We know, either through direct observation or because you've read the upcoming section about radiative transfer, that wherever is a temperature gradient there is also a radiative flux (along with a convective motion and electronic conduction)!
+\par On a first approximation we may write
+\begin{equation*}
+	\frac{\text{d}T(r)}{\text{d}r}\Big|_{\text{rad}} \propto F(r)\bar{\kappa}
+\end{equation*}
+wnere $F$ is the flux we've defined in (\ref{eq:bolometricflux}) and $\bar{\kappa}$ is some average \emph{opacity}\footnote{Opacity is measured in $\text{cm}^{2}\,\text{g}^{-1}$.} that sums up the various interaction channels between matter and radiation. Note that in general it is frequency dependent\footnote{For a more rigorous definition see either the next chapter or \cite{1986rpa..book.....R}.}.
+\par In the equation we've written above we're assuming that the transport of energy is carried out by radiation alone, which is essentially the temperature gradient that we'd observe if all the flux was transported by radiation.
+\par Taking a closer look to the micro-physics involved in absorption phenomena we learn that is possible to link the opacity to the mean free path of electrons
+\begin{equation*}
+	\lambda_{\sigma} = (n\langle\sigma\rangle)^{-1} = (\rho\bar{\kappa})^{-1}
+\end{equation*}
+\par If, on the other hand, there were another channel available for transporting energy on top of radiation, we may be writing
+\begin{equation*}
+	F(r) = \frac{L(r)}{4\pi r^{2}} = F_{\text{rad}}+F_{\text{conv}}
+\end{equation*}
+where we've assumed the presence of, say, relevant convective motions within the star. It should go without saying that the temperature gradient will no longer be the gradient induced by radiative transport, but will rather be an \emph{ambient gradient}, which we might express as 
+\begin{equation*}
+	\frac{\text{d}T(r)}{\text{d}r}\Big|_{\text{amb}} \propto \bar{\kappa}F_{\text{rad}}
+\end{equation*}
+Clearly, since now radiation is transporting only a part of the total flux
+\begin{equation*}
+	\Big|\frac{\text{d}T(r)}{\text{d}r}\Big|_{\text{amb}} < \Big|\frac{\text{d}T(r)}{\text{d}r}\Big|_{\text{rad}}
+\end{equation*}
+\par If we define with $\phi$ the flux of photons per unit time, and approximate the number of interactions in an infinitesimal distance $\text{d}r$ as $\text{d}r/\lambda$, with $\lambda$ the mean free path, we can calculate the transferred momentum
+\begin{equation*}
+	\delta p = \phi \frac{\text{d}r}{\lambda}\frac{h\nu}{c} = \frac{F(r)}{\lambda c}\text{d}r
+\end{equation*}
+But the variation in (linear) momentum is equal to the variation of pressure $\delta p = \delta P_{\text{rad}}$
+\begin{equation*}
+	\frac{\text{d}P_{\text{rad}}}{\text{d}r} = \frac{F(r)}{\lambda c}
+\end{equation*}
+If we recall that $P_{\text{rad}} = U/3 = aT^{4}/3$ and correct the sign of the expression (to address the mismatch of signs between the flux and temperature gradient), we finally yield
+\begin{equation*}
+	F(r) = -\lambda c a \frac{4}{3}T^{3}\frac{\text{d}T}{\text{d}r}
+\end{equation*}
+Recalling that $\lambda = (\rho\bar{\kappa})^{-1}$ and that $\sigma_{B} = ac/4$ we can write our third stellar structure equation
+\begin{equation}
+	\boxed{
+		F(r) = -\frac{16}{3}\frac{\sigma_{B}T^{3}}{\rho\bar{\kappa}}\frac{\text{d}T}{\text{d}r}
+	}
+	\label{eq:energytransport}
+\end{equation}
+It is often useful to flip the equation
+\begin{equation*}
+	\frac{\text{d}T(r)}{\text{d}r}\Big|_{\text{rad}} = -\frac{3\bar{\kappa}\rho}{4ac}\frac{1}{T^{3}}\frac{L(r)}{4\pi r^{2}}
+\end{equation*}
+so that in general, if $F_{\text{rad}}\neq F_{\text{tot}}$, we can make a slight manipulation and write
+\begin{equation*}
+	\frac{\text{d}T(r)}{\text{d}r}\Big|_{\text{amb}} = -\frac{3\bar{\kappa}\rho}{4ac}\frac{1}{T^{3}}F_{\text{rad}}
+\end{equation*}
+If you want to see a slight more rigorous derivation of (\ref{eq:energytransport}), you may check the last part of the "Radiative Transfer" section.
+
+\subsection{Energy Production}
+
+Let us consider what happens if the stellar atmosphere was not constantly replenished with energy from the inner layers. How long would it take for the star to deplete completely the energy stored in the atmosphere.
+\par The average density of the outer layers of the atmosphere is $\rho^{\text{ext}_{\odot}}\sim 10^{-7}\,\text{g}\,\text{cm}^{-3}$. We can thus give an estimate of the mean free path $\lambda_{j}\sim (\rho\bar{\kappa})^{-1}\sim 100-300\,\text{km}$. We've made the (usually decent) approximation of opacity being dominated by photoelectric effect on $\text{H}^{-}$ ions, $\bar{\kappa} \approx 0.3\,\text{cm}^{2}\,\text{g}^{-1}$. Note that in these conditions, the width of the atmosphere is of the same order of the mean free path of photons.
+\par We know the solar flux $F_{\odot} \sim 6 \cdot 10^{10}\,\text{erg}\,\text{cm}^{-2}\,\text{s}^{-1}$, as well as its temperature and pressure $T_{eff}\sim 6000\,\text{K}$, $p\approx 10^{5}\,\text{dyne}\,\text{cm}^{-2}$. The average number of particles is $n\sim 10^{17}\,\text{cm}^{-3}$, which can be integrated over the vertical direction to find an average number of photons per unit surface.
+\par The mean energy of photons can be expressed as $E_{p} = 3kT/2\sim 10^{-12}\,\text{erg}$. The energy per unit surface is thus $E_{s}\approx 10^{12}\,\text{erg}\,\text{cm}^{-2}$. Finally, we find that the energy stored in the atmosphere would be depleted in roughly
+\begin{equation*}
+	\tau = \frac{E_{s}}{F} \approx 15\,\text{s}
+\end{equation*}
+In such a short time, we would be able to discern immediately the changes in color in the atmosphere. Similarly, through the random-walk approximation, we may find an estimate of the time it takes photons to escape the inner regions of stars.
+
+\subsubsection*{Random Walks}
+
+\par Consider a photon emitted in an infinite, homogeneous scattering region. It travels a displacement $\vec{r}_{1}$ before being scattered, then travels in a new direction over a displacement $\vec{r}_{2}$ before being scattered, and so on. After N free paths, the total displacement will look like 
+\begin{equation*}
+    \vec{R} = \sum_{i=1}^{N}\vec{r}_{i}
+\end{equation*}
+The average total displacement will be identically null. Therefore, we must evaluate the mean square of the total displacement, which, in the assumption of independent and isotropic scattering, must be expressed as 
+\begin{equation*}
+    l_{*}^{2} = \langle\vec{R}^{2}\rangle = \sum_{i=1}^{N}\langle\vec{r}_{i}^{\,2}\rangle = \sum_{i=1}^{N} l^{2}_{i}
+\end{equation*}
+The quantity $l_{*}$ is the root-mean-square net displacement of the photon, while $l^{2}$ denotes the mean square of the free path of a photon, which within a factor of order unity, it's simply the mean free path of a photon.
+\par Since the mean square displacements of each scattering iteration have no reason to be different, we'll just write 
+\begin{equation*}
+    l_{*} = \sqrt{N}l
+\end{equation*}
+Said $L$ the linear dimension of the object photons are trying to "escape" from, the number of scatterings events required to actually escape from regions of large optical depth is roughly determined by setting $l_{*} \approx L$. Then $N \sim L^{2}/l^{2}$.
+\par This way, we can find the number of interactions needed to travel through a solar radius $R_{\odot}$ if the average displacement is a mean free path $\lambda$
+\begin{equation*}
+	\Delta x = \sqrt{z}\lambda \implies z\approx\left(\frac{R_{\odot}}{\lambda}\right)^{2} = 1.96\cdot10^{22}
+\end{equation*}
+If an interaction takes, on average, $\tau = 10^{-8}\,\text{s}$, the time needed to perform all those interactions is $\Delta t \approx 10\,\text{Myr}$. This usually goes by the name of \emph{thermal timescale}.
+\par If we consider the average density of a star and a mean opacity independent of temperature and density, we can write
+\begin{equation*}
+	\bar{\rho} = \frac{M}{\frac{4\pi}{3}R^{3}}
+\end{equation*}
+but for stars with mass in the range $M_{\odot}\lesssim M \lesssim 10M_{\odot}$, mass scales linearly with the radius $M\propto R$. So
+\begin{equation*}
+	\lambda = (\bar{\kappa}\rho)^{-1} \propto R^{2} \to \sqrt{z} \propto R^{-1} \implies \Delta t_{th} \propto R^{-2}
+\end{equation*}
+This is telling us that increasing the mass of a star (and thus the radius) has the surprising consequence of a (very) reduced lifespan.
+\newline 
+\par We now present the last equation of stellar structure, that relates the luminosity gradient to the rate of production of energy
+\begin{equation}
+	\boxed{
+		\frac{\text{d}L(r)}{\text{d}r} = 4\pi r^{2} \rho(r)\epsilon(r)
+	}
+	\label{eq:energyproduction}
+\end{equation}
+where $\epsilon(r)$ is the "energy production rate", that is usually decomposed in three contributions
+\begin{equation*}
+	\epsilon(r) = \epsilon_{g}(r) + \epsilon_{N}(r) - \epsilon_{\nu}(r)
+\end{equation*}
+The easier to address is the term $-\epsilon_{\nu}$, which expresses the energy lost to neutrinos that are produced where there's no nuclear reactions. These neutrinos, produced via various channels, are often called \emph{thermal neutrinos}. The main channels of production are summed up below:
+\begin{align*}
+	e^{-} + (Z, A)\;\text{or}\;e^{-} & \to e^{-} + (Z,A)\;\text{or}\;e^{-} +\nu_{e}+\bar{\nu}_{e} \quad \text{Bremsstrahlung}\\
+	\gamma + e^{-} & \to e^{-} +\nu_{e}+\bar{\nu}_{e} \quad \text{Photoproduction}\\
+	\gamma & \to e^{-} + e^{-} \to +\nu_{e}+\bar{\nu}_{e} \quad \text{Pair annihilation}\\
+	\gamma_{\text{plasmon}} & \to \nu_{x} + \bar{\nu}_{x} \quad \text{Neutrinic oscillations} \\
+	(Z,A) + e^{-} & \to (Z-1,A)+\nu_{e} \quad \text{Neutralization}
+\end{align*}
+\par Please note that the subject of neutrinic oscillations is rather technical and I know nothing of it to make this surely intriguing subject justice. The only thing I know is that the collective oscillations in a plasma, \emph{plasmons}\footnote{Not to be confused with the omonimous biscuits.}, may decay into one of the three leptonic pairs of neutrinos.
+\par The next one to address is the contribution given by \emph{gravitational energy} $\epsilon_{g}$. Consider the 1st principle of thermodynamics
+\begin{equation}
+	\text{d}Q = \text{d}U + p\text{d}V \quad \text{d}Q_{m} = \text{d}U_{m} + p\text{d}\left(\frac{1}{\rho}\right)
+	\label{eq:1st_principle}
+\end{equation}
+where the subscript $m$ in the second equation means "per unit mass". We may then define $\epsilon_{g} = -\text{d}Q_{m}/\text{d}t$. Invoking entropy, this becomes
+\begin{equation*}
+	\epsilon_{g} = -\frac{\text{d}Q_{m}}{\text{d}t} = -T\frac{\text{d}S_{m}}{\text{d}t} = -T\left[\partial_{p}S)_{T}\frac{\text{d}p}{\text{d}t}+\partial_{T}S_{m})_{p}\frac{\text{d}T}{\text{d}t}\right]
+\end{equation*}
+which, once we introduce the \emph{specific heat capacity at constant pressure} $c_{p} = T\partial_{T}S_{m})_{p}$ and the heat exchanged during an isothermal transformation $E_{T} = -T\partial_{p}S)_{T}$, we may finally write
+\begin{equation}
+	\epsilon_{g} = -\frac{\text{d}Q_{m}}{\text{d}t} = E_{T}\dot{p}-c_{p}\dot{T}
+	\label{eq:gravitationalenergy_productionrate}
+\end{equation}
+\par Since time derivatives are involved, it should be clear that we are in the need of having two different models to describe the structure of a star in different times. To do so, it is necessary to solve \emph{mesh by mesh} the stellar structure equations. It is then of crucial importance knowing how abundances change within a given mesh. Those who work with this stuff usually linearize the function describing the evolution of the abundance of the $i$-th element as such
+\begin{equation}
+	X_{i,k}^{\text{new}} = X_{i,k}^{\text{old}} + \frac{\text{d}X_{i}}{\text{d}t}\Delta t
+	\label{eq:linearized_abundancevolution}
+\end{equation}
+where the subscript $k$ refers to a given mesh. The time interval $\Delta t$ is often chosen so that in each mesh the physical variables and/or the abundances do not vary more than a predetermined value.
+\newpage
+
+\subsubsection*{Concluding note}
+
+\par For the sake of completeness, I'll write down all four equations of stellar structure (with the addition of the EoS)
+\begin{align*}
+	\frac{\text{d}M_{r}}{\text{d}r} &= 4\pi r^{2}\rho(r)\\
+	\frac{\text{d}P_{r}}{\text{d}r} &= -\frac{GM_{r}}{r^{2}} \\
+	F(r) &= -\frac{16}{3}\frac{\sigma_{B}T^{3}}{\rho\bar{\kappa}}\frac{\text{d}T}{\text{d}r}\\
+	\frac{\text{d}L(r)}{\text{d}r} &= 4\pi r^{2} \rho(r)\epsilon(r)\\
+	p &= p(\rho, T, X, Y, X_{i})
+\end{align*}
+Those who are used to working with stellar structure equations are often solving them (numerically, of course) using different independent variables in the stead of the radial distance $r$. For example, in the inner regions of stars, where the mass isn't saturated, we may use the mass $M_{r}$ and express all the derivatives consequently. When the mass is saturated we have to switch to another varible, for example the pressure $p$ (the associated region is the \emph{sub-atmosphere}). As we move to the outskirts of the star, all relevant quantities will be saturated to their boundary value, and we have to switch to the \emph{optical depth} to parametrize the stellar structure equations (this is the case for the \emph{photosphere}).
+\par The interested reader may refer to \cite{choudhuri}, §3.3, to have an idea of how the boundary conditions are chosen and linked together.
 
 \section{Radiative Transfer}
 Most of our knowledge about the Universe is based on the electromagnetic radiation that reaches us from far far away. EM radiation is obviusly not the only way we can probe the Universe we live in but, in respect to neutrinos, cosmic rays or even gravitational waves, it's not a long stretch to claim it is by far the most understood.
@@ -237,17 +473,17 @@ Let us briefly consider what we have just derived. Matter often tends to emit an
 Let's be honest: In a realistic situation, we \emph{rarely} have strict thermodynamic equilibrium. If a body is in thermodynamic equilibrium, we can assume a number of important physical principles to hold, like the Maxwellian distribution 
 \begin{equation}
 	\text{d}n_{v} = 4\pi n \left(\frac{m}{2\pi k T}\right)^{3/2}v^{2}\exp\left(-\frac{mv^{2}}{2kT}\right)\,\text{d}v
-	\label{maxwell}
+	\label{eq:maxwell}
 \end{equation}
 where $n$ is the total number of particles per unit volume and $m$ is the mass of each particle. Similarly, we can expect certain laws to hold, like Boltzmann's law for occupation numbers
 \begin{equation}
 	\frac{n_{E}}{n_{0}} = \frac{g_{E}}{g_{0}}\exp\left(-\frac{E-E_{0}}{kT}\right)
-	\label{boltmann-occ}
+	\label{eq:boltmann-occ}
 \end{equation}
 and Saha's equation
 \begin{equation}
 	\frac{N_{j+1}n_{e}}{N_{j}} = 2\frac{Z_{j+1}(T)}{Z_{j}(T)}\left(\frac{2\pi m k T}{h^{2}}\right)^{3/2}\exp\left(-\frac{\chi_{j,\,j+1}}{kT}\right)
-	\label{saha}
+	\label{eq:saha}
 \end{equation}
 where $n_{e}$ is the density of electrons and $\chi_{j,\,j+1}$ is the ionization potential. Saha's equation in particular is expected to be crucial in interpreting the effect that ionization has on the emission/absorption spectrum.
 \par The proverbial "one-million-dollar-question" then is: When can we expect a system to be in thermodynamic equilibrium and when can we expect the previous principles to hold?
