@@ -305,20 +305,6 @@ which, once we introduce the \emph{specific heat capacity at constant pressure} 
 	\label{eq:linearized_abundancevolution}
 \end{equation}
 where the subscript $k$ refers to a given mesh. The time interval $\Delta t$ is often chosen so that in each mesh the physical variables and/or the abundances do not vary more than a predetermined value.
-\newpage
-
-\subsubsection*{Concluding note}
-
-\par For the sake of completeness, I'll write down all four equations of stellar structure (with the addition of the EoS)
-\begin{align*}
-	\frac{\text{d}M_{r}}{\text{d}r} &= 4\pi r^{2}\rho(r)\\
-	\frac{\text{d}P_{r}}{\text{d}r} &= -\frac{GM_{r}}{r^{2}} \\
-	F(r) &= -\frac{16}{3}\frac{\sigma_{B}T^{3}}{\rho\bar{\kappa}}\frac{\text{d}T}{\text{d}r}\\
-	\frac{\text{d}L(r)}{\text{d}r} &= 4\pi r^{2} \rho(r)\epsilon(r)\\
-	p &= p(\rho, T, X, Y, X_{i})
-\end{align*}
-Those who are used to working with stellar structure equations are often solving them (numerically, of course) using different independent variables in the stead of the radial distance $r$. For example, in the inner regions of stars, where the mass isn't saturated, we may use the mass $M_{r}$ and express all the derivatives consequently. When the mass is saturated we have to switch to another varible, for example the pressure $p$ (the associated region is the \emph{sub-atmosphere}). As we move to the outskirts of the star, all relevant quantities will be saturated to their boundary value, and we have to switch to the \emph{optical depth} to parametrize the stellar structure equations (this is the case for the \emph{photosphere}).
-\par The interested reader may refer to \cite{choudhuri}, §3.3, to have an idea of how the boundary conditions are chosen and linked together.
 
 \section{Radiative Transfer}
 Most of our knowledge about the Universe is based on the electromagnetic radiation that reaches us from far far away. EM radiation is obviusly not the only way we can probe the Universe we live in but, in respect to neutrinos, cosmic rays or even gravitational waves, it's not a long stretch to claim it is by far the most understood.
@@ -379,6 +365,7 @@ Similarly, we can consider the energy that is absorbed from the radiation when p
 \par If we use a microscopic model, then the absorption coefficient can be understood as particles with numeric density $n$ presenting an effective absorbing area, the \emph{cross section} $\sigma_{\nu}$. The coefficient $\alpha_{\nu}$ can thus be rewritten in terms of
 \begin{equation*}
 	\alpha_{\nu} = n\sigma_{\nu} = \rho \kappa_{\nu}
+	\label{eq:absorption_coeff}
 \end{equation*}
 where $\kappa_{\nu}$ is called the mass absorption coefficient or the \emph{mass-weighed opacity coefficient}.
 \par Note that in eq.\ref{alpha}, we consider “absorption” to include both “true absorption” and stimulated emission, because both are proportional to the intensity of the incoming beam. Depending on the entity of the contribution, the $\alpha_{\nu}$ coefficient may be positive or even negative, giving raise to curious phenomena.
@@ -403,6 +390,7 @@ This time we set $j_{\nu} = 0$. The equation is easily solved this time as well
 \par In this case, it's rather common to write down the equation in terms of a new variable, the \emph{optical depth} $\tau_{\nu}$
 \begin{equation}
 	\text{d}\tau_{\nu} = \alpha_{\nu}\,\text{d}s
+	\label{eq:optical_depth}
 \end{equation}
 Given this definition we'll say that if
 \begin{itemize}

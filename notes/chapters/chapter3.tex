@@ -1,3 +1,112 @@
 \chapter{Stellar Models}\label{ch:iii}
 
 \section{Introduction}
+
+\par In the last chapter we've managed to write down the four (five, if you consider the EoS) equations through which we're able to describe stellar structures. For the sake of completeness (and not to make you flip your pages back and forth), I'll write them all down below
+\begin{align*}
+	\frac{\text{d}M_{r}}{\text{d}r} &= 4\pi r^{2}\rho(r)\\
+	\frac{\text{d}P_{r}}{\text{d}r} &= -\frac{GM_{r}}{r^{2}} \\
+	F(r) &= -\frac{16}{3}\frac{\sigma_{B}T^{3}}{\rho\bar{\kappa}}\frac{\text{d}T}{\text{d}r}\\
+	\frac{\text{d}L(r)}{\text{d}r} &= 4\pi r^{2} \rho(r)\epsilon(r)\\
+	p &= p(\rho, T, X, Y, X_{i})
+\end{align*}
+\par Those who are used to working with stellar structure equations are often solving them (numerically, of course) using different independent variables in the stead of the radial distance $r$.
+\par For example, in the inner regions of stars, where the mass isn't saturated, we may use the mass $M_{r}$ and express all the derivatives consequently. When the mass is saturated we have to switch to another varible, for example the pressure $p$ (the associated region is the \emph{sub-atmosphere}). As we move to the outskirts of the star, all relevant quantities will be saturated to their boundary value, and we have to switch to the \emph{optical depth} to parametrize the stellar structure equations (this is the case for the \emph{photosphere}).
+\par The interested reader may refer to \cite{choudhuri}, §3.3, to have an idea of how the boundary conditions are chosen and linked together.
+\par Let us now take a closer look at how the deed is done.
+
+\section{Fitting Method for Stellar Structures Integration}
+
+\par In principle, you could use an atmosphere model to describe more or less accurately the atmosphere of a star. However, it may also happen that you \emph{don't want} to use an atmosphere model but rather use an approximate model. In the present section, we're going to discuss a little bit of this can be done. Clearly, these rough calculation will hold, if approximately, only in small main sequence stars, which have "simpler" atmospheres.
+\par The procedure here described follows closely the discussion by (blank, at the moment I've yet to find someone talking about this). 
+\par Consider the equation for hydrostatic equilibrium. In the atmosphere, we're going to use as independent variable the optical depth $\tau$, so that
+\begin{equation*}
+    \frac{\text{d}p}{\text{d}r} = \der{p}{r}\cdot\der{\tau}{r} = -\frac{GM_{r}\rho}{r^{2}}
+\end{equation*}
+But recall the definition of optical depth (\ref{eq:optical_depth}) and absorption coefficient (\ref{eq:absorption_coeff}), so that
+\begin{equation*}
+    \der{\tau}{r} = (-)\rho\bar{\kappa}
+\end{equation*}
+with $\bar{\kappa}$ a suitably averaged opacity coefficient. Since in the atmosphere the mass of the star is saturated $M_{r} = M_{\text{tot}}$ and so is the radius, the equation for hydrostatic equilibrium becomes
+\begin{equation*}
+    \der{p}{\tau} = \frac{g}{\bar{\kappa}}
+\end{equation*}
+where $g = GM_{\text{tot}}/R_{*}^{2}$ is the surface gravity of the star. What about the other equations? The mass is saturated, so the 1st equation is irrelevant; for the same reason, also the 4th equation is irrelevant, for there is no energy production in the atmosphere\footnote{Note that although in the atmosphere there is no energy produced by nuclear reaction, we may still have to consider the contribution of energy generation by the means of gravitational collapse. However, densities are very low in the atmosphere, making $\epsilon_{g}$ negligible.}.
+\par So we're left with only the equation for energy transport and the EoS. Note that, in general, we cannot write an expression for radiative transfer as in (\ref{eq:rt}), because we're not assured LTE to hold.
+\par So what we're going to do is writing down an approximate relation for the temperature, that is going to depend on the optical depth and the effective temperature
+\begin{equation*}
+    T = T(\tau, T_{\text{eff}})
+\end{equation*}
+\par One possible relation is the celebrated equation for the \emph{grey atmosphere}
+\begin{equation}
+    T(\tau) = \frac{3}{4}T_{\text{eff}}^{4}\left(\tau + \frac{2}{3}\right)
+    \label{eq:greyatmosphere_temp}
+\end{equation}
+which assumes LTE to hold and negligible frequency-dependence on the absorption coefficient (and thus for the opacity and optical depth as well). According to this equation, the photosphere, characterized by $T = T_{\text{eff}}$, is to be found at an optical depth $\tau = 2/3$.
+\par This approximation is sometimes used when we're interested in observing differential effects and we can be a little loose on having an accurate estimate of the effective temperature.
+\par Another expression, that is still quite in use, is that found by \cite{1969Ap&SS...3..552K}, which is essentially a grey atmosphere modified so to include the absorption of some elements
+\begin{equation}
+    T^{4}(\tau) = \frac{3}{4}T_{\text{eff}}^{4}\left(\tau - 1.017-0.30e^{-2.54\tau}-0.291e^{-30\tau}\right)
+    \label{eq:krishna_swamy_greyatmosphere}
+\end{equation}
+where the coefficients are the product of a fitting procedure.
+\par It's clear that those who create hydrodynamic atmosphere models try to take into account every possible phenomenon that may occur (and be relevant) in the atmosphere, such as turbulence. Technically, especially in larger stars with convective envelopes, it would be sensible to consider the contribution of \emph{turbulent pressure} to the total balance
+\begin{equation*}
+    p = p_{\text{gas}}+p_{\text{rad}}+p_{\text{turb}}
+\end{equation*}
+As you should know if you've attended the Fluid Dynamics or the Astrophysical Processes course, turbulence is one hell of a beast to deal with. To give you an idea of how much complex it is to even build a half-functioning model of turbulence, here's Werner Heisenberg's take on the subject\footnote{Yes, this is the same Werner Heisenberg that laid the foundations of Quantum Mechanics.}:
+\begin{quote}
+   "\emph{When I meet God, I am going to ask him two questions: why relativity? And why turbulence? I really believe he will have an answer for the first}."
+\end{quote}
+\par If we really have to include turbulence in the picture, what's often done is invoking the Boussinesq's approximation and write a barotropic expression for the turbulent pressure
+\begin{equation*}
+    p_{\text{turb}} = \rho\bar{v}_{\text{turb}}^{2} \quad \bar{v}_{\text{turb}}^{2} = \beta c^{2}_{s}
+\end{equation*}
+where $\beta \lesssim 1$ is a free parameter that has to be estimated to find an accord. But is this worth the trouble? Probably not. 
+\par On top of not knowing how to deal with turbulence, we are not able, as yet, to give a precise description of the ambient temperature gradient in the atmosphere, which already enters our equations with a free parameter.
+\par If you really want to make a meticulous job, don't bother stuffing your equations with all this stuff and get for yourselves a three-dimensional atmosphere model.
+
+\subsection{Starting the Integration}
+
+Our external boundary conditions are the star luminosity $L_{*}$ and the effective temperature $T_{\text{eff}}$. Note, however, that the former doesn't help us much at this stage, since it still doesn't enter our equations in the atmosphere.
+\par Let's assume we're starting with a very small optical depth $\tau = \tau_{0} \ll 1$, so that the pressure (and the opacity) is small $p = \epsilon \ll 1$. So, assuming we're given an expression of the form $T = T(\tau, T_{\text{eff}})$, we can calculate $T$ plugging in our values for $\tau = \tau_{0}$ and $T_{\text{eff}}$.
+\par From the EoS, since we already knew $p = \epsilon$ and $T$ we've just calculated, we obtain the density $\rho$. At this point, using all of this and the chemical composition, we can calculate the mean opacity $\bar{\kappa}$ and put everything in the equation of hydrostatic equilibrium and check if our solution is self-consistent. If not, we re-iterate the process (changing our starting values for $\tau$ and $p$) until the solution satisfies hydrostatic equilibrium within a given precision.
+\par Now that we have all our varibles determined on the external boundary, we can start integrating towards the inner regions. To do so, derivatives in our equations become incremental ratios and we solve mesh after mesh until we reach the base of the atmosphere (the boundary with the sub-atmosphere).
+\par Integrating through the sub-atmosphere, we have to raccord the values of the $n$-th mesh of the region with the most external one of the stellar interior. So we'll have to match $p_{N}$, $\rho_{N}$, $T_{N}$, $L_{N}$ and $R_{N}$.
+\par As anticipated, in the stellar interior we're going to be integrating with respect to the mass $M_{r}$, and we'll be using as boundary conditions at the center of the star $\rho_{C}$, $p_{C}$, $L_{r} \approx 0$, $M_{r}\approx 0$.
+\par Consider the equivalent formulation for the equation of hydrostatic equilibrium
+\begin{equation*}
+    \der{p}{M_{r}} = -\frac{GM_{r}}{4\pi r^{4}}
+\end{equation*}
+In a given mesh we know the value of the right hand side of the equation, meaning we also know the value of the derivative. We can therefore linearize the relation for the pressure and (moving outwards) find
+\begin{equation*}
+    p(M_{r}+\Delta M_{r}) = p(M_{r})+\der{p}{M_{r}}\Delta M_{r}
+\end{equation*}
+As mentioned above, the derivative is known from the hydrostatic equilibrium. In principle we're not assured that the variation is exactly linear, so we're going to inevitably incurr into errors. What is usually done (automatically) is halving the mass step and check how the solution changes, eventually stopping when the variation gets under a given threshold.
+\par Typically, the integration stops not in the center of the star (which would be non-sensical, computationally and physically speaking), but rather in a mesh nearby the center called \emph{fitting mesh}. Once this special mesh is defined, we start integrating outwards from the center of the star with the aforementioned boundary conditions, stopping only when the fitting mesh is reached.
+\par This leaves us with two sets of values at the fitting mesh, one obtained from fitting from the exterior inwards and one from the inside outwards. Clearly, there's no reason these two sets must turn out to be equal (computationally speaking), thus obtaining differences
+\begin{equation*}
+    X_{i}-X_{e} \neq 0
+\end{equation*}
+where $X_{i}$ and $X_{e}$ represent some physical property of the star as computed from, respectively, integrating outwards and inwards. Physically speaking, however, since the values are describing the same mesh, they must be coinciding.
+\par To decide whether or not the difference is acceptable, we can set an upper bound to the maximum relative difference we're accepting
+\begin{equation*}
+    \frac{X_{i}-X_{e}}{X_{i}} \leq 10^{-4}-10^{-3}
+\end{equation*}
+\par If that condition is not met, we change both the inner and outer boundary conditions and re-iterate the process, thus modifying the two sets of solution at the fitting mesh. The procedure will then be stopping when the difference between the solutions is negligible.
+\par Moreover, we can check the dependence of our solutions from the boundary conditions we've chosen, calculating partial derivatives. For example, we may want to check the dependence of the inner solution for the pressure on the central temperature
+\begin{equation*}
+    \parder{p_{i}}{T_{C}} \sim \frac{p_{i}|_{T_{C}+\delta T_{C},\,p_{C}}-p_{i}|_{T_{C},\,p_{C}}}{T_{C}}
+\end{equation*}
+so that the difference between the inner pressure solution and the external pressure solution is
+\begin{equation*}
+    \Delta(p_{i}-p_{e}) = \left(\parder{p_{i}}{T_{C}}\right)\Delta T_{C} + \left(\parder{p_{i}}{p_{c}}\right)\Delta p_{C} - \left(\parder{p_{e}}{L}\right)\Delta L + \left(\parder{p_{e}}{T_{\text{eff}}}\right)\Delta T_{\text{eff}}
+\end{equation*}
+This variation must be able to cancel out the difference that we originally had in the fitting mesh. We're going to write similar expressions for all our variables. Sooner or later the procedure will hopefully converge and we'll find out the right boundary solutions.
+\par The procedure we've just described is able to solve stellar structure equations \emph{but} is not able to follow the "fine structure" of thinner structures within the star, for example a thin layer where Hydrogen is burned. This method serves just to build a first model of the star, paving the way for more complex and accurate methods, such as the one that is going to be described in the next section.
+
+\section{Second Integrating Method}
+
+Coming soon.
+
+
