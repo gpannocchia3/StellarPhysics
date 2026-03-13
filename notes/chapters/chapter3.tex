@@ -105,8 +105,22 @@ so that the difference between the inner pressure solution and the external pres
 This variation must be able to cancel out the difference that we originally had in the fitting mesh. We're going to write similar expressions for all our variables. Sooner or later the procedure will hopefully converge and we'll find out the right boundary solutions.
 \par The procedure we've just described is able to solve stellar structure equations \emph{but} is not able to follow the "fine structure" of thinner structures within the star, for example a thin layer where Hydrogen is burned. This method serves just to build a first model of the star, paving the way for more complex and accurate methods, such as the one that is going to be described in the next section.
 
-\section{Second Integrating Method}
+\section{Henyey Method}
 
-Coming soon.
+As mentioned in the passing at the end of last section, it is customary to use the approximate solution found with the fitting method at time $t$ as a test solution for the \emph{Henyey method} \cite{1964ApJ...139..306H} \cite{1987ApJ...312..217B} at time $t+\text{d}t$.
+\par The fitting method provides us with test-values for the $k$-th mesh; what we're going to do is checking mesh by mesh if the stellar structure equations are verified. We can expand derivatives as incremental ratios and write an expression, for each equation, with the form 
+\begin{equation*}
+    f_{i,k} = \delta_{i,k} \neq 0
+\end{equation*}
+where $f_{i,k}$ is just a fancy way to indicate the $i$-th stellar equation in the $k$-th mesh and $\delta_{i,k}$ is the, hopefully small, result of the $i$-th equation in the $k$-th mesh. Clearly, at the first iteraction, it is going to be hard that it is vanishing as we'd like it to be. In fact, in general $\delta_{i,k}$ is a function of all the physical properties of the star in the $k$-th mesh and of the $(k+1)$-th mesh. We can express it as 
+\begin{equation*}
+    \delta_{i,k} = \mathcal{F}(p_{k}, T_{k}, R_{k}, L_{k},p_{k+1}, T_{k+1}, R_{k+1}, L_{k+1})
+\end{equation*}
+What we're going to do is slightly changing the test-values for each mesh until $\delta_{i,k}$ is found within the desired accuracy. The change in $\delta_{i,k}$ can be expressed as the sum of all the variation induced by the little changes in parameters Said $X_{i}$ one of the physical properties, we can write
+\begin{equation*}
+    \Delta\delta_{i,k} = \sum_{j}\parder{\delta_{i,k}}{X_{j,k}}\Delta X_{j,k} + \sum_{j}\parder{\delta_{i,k}}{X_{j,k+1}}\Delta X_{j,k+1}
+\end{equation*}
+We have have 8 unknown variables, but four of them are always in common between two adjacent meshes. Since $i = 1,...,4$ and $k=1,...,N-1$, we thus have $4n-4$ equations and $4n$ variables to determine. We're in the need of adding boundary conditions. 
+\par The most obvious conditions to add are $L_{C}\sim 0$, $R_{C}\sim 0$ in the center of the star, so that $\Delta R_{1}\sim 0$, $\Delta L_{1}\sim 0$, and at the base of the sub-atmosphere $p_{N} = f_{1}(L,T_{e})$, $T_{N} = f_{2}(L,T_{e})$, $R_{N} = f_{3}(L,T_{e})$, $L_{N} = f_{4}(L,T_{e})$. Given these conditions, there are plenty of (rigorous) mathematical theorems that grants that the solution we're going to find this way is, both locally and globally, \emph{unique} (within the requested accuracy, that should go without saying).
 
 
