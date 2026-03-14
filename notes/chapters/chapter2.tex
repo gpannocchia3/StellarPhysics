@@ -489,8 +489,143 @@ which is the general \emph{Lane-Emden equation}. Solutions for this equation hav
     \caption{Numerical solutions to the Lane-Emden equation.}
     \label{fig:LE}
 \end{figure}
-\par Since we know quite a few things already, we may ask ourselves if it is possible to calculate the central density of the star as well. Assuming that we know from some other observations the total mass of the star, we can indeed calculate $\rho_{c}$. In fact, we can simply integrate the equation of continuity (\ref{eq:massconservation})
-\begin{equation*}
+\par Since we know quite a few things already, we may ask ourselves if it is possible to calculate the central density of the star as well. Assuming that we know from some other observations the total mass of the star, we can indeed calculate $\rho_{c}$. In fact, we can simply integrate the equation of continuity (\ref{eq:massconservation}) up to the radius of the star
+\begin{equation}
     M = \int_{0}^{R} 4\pi r^{2}\rho\,\text{d}r = 4\pi \lambda^{3}\rho_{c}\int_{0}^{\xi_{0}}\xi^{2}\phi^{n}\,\text{d}\xi
-\end{equation*} 
+	\label{eq:politropic_mass}
+\end{equation} 
 \par The value of that integral is actually fixed by the original equation itself to $-\xi_{0}^{2}\partial_{\xi}\phi|_{\xi_{0}}$. So we can promptly invert the equation above and find the central density of the star. It goes without saying that once we've completely specified the density profile we'll have automatically determined the pressure profile as well by means of mere substitution.
+
+\subsection*{Politropic Integration for the Solar Structure}
+
+In the following section we'll try to integrate analitically the stellar structure equations for the Sun assuming a politropic EoS (\ref{eq:politropic}). Before we begin, let us make the following approximation
+\begin{equation*}
+	\beta = \frac{p_{\text{gas}}}{p_{\text{tot}}} \sim \text{const.}
+\end{equation*}
+where $p_{\text{tot}} = p_{\text{gas}}+p_{\text{rad}}$. This assumption follows from the conditions of hydrostatic equilibrium and radiative transfer, by means of which it's possible to prove that 
+\begin{equation*}
+	1-\beta \sim \bar{\kappa}(r)\epsilon
+\end{equation*}
+This is the so called \emph{Eddington Approximation}: Since $\epsilon \propto \rho T^{4}$ (at least as far as Hydrogen burning in main sequence stars is concerned) and $\bar{\kappa}\propto \rho^{\alpha}T^{-3.5}$ (Kramer's law), their product will be approximately constant\footnote{Note that this is only approximately true for Sun-like stars which are burning Hydrogen in the Main Sequence stage.}. 
+\par Moreover
+\begin{equation*}
+	p_{\text{tot}} = p = p_{\text{gas}}+p_{\text{rad}} = \frac{\rho kT}{\mu m_{\text{H}}} + \frac{1}{3}aT^{4}
+\end{equation*}
+Let us use the expression for $\beta$ to remove the temperature, so to write a politropic equation
+\begin{equation*}
+	\frac{p_{\text{rad}}}{p_{\text{gas}}} = \frac{1-\beta}{\beta} = \frac{1}{3}\frac{aT^{3}}{\rho}\mu m_{\text{H}}
+\end{equation*}
+so that
+\begin{equation*}
+	T = \left[\frac{1-\beta}{\beta}\frac{3\rho}{\mu m_{\text{H}}a}\right]^{1/3}
+\end{equation*}
+\par This way, if we substitute in the equation for the pressure, we find
+\begin{equation}
+	p = \left[\frac{3}{a}\left(\frac{k}{\mu m_{\text{H}}}\right)^{4}\frac{1-\beta}{\beta^{4}}\right]^{1/3}\rho^{4/3}
+	\label{eq:solar_politropicequation}
+\end{equation}
+which is a politropic equation as requested. With reference to (\ref{eq:politropic}), this relation would have a politropic index $n=3$. Note that in this case, since we don't know $\beta$, we don't know the multiplicative factor, nor we have the absolute certainty of it being constant. For the moment, we'll consider an averaged molecular weight over the whole stellar structure\footnote{Note that generally the solar structure is divided into two regions, one where Hydrogen burning has happened (\emph{solar interior}: $X \sim 0.34$, $Y\sim 0.64$, $Z \sim 0.02$ and $\mu \approx 0.85$, assuming complete ionization) and one where it has not (\emph{external envelope}: $X \sim 0.70$, $Y\sim 0.28$, $Z \sim 0.02$ and $\mu \approx 0.62$, assuming complete ionization).}.
+\par We still don't know the multiplicative constant, but we know both the mass and the radius of the Sun. We've shown in (\ref{eq:politropic_mass}) that if we know both the mass and the radius of a star we're able to infer its central density
+\begin{equation*}
+	 M = M(\beta, \rho_{C})= 4\pi \lambda^{3}\rho_{c}(-\xi^{2}\partial_{\xi}\phi)_{\xi_{0}} = M_{\odot}
+\end{equation*}
+with 
+\begin{equation*}
+    \lambda = \left[\frac{K\rho_{c}^{1/n-1}(n+1)}{4\pi G}\right]^{1/2}
+\end{equation*}
+Moreover, we know that $R_{\odot} = R(\beta, \rho_{C}) \lambda\xi_{0}$, thus we have enough equations to solve for. Behold
+\begin{equation*}
+	\rho_{C} = \frac{M_{\odot}}{4\pi R_{\odot}^{3}}\frac{\xi_{0}^{3}}{(-\xi^{2}\partial_{\xi}\phi)_{\xi_{0}}}
+\end{equation*}
+So if we plug in the necessary solar parameters and look up to some table to find the values for $\xi_{0} \approx 6.9$ and $-\xi^{2}\partial_{\xi}\phi|_{\xi_{0}} \approx 2.02$ for a politropic index $n=3$, we'd find
+\begin{equation*}
+	\rho_{C} \sim 75\,\text{g}\,\text{cm}^{-3}
+\end{equation*}
+which is about half of the best estimate we'd find using less approximate models, so everything considered we've done a good job.
+\par At this point we can equate the expression for $K$ coming from the definition of the parameter $\lambda$ and that coming from the multiplicative factor of (\ref{eq:solar_politropicequation})
+\begin{equation*}
+	K = \frac{\lambda^{2} 4 \pi G}{(1+n)\rho_{c}^{1/n-1}} \quad K_{\odot} = \left[\frac{3}{a}\left(\frac{k}{\mu m_{\text{H}}}\right)^{4}\frac{1-\beta}{\beta^{4}}\right]^{1/3}
+\end{equation*}
+thus allowing us to solve for $\beta$ (since we've calculated $\rho_{C}$ and we can deduce the value of $\lambda = R_{\odot}/\xi_{0}$). The solution is not exactly trivial, and is shown in (\ref{eq:betafactor})
+\begin{equation}
+	\frac{1-\beta}{\mu \beta^{4}} = \frac{a\pi}{48}\frac{G^{3}M_{\odot}^{2}m_{\text{H}^{4}}}{k^{4}(-\xi^{2}\partial_{\xi}\phi)_{\xi_{0}}} = A
+	\label{eq:betafactor}
+\end{equation}
+which you can use also for sun-like stars. Given what we've found earlier we can substitute for $\beta \approx 0.998$, meaning that most of the pressure is due to raw gas pressure (and not from radiation); the value of $\beta$ coming from evolution models is $\beta\sim0.999$ which is in great agreement with our present approximated result.
+\par We can also calculate the central pressure $p_{C}\sim 1.2\cdot 10^{17}\,\text{dyne}/\text{cm}^{2}$ and the central temperature $T_{C}\sim 1.6\cdot 10^{7}\,\text{K}$.
+\par Similarly to what we've done in (\ref{eq:politropic_mass}), we can calculate the mass within a sphere of radius $r$. The expression is almost identical
+\begin{equation}
+    M = \int_{0}^{r} 4\pi r^{2}\rho\,\text{d}r = 4\pi \lambda^{3}\rho_{c}\int_{0}^{\xi}\xi^{2}\phi^{n}\,\text{d}\xi = 4\pi \lambda^{3}\rho_{c}(-\xi^{2}\partial_{\xi}\phi)
+\end{equation} 
+
+\section{Homologous Models: Self-Similarity}
+
+\par Let's start with a simple consideration: Different politropic structures, \emph{with the same politropic index $n$}, differ only for a scaling factor. This is not particularly difficult to show. Consider
+\begin{equation*}
+	\frac{\rho(\xi)}{\rho'(\xi)} = \frac{\rho_{C}}{\rho_{C}'}
+\end{equation*}
+and the same thing holds for the pressure, mass and so on
+\begin{equation*}
+	\frac{m(\xi)}{m'(\xi)} = \frac{M}{M'} \quad \frac{r(\xi)}{r'(\xi)} = \frac{R}{R'}
+\end{equation*}
+\par All we have done was writing down the various politropic equations (and what descends from them) and \emph{scale} them, finding out that you can jump from one another by simply rescaling an already existent solution. That is a notable simplification if you think about it.
+\par What are, then, in general the properties a star must have to be self-similar? The answer you can find in the following Table.
+\begin{tcolorbox}[enhanced,attach boxed title to top center={yshift=-3mm,yshifttext=-1mm},
+colback=blue!5!white,colframe=blue!75!black,colbacktitle=blue!80!black,
+title=Self-Similarity,
+boxed title style={size=small,colframe=blue!50!black}]
+Suppose to have a quantity dependent on two independent variables $Q(x,y)$. Characteristic scales $Q_{0}(x)$ and $\delta(x)$ are defined for $Q,\,y$ respectively. Then the scaled variables are just 
+	\begin{equation*}
+		\xi = \frac{y}{\delta(x)} \quad \tilde{Q}(\xi, x)=\frac{Q(x,\xi)}{Q_{0}(x)}
+	\end{equation*}
+	If the scaled dependent variable is independent of $x$, i.e.
+	\begin{equation*}
+		\exists\hat{Q}(\xi): \tilde{Q}(\xi, x) = \hat{Q}(\xi)
+	\end{equation*}
+	then $Q(x,y)$ is self-similar. The interested reader can refer, for example, to \cite{Pope_2000}.
+\end{tcolorbox}
+
+\par Let's make a few other definitions, starting from $\eta = m(r)/M(R)$
+\begin{align*}
+	\frac{r(\eta)}{r'(\eta)} = z \quad & \quad \frac{P(\eta)}{P'(\eta)} = p \\
+	\frac{T(\eta)}{T'(\eta)} = t \quad & \quad \frac{L(\eta)}{L'(\eta)} = s \\
+	\frac{\rho(\eta)}{\rho'(\eta)} = d \quad & \quad
+\end{align*}
+Given these definitions, we'll be interested in finding out how these scaling factors depend on the variations in mass and chemical composition. We'll then define
+\begin{equation*}
+	\frac{M(\eta)}{M'(\eta)} = x \quad \frac{\mu(\eta)}{\mu'(\eta)} = y
+\end{equation*}
+Tragically, we have to make another approximation: We have to assume that also the opacity and the energy production rate are self-similar
+\begin{equation*}
+	\frac{\epsilon(\eta)}{\epsilon'(\eta)} = \varepsilon \quad \frac{\bar{\kappa}(\eta)}{\bar{\kappa}'(\eta)} = k
+\end{equation*}
+\par This is a very restrictive limitation to the possible self-similar stellar structures: We've already seen that for the energy production rate the greater the mass, the greater the temperature and the greater gets the energy production rate, so we can't really compare much different masses. A similar thing holds for the opacity. This works kinda well for stars that have just entered the main sequence, when nuclear reactions haven't really started.
+\par We can write all the structure equations in a self-similar fashion
+\begin{equation*}
+	\der{p}{\eta} = \der{p}{r}\der{r}{\eta} = \der{p}{r}\frac{M}{4\pi\rho r^{2}}
+\end{equation*}
+so that plugging this in the hydrostatic equilibrium condition yields
+\begin{equation*}
+	\der{p}{\eta} = -\frac{G}{4\pi}\frac{M^{2}\eta}{r^{4}}
+\end{equation*}
+for both the structures we're considering (\emph{mutatis mutandis}, that is). We can extend this calculation to all the other equations and start using all the self-similar relations we've written above. This way we can write
+\begin{align*}
+	\der{p'}{\eta} &= -\frac{G}{4\pi}\frac{M'^{2}\eta}{r'^{4}}\left(\frac{x^{2}}{z^{4}p}\right) \\
+	\der{r'}{\eta} &= \frac{M'}{4\pi\rho'r'^{2}}\left(\frac{x}{z^{3}d}\right)\\
+	\der{T'}{\eta} &= -\frac{3}{64a\pi^{2}c}\frac{\bar{\kappa}'M'L'(\eta)}{r'^{4}T'^{3}}\left(\frac{kxs}{z^{4}t^{4}}\right)\\
+	\der{L'}{\eta} &= M'\epsilon'\left(\frac{\varepsilon x}{s}\right)
+\end{align*}
+but since the stellar structure equations must hold also for the second star (the one with the primed superscript), all the terms within parentheses must be equal to 1!
+\begin{align}
+	1 = \frac{x^{2}}{z^{4}p} \quad & \quad 1 = \frac{x}{z^{3}d}\\
+	1 = \frac{kxs}{z^{4}t^{4}} \quad & \quad 1 = \frac{\varepsilon x}{s}
+\end{align}
+and we also have the equation of state, so we have enough equations to solve this\footnote{Note that the EoS isn't enough to completely specify and solve the system. We have seven variables and only four equations, meaning we're in the need of three other relations. These can be found in the EoS $\rho \propto p^{\alpha}T^{-\delta}\mu^{-\phi}$, the energy production rate $\epsilon \propto \rho^{\lambda}T^{\nu}$ and the opacity $\bar{\kappa}\propto p^{a}T^{b}$.}. It is possible to show that the system of equations can be solved with solutions given by
+\begin{align*}
+	R:\;z = x^{z_{1}}y^{z_{2}} \quad & \quad L:\;s = x^{s_{1}}y^{s_{2}}\\
+	P:\;p = x^{p_{1}}y^{p_{2}} \quad & \quad T:\;t = x^{t_{1}}y^{t_{2}}
+\end{align*}
+thus reducing the equations to equations for the powers of $x$ and $y$, whose sum must necessary be equal to zero (by simple means of dimensional analysis). You can read an example of solution right below (or in any book that deals with self-similar solutions for stellar structures)
+\begin{equation*}
+	z_{1} = \frac{1}{2}(1+A) \quad A = \left[\frac{4\delta(1+a+\lambda\alpha)}{\nu+b-4-\lambda\delta}+4\alpha-3\right]^{-1}
+\end{equation*}
