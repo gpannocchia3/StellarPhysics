@@ -629,3 +629,304 @@ thus reducing the equations to equations for the powers of $x$ and $y$, whose su
 \begin{equation*}
 	z_{1} = \frac{1}{2}(1+A) \quad A = \left[\frac{4\delta(1+a+\lambda\alpha)}{\nu+b-4-\lambda\delta}+4\alpha-3\right]^{-1}
 \end{equation*}
+
+\section{Convective Transport}
+
+Matter inside the stars is never at rest, but usually the movements of the gas elements are small, random perturbations around their equilibrium positions. Under certain conditions, these small random perturbations can trigger large-scale motions that involve sizable fractions of the total stellar mass. These large-scale motions are called \emph{convection}. Hot elements may rise to the top, thereby transporting energy from the hottest to the coolest regions, where they cool and then fall down as cold material.
+\par In order to include convective transport in the stellar model computation we'll need to find a criterion for the onset of convection, and the expression of the temperature gradient in a convection zone. Note that the treatment of convections in the stellar interior is extremely complicated and needs the introduction of various approximations. This stems from the fact that the flow of gas in a stellar convective region is turbulent, in the sense that the velocity and all the other properties of the flow vary in a random and chaotic way.
+\par The random nature of tyrbulence precludes computation based on a complete description of the motion of all the fluid particles based on a solution of the Navier-stokes equations for the stellar fluid.
+\par In the following we're going to adapt an extremely simple model in which the gas flow is made of gas elements with a certain characteristic size, the same in all dimensions, that move by a certain mean free path before dissolving. All gas elements have the same physical properties at a given distance $r$ from the center.
+\input{chapters/bubble.tex}
+We're going to assume that the "bubble" always remains in \emph{pressure equilibrium} as it moves, which is a condition that is generally met for subsonic flows for which 
+\begin{equation*}
+	\tau_{d} \sim \frac{l}{c_{s}}\ll \frac{l}{v_{\text{bubble}}}
+\end{equation*}
+For example, in the Sun's convective regions, which extend approximately to 30\% of the total solar radius, the sound speed is roughly $2-5 \cdot 10^{2}\,\text{km}/\text{s}$, while the convective velocity is of order of a few meters per second. Note that only in the outskirts of the star the convective velocity gets high enough to give a little trouble to our initial assumption With some simple computations we are able to show that the time needed to roughly move across the convective region is of the order of a week, while the dynamic time is much smaller. Under these assumption, convective motions are unlikely to disturb too much the hydrostatic equilibrium condition.
+\par Moreover, we're going to assume that the bubble moves \emph{adiabatically}, so that there's no energy exchange with the surrounding fluid. As a further approximation we'all assume that the chemical composition of the star $\mu$ is constant along the bubble's motion.
+\par With reference to Fig.\ref{fgr:bubble}, we can expand to first order the temperature of the bubble and that of the surrounding fluid
+\begin{equation*}
+	T_{b}' = T_{0} +\left(\der{T}{r}\right)_{\text{ad}}l \quad T_{1} = T_{0} +\left(\der{T}{r}\right)_{\text{rad}}l
+\end{equation*}
+we'all assume both the temperature gradients to be constant across a small displacement. To achieve the onset of covection, it's necessary that the bubble is \emph{lighter} than the surrounding fluid, so that it will start floating upwards because of buyoancy. This is equivalent to requiring
+\begin{equation*}
+	(\rho_{amb}-\rho_{ad})g > 0
+\end{equation*}
+This condition we can in principle transform in a condition for temperature gradients, but to do so, we're in the need of some equation of state. Before taking a closer look at the various configurations, let us write down a few useful expansions
+\begin{align*}
+	T_{a} &= T_{0} + \partial_{r}T|_{\text{rad}}l \\
+	T_{b} &= T_{0} + \partial_{r}T|_{\text{amb}}l \\
+	\mu_{a} &= \mu + \partial_{r}\mu|_{\text{amb}}l \\
+	\mu_{b} &= \mu + \partial_{r}\mu|_{\text{b}}l = \mu
+\end{align*}
+In the last equation we assumed that the chemical composition of the bubble remains constant as it moves\footnote{This clearly is a possibly faulty approximation, because as the bubble moves, instabilities will surely arise, producing mixing between the bubble and the surrounding fluid.}.
+\subsection*{Perfect Gas}
+Let us assume a perfect gas EoS, so that 
+\begin{equation*}
+	\frac{\text{d}\rho}{\rho} = \frac{\text{d}p}{p} + \frac{\text{d}T}{T}+\frac{\text{d}\mu}{\mu}
+\end{equation*}
+If we assume that the chemical composition of the background fluid is constant, we're left with a relation that connects only the variation in temperature and the variation in density. Thus, if we request $\text{d}\rho > 0$ 
+\begin{equation*}
+	-\frac{1}{T}\partial_{r}T|_{\text{rad}} + \frac{1}{T}\partial_{r}T|_{\text{b}} > 0
+\end{equation*}
+which we can convert into gradients with respect to the pressure simply multiplying by $\text{d}r/\text{dp}$. Taking the absolute values 
+\begin{equation}
+	\Big|\der{\ln T}{\ln p}\Big|_{\text{rad}} > \Big|\der{\ln T}{\ln p}\Big|_{\text{ad}} \to \nabla_{\text{rad}} > \nabla_{\text{ad}}
+	\label{eq:schwartzschildcriterion} 
+\end{equation}
+which is known as \emph{Schwartzschild criterion}. We have defined with $\nabla_{x}$ the gradient of temperature with respect to pressure. In the presence of convection we've seen that 
+\begin{equation*}
+	\der{T}{r}\Big|_{\text{amb}} = -\frac{3}{4ac}\frac{\bar{\kappa}\rho}{T^{3}}F_{\text{rad}}(r)
+\end{equation*}
+but the total flux does not completely overlap with the radiative flux $F_{\text{tot}} = F_{\text{rad}}+F_{\text{conv}}$.
+\par Note that if we relax the perfect gas condition
+\begin{equation*}
+	\rho = \rho(p,T,\mu) \to \alpha = \parder{\ln \rho}{\ln p} \quad \delta = \parder{\ln \rho}{\ln T} \quad \phi = \parder{\ln \rho}{\ln \mu}
+\end{equation*}
+we obtain a condition like
+\begin{equation*}
+	\frac{\text{d}\rho}{\rho} = -\delta \frac{\text{d}T}{T}+\phi\frac{\text{d}\mu}{\mu}
+\end{equation*}
+which if we assume $\text{d}\mu = 0$ bears just the same result as before.
+\subsection*{Perfect Gas with Non-Uniform Chemical Composition}
+As per our previous discussions, we can write 
+\begin{equation*}
+	\frac{\Delta\rho}{\rho} = -\frac{(T_{\text{amb}}-T_{\text{b}})}{T}+\frac{(\mu_{\text{amb}}-\mu_{\text{b}})}{\mu} > 0
+\end{equation*}
+which in terms of the gradients we've defined earlier becomes 
+\begin{equation*}
+	\Big|\der{T}{r}\Big|_{\text{rad}} > \Big|\der{T}{r}\Big|_{\text{amb}} + \frac{T}{\mu}\Big|\der{\mu}{r}\Big|_{\text{amb}} 
+\end{equation*}
+Now we can make the same trick of multiplying for the spatial pressure gradient so to obtain
+\begin{equation}
+	\nabla_{\text{rad}} > \nabla_{\text{ad}} + \nabla_{\mu}
+	\label{eq:ledouxcriterion}
+\end{equation}
+which is called \emph{Ledoux Criterion}. Note that in this case it's much harder to prompt the onset of convection (the radiative gradient must be greater than that predicted by the Schwartzschild criterion). I think it won't surprise you that we can generalize this condition to a non-perfect gas, thus finding 
+\begin{equation*}
+	\nabla_{\text{rad}} > \nabla_{\text{ad}} + \frac{\phi}{\mu}\nabla_{\mu}
+\end{equation*}
+\subsection{The Overshooting Problem}
+The \emph{overshooting problem} can be quite a nuisance if we want to calculate the spatial extension of the convective region of the star. To put it simply, in the convective region, the blob of gas will raise with non-zero velocity which, in turn, won't be magically disappearing as soon as it crosses the non-convective region. This causes the convective region to formally "expand" outwards. This can potentially impact significantly on the permanency of a star in the Main Sequence stage. If we want to address the increasing in size of the convective region, it is customary to introduce a new parameter $\beta_{ov}$ so that
+\begin{equation*}
+	l_{ov} = \beta_{ov}H_{p}
+\end{equation*}
+where $H_{p}$ is the scale height of the pressure profile.
+\par To find the ambient temperature gradient, we're in the need of recalling the 1st principle of thermodynamic
+\begin{equation}
+	\delta Q = c_{p}\rho V (T_{0}'-T_{1}) = C_{p}\Delta T
+	\label{eq:1stprinciple}
+\end{equation}
+\par The temperature difference can be expressed in terms of derivatives with respect to pressure 
+\begin{equation*}
+	\Delta T = \left(\der{T}{p}\Big|_{\text{amb}} - \der{T}{p}\Big|_{\text{ad}}\right)\Delta p
+\end{equation*}
+where we can define the \emph{superadiabaticity} $\delta_{\text{ad}}$
+\begin{equation}
+	\delta_{\text{ad}} = \left(\der{T}{p}\Big|_{\text{amb}} - \der{T}{p}\Big|_{\text{ad}}\right)
+	\label{eq:superadiabaticity}
+\end{equation}
+Since the thermal capacity is very large in the stellar interiors, we can assume the superadiabaticity to be vanishing
+\begin{equation*}
+	\der{T}{p}\Big|_{\text{amb}} \sim \der{T}{p}\Big|_{\text{ad}}
+\end{equation*}
+Note that in the stellar external envelopes, we can't assume the same principle to hold. But the problem is partially mitigated by the fact that in the most external layers there's roughly no energy production. This means that convection will influence the effective temperature, but not the luminosity.
+\par To find the radiative gradient, we first have to find $F_{\text{rad}}$ and, consequently, $F_{\text{conv}}$. In order to do so, we're going to implement somewhat "empirical" models, that tells us that $F_{\text{conv}}\propto l$. The mean free path $l$ we'll parametrize as
+\begin{equation*}
+	l = \alpha_{ML}H_{p}
+\end{equation*}
+where $\alpha_{ML}$ is the \emph{mixing length parameter}. We're not assured that such parameter is the same in different stars--or even in the same star but in different evolutionary stages.
+\par We know that in order for convection to settle
+\begin{equation*}
+	\nabla_{\text{rad}} > \nabla_{\text{ad}}
+\end{equation*}
+and so that energy can be transported 
+\begin{equation*}
+	\nabla_{\text{amb}} \geq \nabla_{\text{ad}}
+\end{equation*}
+In short 
+\begin{equation*}
+	\boxed{
+		\nabla_{\text{ad}} \leq \nabla_{\text{amb}} \leq \nabla_{\text{rad}}
+	}
+\end{equation*}
+This tells us that the adiabatic gradient is the maximum gradient that can set into a given structure (assuming $\delta_{\text{ad}}\approx 0$). What we still have to do is find the convective gradient in the external regions.
+\subsection{Mixing Length Theory}
+
+In order to find what we're looking for (an approximate description of the convective gradient) we're going to need some simplifying assumptions:
+\begin{enumerate}
+	\item The theory behind mixing length is going to be a \emph{local}, so that this criterion can be applied on a "mesh perby mesh" basis to check its stability;
+	\item The mean free path of the bubble we can parametrize as $l = \alpha_{ML}H_{p}$;
+	\item Small variations in temperature and density;
+	\item The variations induced by different shapes and sizes of the bubbles are negligible (this is usually not true, but their contribution enters as a second order correction).
+\end{enumerate}
+First and foremost, let us define the \emph{pressure scale height} $H_{p}$ as the distance the bubble has to travel so that pressure drops to $e^{-1}$ of its original value, in formulas
+\begin{equation*}
+	\frac{1}{H_{p}} = -\frac{1}{p}\der{p}{r} = -\der{\ln p}{r}
+\end{equation*}
+If we assume that all contribution to the pressure comes from the gas (and so we neglect other contributions, like radiation pressure), we can write  plug in the equation for hydrostatic equilibrium and find 
+\begin{equation*}
+	H_{p} = \frac{p}{g\rho}
+\end{equation*}
+where $g$ is the local acceleration of gravity.
+\par Recall when we have first introduced the 1st Principle of Thermodynamics (\ref{eq:1stprinciple}). We assumed tht the temperature difference was proportional to the difference between the adiabiatic gradient and the ambient temperature gradient. It's clear that if the two gradients were the same, no heat would be released and no energy transport is possible. As we've mentioned before, when convection involved layers closer to the stellar surface, we cannot make the the simplifications we've used in last section.
+\par In this case we need to find a more complex expression for $\nabla_{\text{conv}}$. We start by enforcing the confition that at a given layer within the convective region the total energy flux is simply the sum of the flux carried by radiation and convection
+\begin{equation}
+	F_{\text{tot}} = F_{\text{rad}}+F_{\text{conv}} \quad F_{\text{rad}} = -\frac{4acT^{3}}{3\bar{\kappa}\rho}\der{T}{r}
+	\label{eq:fluxesrecap}
+\end{equation}
+where $\text{d}T/\text{d}r$ is the the actual temperature gradient of the convecting region. So far so good, there's nothing new here.
+\par Taken that we refer with the subscript "u" to rising matter and "d" to downwards moving matter, we can write an expression for the amount of stuff that is either rising or descending
+\begin{equation*}
+	\rho_{u}\sigma_{u}v_{u} \quad \rho_{d}\sigma_{d}v_{d}
+\end{equation*}
+where $\sigma$ is the surface area of the convection column. The net transport of energy will then be 
+\begin{equation*}
+	2F_{\text{conv}} = \rho_{u}v_{u}c_{p}T_{u}+\frac{1}{2}\rho_{u}v_{u}v_{u}^{2}-\left[\rho_{d}v_{d}c_{p}T_{d}+\frac{1}{2}\rho_{d}v_{d}v_{d}^{2}\right]
+\end{equation*}
+Note that in order to preserve hydrostatic equilibrium, the amount of falling material must be the same as the rising one, otherwise the star would either dissolve or concentrate all the mass in the interior. To avoid this, the only solution is that after a distance $l$ of order $H_{p}$ the bubble stops and invert its motion. This reflects in requiring 
+\begin{equation*}
+	\rho_{u}\sigma_{u}v_{u} = \rho_{d}\sigma_{d}v_{d}
+\end{equation*}
+so that if we assume little differences in density and equal cross-sections for the convective columns, the condition simply becomes $v_{d}\sim v_{u} = v$.
+\par By neglecting the energy losses during the bubble's displacement (adiabatic assumption), the convective flux transported by bubbles that move \emph{upwards} with a velocity $v$ is then given by 
+\begin{equation*}
+	F_{\text{conv}} = \frac{1}{2}\rho v c_{p}\left[\left(\der{T}{r}\right)_{\text{ad}}-\left(\der{T}{r}\right)\right]l
+\end{equation*}
+The factor $1/2$ accounts for the fact that at each layer approximately half of the matter is rising and half is moving downwards. We've already expanded $T_{u}$ and $T_{d}$. Assuming an "average" temperature $T_{\text{amb}}$ between the temperatures of the two columns, we can write
+\begin{equation*}
+	T_{u}-T_{d} = 2\Delta T = 2(T_{u}-T_{\text{amb}}) \to \Delta T(s) = \left[\left(\der{T}{r}\right)_{\text{ad}}-\left(\der{T}{r}\right)\right]s
+\end{equation*}
+where $s$ is an average displacement which we can conveniently take as $s=l/2$, so that everything is consistent with the equation presented above. Performing the usual trick, we can transform all the gradient in logarithmic gradients ($\nabla$), so that 
+\begin{equation*}
+	F_{\text{conv}} = \frac{1}{2}\rho v c_{p}\frac{T}{p}\der{p}{z}\left[\nabla_{\text{amb}}-\nabla_{\text{ad}}\right]l
+\end{equation*}
+where $\text{d}z = -\text{d}r$ is the depth. We can substitute $\text{d}p/\text{d}z$ from the equation of hydrostatic equilibrium obtaining the following expression that is all nice and dandy (\emph{said Lying Odysseus})
+\begin{equation}
+	\nabla_{\text{amb}} = \frac{F_{\text{tot}}+\frac{l}{2}\rho v c_{p}\frac{T}{p}\der{p}{z}\nabla_{\text{ad}}}{\frac{l}{2}\rho v c_{p}\frac{T}{p}\der{p}{z}+\frac{T^{3}}{\bar{\kappa}\rho}\frac{4ac}{3}\frac{T}{p}\der{p}{z}}
+	\label{eq:convectiveambientgradient}
+\end{equation}
+where we've used the decomposition of the total flux and the expression for the radiative flux (\ref{eq:fluxesrecap}).
+\par What we are still lacking is a prescription for the velocity of the convective elements, which, however, we can conveniently obtain from the kinetic energy theorem ("work-energy principle")\footnote{The interested reader can refer to either \cite{1968pss..book.....C} or \cite{2005essp.book.....S} for a more detailed discussion.}: The net force per unit volume $f_{r}$ acting on the convective element at the layer $r$ is given by $f_{r} = -g\Delta\rho(r) = -g\Delta T/T$, meaning the work done per unit volume in moving the bubble through a distance $\Delta r$ is
+\begin{equation*}
+	W(\Delta r) = -\left(\frac{1}{2}\right)g\Delta\rho(\Delta r)\Delta r 
+\end{equation*}
+which we can average over a distance $l/2$. Moreover, it is customary to express $\langle W(\Delta r)\rangle$ in terms of the average speed of the convective elements as 
+\begin{equation*}
+	\langle W(\Delta r)\rangle = \frac{1}{2}\rho v^{2}
+\end{equation*}
+Equating the two expressions we finally obtain 
+\begin{equation}
+	\boxed{
+		v^{2} = \left(\frac{1}{2}\right) \frac{g}{T}\left(\frac{l}{2}\right)^{2} \left[\left(\der{T}{r}\right)_{\text{amb}}-\left(\der{T}{r}\right)_{ad}\right]
+	}
+	\label{eq:convectivevelocity}
+\end{equation}
+Note that the factor $1/2$ within parentheses was introduced by \cite{2005essp.book.....S} when performing the integral of the force per unit volume. It is still not clear to me where that comes from, but I think it may be to address for some sort of average value for the density.
+
+\section{Opacity}
+As we might have mentioned somewhere in the above, the physical property known as \emph{opacity} is the collection of all the mechanisms of interaction between radiation and matter. A few important mechanisms are listed below 
+\begin{itemize}
+	\item Scattering $e^{-}\gamma$: Since the average energy of particles in a star is generally such that $kT \ll m_{e}c^{2}\approx 0.511\,\text{MeV}$, the prevalent scattering channel is the \emph{Thomson scattering};
+	\item \emph{Inverse Bremsstrahlung}: also known as "braking radiation" is a channel of interaction that leaves an unbound particle unbound (Free-Free);
+	\item \emph{Photoionization}: it's a type of interaction between a photon and a bound electron, that gets freed from a given atom. So, it's a type of Bound-Free interaction;
+	\item \emph{Level Jump}: radiative excitation/de-excitation of an electron, that is made jump from an energetic level to another. In this sense, this is a Bound-Bound interaction.
+\end{itemize}
+It won't come as a surprise that the correct calculation of opacity is made all the more difficult when we're not assured a complete-ionization scenario or if we can't exclude the presence of dust grains (or grains in general) in the stellar structure.
+\par In general, the total opacity is the sum of all the contributions from the various channels which, of course, will also be frequency dependent
+\begin{equation}
+	\kappa_{\nu} = (\kappa_{bb}+\kappa_{bf}+\kappa_{bf})\left[1-\exp\left(-\frac{h\nu}{kT}\right)\right]+\kappa_{sc}
+	\label{eq:totalopacity}
+\end{equation}
+If you recall, in our stellar structure equations enters an opacity averaged over all frequencies, that is generally known as \emph{Rosseland Mean Opacity}. A possible way to obtain it is presented at the end of Appendix A (\ref{eq:rosselandopacity}).
+\par We're going to dedicate the next few sections to obtaining analitical expressions for the most common sources of opacity, under the assumption of being the dominating contribution.
+\subsection{$\text{H}^{-}$ opacity}
+The opacity due to Bound-Free or Free-Free interactions with the $\text{H}^{-}$ ion is dominant, for example, in the solar photosphere. In order for this channel to grow relevant, it's clear that we're going to need plenty of Hydrogen and free electrons (which will be typically coming from ionized metals).
+\par If we want to exclude the possibility of other sources of opacity being more relevant, we'll have to work with temperatures in the range $3000-6000\,\text{K}$ and with a metallicity $Z$ in the range $10^{-3}-3\cdot 10^{-3}$. Similarly, we have to require a low density $10^{-10}<\rho<10^{-5}\,\text{g}/\text{cm}^{3}$ to avoid what's called \emph{collision induced absorption}, which becomes more and more relevant at low temperatures and high densities, as can happen in main sequence stars with masses $M \leq 0.5M_{\odot}$ or in the atmosphere of some white dwarves.
+\par It is possible to show that the opacity due to interactions with the $\text{H}^{-}$ ion is given by
+\begin{equation}
+	\bar{\kappa}_{\text{H}^{-}} \sim 2.5\cdot 10^{-31}\left(\frac{Z}{0.02}\right)\rho^{1/2}T^{9}\,\text{cm}^{2}\text{g}^{-1}
+	\label{eq:hydrogenopacity}
+\end{equation}
+while for the collision induced absorption
+\begin{equation}
+	\bar{\kappa}_{\text{CIA}} = k_{2}\rho^{2}
+	\label{eq:ciaopacity}
+\end{equation}
+where $k_{2}$ is a constant.
+\par Note that if temperature drops particularly low ($T \lesssim 1400-1800\,\text{K}$) we can observe the formation of \emph{grains}, which are another important source of opacity.
+\subsection{Thomson Scaattering}
+We know that in your typical star temperature is such that
+\begin{equation*}
+	kT \ll m_{e}c^{2} \approx 0.511\,\text{MeV}
+\end{equation*}
+We have formerly defined the opacity as 
+\begin{equation}
+	\rho\kappa_{\nu} = n\sigma_{\nu}
+	\label{eq:opacitydefinition}
+\end{equation}
+where $n$ is the numeric density of the particles that interact with photons. Particle physics (or your Physics II classes, if you prefer) tells us that scattering Thomson is a particular type of \emph{isotropic} and \emph{frequency independent} scattering channel, which is automatically translated into the expression for its cross-section
+\begin{equation}
+	\sigma_{T} = \frac{8\pi}{3}\left(\frac{e^{2}}{m_{e}c^{2}}\right)^{2} = 0.66\,\text{b}
+	\label{eq:thomsoncrossection}
+\end{equation}
+where the $\text{b}$ stands for \emph{Barns} ($10^{-24}\,\text{cm}^{2}$) a unit that is particularly used in particle physics. The opacitive channel of scattering Thomson benefits from high temperatures (more electrons since matter's more likely to be ionized) and not too high densities (other channels become dominant). As a rule of thumb, you might want to remember that the more dominant opacitive channels are the level jump, closely followed by photoionization, and then the others.
+\par A while back ago, we've defined the number density of electrons in the case of total ionization (\ref{eq:completeionization_species})
+\begin{equation}
+	n_{e} = \frac{\rho}{m_{H}}\sum_{i =i}^{N} \frac{Z_{i}X_{i}}{A_{i}} \approx \frac{\rho}{m_{H}} \left(X+\frac{Y}{2}+\frac{Z}{2}\right) =  \frac{\rho}{m_{H}} \left(\frac{X+1}{2}\right)
+	\label{eq:electrondensitytotion}
+\end{equation}
+where the last equality was obtained exploiting the condition $X+Y+Z =1$.
+\par We can therefore plug (\ref{eq:electrondensitytotion}) into (\ref{eq:opacitydefinition}), obtaining 
+\begin{equation}
+	\bar{\kappa}_{T} = \kappa_{T} = \frac{8\pi}{3}\left(\frac{e^{2}}{m_{e}c^{2}}\right)^{2}\frac{X+1}{2m_{H}}
+	\label{eq:thomsonopacity}
+\end{equation}
+Note that in general, for higher temperatures ($T>10^{8}\,\text{K}$), the Compton scattering probability grows non-negligible. Compton scattering is an anisotropic, anelastic scattering mechanism
+\begin{equation}
+	\lambda'-\lambda = \frac{h}{m_{e}c}(1-\cos\theta)
+	\label{eq:comptonscattering}
+\end{equation}
+Since the effect produced by Compton scattering is small (but sometimes not negligible), people used to correct the Thomson scattering cross-section as such 
+\begin{equation*}
+	\sigma_{T, \text{corr}} = \left[1+0.35\left(\frac{T}{10^{9}\,\text{K}}\right)^{1/2}+0.73\left(\frac{T}{10^{9}\,\text{K}}\right)\right]^{-1}\sigma_{T}
+\end{equation*}
+\subsection{Inverse Bremsstrahlung}
+Another channel that is particularly important when BB and BF channels are quiescent\footnote{Oh my, what a fancy word I've found.}, is that of inverse Bremsstrahlung\footnote{Remember the capital "B" and the two "s", it's a German word (well, two, actually).}. Particle physicists usually manage to convince us that the \emph{differential cross-section} (read: velocity dependent) for inverse Bremsstrahlung is described by
+\begin{equation}
+	\der{\sigma_{FF}}{v_{e}} = \frac{4\pi}{3\sqrt{3}hc}\frac{Z^{2}e^{6}}{m_{e}^{2}}\frac{1}{v_{e}}\frac{1}{\nu^{3}}n_{e}f(v_{e})\bar{g}_{ff}(\nu, v_{e})
+	\label{eq:diFFerentialcrosssection}
+\end{equation}
+where here $Z$ is the electrical charge of the ion interacting with electrons, $f(v_{e})$ is some velocity distribution for electrons (typically a Maxwellian distribution) and $\bar{g}_{ff}$ is the \emph{Gaunt factor} a fancy numerical coefficient that we will approximate as roughly constant and of order unity in the following. Note that since there isn't an energy threshold for this opacity channel, in principle we have to take into account all possible species that might be contributing.
+\par If we take an average value for the velocity
+\begin{equation*}
+	\langle \frac{1}{v_{e}} \rangle = \left(\frac{2m_{e}}{\pi k T}\right)^{1/2}\propto \left(\frac{m_{e}}{T}\right)^{1/2}
+\end{equation*}
+then we can consider an average cross section 
+\begin{equation*}
+	\langle \sigma_{FF} \rangle = \text{const}\cdot \frac{Z^{2}n_{e}}{(kT)^{1/2}}\frac{\bar{g}_{ff}}{\nu^{3}}
+\end{equation*}
+Recalling the definition of opacity (\ref{eq:opacitydefinition})
+\begin{align*}
+	\kappa_{\nu, ff}\rho &= \sum_{A=1}^{N}n(A,Z_{A})\langle \sigma_{FF} \rangle \\
+	&=\sum \frac{X_{A}\rho}{Am_{H}}\langle \sigma_{FF} \rangle
+\end{align*}
+To the cross section only the more abundant species will participate (so Hydrogen and Helium). Thus
+\begin{equation*}
+	\kappa_{\nu,FF} \sim \frac{X}{m_{H}}\langle \sigma_{FF}(1,\nu) \rangle +\frac{Y}{4m_{H}}\langle \sigma_{FF}(2,\nu) \rangle
+\end{equation*}
+If we assume completely ionized matter (\ref{eq:electrondensitytotion}) and notice that $\sigma \propto T^{-1/2}\nu^{-3}\to T^{-3.5}$, then after computing the Rosseland mean opacity, we're left with 
+\begin{equation}
+	\bar{\kappa}_{FF} \sim 4\cdot 10^{22}(X+Y)(1+X)\rho T^{-3.5}
+	\label{eq:inversebremsstrahlungopacity}
+\end{equation}
+\subsection{Photoionization}
+Not surprisingly, for photoionization mechanisms to arise, it's necessary the presence of atoms with at least one bounded electron. Differently from the channels we've taken a look so far, photoionization is a threshold process. For it to happen, photons must have an energy at least equal to the ionization potential of the impinged atom. In general
+\begin{equation*}
+	h\nu = \chi_{n} + \frac{p_{e}^{2}}{2m_{e}}
+\end{equation*}
+with 
+\begin{equation*}
+	\chi_{n} = \frac{2T^{2}m_{e}e^{4}}{hn^{2}}(Z')^{2}
+\end{equation*}
+where $Z'$ is the effective charge of the ion. Unless we're particularly happy of doing a lousy job, we should, in principle, consider all relevant energy levels of the ions, the ionization degree of the species and the number of species available. In short: There are many things you might want to keep track of.
+\par What you would find out, were you actually to do the computations (and do not make any mistakes in the process), is that the photoionization channel has the same density and temperature dependencies as the Inverse Bremsstrahlung one, but with a greater multiplicative coefficient, thus making it usually more relevant.
