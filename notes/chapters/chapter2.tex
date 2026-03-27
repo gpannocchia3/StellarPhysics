@@ -854,7 +854,7 @@ while for the collision induced absorption
 \end{equation}
 where $k_{2}$ is a constant.
 \par Note that if temperature drops particularly low ($T \lesssim 1400-1800\,\text{K}$) we can observe the formation of \emph{grains}, which are another important source of opacity.
-\subsection{Thomson Scaattering}
+\subsection{Thomson Scattering}
 We know that in your typical star temperature is such that
 \begin{equation*}
 	kT \ll m_{e}c^{2} \approx 0.511\,\text{MeV}
@@ -930,3 +930,107 @@ with
 \end{equation*}
 where $Z'$ is the effective charge of the ion. Unless we're particularly happy of doing a lousy job, we should, in principle, consider all relevant energy levels of the ions, the ionization degree of the species and the number of species available. In short: There are many things you might want to keep track of.
 \par What you would find out, were you actually to do the computations (and do not make any mistakes in the process), is that the photoionization channel has the same density and temperature dependencies as the Inverse Bremsstrahlung one, but with a greater multiplicative coefficient, thus making it usually more relevant.
+\par Assuming a prevalence of hydrogenoid atoms\footnote{That is atoms of given $Z$ that through processes we're not even interested in have been left with just one electron.}, it is possible to prove that the cross section for photoionization is given by 
+\begin{equation}
+	\sigma_{bf} = \frac{64\pi^{4}m_{e}e^{10}(Z')^{4}g}{3\sqrt{3}ch^{6}n^{5}\nu^{3}}
+	\label{eq:photoionizationcrosssection}
+\end{equation}
+where all symbols have their customary meaning. Said $N_{A}$ the numeric density of the atomic species $A$
+\begin{equation*}
+	N_{A} = \frac{X_{A}\rho}{A m_{\text{H}}}
+\end{equation*}
+we can define a numeric density expressing the average number of electrons for each atom $A$ which are bounded to an energy state $n$. This quantity, which we're calling $N_{A,n}$ is given by 
+\begin{equation*}
+	N_{A,n} = \frac{N_{e}n^{2}h^{3}\exp(\chi_{n}/kT)}{2(2\pi m_{e}kT)^{3/2}}
+\end{equation*}
+Given these definitions, we can write down the expression for the opacity
+\begin{equation*}
+	\kappa_{bf}(\nu)\rho = \sum_{A,n}\sigma_{bf}(\nu)\frac{X_{A}\rho}{A m_{\text{H}}}N_{A,n}
+\end{equation*}
+in which we're going to consider only elements with $A\geq 6$, for Hydrogen and Helium are completely ionized at the temperatures we're considering and are thus unable to participate to the opacity. So, we can write the numeric density of electrons as
+\begin{equation*}
+	N_{e}\sim \frac{\rho}{m_{\text{H}}} \left(\frac{X+1}{2}\right)
+\end{equation*}
+so that pluggining in all the various definitions we obtain
+\begin{equation*}
+	\kappa_{bf}(\nu) = \sum_{A,n} \frac{4\pi^{2}e^{2}g}{3\sqrt{3}c\nu^{3}}\left(\frac{\chi_{n}^{2}}{m_{e}}\right)\frac{kT}{kT}\frac{X_{A}\rho(1+X)}{Am_{\text{H}}^{2}}\frac{nh\exp(\chi_{n}/kT)}{(2\pi m_{e}kT)^{3/2}}
+\end{equation*}
+where we've used the definition of the ionization potential $\chi_{n}$ to eliminate the effective ion charge. Summing over $A$ gives us the metallicity $Z$, thus leaving us with 
+\begin{equation*}
+	\kappa_{bf}(\nu) = \sum_{n} \frac{4\pi^{2}e^{2}g}{3\sqrt{3}c\nu^{3}}\left(\frac{\chi_{n}^{2}}{m_{e}}\right)\frac{kT}{kT}\frac{Z\rho(1+X)}{Am_{\text{H}}^{2}}\frac{nh\exp(\chi_{n}/kT)}{(2\pi m_{e}kT)^{3/2}}
+\end{equation*}
+If we consider only the energy level $n=1$ we may find that the opacity, leaving behind all numerical factors, is a function of 
+\begin{equation*}
+	\kappa_{bf}(\nu) \propto \left[\frac{\chi_{n}}{kT}\exp(\chi_{n}(kT)\left(\frac{kT}{h\nu}\right)^{3})\right]Z(1+X)\rho T^{-3.5}
+\end{equation*}
+and the term within squared parentheses is approximately of order 1, since terms with $h\nu\sim kT$ will be weighed more when performing the Rosseland mean. If we restore all numerical factors and perform the aforementioned Rosseland mean, you'd find 
+\begin{equation}
+	\bar{\kappa}_{bf} \sim 4\cdot 10^{25}\,Z(1+X)\rho T^{-3.5}
+	\label{eq:photoionizationopacity}
+\end{equation}
+which, as anticipated, has the same temperature and density dependencies as the free-free contribution.
+\subsubsection*{Level Jump}
+With \emph{level jump} we refer to the absorption of radiation by an electron bound to an ion that causes the electron to move from one bound state to a more energetic one. After the transition the electron will have to move down to the original bound state, for the ion has to return in equilibrium with the surroundings. The photon emitted during this de-excitation will have the same energy of the absorbed one, but it is re-emitted in a random direction.
+\par This process necessarily involves photons of certain frequencies, corresponding to the energy differences between the initial and final bound state of the electron. Bound-bound processes can become important contributors to the total opacity for temperatures below $\sim 10^{6}\,\text{K}$.
+\par Since a formal discussion of bound-bound opacitive mechanisms would have to make use of Einstein's coefficients (and we would end up not finding a nice analitical solution, but rather statistics for the process) we'll skip right to the next opacitive channel.
+\subsection{Electron Conduction}
+As we might expect from its name, electron conduction is a \emph{diffusive process}, in the sense that it can be described by a diffusive equation of the form 
+\begin{equation*}
+	\partial_{t}n = D_{\text{cond}}\partial_{r}^{2}n \quad D_{\text{cond}} = \frac{\lambda_{e}\langle v_{e} \rangle}{3}
+\end{equation*}
+If electrons are non-degenerate, the cross section for conductive mechanisms is much larger than, say, the photoionization cross section. In fact, the mean free path of electrons is much smaller than that of photons
+\begin{equation*}
+	\lambda_{\text{cond}} \propto \frac{1}{n_{i}\sigma_{\text{cond}}} \ll \lambda_{\gamma}
+\end{equation*}
+But things change rather dramatically if the gas becomes degenerate: The cross section for the process decreases and thus the mean free path for electrons raises considerably. For the purposes of our discussion, let us recall the Fermi momentum 
+\begin{equation}
+	p_{F} = \left(\frac{3n_{e}}{8\pi}\right)^{1/3}h \quad n_{e} = \frac{\rho}{\mu_{e}m_{\text{H}}}
+	\label{eq:fermimomentum}
+\end{equation}
+If diffusion is isotropic, we can assume the generalized Fick law to hold, and so 
+\begin{equation}
+	F(r) = -\frac{1}{3}\langle v_{e} \rangle \lambda_{e}\der{U(r)}{r} = -\frac{1}{3}\langle v_{e} \rangle \lambda_{e}\der{U}{T}\der{T}{r} = -\frac{1}{3}\langle v_{e} \rangle \lambda_{e}c_{V}\der{T}{r}\Big|_{\text{amb}}
+	\label{eq:generalizedfick}
+\end{equation}
+where we've introduced $c_{V}$ the constant volume specific heat. We'll call
+\begin{equation}
+	k_{\text{cond}} = \frac{1}{3}\langle v_{e} \rangle \lambda_{e}c_{V}
+	\label{eq:thermalconductioncoefficient}
+\end{equation}
+the thermal conduction coefficient. To proceed further we have to determine the Coulombian cross section
+\begin{equation*}
+	m_{e}v_{e}^{2}\approx \frac{Z_{C}e^{2}}{b}
+\end{equation*}
+where $b$ is the impact parameter. Inverting last equation and defining a conduction cross section $\sigma_{\text{cond}} \approx \pi b^{2}$ yields
+\begin{equation*}
+	\sigma_{\text{cond}} \propto \frac{\langle Z_{C}^{2} \rangle}{\langle v_{e}^{4} \rangle}
+\end{equation*} 
+Since the gas is degenerate, the electrons that will have the larger contribution are those with momentum approximately equal to the Fermi momentum (\ref{eq:fermimomentum}), and thus 
+\begin{equation*}
+	v_{e}\approx \frac{p_{F}}{m_{e}}\propto \left(\frac{\rho_{e}}{\mu_{e}}\right)^{1/3}
+\end{equation*}
+hence 
+\begin{equation*}
+	\sigma_{\text{cond}} \propto \left(\frac{\mu_{e}}{\rho_{e}}\right)^{4/3}
+\end{equation*}
+Now we can finally calculate the mean electronic free path 
+\begin{equation*}
+	\lambda_{e} = \frac{1}{n_{i}\sigma_{\text{cond}}} = \frac{\mu_{i}m_{\text{H}}}{\rho}\left(\frac{\rho_{e}}{\mu_{e}}\right)^{4/3}\frac{1}{\langle Z_{C}^{2}\rangle}
+\end{equation*}
+Moreover, we're in the need of an expression for the specific heat
+\begin{equation*}
+	c_{V} = \frac{8\pi^{3}m_{e}k^{2}Tp_{F}}{3h^{3}}\propto \left(\frac{\rho_{e}}{\mu_{e}}\right)^{1/3}T
+\end{equation*}
+At last we've finally found an expression for the thermal conduction coefficient
+\begin{equation*}
+	k_{\text{cond}} = \rho\frac{\mu_{i}}{\mu_{e}^{2}}\frac{T}{\langle Z_{C}^{2}\rangle}
+\end{equation*}
+From this we can then define an opacity coefficient for thermal electronic conduction 
+\begin{equation}
+	\kappa_{\text{cond}}:= \frac{4ac T^{3}}{3k_{\text{cond}}\rho} \approx 4\cdot 10^{-8}\left(\frac{\mu_{e}^{2}}{\mu_{i}}\right)\left(\frac{T}{\rho}\right)^{2}\langle Z_{C}^{2}\rangle
+\end{equation}
+Note that with this we can define a \emph{total transported flux}
+\begin{equation*}
+	F_{\text{tot}} = F_{\text{cond}}+F_{\text{rad}} = -\frac{4acT^{3}}{3\rho}\left(\frac{1}{\bar{\kappa}}+\frac{1}{\bar{\kappa}_{\text{cond}}}\right) = -\frac{4acT^{3}}{3\rho\bar{\kappa}_{\text{tot}}}
+\end{equation*}
+The opacitive coefficient within parentheses is the one that is customarily found in professional opacitive tables.
