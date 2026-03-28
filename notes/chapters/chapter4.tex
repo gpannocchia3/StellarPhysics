@@ -125,3 +125,250 @@ with
     \label{eq:effectiveastrofactor}
 \end{equation}
 The values for the astrophysical factor and its derivaties are obtained either from laboratory measurements (with the aforementioned limitations) or from theoretical quantum mechanical computations.
+\par Let's see how can we deduce the (approximate) temperature dependence. Say $T_{0}$ a reference temperature, which may be the temperature for which the burning of a particular element is possible.
+\par We've shown that in general, the energy at Gamow's peak is dependent on the temperature 
+\begin{equation*}
+    E_{0} = \left(\frac{bkT}{2}\right)^{2/3} \quad b = \frac{(2\mu)^{1/2}\pi e^{2}Z_{A}Z_{b}}{\hbar}
+\end{equation*}
+Let us expand (\ref{eq:averagenuclearcs}) around our reference temperature in the way presented below 
+\begin{equation*}
+    \langle \sigma v \rangle_{T} \approx  \langle \sigma v \rangle_{T_{0}}\left(\frac{T}{T_{0}}\right)^{\nu}
+\end{equation*} 
+Taking the logarithms of both memebers
+\begin{equation*}
+    \ln( \langle \sigma v \rangle_{T}) \approx \ln( \langle \sigma v \rangle_{T_{0}})+\nu\ln\left(\frac{T}{T_{0}}\right)
+\end{equation*}
+hence 
+\begin{equation*}
+    \nu \approx \frac{ \ln( \langle \sigma v \rangle_{T}) - \ln( \langle \sigma v \rangle_{T_{0}})}{\ln T -\ln T_{0}} = \der{\ln\langle \sigma v \rangle}{\ln T}\Big|_{T=T_{0}}
+\end{equation*}
+Let us express this in terms of the variable $\tau = 3E_{0}/kT$ we've used earlier when expanding the exponential term in (\ref{eq:averagenuclearcs}).
+\par You can show that 
+\begin{equation*}
+    \tau \propto T^{-1/3}\implies T\propto \tau^{-3} \implies \ln T = C-3\ln\tau
+\end{equation*}
+while for $\langle \sigma v \rangle_{T}$ we use (\ref{eq:approximatenuclearrt}). Let's explicit the various dependencies
+\begin{equation*}
+    \langle \sigma v \rangle_{T} \propto \frac{\Delta}{T^{3/2}}e^{-\tau} \quad \Delta \propto T^{5/6}
+\end{equation*}
+which, after putting all together, implies 
+\begin{equation*}
+    \langle \sigma v \rangle_{T} \propto T^{-2/3}e^{-\tau} \propto \tau^{2}e^{-\tau} \implies \ln\langle \sigma v \rangle_{T} \propto D +2\ln\tau -\tau
+\end{equation*}
+Now we can finally plug everything in the definition of $\nu$. Calculating
+\begin{equation*}
+    \text{d}\ln\langle \sigma v \rangle_{T} = \text{d}\tau\left(\frac{2}{\tau}-1\right) \quad \text{d}\ln T = -\frac{3}{\tau}\text{d}\tau
+\end{equation*}
+\begin{equation*}
+    \nu = \der{\ln\langle \sigma v \rangle}{\ln T}\Big|_{T=T_{0}} = -\frac{2}{3}+\frac{\tau}{3}
+\end{equation*}
+meaning that 
+\begin{equation}
+    \boxed{
+    \langle \sigma v \rangle \propto T^{-\frac{1}{3}(\tau_{0}-2)}
+    }
+    \label{eq:nrtemperaturedep}
+\end{equation}
+For example, consider a reaction from the $\text{ppI}$ chain
+\begin{equation*}
+    p+p \to D + e^{+}\bar{\nu}_{e} \implies \langle \sigma v \rangle\propto T^{4}
+\end{equation*}
+\subsection{Resonant Reactions}
+So far we've been focusing on reactions for which the astrophysical factor (\ref{eq:astrophysicalfactor}) was slowly varying with energy, the so-called \emph{non-resonant reactions}. We've mentioned before that given two reactants, multiple products are possible, depending on the nature of the interaction (elastic, anelastic, etc).
+\begin{align*}
+    \text{A}+\text{b} \to \text{C}^{*} &\to \text{A}+\text{b} \; (\text{elastic scattering})\\
+                  &\to \text{A}+\text{b}^{*}\; (\text{anelastic scattering})\\
+                  &\to \text{D}+\text{e}\\
+                  &\to \text{C}+\gamma\; (\text{radiative capture})\\
+\end{align*}
+Note that if the energy of the center of mass added to the Q-value of the specific reaction is "close enough" to one of the energetic level of the compound nucleus C$^{*}$, then the reaction is \emph{resonant}. We'll consider only \emph{narrow} resonant reactions, for which the width of the resonance is much smaller than the resonant energy 
+\begin{equation}
+    \Gamma \ll E_{R}
+    \label{eq:narrowresonance}
+\end{equation}
+It should come as no surprise that, around resonance, the interaction cross section becomes extremely larger, and it's no more the one we've found in (\ref{eq:averagenuclearcs}), but it's rather the one found by Breit and Wigner
+\begin{equation}
+    \sigma_{BW}(E) = \frac{\lambda^{2}}{4\pi}\frac{\omega\Gamma_{1}\Gamma_{2}(1+\delta_{Ab})}{(E-E_{R})^{2}+\left(\frac{\Gamma}{2}\right)^{2}}
+    \label{eq:breitwignercs}
+\end{equation}
+where $\lambda$ is the De-Broglie wavelength
+\begin{equation}
+    \lambda = \frac{h}{\sqrt{2\mu E}}
+    \label{eq:debrogliewavelength}
+\end{equation}
+and $\Gamma_{1}$ is the probability amplitude of forming the compound nucleus, which is also equal to its decay probability; $\Gamma_{2}$ is the probability amplitude of decaying in the products of the reaction (say D, e), while $\Gamma$ is the width of the excited level responsible of the resonance. Note that $\Gamma$ is proportional to the total lifetime $\tau$ of the excited state according to 
+\begin{equation}
+    \Gamma = \frac{h}{2\pi\tau}
+    \label{eq:branchingfraction}
+\end{equation}
+and $\Gamma_{1}$, $\Gamma_{2}$ have a similar definition, but considering the lifetime for the decay of the compound nucleus into the original interacting particles A+b, and into the products D+e, respectively. In teh case of heavy compound nuclei many resonances are present in the range of stellar energies.
+\par On the other hand, the factor $\omega$ is related to the spin of the reactants and to the (total) angular momentum of the compound nucleus
+\begin{equation*}
+    \omega = \frac{2J+1}{(2J_{A}+1)(2J_{b}+1)}
+\end{equation*}
+At this point we can write anew the reaction rate (\ref{eq:reactionrate}), but with a few caveats. First of all, now we're in the presence of a narrow resonance, meaning that if the Gamow peak $E_{0}$ is far from resonance $E_{R}$, we won't be able to observe the resonance.
+\par On the other hand, if $E_{R}\sim E_{0}$, the resonance overrides all the other possible decay products, and thus we have to use (\ref{eq:breitwignercs}) rather than the tunnelling probability.
+\par We still have to average over the velocity distribution
+\begin{equation}
+    \langle \sigma v \rangle = \left(\frac{8}{\pi\mu}\right)^{1/2}\frac{1}{(kT)^{3/2}}\int_{0}^{\infty}\sigma_{BW}(E)Ee^{-E/kT}\,\text{d}E
+    \label{eq:resonanrreactionrate}
+\end{equation}
+But since the resonance is narrow around $E_{R}$ and, for extension, around $E_{0}$, we can bring the Maxwellian contribution out of the integral, evaluating them in $E_{R}$
+\begin{equation*}
+    \langle \sigma v \rangle = \left(\frac{8}{\pi\mu}\right)^{1/2}\frac{1}{(kT)^{3/2}}E_{R}e^{-E_{R}/kT}\int_{0}^{\infty}\sigma_{BW}(E)\,\text{d}E
+\end{equation*}
+\par This integral can be calculated, thus finding
+\begin{equation}
+    \langle \sigma v \rangle = \left(\frac{2\pi}{\mu kT}\right)^{3/2}\hbar^{2}\omega\gamma e^{-E_{R}/kT}
+        \label{eq:narrowresonanrreactionrate}
+\end{equation}
+where $\gamma = \Gamma_{1}\Gamma_{2}/\Gamma$. Unlike narrow resonances, \emph{broad resonances} are more troublesome, since they have broad tails that can influence the interaction cross section even when the reaction is well out of resonance conditions.
+\subsection{Electronic Shielding}
+It is important to notice that in our previous discussion and the cross sections provided in the literature refer to reactions \emph{happening in vacuum}. Instead, as I'm sure the sharpest among my four readers had been itching to point out for a while, ions in stellar interiors are surrounded by a sea of free electrons that tend to cluster near the nuclei and reduce their Coulomb potential.
+\par Therefore an approaching particle will feel a Coulombian potential different from the case of an isolated positive charge. This shielding effect of the electrons increases the reaction rate $\langle \sigma v \rangle$ by a so-called \emph{screening factor} $f$ that will necessarily be a function of the matter density.
+\par Consider the upper cartoon of Fig.\ref{fgr:tunnelling}, and assume that the impinging particle on our target nucleus has an energy much lower than the Coulombian potential. The poor thing would not be able to interact effectively with the target nucleus and will "stop" at a distance known as \emph{classical turning point}, which is easily computed 
+\begin{equation}
+    r_{TP} = \frac{Z_{A}Z_{b}e^{2}}{E_{b}}
+    \label{eq:classicalturningpointradius}
+\end{equation}
+In reality, however, the target nucleus has some electrons, that will be located at a certain distance from the nucleus. Within the electronic cloud, the Coulombian potential vanishes.
+\par Then, if our impinging projectile had an energy such that $r_{TP}>r_{A}$, where $r_{A}$ is the atomic radius, the resulting effect would be incredible since, because of the electronic shielding, the effective electrostatic potential would be identically zero.
+\par Let us define an energy 
+\begin{equation*}
+    U_{e} = \frac{Z_{A}Z_{b}e^{2}}{r_{A}}
+\end{equation*}
+so that if $E_{b}>U_{e}$, the projectile can break into the electronic cloud. This is indeed what happens, since $U_{e}$ is rather small ($\sim 0.03\,\text{keV}$). If that is the case, then necessarily $r_{TP}<r_{A}$.
+\par So how does the electrostatic potential changes? We can imagine the cloud as a symmetric source of potential around $Z_{A}$, so that
+\begin{equation*}
+    \Phi_{A} = -\frac{Z_{A}e}{r_{A}}
+\end{equation*}
+Therefore the total potential within the cloud decreases a bit
+\begin{equation*}
+    \Phi_{\text{tot}} = \frac{Z_{A}e}{r}-\frac{Z_{A}e}{r_{A}}
+\end{equation*}
+but we're interested in evaluating it at distances comparable to the range of nuclear forces, where our nuclear fusion interactions can take place.
+\par This has the effect of lowering the Coulombian barrier
+\begin{equation*}
+    V_{\text{eff}} = \frac{Z_{A}Z_{b}e^{2}}{r_{N}}-\frac{Z_{A}Z_{b}e^{2}}{r_{A}}
+\end{equation*}
+The correction we've introduced is rather small, since $r_{N}/r_{A}\sim 10^{-5}$. In a sense, we could consider this effect as an increased energy of the impinging projectile $E_{b}\to E_{b}+U_{e}$. This clearly induces a slight increasing of the reaction rate by a factor $f$.
+\par The shielding factor $f$ is defined as 
+\begin{equation}
+    f = \frac{\sigma(E_{b}+U_{e})}{\sigma(E_{b})}
+    \label{eq:shieldingfactor}
+\end{equation}
+Albeit small, this effect is not at all negligible. From the definition (\ref{eq:shieldingfactor}) we can substitute the expressions for the cross sections (I'm dropping the b-subscript)
+\begin{equation*}
+    \frac{\sigma(E+U_{e})}{\sigma(E)} = \frac{E}{E+U_{e}}\frac{S(E+U_{e})}{S(e)}\exp\left(-\frac{2\pi Z_{A}Z_{b}e^{2}\sqrt{\mu}}{\hbar\sqrt{2(E+U_{e})}}+\frac{2\pi Z_{A}Z_{b}e^{2}\sqrt{\mu}}{\hbar\sqrt{2E}}\right)
+\end{equation*}
+which, since $U_{e} \ll E$, we can Taylor-expand. First of all we can notice that the first two ratios are, at linear order, of order unity. Then, expanding the square root, we obtain
+\begin{equation*}
+    f \approx \exp\left(\frac{\pi Z_{A}Z_{b}e^{2}\sqrt{\mu}}{\hbar\sqrt{2E}}\frac{U_{e}}{E}\right)
+\end{equation*}
+which becomes more and more relevant for lower energies of the center of mass, which are those of astrophysical relevance, since the astrophysical factor starts to climb up back again.
+\par To the reaction rates we've been calculating so far we have to add a correction to address the effect of electronic shielding in the stellar plasma. The idea is that, although the stellar plasma is globally neutral, whenever a impinging projectile comes close to an ionized nucleus, the two charged nuclei start repelling each other, whilst electrons tend to be attracted.
+\par If that's the case, then we can imagine our stellar plasma as made of a myriad of charged nuclei that are getting "shielded" by electronic clouds at a certain distance from them, so that when a nucleus interact with another nucleus, the electronic cloud, which is just an electron over-density, trails behind it.
+\par Say that $n_{i}$ is the numeric density of the ions
+\begin{equation*}
+    n_{i} \approx \frac{\rho}{\mu_{i}m_{\text{H}}} \approx \frac{1}{\frac{4\pi}{3}a^{3}}
+\end{equation*}
+with $a$ the average distance between ions. We can invert the latter expression
+\begin{equation*}
+    a \sim \frac{1}{n_{i}^{1/3}} \sim \left(\frac{\mu_{i}n_{\text{H}}}{\rho}\right)^{1/3}
+\end{equation*}
+In the inner regions of the stellar plasma, the density is quite large, meaning that the distance between two ions gets smaller.
+\par We can define \emph{strong shielding} the condition for which 
+\begin{equation}
+    \frac{Z_{1}Z_{2}e^{2}}{akT} \gg 1
+    \label{eq:strongshielding}
+\end{equation}
+In such a scenario we can imagine that ions are so far away from each other that there's effectively only one ion per electronic cloud. This is a condition that can be verifying only at very high densities, which are not those typical of the regions where nuclear reactions are active.
+\par In stars, strong shielding is typical of regions where electrons are degenerate, but generally it's much more probable that, in regions of active fusion, the shielding is \emph{weak} (which is exactly the opposite of the strong shielding we mentioned before) or an intermediate scenario that is known as \emph{intermediate shielding}, which can be addressed only through numerical simulations.
+\par Consider a \emph{weak shielding} scenario, where the positions of ions is only slightly skewed with respect to the global absence of electric fields. Generally, the distance between the electronic cloud and a bare nucleus $R$ is much larger than the distance among ions $a$.
+\par In the surrounding of the target ion A with positive charge $Z_{A}$, there's going to be a non-zero electric field, which is going to induce a different distribution of ions and electrons from that that would be giving a vanishing net charge. In general we can write 
+\begin{equation*}
+    \bar{n}_{i}\approx \frac{\rho X_{i}}{A_{i}m_{\text{H}}} \to \bar{n}_{e} = \sum_{i}Z_{i}\bar{n}_{i}
+\end{equation*}
+assuming, for simiplicity, complete ionization in a region of active fusion. On average we know that 
+\begin{equation*}
+    \Phi = 0 \quad \bar{\rho} = \sum_{i}Z_{i}e\bar{n}_{i}-e\bar{n}_{e}= 0
+\end{equation*}
+Instead, in the surrounding of each charged nucleus, there is a small, but non vanishing, electrostatic potential. Statistical mechanics tells us that
+\begin{align*}
+    n_{i} &= \bar{n}_{i}\exp\left(-\frac{Z_{i}e\Phi}{kT}\right) \approx \bar{n}_{i}\left(1-\frac{Z_{i}e\Phi}{kT}\right)\\
+    n_{e} &= \bar{n}_{e}\exp\left(\frac{e\Phi}{kT}\right) \approx \bar{n}_{e}\left(1+\frac{e\Phi}{kT}\right)
+\end{align*}
+Note that, despite the deviation from neutrality, the charge displacement is very small, so that the new numeric density of charges is not that much different from the one that grants neutrality.
+\par The total electronic density is now 
+\begin{equation*}
+    \rho = \sum_{i}Z_{i}e\bar{n}_{i}-e\bar{n}_{e} = \sum_{i}\left(-\frac{Z_{i}^{2}e^{2}\Phi\bar{n}_{i}}{kT}-\frac{e^{2}\Phi\bar{n}_{e}}{kT}\right)
+\end{equation*}
+where we've used the global neutrality condition. Let's manipulate this last expression a bit so to extract the distance of the electronic cloud (\emph{Debye radius})
+\begin{equation*}
+    n = \sum_{i}(\bar{n}_{e}+\bar{n}_{i}) \quad \text{at}\; \Phi = 0
+\end{equation*}
+and we introduce the quantity $\chi$ classically defined as 
+\begin{equation*}
+    \chi = \frac{\sum_{i}Z_{i}^{2}\bar{n}_{i}+n_{e}}{n}
+\end{equation*}
+\par Substituting what we've just found we obtain
+\begin{equation*}
+    \rho = -\frac{\chi e^{2}\Phi}{kT}n
+\end{equation*}
+Now we'd like to understand how the electrostatic potential changes nearby the charged ion, so to determine how the electronic cloud is distributed. Recall Poisson's equation
+\begin{equation*}
+    \nabla^{2}\Phi = -4\pi\rho \implies \frac{1}{r}\frac{\text{d}^{2}(r\Phi)}{\text{d}r^{2}} = -4\pi\rho
+\end{equation*}
+We can plug in the charge density $\rho$
+\begin{equation*}
+    \frac{1}{r}\frac{\text{d}^{2}(r\Phi)}{\text{d}r^{2}} = 4\pi\frac{\chi e^{2}\Phi}{kT}n
+\end{equation*}
+At last, we can define the \emph{Debye radius}
+\begin{equation}
+    r_{D} = \left(\frac{kT}{4\pi\chi ne^{2}}\right)^{1/2}
+    \label{eq:debyeradius}
+\end{equation}
+so that our spherically symmetric Poisson's equation becomes 
+\begin{equation*}
+     \frac{1}{r}\frac{\text{d}^{2}(r\Phi)}{\text{d}r^{2}} = \frac{\Phi}{r_{D}}
+\end{equation*}
+which can be solved for the electrostatic potential $\Phi$
+\begin{equation*}
+    \Phi = \frac{Z_{i}e}{r}\exp\left(-\frac{r}{r_{D}}\right)
+\end{equation*}
+If we expand it for $r/r_{D}\ll 1$ we find out that 
+\begin{equation}
+    \Phi \approx \frac{Z_{i}e}{r}-\frac{Z_{i}e}{r-{D}}
+\end{equation}
+which can be interpreted as the potential generated by a charged ion corrected for the presence of an electronic charge at distance $r_{D}$. We can also define a \emph{Debye energy}
+\begin{equation}
+    E_{D} = \frac{Z_{i}Z_{j}e^{2}}{r_{D}}
+    \label{eq:debyeenergy}
+\end{equation}
+which is the limit energy for which the impinging projectile wouldn't be able to penetrate into the electronic cloud. Note that since the Debye radius is quite large, the associated energy is $E_{D}\ll E_{0}$. In "normal" stars\footnote{Read: non-strongly degenerate stars as white dwarves or neutron stars.} the Debye radius is much larger than
+\begin{equation*}
+    E_{D}=\frac{Z_{i}Z_{j}e^{2}}{r_{D}}\ll\frac{Z_{i}Z_{j}e^{2}}{r_{0}} := E_{0}
+\end{equation*}
+For example, for the Sun, at its center, the Debye radius is $r_{D}\approx 10^{-9}-10^{-8}\,\text{cm}$, while the ratio $r_{D}/r_{0}\sim 50-100$.
+\par As we've done before, we have to calculate the shielding factor and the associated $\langle \sigma v\rangle_{S}$
+\begin{equation*}
+    \langle \sigma v\rangle_{S} = \left(\frac{8}{\pi\mu}\right)^{1/2}\frac{1}{(kT)^{3/2}}\int_{0}^{\infty}\sigma_{ns}(E+E_{D})Ee^{-E/kT}\,\text{d}E
+\end{equation*}
+which we can integrate changing variable to $E' = E+E_{D}$
+\begin{equation*}
+    \langle \sigma v\rangle_{S} = \left(\frac{8}{\pi\mu}\right)^{1/2}\frac{1}{(kT)^{3/2}}\int_{0}^{\infty}\sigma_{ns}(E')(E'-E_{D})e^{-(E'-E_{D})/kT}\,\text{d}E'
+\end{equation*}
+Now, since $E_{D}\ll E_{0}$, we can neglect its contribution coming from the factor $E'-E_{D}$, thus leaving us with 
+\begin{equation*}
+     \langle \sigma v\rangle_{S} \approx \left(\frac{8}{\pi\mu}\right)^{1/2}\frac{1}{(kT)^{3/2}}e^{+E_{D}/kT}\int_{0}^{\infty}\sigma_{ns}(E')E'e^{-E'/kT}\,\text{d}E'
+\end{equation*}
+where we can easily recognize the shielding factor $f$, which comprises essentially of the exponential 
+\begin{equation}
+    f = e^{E_{D}(kT)} \sim 1
+    \label{eq:weakshieldingfactor}
+\end{equation}
+so that the shielded cross section is just a small correction on the non-shielded cross section
+\begin{equation*}
+    \langle \sigma v\rangle_{S} = f\langle \sigma v\rangle_{NS}
+\end{equation*}
+For typical solar values, given the Debye radius we've found earlier, we'd obtain a shielding factor for the pp reaction of order $f\sim 1.03$.
