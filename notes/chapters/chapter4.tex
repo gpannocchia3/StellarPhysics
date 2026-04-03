@@ -512,7 +512,7 @@ whose solution is of the type $N_{\text{D}} = N_{\text{D},0}\exp(-t/\tau)$, with
 which, for example, we can compare to the very following reaction, the one involving deuterion, that has $S(0)_{\text{D}p}\sim 2.1\cdot 10^{-4}\unit{keV}\unit{b}^{-1}$.
 \par So there are 18 orders of magnitude of difference.
 \subsection{Hydrogen Burning: CN-NO}
-The CN-NO (by)cycle is the combination of two independent cycles: The CN cycle and the NO cycle. The presence of some isotopes of Carbon, Nitrogen and Oxygen are necessary for either cycle to begin. Being both produced and destroyed during these cycles, those elements act as catalysts. The reaction networks involved are the following:
+The CN-NO (bi)cycle is the combination of two independent cycles: The CN cycle and the NO cycle. The presence of some isotopes of Carbon, Nitrogen and Oxygen are necessary for either cycle to begin. Being both produced and destroyed during these cycles, those elements act as catalysts. The reaction networks involved are the following:
 \begin{align*}
     & \text{\textbf{CN cycle}}\\
     & \element{C}{12}{6}+\element{p}{1}{1}\to \element{N}{13}{7}+\gamma\\
@@ -521,6 +521,265 @@ The CN-NO (by)cycle is the combination of two independent cycles: The CN cycle a
     & \element{N}{14}{7}+\element{p}{1}{1}\to \element{O}{15}{8}+\gamma\\
     & \element{O}{15}{8}\to \element{N}{15}{7}+e^{+}+\nu_{e}\\
     & \element{N}{15}{7}+\element{p}{1}{1}\to \element{O}{16}{8}^{*}\to \element{C}{12}{6}+\element{He}{4}{2} \;\; (\Gamma \sim 99\%)\\
-    &\quad \quad \quad \quad\to \element{O}{16}{8}+\gamma\quad \quad \quad \quad \quad\,(\Gamma \sim 1\%)
+    &\quad\quad\quad\quad\quad\quad\quad\;\;\to \element{O}{16}{8}+\gamma \quad \;\;\,(\Gamma \sim 1\%)
 \end{align*}
-This branch of the cycle has to follow the timescale of $\element{N}{14}{7}+\element{p}{1}{1}\to \element{O}{15}{8}+\gamma$, which has the smaller cross section, folloed by the first reaction of the cycle.
+This branch of the cycle has to follow the timescale of $\element{N}{14}{7}+\element{p}{1}{1}\to \element{O}{15}{8}+\gamma$, which has the smaller cross section, followed by the first reaction of the cycle.
+\par In the CN cycle the isotopes of C and N act as catalysts, and so behave as secondary elements. As a consequence, the cycle can start almost from any reaction if the involved isotope is present, and during a complete loop around the cycle the isotope is consumed and then produced again.
+\par This, however, doesn't mean that the concentrations of the different isotopes will be unchanged as the final abundances depend strongly on the relative rates of the nuclear reactions in the cycle. Only at a high enough temperature ($T\approx 15\cdot 10^{6}\unit{K}$) will the isotopes achieve their equilibrium abundance.
+\par The branching ratio between the proton captures on $^{15}\text{N}$, producing respectively $^{16}\text{O}$ and $^{12}\text{C}$, is of the order of $10^{-4}$, thus the amount of $^{16}\text{O}$ produced is practically negligible. Nevertheless, for slightly higher temperatures ($T\approx 20\cdot 10^{6}\unit{K}$)the small production of $^{16}\text{O}$ unlocks a new branch for the cycle, one which transforms Oxygen into Nitrogen.
+\begin{align*}
+    & \text{\textbf{NO cycle}}\\
+    & \element{N}{15}{7}+\element{p}{1}{1}\to \element{O}{16}{8}^{*}\to \element{O}{16}{8}+\gamma \;\; (\Gamma \sim 1\%)\\
+    & \element{O}{16}{8}+\element{p}{1}{1}\to \element{F}{17}{9}+\gamma\\
+    & \element{F}{17}{9}\to \element{O}{17}{8}+e^{+}+\nu_{e}\\
+    & \element{O}{17}{8}+\element{p}{1}{1}\to \element{O}{15}{8}+\gamma\\
+    & \element{O}{17}{8}+\element{p}{1}{1}\to \element{F}{18}{9}^{*}\to \element{N}{14}{7}+\element{He}{4}{2} \;\; (\Gamma \sim 99\%)\\
+    &\quad\quad\quad\quad\quad\quad\quad\;\;\to \element{F}{18}{9}+\gamma \quad \;\;\,(\Gamma \sim 1\%)
+\end{align*}
+\par It should be noticed that for a typical PopI chemical composition (i.e., about solar) the global amount of CNO elements is of order of 75\% of the total metallicity
+\begin{equation*}
+    X_{\text{CNO}}\approx 0.75Z \quad \frac{X_{\text{O}}}{X_{\text{C}}} \approx 0.7
+\end{equation*}
+We know, however, that the total abundance has to be conserved (unless particular kinds of burnings are involved, that is)
+\begin{equation*}
+    \sum_{i}N_{i}(t=0) = \sum_{i}N_{i}(t)
+\end{equation*}
+meaning only the relative abundances between elements can be changing. In particular, we know that the slowest reaction of the CNO cycle is the $^{14}\text{N}(p,\gamma)\,^{15}\text{O}$, so the most abundant element in the CNO cycle processed material is indeed $^{14}\text{N}$. As a rule of thumb, the change of the CNO element caused by the different burning channels is
+\begin{itemize}
+    \item CN cycle processed matter: C$\downarrow$ N$\uparrow$
+    \item CNO cycle processed matter: C$\downarrow$ N$\uparrow$ O$\downarrow$
+\end{itemize}
+Once the full CNO is operating, more than 95\% of the cycle's elements are converted into $^{14}\text{N}$, which also enables a new chain for unbound neutrons production.
+\par At even higher temperatures, a new chain of reactions for processing Fluorine is unlocked
+\begin{align*}
+    & \element{F}{18}{9}\to \element{O}{18}{8}+e^{+}\nu_{e}\\
+    & \element{O}{18}{8}+\element{p}{1}{1}\to \element{F}{19}{9}^{*}\to \element{N}{15}{7}+\element{He}{4}{2}\\
+    &\quad\quad\quad\quad\quad\quad\quad\;\;\to \element{F}{19}{9}+\gamma\\
+    & \element{F}{19}{9}+\element{p}{1}{1}\to \element{O}{16}{8}+\element{He}{4}{2}\\
+    &\quad\quad\quad\;\,\;\;\to \element{Ne}{20}{10}+\gamma\\
+\end{align*}
+Until temperature raises even higher ($T\approx 25\cdot 10^{6}\unit{K}$) there is a \emph{leakage} on un-burned Neon from the star. Only in very massive MS-stars and during the AGB\footnote{\emph{Asymptotic Giant Branch}.} does a star suffice the necessary conditions to activate the Neon-Sodium cycle
+\begin{align*}
+    & \text{\textbf{Ne-Na cycle}}\\
+    & \element{Ne}{20}{10}+\element{p}{1}{1}\to \element{Na}{21}{11}+\gamma\\
+    & \element{Na}{21}{11}\to \element{Ne}{21}{10}+e^{+}+\nu_{e}\\
+    & \element{Ne}{21}{10}+\element{p}{1}{1}\to \element{Na}{22}{11}+\gamma\\
+    & \element{Na}{22}{11}+\element{p}{1}{1}\to \element{Mg}{23}{12}+\gamma\\
+    & \element{Mg}{23}{12}\to \element{Na}{23}{11}+e^{+}+\nu_{e}\\
+    & \element{Na}{23}{11}+\element{p}{1}{1}\to \element{Mg}{24}{13}^{*} \to \element{Ne}{20}{10}+\element{He}{4}{2}\\
+    &\quad\quad\quad\quad\quad\quad\quad\quad\,\;\;\to \element{Mg}{24}{12}+\gamma
+\end{align*}
+which reflects into an increase of the abundance of Sodium and a decrease in the abundance of Oxygen, the so-called \emph{Oxygen-Sodium anticorrelation}, which is a distinctive characteristic of most globular clusters. At $T\approx 50\cdot 10^{6}\unit{K}$, Magnesium is ignited, forming Aluminium
+\begin{align*}
+    & \text{\textbf{Mg-Al cycle}}\\
+    & \element{Mg}{24}{12}+\element{p}{1}{1}\to \element{Al}{25}{13}+\gamma\\
+    & \element{Al}{25}{13}\to \element{Mg}{25}{12}+e^{+}+\nu_{e}\\
+    & \element{Mg}{25}{12}+\element{p}{1}{1}\to \element{Al}{26}{13}+\gamma\\
+    & \element{Al}{26}{13}\to \element{Mg}{26}{12}+e^{+}+\nu_{e}\\
+    & \element{Mg}{26}{12}+\element{p}{1}{1}\to \element{Al}{27}{13}+\gamma
+\end{align*}
+Note, however, that when temperature raises over a given threshold, protonic captures and $\alpha$-captures are competitive to $\beta^{+}$ decays. Two more protonic captures are given for isotopes of Aluminium
+\begin{align*}
+    & \element{Al}{26}{13}+\element{p}{1}{1}\to\element{Si}{27}{14}+\gamma\\
+    & \element{Si}{27}{14}\to\element{Al}{27}{13}+e^{+}+\nu_{e}\\
+    & \element{Al}{27}{13}+\element{p}{1}{1}\to \element{Si}{28}{14}^{*} \to \element{Mg}{24}{12}+\element{He}{4}{2}\\
+    &\quad\quad\quad\quad\quad\quad\quad\,\,\;\;\to \element{Si}{28}{14}+\gamma
+\end{align*}
+which reflects the so-called \emph{Magnesium-Aluminium anticorrelation}. This property we're not able to see in all clusters, from which we'd able to infer, in principle, the presence of a contamination in the cluster.
+\par This is a good point to stop for a second (and take a deep breath) and ask ourselves who's burning Hydrogen how.
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.7\textwidth]{img/cnopp.png}
+    \caption{Logarithm of the relative energy output ($\epsilon$) of proton-proton (p-p), CNO, and triple-$\alpha$ fusion processes at different temperatures. The dashed line shows the combined energy generation of the p-p and CNO processes within a star. Credits: Wikipedia.}
+    \label{fgr:cnopp}
+\end{figure}
+\par It's possible to show that the energy production rate scales with $\sim T^{4}$ for the p-p chain, and with $\sim T^{17}$ for the CNO bi-cycle. When temperature gets over $\sim 20\cdot 10^{6}\unit{K}$, the CNO takes over the p-p, as shown in Fig.\ref{fgr:cnopp}. At the end of the day, it all comes down to the mass of the star.
+\par \emph{Lower Main Sequence} stars (LMS), that have about solar chemical composition and are roughly in the range $M\lesssim 1.2M_{\odot}$, will burn Hydrogen through the p-p chain, as will do \emph{Very Low Mass Stars} (VLMS), which have masses $M\lesssim0.3M_{\odot}$ and are completely convective and very "cold".
+\par \emph{Upper Main Sequence} stars (UMS), that have masses $M\gtrsim 1.2M_{\odot}$ will be burning Hydrogen through the CNO bi-cycle.
+\par Note that as temperature climbs up to other heights\footnote{Poetical delirium.}, under conditions such as those found in novae and X-ray bursts, the rate of proton captures can exceed the rate of beta-decay, pushing the burning to the proton drip line.
+\par The essential idea is that a radioactive species will capture a proton before it can beta decay, opening new nuclear burning pathways that are otherwise inaccessible. Because of the higher temperatures involved, these catalytic cycles are typically referred to as the \emph{hot CNO cycles}. For example
+\begin{align*}
+    & \text{\textbf{HCNO I}}\\
+    & \element{C}{12}{6}+\element{p}{1}{1}\to\element{N}{13}{7}+\gamma\\
+    & \element{N}{13}{7}+\element{p}{1}{1}\to\element{O}{14}{8}+\gamma\\
+    & \element{O}{14}{8}\to\element{N}{14}{7}+e^{+}+\nu_{e}\\
+    & \element{N}{14}{7}+\element{p}{1}{1}\to\element{O}{15}{8}+\gamma\\
+    & \element{O}{15}{8}\to\element{N}{15}{7}+e^{+}+\nu_{e}\\
+    & \element{N}{15}{7}+\element{p}{1}{1}\to\element{C}{12}{6}+\element{He}{4}{2}
+\end{align*}
+\subsection{Helium Burning}
+All stars with initial total mass larger than $\sim 0.5M_{\odot}$ are able to attain, in their interiors, the thermal conditions required for the onset of Helium burning. Unlike during the Hydrogen burning, the physical process at work in stars of different masses during the main core He-burning stage are quite similar.
+\par The first and fundamental reaction in the He-burning process is the production of $^{12}\text{C}$ from the fusion of three Helium nuclei. This reaction is called the $3\alpha$ reaction. Since it's a three-body encounter, it has very low probability, and this reaction usually occurs in two separate steps 
+\begin{align*}
+    & \element{He}{4}{2}+\element{He}{4}{2}\to \element{Be}{8}{4}\\
+    & \element{Be}{8}{4}+\element{He}{4}{2}\to\element{C}{12}{6}+\gamma
+\end{align*}
+Also, temperature is now high enough to allow $\alpha$-captures on Carbon nuclei, producing Oxygen 
+\begin{equation*}
+    \element{C}{12}{6}+\element{He}{4}{2}\to \element{O}{16}{8}+\gamma
+\end{equation*}
+In a short time ($\sim 10^{-16}\unit{s}$), Berillium decays back into two $\alpha$ particles, thus making the probability of the second reaction extremely low. However, as the interior temperature climbs up, the probability of the second reaction increases, due to these combined effects:
+\begin{itemize}
+    \item the number of $\alpha+\alpha$ reactions increases, while the decay time for Berillium stands unchanged, thus significantly increasing the abundance of Berillium;
+    \item the nuclear cross section of the second reaction strongly increases.
+\end{itemize} 
+\par A temperature of about $\sim 100\cdot 10^{6}\unit{K}$ is necessary before $3\alpha$ reactions start producing a sizeable amount of energy. Also, any increase in the density favors incredibly this reaction for 
+\begin{equation*}
+    \epsilon_{3\alpha} \propto \rho^{2}T^{41}
+\end{equation*}
+Even considering all of this, the measured abundances of Carbon and Oxygen in the Universe wouldn't be matching the results the reactions we've written down would bear, because they're still strongly inefficient reactions.
+\par In 1954, Fred Hoyle \cite{1954ApJS....1..121H} predicts that in order to achieve the observed abundances of Carbon and Oxygen, the $3\alpha$ reaction must be \emph{resonant}.
+\par That was indeed the case: the $\alpha$-capture on Berillium nuclei has a broad resonance at approximately $300\unit{keV}$ (roughly to $\approx 2\power{10}{8}\unit{K}$), meaning that the reaction gets influenced from the "tail" of the resonance, which would also explain how so much Oxygen is produced\footnote{Technically, Oxygen production is influenced by \emph{three} resonant reactions.}
+\begin{equation*}
+    \frac{\text{C}}{Z}\sim 0.20\quad\frac{\text{O}}{Z}\sim 0.47\quad \frac{\text{N}}{Z}\sim 0.06
+\end{equation*}
+Since small stars which can achieve Helium burning can continue to do so for millions of years, we've now found a way to circumvent the instability hidden into elements with $A=5,8$, which prevented the formation of heavier nuclei.
+\par Note that since the luminosity is fixed only by the \emph{mass} of the star and from its \emph{evolutionary stage}, various reactions might be competitive in order to balance the total luminosity of the star. So, for example, the contribution to luminosity might be distributed between the $3\alpha$ and the $^{12}\text{C}(\alpha,\gamma)\,^{16}\text{O}$
+\begin{equation*}
+    L_{\text{tot}} = L_{3\alpha}+L_{\text{C}-\alpha}
+\end{equation*}
+with the latter being slightly favored because it has a lower Helium consumption rate (only one $\alpha$ instead of 3), which allows the star to live longer.
+\subsubsection{Production of free neutrons}
+\par Other important reactions are given
+\begin{align*}
+    &\element{O}{16}{8}+\element{He}{4}{2}\to \element{Ne}{20}{10}+\gamma\\
+    &\element{Ne}{20}{10}+\element{He}{4}{2}\to \element{Mg}{24}{12}+\gamma\\
+    &\element{Mg}{24}{12}+\element{He}{4}{2}\to \element{Si}{28}{14}+\gamma\\
+\end{align*}
+but the most notable feature of Helium burning is that the star is now able to produce \emph{free neutrons}. Consider for example
+\begin{align*}
+    &\element{N}{14}{7}+\element{He}{4}{2}\to\element{F}{18}{9}+\gamma\\
+    &\element{F}{18}{9}\to\element{O}{18}{8}+e^{+}+\nu_{e}\\
+    &\element{O}{18}{8}+\element{He}{4}{2}\to\element{Ne}{22}{10}+\gamma\\
+    &\element{Ne}{22}{10}+\element{He}{4}{2}\to\element{Mg}{25}{12}++\element{n}{1}{0}
+\end{align*}
+For stars of solar metallicity, in which $Z_{\text{CNO}}\sim 0.01Z_{\odot}$, we'd have, for example, a flux of $7\power{10}{20}\text{neutrons}\unit{g}^{-1}$, but temperatures of order $300-350\power{10}{6}\unit{K}$ are needed. So, during the AGB phase, this chain of neutrons production is possible for $M\gtrsim 3M_{\odot}$ (and dominant for $M\gtrsim5M_{\odot}$). Smaller stars produce free neutrons with a reaction involving Carbon 
+\begin{align*}
+    & \element{C}{12}{6}+\element{p}{1}{1}\to\element{N}{13}{7}+\gamma\\
+    & \element{N}{13}{7}\to \element{C}{13}{6}+e^{+}+\nu_{e}\\
+    & \element{C}{13}{7}+\element{He}{4}{2}\to\element{O}{17}{O}^{*}\to\element{O}{16}{8}++\element{n}{1}{0}
+\end{align*}
+that is completed only at temperatures of order $\approx 80\power{10}{6}\unit{K}$, but not much higher since Helium burning would soon be starting.
+\par Paradoxically, these reactions aren't easy to do not even during the AGB phase: Stars have the necessary temperatures, but, in those same regions, they don't have protons to spare. Other possible reactions involve the burning of heavier nuclei
+\begin{align*}
+    & \element{C}{12}{6}+\element{C}{12}{6}\to\element{Mg}{23}{12}+\element{n}{1}{0}\\
+    & \element{O}{16}{8}+\element{O}{16}{8}\to\element{S}{31}{16}+\element{n}{1}{0}\\
+    & \element{Fe}{56}{26}+\gamma\to 13\,\element{He}{4}{2}+4\,\element{n}{1}{0}
+\end{align*}
+where the latter is only active moments before a star goes supernova and photons are able to disintegrate Iron nuclei.
+\subsection{Heavier Elements Burning}
+Moving on to even higher temperatures, it is possible to ignite the combustion of heavier nuclei, such as Carbon. Since a temperature of order $T\sim 700-800\power{10}{6}\unit{K}$ is needed, many stars will never even get that far. The minimum mass to ignite Carbon is said $M_{\text{up}}$ and is defined as such
+\begin{equation*}
+    M_{\text{up}}=
+        \left\{
+    \begin{array}{ll}
+            \sim 7M_{\odot} & \text{metal poor halo stars,}\;Z\sim10^{-4}\\
+            \sim 7M_{\odot} & \text{metallic disk stars,}\;Z\sim 0.015\\
+            \sim 4M_{\odot} & \text{intermediate metallicity stars,}\;Z\sim\power{10}{-3}
+    \end{array}
+        \right.
+\end{equation*}
+Not surprisingly, as progressively heavier nuclei are burned, more reactions products are possible. For Carbon
+\begin{align*}
+    & \text{\textbf{Carbon Burning}}\\
+    \element{C}{12}{6}+\element{C}{12}{6}\to\element{Mg}{24}{12}^{*}&\to\element{Ne}{20}{10}+\element{He}{4}{2}\quad (\Gamma \sim 50\%)\\
+    & \to \element{Na}{23}{11}+\element{p}{1}{1}\quad (\Gamma \sim 50\%)\\
+    & \to \element{Mg}{23}{12}+\element{n}{1}{0}\quad (\text{rare})\\
+    & \to \element{Mg}{24}{12}+\gamma\quad (\text{very rare})
+\end{align*}
+Before reaching the temperature for Oxygen burning ($T\sim1\power{10}{9}\unit{K}$), photons get energetic enough to photodisintegrate Neon
+\begin{equation*}
+    \element{Ne}{20}{10}+\gamma \leftrightarrows \,\element{O}{16}{8}+\element{He}{4}{2}
+\end{equation*}
+with the right hand side (so, Oxygen) being more favored. At these temperatures, $\alpha$-captures are also possible
+\begin{align*}
+    & \element{Ne}{20}{10}+\element{He}{4}{2}\to\element{Mg}{24}{12}+\gamma\\
+    & \element{Mg}{24}{12}+\element{He}{4}{2}\to\element{Si}{28}{14}+\gamma
+\end{align*}
+Finally we reach the temperature needed for Oxygen burning ($T\sim 1.4\power{10}{9}\unit{K}$, $M\gtrsim 10M_{\odot}$). As expected, multiple channels are available this time as well
+\begin{align*}
+    & \text{\textbf{Oxygen Burning}}\\
+    \element{O}{16}{8}+\element{O}{16}{8}\to\element{S}{32}{16}^{*}&\to\element{Si}{28}{14}+\element{He}{4}{2}\quad (\Gamma \sim 45\%)\\
+    & \to \element{P}{31}{15}+\element{p}{1}{1}\quad (\Gamma \sim 45\%)\\
+    & \to \element{S}{31}{16}+\element{n}{1}{0}\quad (\Gamma \sim 10\%)\\
+    & \to \element{S}{32}{16}+\gamma\quad (\text{very rare})
+\end{align*}
+Clearly, all other combinations of heavy nuclei are also possible, such as 
+\begin{align*}
+    & \element{C}{12}{6}+\element{O}{16}{8}\to\element{Mg}{24}{12}+\element{He}{4}{2}\\
+    & \element{C}{12}{6}+\element{O}{16}{8}\to\element{Al}{27}{13}+\element{p}{1}{1}\\
+    & \element{C}{12}{6}+\element{Ne}{20}{10}\to 2\,\element{O}{16}{8}
+\end{align*}
+Now, the next in line after Oxygen would be Silicon. But there's a problem. The ignition temperature for Silicon burning is $T\sim 4.5\power{10}{9}\unit{K}$, while at $T\sim 3\power{10}{9}\unit{K}$ Silicon gets photodisintegrated, as well as do other less bound nuclei, for example
+\begin{align*}
+    \element{Si}{28}{14} +\gamma \leftrightarrows\,& \element{Al}{27}{13}+\element{p}{1}{1}\\
+    & \element{Mg}{24}{12}+\element{He}{4}{2}
+\end{align*}
+\par This allows for a redistribution of chemical elements, favoring an over-abundance of more tightly bound elements. At this temperatures are more probable $\alpha$-captures up until the very most bound element (take a deep breath)
+\begin{align*}
+    & \element{Si}{28}{14}+\element{He}{4}{2}\leftrightarrows \,\element{S}{32}{16}+\gamma\\
+    & \element{S}{32}{16}+\element{He}{4}{2}\leftrightarrows \,\element{Ar}{36}{18}+\gamma\\
+    & \element{Ar}{36}{18}+\element{He}{4}{2}\leftrightarrows \,\element{Ca}{40}{20}+\gamma\\
+    & \element{Ca}{40}{20}+\element{He}{4}{2}\leftrightarrows \,\element{Ti}{44}{22}+\gamma\\
+    & \element{Ti}{44}{22}+\element{He}{4}{2}\leftrightarrows \,\element{Cr}{48}{24}+\gamma\\
+    & \element{Cr}{48}{24}+\element{He}{4}{2}\leftrightarrows \,\element{Fe}{52}{26}+\gamma\\
+    & \element{Fe}{52}{26}+\element{He}{4}{2}\leftrightarrows \,\element{Ni}{56}{28}+\gamma\\
+    & \element{Ni}{56}{28}\to \element{Co}{56}{27}+e^{+}+\nu_{e}\to \element{Fe}{56}{26}+2(e^{+}+\nu_{e})
+\end{align*}
+The formation of $\element{Ni}{62}{28}$, which would be the most tightly bound element, is greatly disfavored by the scarce number of reactions producing it. That's the reason why this crazed run for the most bound element stops only at $\element{Fe}{56}{26}$.
+
+\subsection{Netronic Captures}
+Up until now we've seen how elements up to Iron are produced all throughout stellar nucleosynthesis, and maybe you've began to wonder how even heavier elements like Silver, Gold and Platinum (if you're into riches) or Technetium, Uranium and Radium (if you're into radioactive stuff) are produced.
+\par The answer to all your questions was anticlimactically revealed in the title of this section: \emph{Neutronic captures}.
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.7\textwidth]{img/stableisotopes.png}
+    \caption{Isotope half-lives. The darker more stable isotope region departs from the line of protons $Z = N$ (neutrons) as the element number $Z$ grows. Credits: Wikipedia.}
+    \label{fgr:stableisotopes}
+\end{figure}
+\par As far as our understanding goes, there are two types of neutronic captures: \emph{slow} (s) and \emph{rapid} (r) captures. The distinction is essentially based on the comparison between the $\beta^{+}$-decay half-life and the average timescale for neutronic capture in the case of an unstable element being produced.
+\par Neutronic captures are usually happening during the AGB phase, which is millions of years-long and neutrons are supplied quite steadily all throughout the process. Other sources are typically SNe, during which we have an incredible amount of free neutrons available but that is more of a short injection rather than a constant supply.
+\par Since neutrons are, guess what, neutral, we don't have to worry about getting through the Coulombian potential as we've done earlier. If nuclei and neutrons are both thermalized (which is likely, if not certain) we can write 
+\begin{equation*}
+    v_{T} = \sqrt{\frac{2kT}{\mu}} \quad \sigma \propto \frac{1}{v}\propto \frac{1}{\sqrt{E}}
+\end{equation*}
+As we've done earlier, we now have to calculate (\ref{eq:averagenuclearcs}) but considering only the Maxwellian contribution
+\begin{equation*}
+    \langle \sigma(v)v \rangle = \left(\frac{8}{\pi\mu}\right)^{1/2}\frac{1}{(kT)^{3/2}}\int_{0}^{\infty}\sigma(E)E\exp(-E/kT)\diff{E}
+\end{equation*}
+but since neutrons are neutral, the maximum reactivity is at $E_{0}=kT$. Thus we can write an expression for the average interaction cross section of the form 
+\begin{equation*}
+    \langle\sigma\rangle = \sigma(v_{T}) = \sigma_{T}
+\end{equation*}
+and 
+\begin{equation*}
+    \langle \sigma(v)v \rangle = \text{const.} = \sigma_{T}v_{T}
+\end{equation*}
+Let us now calculate the average lifetime of a nuclide of mass $A$, so that we can compare it with the average timescales for neutronic captures.
+\par The reaction we're interested in considering is 
+\begin{equation*}
+    A(Z,N) + n \to A+1(Z,N+1)
+\end{equation*}
+We know that we can approximate $\dot{N}_{A} = -N_{A}(t)/\tau$ and, following its definition, we also have 
+\begin{equation*}
+    \dot{N}_{A} = -N_{n}N_{A} \langle \sigma(v)v \rangle_{A+n}
+\end{equation*}
+Equating the two and solving for $\tau$
+\begin{equation}
+    \tau_{n} = \frac{1}{N_{n}\langle \sigma(v)v \rangle_{A+n}}
+    \label{eq:neutronictimescale}
+\end{equation}
+Note that in general the cross section $\langle \sigma(v)v \rangle_{A+n}$ is not constant with respect to $A$ because of the presence of stable nuclides, in correspondence to which there is a "depression".
+\par For s-processes, temperatures are those of Helium burning in shells, which are in the range $1-6\power{10}{8}\unit{K}$.
+\par As a reference nucleus we'll be taking $\element{Ba}{134}{56}$, which has a termal velocity $v_{T}\sim 3\power{10}{8}\unit{cm}\unit{s}^{-1}$ and a cross section $\sigma_{T}\sim 0.1\unit{b}$ at a temperature $T\sim 4\power{10}{8}\unit{K}$ ($kT=30\unit{keV}$). Thus
+\begin{equation*}
+    \sigma_{T}v_{T}\sim 3\power{10}{-7}\unit{cm}^{3}\unit{s}^{-1}
+\end{equation*}
+\par If we want to make sure that a capture is indeed a s-capture, then we have to require $\tau_{n}\gg \tau_{\beta}$. Since the average timescale for $\beta$-decays in these conditions is $\tau_{\beta}\sim 3\power{10}{8}\unit{s}$, the necessary neutron density is
+\begin{equation*}
+    N_{n}<1\power{10}{8}\unit{cm}^{-3}
+\end{equation*}
+On the other hand, to make sure captures are of the r type, we have to require $\tau_{\beta}\gg\tau_{n}$, with an average value of $1\power{10}{-3}\unit{s}$, hence
+\begin{equation*}
+    N_{n}> 10^{20}\unit{cm}^{-3}
+\end{equation*}
