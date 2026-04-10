@@ -733,11 +733,11 @@ Up until now we've seen how elements up to Iron are produced all throughout stel
 \par The answer to all your questions was anticlimactically revealed in the title of this section: \emph{Neutronic captures}.
 \begin{figure}[h!]
     \centering
-    \includegraphics[width=0.7\textwidth]{img/stableisotopes.png}
+    \includegraphics[width=0.5\textwidth]{img/stableisotopes.png}
     \caption{Isotope half-lives. The darker more stable isotope region departs from the line of protons $Z = N$ (neutrons) as the element number $Z$ grows. Credits: Wikipedia.}
     \label{fgr:stableisotopes}
 \end{figure}
-\par As far as our understanding goes, there are two types of neutronic captures: \emph{slow} (s) and \emph{rapid} (r) captures. The distinction is essentially based on the comparison between the $\beta^{+}$-decay half-life and the average timescale for neutronic capture in the case of an unstable element being produced.
+\par As far as our understanding goes, there are two types of neutronic captures: \emph{slow} (s) and \emph{rapid} (r) captures. The distinction is essentially based on the comparison between the $\beta^{-}$-decay half-life and the average timescale for neutronic capture in the case of an unstable element being produced.
 \par Neutronic captures are usually happening during the AGB phase, which is millions of years-long and neutrons are supplied quite steadily all throughout the process. Other sources are typically SNe, during which we have an incredible amount of free neutrons available but that is more of a short injection rather than a constant supply.
 \par Since neutrons are, guess what, neutral, we don't have to worry about getting through the Coulombian potential as we've done earlier. If nuclei and neutrons are both thermalized (which is likely, if not certain) we can write 
 \begin{equation*}
@@ -783,3 +783,46 @@ On the other hand, to make sure captures are of the r type, we have to require $
 \begin{equation*}
     N_{n}> 10^{20}\unit{cm}^{-3}
 \end{equation*}
+\par In what remains of this chapter, we'll try to calculate the equilibrium abundance of (stable) the nuclei that are forming due to neutronic captures, as well as explaining particular features in the abundances trend.
+\par First of all, it's clear that if after a neutronic capture the resulting nucleus is stable, it won't be $\beta$-decaying, and will only be able to climb further on the $N$ ladder. Consider
+\begin{equation*}
+    \dot{N}_{A}(t) = N_{A-1}N_{n}\langle \sigma v \rangle_{A-1+n} - N_{A}N_{n}\langle \sigma v \rangle_{A+n}
+\end{equation*}
+where the first term represents the contribution of neutronic captures, whilst the second that of decays. Since we'll consider here only s-captures, we can assume $\tau_{s}\gg\tau_{\beta}$, so that all unstable nuclei quickly decay into stable nuclei.
+\par When equilibrium is reached, the abundance of nuclei of atomic weigth A is no longer varying, thus earning the label of secondary products. We can write the equilibrium condition as a function of the neutron flux $\Phi_{n} = N_{n}v_{T}$
+\begin{equation*}
+    \dot{N}_{A}(t) = \frac{\Phi_{n}}{v_{T}}N_{A-1}\langle \sigma \rangle_{A-1+n}v_{T} - \frac{\Phi_{n}}{v_{T}}N_{A}\langle \sigma \rangle_{A+n}v_{T}
+\end{equation*}
+so that if all nuclei are able to reach equilibrium and the flux of neutron is constant\footnote{Note that this is an unreasonable assumption. The neutron flux can be assumed constant only during the AGB phase. When we're observing a star, however, we're observing its photosphere, and therefore we're seeing matter that has already been processed multiple times in plenty of other stars before and so it has been exposed to many different fluxes of neutrons in different stars for uneven amounts of time. Hence our initial claim.} we'd obtain 
+\begin{equation*}
+    N_{A-1}\langle\sigma\rangle_{A-1+n} = N_{A}\langle\sigma\rangle_{A+n} 
+\end{equation*}
+\par If we were to take a look at a plot\footnote{I've yet to find one that is at least half-satisfying. For the time being, trying to picture it in your head.} of the neutronic capture cross section as a function of $A$, we'd see that there are regions in which the product $N_{A}\sigma_{A}$ (dropping the bra-kets for convenience) is approximately constant in certain regions, while in others we're observing sharp drops. Why is it so?
+\par Those sharp drops are always in correspondence with "magical numbers", which are essentially stable isotopes for which the neutronic capture cross section is strongly reduced. Hence the abundance of the associated secondary element increases, since the destruction processes are very weak.
+\begin{figure}[h!]
+    \centering 
+    \includegraphics[width=0.7\textwidth]{img/peaks.jpeg}
+    \caption{Numerical abundance of nuclides as observed in the Sun, normalized to $10^{6}$ atoms of Silicon. Adapted from Cameron, 1920.}
+    \label{fgr:peaks}
+\end{figure}
+\par Note that for elements heavier than Iron there are some "bumps" in the curve shown in Fig.\ref{fgr:peaks}, which appear in two kinds: Steeper s-peaks (e.g. that of Barium) and the rounder r-peaks (e.g. that of Xenon).
+\par Finding an explaination for these particular shapes is actually very simple. For s-processes, the peaks are in correspondence of the aforementioned magic numbers: Neutronic capture on those nuclei is very hard because of closed shells and thus their abundance is very high (although still quite inferior to the equilibrium one).
+\begin{figure}[h!]
+    \centering 
+    \includegraphics[width=0.7\textwidth]{img/rprocess.jpg}
+    \caption{Schematic depiction of s-processes and r-processes. Credits: \cite{Horowitz2019}.}
+    \label{fgr:rprocess}
+\end{figure}
+\par The other peaks are, surprise surprise, caused by r-processes. For this type of neutronic capture, the neutron flux is very intense but short-lived (roughly of the order of a couple seconds).
+\par Consider an unstable element capturing neutrons. Since we're considering r-processes, the element isn't able to decay before capturing another neutron, and so it starts piling them up, until it reaches a number of neutrons that corresponds to that of a magic number. The capture cross section decreases abruptly and the nucleus is now able to decay.
+\par The neutron flux hasn't disappeared, though. So the nucleus can capture a new neutron, reach the magic number and decay once more. When the neutron flux is finally over, the nucleus decays back into the "stability valley", but ending up with an atomic weigth $A$ smaller than the closest magic number and stopping on the first stable isotope that is found.
+\par This process thus leads to the formation of an element whose number of protons and neutrons is inferior to that of the closer magic number, hence the rounder peak we observe. That is because when the flux of neutrons is cut, not all elements will share the same configuration and thus will decay back to the first stable element at "hand" (see Fig.\ref{fgr:rprocess} for a much clearer visual representation).
+\par The result is that there is a possible range of stable configurations rather than a single one.
+\par Now you might be wondering: "If r-processes are exactly how we've described, nuclei shouldn't be able to go further than the first magic number they stumble upon. So how come they're not stopping there?"
+\par It would be a very sensible question indeed. The thing is that the more $\beta$-decays bring nuclei closer to the stability valley, the more neutronic captures become probable, hence, unless the neutron flux gets suddenly cut off, it is possible to capture another neutron, cross the magic number barrier and reach higher atomic weigths than the corresponding s-peak.
+\begin{figure}[h!]
+    \centering 
+    \includegraphics[width=0.9\textwidth]{img/neutroniccapturesall.jpg}
+    \caption{Nuclear chart showing the nucleosynthesis processes occurring during stellar burning (yellow), the s-process (orange) and the r-process (violet). Credits: \href{https://www.innovationnewsnetwork.com/observing-nuclear-reactions-formation-heavy-elements/11612/}{this website}.}
+    \label{fgr:neutroniccapturesall}
+\end{figure}
