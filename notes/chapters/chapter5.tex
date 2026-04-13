@@ -39,4 +39,108 @@ which is the minimum mass for a gravitationally bound system to be unstable agai
 
 \section{Pre-Main Sequence}
 
-Coming soon.
+We've mentioned somewhere in the "few" introducing lines of this chapter that during the formation of a star the yet-to-be protostar accretes matter from the surrounding molecular cloud. Such accretion might be distinguished into hot accretion or cold accretion (which seems to be against experimental observations). Up until accretion stops, the luminosity of the star can be thought as made up of two terms
+\begin{equation*}
+    L_{\text{tot}} = L_{\text{acc}}+L_{\text{sup}}
+\end{equation*}
+where $L_{\text{acc}}$ is the energy released through the accretion mechanism. The end of the protostar stage can be identified with the moment when $L_{\text{tot}} \approx L_{\text{sup}}$ and the accretion luminosity turns negligible. The speed of infalling matter is essentially equal to the escape velocity from the surface
+\begin{equation*}
+    0 = \frac{1}{2}mv_{f}^{2}-\frac{GM_{*}m}{R_{*}} \implies v_{f}\sim\sqrt{\frac{2GM_{*}}{R_{*}}}
+\end{equation*}
+hence the kinetic energy associated with a clump of infalling matter $\Delta m$ is just $E_{\text{k}} = \Delta m v_{f}^{2}/2$. The luminosity due to the accretion mechanism is just the variation over time of that kinetic energy (corrected with the efficiency of accretion $\alpha_{\text{acc}}$)
+\begin{equation*}
+    L_{\text{acc}} = (1-\alpha_{\text{acc}})\der{E_{k}}{t} = (1-\alpha_{\text{acc}})\frac{G\dot{M}M_{*}}{R_{*}}
+\end{equation*}
+and a typical relation is given
+\begin{equation*}
+    L_{\text{acc}} = 61L_{\odot}\left(\frac{\dot{M}}{10^{-5}M_{\odot}\unit{yr}^{-1}}\right)\left(\frac{M_{*}}{M_{\odot}}\right)\left(\frac{R_{*}}{5R_{\odot}}\right)^{-1}
+\end{equation*}
+As we've mentioned, at this stage the star is very bloated and cold, but its luminosity is rather high since 
+\begin{equation*}
+    L = 4\pi R^{2}\sigma T_{\text{eff}}^{4}
+\end{equation*}
+where the large extension compensates for the low temperature. Since the star is cold, it is also very opaque, hence the radiative gradient is 
+\begin{equation*}
+    \nabla_{\text{rad}} > \nabla_{\text{ad}}
+\end{equation*}
+and the star is basically everywhere convective. This is great news, because it means that the chemical composition of the star will be fairly homogeneous. On top of that, we know that, accretion or not, the newly born star will always be placed in the same spot in a HR diagram.
+\par This is because the accreting stage is carried out in hydrostatic and (almost) thermal equilibrium and the star will be regardless reaching a total mass and complete convective-ness regardless of its previous accreting history (assuming it is not burst-like).
+\par As our first model to describe a pre-main sequence star, we might avoid using the energy production equation (\ref{eq:energyproduction}) and assume adiabatic gradient everywhere but in the external regions, where superadiabaticity is not negligible\footnote{If we want to find an analytical model to describe a pre-main sequence star, we have to assume a constant adiabatic gradient. For example, assuming a monoatomic perfect gas that is also completely ionized, we'd find $\nabla_{\text{ad}} \sim 0.4$.}. At this stage, when nuclear reactions are still far from igniting, the evolution of the star is led by variations of the central temperature, that is highly influenced by the energy released during the gravitational collapse.
+\par In his first works about the early stages of star evolution, Hayashi makes the following assumption
+\begin{equation*}
+    \der{\ln T}{\ln p} = \text{const.} = A
+\end{equation*}
+and then varies $A$. What he observed is that increasing $A$, the effective temperature decreases. This is because, if we assume negligible superadiabaticity, the largest gradient is the adiabatic one, so
+\begin{equation*}
+    \nabla_{\text{amb}} \approx \nabla_{\text{ad}}
+\end{equation*}
+Thus, Hayashi proved that fixed the mass and chemical composition of a star there exists a forbidden region for stars on an HR diagram, that is the region to the right of the line described by 
+\begin{equation*}
+     \der{\ln T}{\ln p} \sim 0.4
+\end{equation*}
+In the forbidden region, it can be shown that a star must have a temperature gradient greater than that limit. If a star is placed in the forbidden zone, with a temperature gradient much greater than 0.4, it will experience rapid convection that brings the gradient down. Since this convection will drastically change the star's pressure and temperature distribution, the star is not in hydrostatic equilibrium, and will contract until it is. Eventually, the star is brought (literally) back on tracks.
+\par We thus define \emph{Hayashi's track} that limiting line along which all pre-MS stars will align, since they're both convective and in hydrostatic equilibrium. One striking feature of Hayashi's track is that, on an HR diagaram, it is almost vertical, meaning the star decreases its luminosity but keeps its effective temperature roughly constant all throughout its evolution.
+\par This is because, given the low effective temperatures, the main source of opacity is that caused by the H$^{-}$ (\ref{eq:hydrogenopacity}). When the star shrinks, the temperature raises and so does the electron density and, consequently, the opacity. The radiative gradient quickly climbs up as well and so the change in temperature never really gets to the surface.
+\par The evolution along the track is led by gravitational forces and so the timescale for the evolution is the Kelvin-Helmoltz
+\begin{equation*}
+    \tau_{KH} \propto \frac{GM^{2}}{RL}
+\end{equation*}
+but since the mass is not changing anymore it is effectively dependent only on the luminosity and the radius. Furthermore
+\begin{equation*}
+    L = 4\pi R^{2}\sigma T_{e}^{4}
+\end{equation*}
+and since the effective temperature is constant along the track $R \sim L^{1/2}$ meaning that $\tau_{KH}\propto L^{-3/2}$. Hence the luminosity of the star is decreasing with time
+\begin{equation*}
+    L \propto t^{-2/3}
+\end{equation*}
+which is consistent with the star shrinking its radius along the track.
+\subsection{Analytical model}
+Although not particularly enticing, it is possible to find an analytical description for pre-MS stars. First of all we might describe the inner regions with a politropic equation
+\begin{equation*}
+    p = K_{2}\rho^{\gamma} \quad \gamma = \frac{1}{1-\nabla_{\text{ad}}}
+\end{equation*}
+which we might easily integrate as we've seen in earlier chapters. This, however, wouldn't work that well if we were to extend it all up to the atmosphere, because that's where our adiabatic convection approximation breaks down. A reasonable approximation to deal with the more external layers of a stellar atmosphere would be assuming radiative transport, using, say, the grey atomsphere approximation (\ref{eq:greyatmosphere_temp}).
+\par Even if the convection within the star reaches layer above $\tau = 2/3$ (which is the demarcation line between the inner regions and the atmosphere in the grey atomsphere approximation), we can always perform the atmospheric integration down to the point where convection sets in and take the boundary conditions there.
+\par If we assume 
+\begin{equation*}
+    \der{p}{\tau} = \frac{GM}{\bar{\kappa}R^{2}}
+\end{equation*}
+where the constant value of the opacity through the atmosphere is equal to $\bar{\kappa} = \kappa_{0}p^{a}T^{b}$ (which is analogue to Cramer's). It is possible to show, see for example \cite{2005essp.book.....S} §4.3.1, that if we link on a given boundary the solutions obtained by integrating the politropic equation and integrating over the atmosphere layers, we'd obtain a relation of this type 
+\begin{equation}
+    \log(T_{\text{eff}}) = A\log\left(\frac{L}{L_{\odot}}\right)+B\log\left(\frac{M}{M_{\odot}}\right)+\text{const}
+    \label{eq:luminosity_pre-ms}
+\end{equation}
+where $A$ and $B$ are two constants
+\begin{equation*}
+    A = \frac{0.75a-0.25}{b+5.5a+1.5} \quad B = \frac{1.5a-0.5}{b+5.5a+1.5}
+\end{equation*}
+Using realistic values for which the main source of opacity is the H$^{-}$, you'd obtain $A\sim 0.01$ and $B\sim 0.14$. The slope of the Hayashi track in the HR-d is therefore 
+\begin{equation*}
+    \parder{\log L}{\log T_{\text{eff}}} \sim \frac{1}{A} > 10
+\end{equation*}
+meaning the Hayashi track is basically vertical; also, since
+\begin{equation*}
+    \parder{\log T_{\text{eff}}}{\log M} \sim 0.14
+\end{equation*}
+its location has a mild dependence on the stellar mass, and it moves towards higher $T_{\text{eff}}$ for increasing masses.
+\par As soon as the star climbs down the Hayashi track, Deuterium is immediately ignited\footnote{The required temperature, as we've seen, is of $T\sim 10^{6}\unit{K}$, has a $Q$ value of $\sim 5.5\unit{MeV}$ and an initial abundance $X_{D}\sim 2\power{10}{-5}$.}
+\begin{equation*}
+    \element{D}{2}{1}+\element{p}{1}{1} \to \element{He}{3}{2}+\gamma
+\end{equation*}
+The timescale for burning Deuterium is given by 
+\begin{equation*}
+    \tau_{D} = \frac{1}{n_{D}\langle \sigma v \rangle_{\text{D}}+p}\sim 10^{6}\unit{yr}
+\end{equation*}
+and the energy production rate is $\epsilon_{D}\propto T^{11-12}$. Note that if the burning of Deuterium is ignited in the protostar stage, this will go on as long as accretion feeds fresh Deuterium to the star.
+\par It is also possible to show that an increase in metallicity (which causes an increase of the opacity) shifts the track to lower effective temperatures, whereas an increase of Helium at constant metallicity has the opposite effect. This can be roughly explained recalling the EoS for a perfect gas 
+\begin{equation*}
+    p = \frac{\rho}{\mu m_{\text{H}}}kT
+\end{equation*}
+If we assume the pressure to be fixed by the request of the star to be in hydrostatic equilibrium, an increase in Helium abundance increases the mean molecular weight and hence a higher temperature is needed.
+\par Meanwhile, in the external regions, the effect of convection is more relevant. In fact, if the mixing length coefficient $\alpha_{ML}$ decreases, the convective flux decreases (and the radiative one increases). Necessarily, the ambient temperature gradient has to ramp up and hence the effective temperature will decrease.
+\par When the star finally becomes more radiative, it strays aways from the Hayashi track, and enters the so-called Henyey stage. Here nuclear reactions have yet to begin, and stars present different trends for luminosity depending on their mass
+\begin{equation*}
+    L_{\text{LMS}}\propto T_{\text{eff}}^{0.8}M^{4.4} \quad L_{\text{UMS}}\propto M^{3}
+\end{equation*}
+Less massive stars (VLMS, $M\lesssim 0.3M_{\odot}$) have other problems seems they keep being convective and therefore stick to the Hayashi track\footnote{Note that for stars in the range $M \lesssim 0.4M_{\odot}$ the $\element{He}{3}{2}$ becomes a pseudo-primary element, never reaching equilibrium.}.
+\par We define \emph{zero age main sequence} the beginning of the MS, which has to be identified with the moment during which the star is entirely supported by Hydrogen burning and all secondary elements have reached equilibrium\footnote{Note that this might need a lot of time depending on the reaction cross sections. In the CN-NO bi-cycle, the main postponer of the beginning of MS is $\element{N}{14}{7}$, which has a tiny cross section.}.
