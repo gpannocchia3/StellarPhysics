@@ -28,11 +28,23 @@ which is the minimum mass for a gravitationally bound system to be unstable agai
 \par Now if $\alpha_{\text{acc}}\gtrsim 14\%$, the accretion is \emph{hot}, otherwise it's \emph{cold}. Stars with cold accretion have extreme accretion conditions: During the accretion, the protostar shrinks too much, leading to strikingly different characteristics from other stars that have formed normally.
 \par This characteristics, however, are in opposition to experimental observations, so some believe cold accretion isn't really a thing.
 \par We set the \emph{birth line}--so when a protostar becomes effectively a star--at the moment when the protostar's accretion rate gets below $10^{-7}M_{\odot}\unit{yr}^{-1}$. After the birth line, the star ufficially enters the \emph{pre-main sequence} stage.
+\begin{figure}[h!]
+    \centering 
+    \includegraphics[width=0.9\textwidth]{img/1 - Birth.pdf}
+    \caption{}
+    \label{fgr:birth}
+\end{figure}
 \par As we've perhaps mentioned in the last chapter, these stars are still quite cold, so there isn't much they can burn. The first element they will ignite is Deuterium, at a temperature of $\sim 1\power{10}{6}\unit{K}$. This condition can be achieved both in the protostar phase and the pre-main sequence stage.
 \par If Deuterium is ignited in the protostar stage, clearly it won't be stopping any time soon, since matter is still continuously falling into the star. This process continues until the star reaches its total mass and the molecular cloud is completely swept away.
 \par If, instead, Deuterium is ignited during pre-main sequence stage, once it is completely depleted, the burning stops.
+\begin{figure}[h!]
+    \centering 
+    \includegraphics[width=0.8\textwidth]{img/Deuterio.pdf}
+    \caption{In the upper cartoons the evolution of luminosity over time for different initial abundances of Deuterium for masses $M\leq 0.8M_{\odot}$ (on the left), and $M\geq 0.8M_{\odot}$ (on the right). In the lower cartoons, the evolution of Deuterium abundance over time for different masses.}
+    \label{fgr:deuterium}
+\end{figure}
 \par When a protostar "turns" into a star, it is still quite bloated, since during the accretion phase they have heated up and consequently expanded. But, they're still rather cold and thus quite luminous because they're all bloated up.
-\par Since they're cold, the opacity is rather high. We know that opacity increases as the temperature decreases because of all the energy jumps, photoionization levels and so on. If the opacity is hight, the radiative gradient is larger than the adiabatic gradient and the star is, most of the times, completely convective. It might have a small radiative core in the inner, hotter regions, but as soon as Deuterium is ignited it vanishes, because something else happen at that point.
+\par Since they're cold, the opacity is rather high. We know that opacity increases as the temperature decreases because of all the energy jumps, photoionization levels and so on. If the opacity is high, the radiative gradient is larger than the adiabatic gradient and the star is, most of the times, completely convective. It might have a small radiative core in the inner, hotter regions, but as soon as Deuterium is ignited it vanishes, because something else happens at that point.
 \par We know that the radiative gradient is proportional to the energy flux in cases like these. The star is convective because opacity is high. When Deuterium is ignited, the star heats up and the flux increases. The radiative gradient is still larger than the adiabatic one, so even if it has entered the pre-main sequence stage with a small radiative core, as soon as Deuterium is ignited it is lost.
 \par The burning of Deuterium hinders the contraction of the star for a certain time and allows the star to "forget" everything that had happened before that moment. In the initial phase the star is completely mixed up so, even if at first it was dishomogeneous after all the complex accretion mechanisms, this dishomogeneity is lost.
 \par One way or another, stars always pass through a stage where they are completely convective.
@@ -66,11 +78,17 @@ where the large extension compensates for the low temperature. Since the star is
 and the star is basically everywhere convective. This is great news, because it means that the chemical composition of the star will be fairly homogeneous. On top of that, we know that, accretion or not, the newly born star will always be placed in the same spot in a HR diagram.
 \par This is because the accreting stage is carried out in hydrostatic and (almost) thermal equilibrium and the star will be regardless reaching a total mass and complete convective-ness regardless of its previous accreting history (assuming it is not burst-like).
 \par As our first model to describe a pre-main sequence star, we might avoid using the energy production equation (\ref{eq:energyproduction}) and assume adiabatic gradient everywhere but in the external regions, where superadiabaticity is not negligible\footnote{If we want to find an analytical model to describe a pre-main sequence star, we have to assume a constant adiabatic gradient. For example, assuming a monoatomic perfect gas that is also completely ionized, we'd find $\nabla_{\text{ad}} \sim 0.4$.}. At this stage, when nuclear reactions are still far from igniting, the evolution of the star is led by variations of the central temperature, that is highly influenced by the energy released during the gravitational collapse.
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.9\textwidth]{img/4 - HR_energia.pdf}
+    \caption{Evolution of different mass stars along the protostar and PMS stage. The red segments indicate the stage during which Deuterium is burned, while the blue segments indicate the stage where the luminosity generated by nuclear reactions is over 1\%.}
+    \label{fgr:hr_energy}
+\end{figure}
 \par In his first works about the early stages of star evolution, Hayashi makes the following assumption
 \begin{equation*}
     \der{\ln T}{\ln p} = \text{const.} = A
 \end{equation*}
-and then varies $A$. What he observed is that increasing $A$, the effective temperature decreases. This is because, if we assume negligible superadiabaticity, the largest gradient is the adiabatic one, so
+and then varies $A$. What he observed is that increasing $A$, the effective temperature decreases. This is because, if we assume negligible superadiabaticity, the largest gradient that can settle in a structure is the adiabatic one, so
 \begin{equation*}
     \nabla_{\text{amb}} \approx \nabla_{\text{ad}}
 \end{equation*}
@@ -80,12 +98,17 @@ Thus, Hayashi proved that fixed the mass and chemical composition of a star ther
 \end{equation*}
 In the forbidden region, it can be shown that a star must have a temperature gradient greater than that limit. If a star is placed in the forbidden zone, with a temperature gradient much greater than 0.4, it will experience rapid convection that brings the gradient down. Since this convection will drastically change the star's pressure and temperature distribution, the star is not in hydrostatic equilibrium, and will contract until it is. Eventually, the star is brought (literally) back on tracks.
 \par We thus define \emph{Hayashi's track} that limiting line along which all pre-MS stars will align, since they're both convective and in hydrostatic equilibrium. One striking feature of Hayashi's track is that, on an HR diagaram, it is almost vertical, meaning the star decreases its luminosity but keeps its effective temperature roughly constant all throughout its evolution.
+\begin{figure}[h!]
+    \centering 
+    \includegraphics[width=0.7\textwidth]{img/hayashi.png}
+    \caption{HRD location of Hayashi tracks for various assumptions about the chemical composition and the stellar mass. Credits: \cite{2005essp.book.....S}.}
+\end{figure}
 \par This is because, given the low effective temperatures, the main source of opacity is that caused by the H$^{-}$ (\ref{eq:hydrogenopacity}). When the star shrinks, the temperature raises and so does the electron density and, consequently, the opacity. The radiative gradient quickly climbs up as well and so the change in temperature never really gets to the surface.
 \par The evolution along the track is led by gravitational forces and so the timescale for the evolution is the Kelvin-Helmoltz
 \begin{equation*}
     \tau_{KH} \propto \frac{GM^{2}}{RL}
 \end{equation*}
-but since the mass is not changing anymore it is effectively dependent only on the luminosity and the radius. Furthermore
+but, since the mass is not changing anymore, it is effectively dependent only on the luminosity and the radius. Furthermore
 \begin{equation*}
     L = 4\pi R^{2}\sigma T_{e}^{4}
 \end{equation*}
@@ -105,7 +128,7 @@ which we might easily integrate as we've seen in earlier chapters. This, however
 \begin{equation*}
     \der{p}{\tau} = \frac{GM}{\bar{\kappa}R^{2}}
 \end{equation*}
-where the constant value of the opacity through the atmosphere is equal to $\bar{\kappa} = \kappa_{0}p^{a}T^{b}$ (which is analogue to Cramer's). It is possible to show, see for example \cite{2005essp.book.....S} §4.3.1, that if we link on a given boundary the solutions obtained by integrating the politropic equation and integrating over the atmosphere layers, we'd obtain a relation of this type 
+where the constant value of the opacity through the atmosphere is equal to $\bar{\kappa} = \kappa_{0}p^{a}T^{b}$ (which is analogue to Cramer's). It is possible to show\footnote{See for example \cite{2005essp.book.....S} §4.3.1.}, that if we link on a given boundary the solutions obtained by integrating the politropic equation and integrating over the atmosphere layers, we'd obtain a relation of this type 
 \begin{equation}
     \log(T_{\text{eff}}) = A\log\left(\frac{L}{L_{\odot}}\right)+B\log\left(\frac{M}{M_{\odot}}\right)+\text{const}
     \label{eq:luminosity_pre-ms}
@@ -114,7 +137,7 @@ where $A$ and $B$ are two constants
 \begin{equation*}
     A = \frac{0.75a-0.25}{b+5.5a+1.5} \quad B = \frac{1.5a-0.5}{b+5.5a+1.5}
 \end{equation*}
-Using realistic values for which the main source of opacity is the H$^{-}$, you'd obtain $A\sim 0.01$ and $B\sim 0.14$. The slope of the Hayashi track in the HR-d is therefore 
+Using realistic values for which the main source of opacity is the H$^{-}$, you'd obtain $A\sim 0.01$ and $B\sim 0.14$. The slope of the Hayashi track in the HR diagram is therefore 
 \begin{equation*}
     \parder{\log L}{\log T_{\text{eff}}} \sim \frac{1}{A} > 10
 \end{equation*}
@@ -136,11 +159,100 @@ and the energy production rate is $\epsilon_{D}\propto T^{11-12}$. Note that if 
 \begin{equation*}
     p = \frac{\rho}{\mu m_{\text{H}}}kT
 \end{equation*}
-If we assume the pressure to be fixed by the request of the star to be in hydrostatic equilibrium, an increase in Helium abundance increases the mean molecular weight and hence a higher temperature is needed.
+If we assume the pressure to be fixed by the request of the star to be in hydrostatic equilibrium, an increase in Helium abundance increases the mean molecular weight and hence a higher temperature is needed to maintain equilibrium.
 \par Meanwhile, in the external regions, the effect of convection is more relevant. In fact, if the mixing length coefficient $\alpha_{ML}$ decreases, the convective flux decreases (and the radiative one increases). Necessarily, the ambient temperature gradient has to ramp up and hence the effective temperature will decrease.
-\par When the star finally becomes more radiative, it strays aways from the Hayashi track, and enters the so-called Henyey stage. Here nuclear reactions have yet to begin, and stars present different trends for luminosity depending on their mass
+\begin{figure}[h!]
+    \centering 
+    \includegraphics[width=0.9\textwidth]{img/MLpag1.pdf}
+    \caption{Effect of convection on the evolution of a star along the Hayashi track and further. Note how the great divergences introduced by convection early on are quickly smoothened away as the star progresses towards MS.}
+    \label{fgr:mlpag1}
+\end{figure}
+\par During the evolution along the Hayashi track the star increases its temperature due to the virial theorem (\ref{eq:virialtheorem}), a radiative core will form at the centre and grow in mass as the star evolves. This evolutionary phase is the so-called PMS (\emph{Pre-Main Sequence}).
+\par When the radiative core appears the star is no longer fully convective, and it has to depart from its Hayshi track; this departure moves the track towards higher $T_{\text{eff}}$ so that the Hayashi track acts as a rightmost boundary to the evolution of stars in a HR diagram. In fact, as we mentioned, a fully convective star \emph{has} to lie on the Hayashi track.
+\par This straying off the Hayashi track is almost horizontal when a sizeable radiative core is established, with a constant increase of the central temperature due to the virial theorem. This phase is sometimes known as \emph{Henyey phase}. Here nuclear reactions have yet to begin (or grow relevant, depends on the points of view), and stars present different trends for luminosity depending on their mass
 \begin{equation*}
     L_{\text{LMS}}\propto T_{\text{eff}}^{0.8}M^{4.4} \quad L_{\text{UMS}}\propto M^{3}
 \end{equation*}
-Less massive stars (VLMS, $M\lesssim 0.3M_{\odot}$) have other problems seems they keep being convective and therefore stick to the Hayashi track\footnote{Note that for stars in the range $M \lesssim 0.4M_{\odot}$ the $\element{He}{3}{2}$ becomes a pseudo-primary element, never reaching equilibrium.}.
-\par We define \emph{zero age main sequence} the beginning of the MS, which has to be identified with the moment during which the star is entirely supported by Hydrogen burning and all secondary elements have reached equilibrium\footnote{Note that this might need a lot of time depending on the reaction cross sections. In the CN-NO bi-cycle, the main postponer of the beginning of MS is $\element{N}{14}{7}$, which has a tiny cross section.}.
+Less massive stars (VLMS, $M\lesssim 0.3M_{\odot}$) have other problems since they keep being convective and therefore stick to the Hayashi track\footnote{Note that for stars in the range $M \lesssim 0.4M_{\odot}$ the $\element{He}{3}{2}$ becomes a pseudo-primary element, never reaching equilibrium.}.
+\par We define \emph{zero age main sequence} (ZAMS) the beginning of the MS, which has to be identified with the moment during which the star is entirely supported by Hydrogen burning and all secondary elements have reached equilibrium\footnote{Note that this might need a lot of time depending on the reaction cross sections. In the CN-NO bi-cycle, the main postponer of the beginning of MS is $\element{N}{14}{7}$, which has a tiny cross section.}.
+\par Consider for example UMS stars: as the star moves towards the equilibrium configuration, the core shrinks and the luminosity decreases. All production rates slow down to the pace of the rate of $\element{N}{14}{7}$ and the energy production rate decreases consequently. To balance the now missing energy the star has to shrink, until $\element{N}{14}{7}$ reaches equilibrium in a configuration of higher luminosity and effective temperature.
+
+\section{Main Sequence for LMS Stars}
+For stars of about $1M_{\odot}$ in mass and solar composition, the end of the Hayashi track takes place after about $10^{7}\unit{yr}$, not long after the onset of the last fully-convective model. In fact, upon entering the Henyey stage the radiative core has extended up to 70\% of the total mass.
+\par For stars in which the pp-chain is dominant, the element that most postpones entering MS is $\element{He}{3}{2}$, whose burning reaction gets activated only at higher temperatures.
+\par Near the end of PMS, due to the lack of $\element{He}{3}{2}$ nuclei, the dominant reaction is exactly that of $\element{He}{3}{2}$ production. As the nucelar processing proceeds, the amount of this element increases\footnote{Note that the abundance of $\element{He}{3}{2}$ will be steadily rising in time, as well as rising as we move to the outskirts of the star, where the burning reaction is even more suppressed. Once a certain threshold is crossed, however, the abundance of $\element{He}{3}{2}$ quickly drops, as the production rate is also suppressed due to lower temperatures.}, thus increasing the number of reactions producing $\element{He}{4}{2}$. The large number of these reactions allow the star to complete the ppI branch and to produce more energy per burned Hydrogen.
+\par During previous phases, the star was forced to reach a higher temperature and density in order to satisfy its energy needs, due to a only partially efficient pp chain. Since that problem now is no more, the star slightly decreases its core density and temperature, fixing the number of nuclear reactions to the exact value required to match its energy needs.
+\par During the phases preceding $\element{He}{3}{2}$ equilibrium, Helium is burned only in a very spatially-limited region around the center. This means that for a short time the production is larger in the central part of the star, so energy production is more concentrated in the centre.
+\par Due to the large energy flux $F \propto \nabla_{\text{rad}}$, the central region becomes convective and a small, homogeneous, convective core establishes. This convective core, however, vanishes as soon as the abundance of $\element{He}{3}{2}$ is increases in more external regions, as this causes a redistribution of energy generation over a larger area.
+\par Beginning on the ZAMS, a LMS star burns Hydrogen in a \emph{radiative region} whereas, due to the large opacity associated with the presence of partially ionized Hydrogen and Helium, the \emph{outer regions are convective}. As you might imagine, Hydrogen is mainly burned in the inner regions, where conditions are more favorable, and we might expect its abundance to be slowly decreasing as the star evolved through MS. In Fig.\ref{fgr:lmshydrogen} the H chemical profile is shown for a $1M_{\odot}$ star at various stages, from the ZAMS to the exhaustion of Hydrogen in the core.
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.7\textwidth]{img/lmshydrogen.png}
+    \caption{The chemical profile of Hydrogen in a $1M_{\odot}$ star at different stages during the core H-burning phase. Credits: \cite{2005essp.book.....S}.}
+    \label{fgr:lmshydrogen}
+\end{figure}
+\par During the conversion of Hydrogen into Helium the total number of free particles decreases and so does pressure. So, in order to remain in equilibrium, the star contracts ever so slightly and heats up a bit. The combined effect of the change in opacity (which decreases) in the stellar interior, the increase in mean molecular weight and temperature, all cause a slow monotonic increase of the luminosity. As per many things in this beatiful subject, a well-done image is worth more than a thousand of (my) words, so you might want to take a look at Fig.\ref{fgr:turnoff}.
+\begin{figure}[h!]
+    \centering 
+    \includegraphics[width=0.7\textwidth]{img/turnoff.png}
+    \caption{The HR diagram for LMS stars of different mass during the core H-burning phase. The solid dot marks the location of the turn off along each track. Credits: \cite{2005essp.book.....S}.}
+    \label{fgr:turnoff}
+\end{figure}
+\par The central Hydrogen burning continues until, surprise surprise, the Hydrogen at the center is completely exhausted; this stage corresponds roughly to the hottest point on the evolutionary track in Fig.\ref{fgr:turnoff}, called the \emph{turn off}, as it marks the end of the central burning phase for LMS stars.
+\par Since the TO is easily identified, it is of pivotal importance to date clusters. If we were to indulge for a moment in technicalities, we might as well point out that in the surroundings of the TO the curve is fairly vertical. So, while it's pretty easy to identify the color (effective temperature) associated to the TO, it is usually much more difficult to determine the corresponding absolute magnitude (luminosity). To circumvent that problem, we'd usually consider a slight displacement in color, about 0.05, and consider an average of the two luminosities that would be thus identified.
+\par At the exhaustion of Hydrogen in the core, as the burning process already extends to a significant portion of the surrounding regions, the core slightly contracts (building up the conditions to ignite Helium) while H-burning continues in a shell around an inert He-core.
+\par As a result of shell Hydrogen burning, heat is transferred to the surrounding envelope, which bloates up, thus decreasing the effective temperature. Opacity, on the other hand, increases, leading to an extension of the convective core. The sum of all these contributions makes the star "curve back" on the HR diagram towards the Hayashi track\footnote{Please note that this is just to give a sense of direction.} 
+What about UMS stars?
+
+\section{Main Sequence for UMS Stars}
+
+\par The evolutionary path during the central Hydrogen burning phase for UMS stars is characterized by a monotonic increase of the luminosity and an almost steady decrease of the effective temperature. Why is that so?
+\par The main effect of considering more massive stars is the significant increase in the interior temperature, that strongly favors energy production through the CN-NO (bi)cycle rather than the pp-chain. The strong temperature dependence has two main effects:
+\begin{itemize}
+    \item the energy production is concentrated to the center;
+    \item the concentration of energy production causes a steep increase of the radiative gradient towards the centre, as there is a very high energy flux in the innermost portion of the structure. Due to this, according to Schwartzschild's criterion (\ref{eq:schwartzschildcriterion}), the interior of the star becomes convective and it will remain unstable against convection throughout the central H-burning phase.
+\end{itemize}
+\begin{figure}[h!]
+    \centering 
+    \includegraphics[width=0.7\textwidth]{img/umsms.png}
+    \caption{Evolutionary tracks of different intermediate mass stars during the core H-burning phase. The solid dot marks the evolutionary stage equivalent to the TO point. As we'll see, this phase is called \emph{overall contraction} phase. Credits: \cite{2005essp.book.....S}.}
+\end{figure}
+\par Thanks to the presence of a convective core, Hydrogen is turned into Helium in a fully-mixed region. As a consequence, the chemical gradient inside UMS stars at various times during MS is completely different from that in LMS stars. The difference is most evident if you compare Fig.\ref{fgr:lmshydrogen} to Fig.\ref{fgr:umshydrogen}.
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.7\textwidth]{img/umshydrogen.png}
+    \caption{The chemical profile of Hydrogen in a $5M_{\odot}$ star at different stages. Credits:\cite{2005essp.book.....S}.}
+    \label{fgr:umshydrogen}
+\end{figure}
+\par With increasing stellar mass, an additional effect related to the temperature increase is the increasing contribution to the total pressure coming from radiation pressure ($p_{\text{rad}} \propto T^{4}$), which can get as high as 30\% in high mass stars.
+\par Not surprisingly, as the stellar mass increases, the size of the convective core increases accordingly, as a consequence of the larger temperature in the interior which leads to a larger energy flux. In addition, for massive stars, the decrease of the adiabatic gradient due to the increasing contribution of radiation pressure has a significant impact on the dimension of the convective core.
+\par At odds with LMS stars, UMS stars have a convective core and a radiative envelope. This is because the regions of partial ionization of Hydrogen and Helium are located too high up in the atmosphere (thus at too low a density) to affect the thermal properties of the envelope.
+\par There's a problem we've briefly mentioned when we were discussing about convective motion that now makes a grand return as strong and problematic as ever: The problem of overshooting. Overshooting\footnote{A quick reminder. The problem inherent with overshooting is that convective bubbles do not magically stop when trespassing the edge of the convective region, and thus the convective region "bleeds" a bit into the radiative one.} poses a significant limitation to the determination of the extension of MS luminosity.
+\par Let us now consider another major consequence of the presence of a convective core at the end of the central H-burning phase: When the abundance of Hydrogen inside the core drops below the 5\% threshold, the remaining amount of Hydrogen is not sufficient for providing the energy necessary to maintain the structure in equilirbium, and so the star begins to contract. During this evolutionary phase, called \emph{overall contraction}, the dominant energy source is gravitational, and so the evolutionary timescale is the Kelvin-Helmoltz.
+\par After this point, while the central regions contract, the outer layers expand and this occurence produces an increase in the stellar radius and a cooling of the external layers. This drastically increases the opacity of the envelope.
+\par In massive stars, there is yet another phenomenon associated to convection whic makes evolutionary properties near the end of core H-burning uncertain. When the abundance of Hydrogen in the core is significantly decreased, the convective core recedes, leaving behind a chemical abundance gradient. In the region outside the contracting core, the radiative flux increases as well as a consequence of the large energy flux produced by gravitational collapse, and therefore exceeds the adiabatic gradient.
+\par According to (\ref{eq:schwartzschildcriterion}), this region should become convective, but, if the region is mixed with the original convective core, its resulting Helium abundance should be larger than the initial one. Hence, as a consequence of opacity, the radiative gradient of these layers would decrease, inihibing convection.
+\par The solution to this problem is related to the choice of the most appropriate thermal gradient in a chemically inhomogeneous region, which usually comes down to the choice between the Schwartzschild criterion and the Ledoux criterion. It is a common procedure to adopt the Ledoux criterion (\ref{eq:ledouxcriterion}), which usually inhibits the onset of convection in layers around the convective core.
+
+\subsection{The MS Dependence on Chemical Composition and Convection}
+
+\par We've seen someplace else, (\ref{eq:luminosity_mass}) for example, that along the main sequence we might be expecting a certain relation between the luminosity and the effective temperature (roughly $L\propto M^{3}\propto T^{3}$). In a HR diagram we're clearly not seeing a straight line as we might have expected, bur rather some sequence of curves whose form depends on the mass the star. In general, we observe changes in inclination at the transition point between LMS and UMS (at $M\sim 1.2M_{\odot}$) and where there is the formation of molecular Hydrogen in the atmosphere ($M\sim 0.5M_{\odot}$). Another point of interest is given at $M\sim 0.15M_{\odot}$, beyond which the contribution of electron degeneracy is no longer negligible.
+\par If we change the chemical composition, perhaps increasing the abundance of Helium, we observe that 
+\begin{equation*}
+    Y \uparrow \; T\uparrow\; \bar{\kappa}\downarrow \implies L\uparrow\; T_{\text{eff}}\uparrow
+\end{equation*}
+meaning that at fixed color index (i.e., at fixed effective temperature) stars with more Helium are less luminous than average. If we change the metallicity of the star, the expected behavior is exactly the other way around
+\begin{equation*}
+    Z\uparrow\; \bar{\kappa}\uparrow \implies L\downarrow\;T_{\text{eff}}\downarrow
+\end{equation*}
+hence at fixed color index, more metallic stars will be more luminous than average.
+\par It should be expected that different stars will experience less severe temperature changes when trying to balance the effects of gravitational collapse. Consider for example a UMS. If the energy production rate is subpar with respect to the luminosity of the star, the structure will shrink, making temperatures increase. Since UMSs burn Hydrogen via the CN-NO cycle, which scales with high powers of the temperature, even a small change in central temperature would induce a large variation in the energy production rate.
+\par It is for this reason that the curve representing the central temperature dependence on the mass is more steep for LMSs and barely rising for UMSs, as pictorially depicted in Fig.\ref{fgr:masszams}.
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.9\textwidth]{img/5 - Tc_Massa_ZMAS.pdf}
+    \caption{Curve representing how the central temperature of star varies depending on the star mass. Note how the slope of the curve changes around $1-1.2M_{\odot}$, where the transition between LMS and UMS is.}
+    \label{fgr:masszams}
+\end{figure}
+\par Starting from the ZAMS (\emph{Zero Age Main Sequence}), the star begins to evolve, burning steadily Hydrogen in its core, and ultimately enters the MS. When this happens, the star shrinks (because of the "abrupt" decrease in Hydrogen) and central temperature climbs. The star will therefore progress to a new equilibrium configuration with a larger radius (because of the excessive energy production), and higher luminosity (because of the smaller opacity).
+\par Please note that, in principle, \emph{there is no correlation between the central temperature and the effective temperature}. The latter is dependent only on variation of luminosity and radius. This process and constant shift between equilibrium configurations goes on until Hydrogen is completely depleted in the core.
