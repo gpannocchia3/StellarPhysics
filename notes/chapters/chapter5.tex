@@ -256,3 +256,107 @@ hence at fixed color index, more metallic stars will be more luminous than avera
 \end{figure}
 \par Starting from the ZAMS (\emph{Zero Age Main Sequence}), the star begins to evolve, burning steadily Hydrogen in its core, and ultimately enters the MS. When this happens, the star shrinks (because of the "abrupt" decrease in Hydrogen) and central temperature climbs. The star will therefore progress to a new equilibrium configuration with a larger radius (because of the excessive energy production), and higher luminosity (because of the smaller opacity).
 \par Please note that, in principle, \emph{there is no correlation between the central temperature and the effective temperature}. The latter is dependent only on variation of luminosity and radius. This process and constant shift between equilibrium configurations goes on until Hydrogen is completely depleted in the core.
+\subsection{Main Sequence Fitting}
+
+\textbf{Disclaimer}: This part I'm mostly copying and cropping from \cite{2005essp.book.....S}, §9.2.6, to match with my own notes. 
+\par Figure \ref{fgr:msfitting} shows how the brightness of the lower MS of old SSPs\footnote{\emph{Simple Stellar Populations}. They consist of objects born roughly at the same time in a burst of star formation of negligible duration, with the same chemcial composition. Good examples of SSPs are globular clusters and open clusters.} is unaffected by the age of the stellar population, even for old SSPs, because stars in this magnitude range are essentially still on their ZAMS location. It is only the initial chemical composition that determines the location of the lower MS, that becomes redder for increasing metallicity and/or decreasing Helium mass fraction.
+\par Once the $Y$ and $Z$ values are fixed, the lower MS can be used as a template and compared to the observed MS in an SSP with the same initial chemical composition. This is the so-called \emph{MS-fitting method}.
+\begin{figure}[h!]
+    \centering 
+    \includegraphics[width=0.7\textwidth]{img/msfitting.png}
+    \caption{Example of MS-fitting distance determination applied to the old open cluster M67. (a) This displays the absolute magnitude and intrinsic colours of the template MS (large open circles) for the cluster metallicity ($[\text{Fe}/\text{H}]= +0.02$) and the observed magnitudes and colours of the cluster (small filled circles). The effect of extinction on the cluster CMD ($\text{E}[B-V]=0.05$) and the effect of the distance modulus are also shown. (b) This shows the best fit of the (reddening corrected) cluster MS to the template one, and the derived distance modulus. Credits: \cite{2005essp.book.....S}.}
+    \label{fgr:msfitting}
+\end{figure}
+\par In order to determine SSP distances using the MS-fitting method, we need the observed color-magnitude diagram of the SSP's main sequence in some filter combination and a template one for the same chemical composition of the SSP, which may be either theoretical or empirical. In order to derive accurate distances, anything which may systematically affect the intrinsic and observed colors and magnitudes of either the cluster or the template MS must be accounted for (e.g., reddening).
+\par In short, the MS fitting method reduces to computing the difference between the absolute magnitudes of the template MS and the apparent magnitudes of the observed one immediately, which provides the population distance modulus, hence the distance in parsec.
+\par The choice of the template main sequence is obviously extremely important, and the preferred method is to build an empirical template MS instead of using theoretical isochrones, due to the existing uncertainties in the stellar $T_{\text{eff}}$ scale and color transformations. In fact, an uncertainty of only $0.02\unit{mag}$ in colors (not due to the uncertainty in the reddening) translates into an uncertainty of $\sim0.10\unit{mag}$ in the derived distance modulus, and a consequent uncertainty of about $\sim 1 Gyr$ (which is gargantuan to say the least) in the ages obtained from the absolute magnitude of the observed TO.
+\par An empirical MS is built by considering local field stars of known $[\text{Fe}/\text{H}]$ with distances determined geometrically from parallax measurements, and known or negligible reddening. The main problem with this approach is that only a few of these stars with parallax distances have the exact metallicity of the SSP under scrutiny; therefore it is difficult to determine the appropriate template MS.
+\par To overcome this problem one has to shift the position of many template field stars of various $[\text{Fe}/\text{H}]$ values to the location they would have at the metallicity of the SSP.
+\par This method can be particularly useful (although not always the most effective) to determine the distance of objects for which we cannot obtain precise parallax measurements.
+\par Disk stars can also be used to calculate the Helium-to-metals enrichment ratio (\ref{eq:he-metal_enratio}), which is necessary to determine the Helium abundance in stars we're not able to measure it\footnote{The interested reader might look at \cite{1999A&A...349..834C} for an example.}. One of the most methods that were used in the past was trying to fit nearby stars with different Helium abundances as a consequence of the varying metallicity. For this purpose, the theoretical ZAMS was used, accepting the lower precision, on stars low in their evolution. To make sure stars were really at the beginning of the ZAMS and not at some random point in the midst, low mass (and thus faint) stars were generally chosen. The reason for this is that their MS is so long that their evolution is barely progressing.
+\par As you can imagine, reducing to study faint stars wasn't that much easy, and as the surface temperatures decreased (as they correctly should) more complications arose. At the end of it, the theoretical template turned out to be "more blue" than the observations, likely because of the increasing relevance of molecules.
+\subsection{Constraints on the MS}
+As we've mentioned, not all stars forming from a molecular cloud will be able to ignite Hydrogen and shine bright like a new star, but they'll rather be cooling down a turn into brown dwarves, whose degeneracy pressure has halted the core contraction and effectively nullified their chance to become a star\footnote{Electrons are the true career-breakers.}.
+\par In the following we're going to consider an average density
+\begin{equation*}
+    \bar{\rho} \propto \frac{M}{R^{3}}
+\end{equation*}
+which we'll soon identify with the central density, and the dimensional analysis version of the hydrostatic equilibrium equation
+\begin{equation*}
+    \der{p}{r} = -\frac{GM(r)\rho(r)}{r^{2}} \to p_{C} \propto \frac{GM\bar{\rho}}{R}
+\end{equation*}
+in which we can plug in the definition of radius from inverting the expression for the average density, thus obtaining
+\begin{equation*}
+    p_{C} \propto M^{2/3}\rho_{C}^{4/3}
+\end{equation*}
+Now we'd like to see if stars supported by a non-negligible contribution from degeneracy pressure can reach the necessary temperatures to ignite Hydrogen
+\begin{equation*}
+    p_{C} = k_{NR}n_{e}^{5/3} + n_{i}kT_{c} \quad n_{e} = \frac{\bar{Z}\rho}{\mu_{i}m_{\text{H}}} \quad n_{i} = \frac{\rho}{\mu_{i}m_{\text{H}}}
+\end{equation*}
+If we assume the gas to be made only of Hydrogen
+\begin{equation*}
+    p_{C} = k_{NR}\left(\frac{\rho_{C}}{m_{\text{H}}}\right)^{5/3} + \left(\frac{\rho_{C}}{m_{\text{H}}}\right)kT_{c}
+\end{equation*}
+Now, if we substitute in the hydrostatic equilibrium expression and explicit temperature
+\begin{equation*}
+    kT_{C} = c_{1}M^{2/3}\rho_{C}^{1/3}-k_{NR}\left(\frac{\rho_{C}}{m_{\text{H}}}\right)^{5/3} \implies T_{C} = \mathcal{F}(\rho_{c})
+\end{equation*}
+If we compute the derivative of this expression with respect to the central density, we find out that the only stationary point is when $\rho_{c}\propto M^{2}$, which automatically implies
+\begin{equation*}
+    T_{C,\,\text{min}} \propto M^{4/3}
+\end{equation*}
+If we fix the value of $T_{C,\,\text{min}}$ with the one needed for H-burning to start (or complete), you'll surely notice that we've now found a minimum mass for which that process is indeed possible. The precise value, however, cannot be inferred from the present calculation.
+\par Just as there is a minimum mass for a star to enter MS, there is a maximum mass for which a star can keep being a star. Such maximum value is due to the destabilizing effect that radiation pressure has on more massive stars. Consider the equation for hydrostatic equilibrium and the one for the radiation pressure
+\begin{equation*}
+    \der{p}{r} = -\frac{GM(r)\rho(r)}{r^{2}} \quad \der{p_{\text{rad}}}{r} = \frac{4}{3}aT^{3}\der{T}{r}
+\end{equation*}
+The latter, if you recall how we've defined the temperature gradient, turns into
+\begin{equation*}
+    \der{p_{\text{rad}}}{r} = -\frac{\bar{\kappa}\rho}{c}\frac{L(r)}{4\pi r^{2}}
+\end{equation*}
+This we can equate to the gravitational force assuming, for the sake of the present discussion, negligible gas pressure. This yields a limit luminosity for which the system can be stable. Behold
+\begin{equation}
+    L < L_{\text{Edd}} = \frac{4\pi Gc M}{\bar{\kappa}}
+    \label{eq:eddington_lum}
+\end{equation}
+which is known as Eddington's luminosity. In the literature there is no common agreement to the maximum mass a star can have due to this criterion. Rough estimates put the limit to about $M \sim 150M_{\odot}$, but sometimes estimates to double that number are found.
+\par Note that, especially for very high mass stars, if during the accretion stage the star becomes to heavy and the luminosity crosses the Eddington limit, the poor cloud from which the star was accreting gets swept away from the intense radiation pressure, therefore hindering, if not blocking completely, accretion.
+
+\section{Post MS evolution}
+
+After the exhaustion of Hydrogen in the core, there remains an Helium core which doesn't provide in the slightest any contribution to the energy production. So, the Herculean task of supporting the whole star's structure has to be shouldered by the rich Hydrogen envelope which surrounds the lazy core. But before delving into the differences in evolution between low mass and higher mass stars, let us briefly consider what is called the \emph{Schönberg-Chandrasekhar limit}.
+
+\subsection{Schönberg-Chandrasekhar Limit}
+
+As we've seen, regardless of the H-burning mechanism at work during the MS phase, at the exhaustion of the central Hydrogen, the star is left with an Helium core surrounded by Hydrogen-rich layers. At the base of this pile of layers temperature is high enough for Hydrogen burning.
+\par Given that there is no burning inside the core and the temperature gradient is radiative (and rather small), its thermal stratification is isothermal.
+\par With a pure analytical approach, Schönberg and Chandrasekhar investigated the equilibrium conditions of such configuration, assuming ideal gas EoS. Since temperature is (approximately) no longer varying in the core, variations in pressure must be matched by variations in density.
+\par Note that the number of ions available to contribute to the density are significantly lower now that all the Hydrogen in the core has turned into Helium, thus presenting the star with the possibility of the equilibrium conditions not being met.
+\par Schönberg and Chandrasekhar found out that the maximum mass the core can have for the star to be in equilibrium is given by
+\begin{equation}
+    \left(\frac{M_{\text{core}}}{M_{\text{tot}}}\right)_{SC} = 0.37\left(\frac{\mu_{\text{env}}}{\mu_{\text{core}}}\right)^{2}
+    \label{eq:sc_masslimit}
+\end{equation}
+At the end of MS of a solar chemical composition object $\mu_{\text{env}}\sim 0.6$ and $\mu_{\text{core}}\sim 1.3$ (since it's essentially made of pure Helium); the SC limit is therefore set at about 8\% of the total mass.
+\par This means that if the Helium core is larger (or equal) than the SC limit, it must contract.
+
+\subsection{Post MS Evolution: UMS}
+In this mass range, the Helium core is generally larger than the SC limit (\ref{eq:sc_masslimit}). Numerical computations show that H-burning continues in an initially broad shell around the Helium core, which later thins down. Notice that, although the burning is now in a shell, the main burning channel is still the CN-NO (bi)cycle.
+\par During this phase the core contracts very slowly and the envelope expands. Due to the expansion, the outer layers cool and envelope opacity increases drastically, thus trapping more energy within the structure. Upon reaching this stage, the structure moves in the HR-diagram from the blue to the red side at almost constant luminosity.
+\par This is called \emph{Sub-Giant Branch} (SGB). The evolutionary rate for this phase is simply the Kelvin-Helmoltz, of order of $1-12\unit{Myr}$. This is phase is so short for massive stars, compared to MS and the next one coming, that the chance of observing objects in this phase is rather slim. As a rule of thumb, you can commit to memory the following
+\begin{equation*}
+    \frac{t_{i}}{t_{j}} = \frac{N_{i}}{N_{j}}
+\end{equation*}
+where $t$ is the time passed in a given phase and $N$ is the number of objects observed in that phase.
+\par This phenomenon leads to the presence of the so-called \emph{Hertzsprung gap} in the HR-diagram (literally a hole). Another gap of this sort you can expect, and finx, during the overall-contraction phase.
+\par During SGB, the stellar envelope becomes convective, as the outer layers cool due to their expansion. When the convective envelope reaches the base of the Helium core, the star exits the SGB and enterns the \emph{Red Giant Branch} (RGB), where it will remain as long as the conditions to ignite Helium are not met.
+\par On a concluding note, for high and intermediate-mass stars, the central density at the end of the SGB is sufficiently low to prevent the onset of electron degeneracy, and therefore core contraction can cause an increase of the temperature of the interior.
+
+\subsection{Post MS Evolution: LMS}
+
+At odds with more massive stars, the transition to shell burning is not so fast for LMS stars. For these, the mass of the core is well below the SC limit, and even when it grows above this limit due to the production of Helium from shell H-burning, electron degeneracy in the core provides the necessary pressure to support the overlying envelope.
+\par As we've seen, LMS stars still have a radiative core at TO, and as the central abundance of Hydrogen drops below a critical value, the maximum in the nuclear energy release ceases to be located at the center as it begins to move outwards.
+\par During the SGB phase, due to dependence of the CN-NO cycle efficiency on temperature, the shell in which Hydrogen is burned becomes increasingly thinner as Hydrogen is depleted and temperature drops in the envelope\footnote{The reason for this is that the energy produced from Hydrogen-burning is transferred to the envelope, which bloates and cools down, increasing the opacity.}.
+\par Starting from a mass of about $M_{\text{shell}}\sim 0.2M_{\odot}$, the shell thins down to $\sim 0.001M_{\odot}$ at the end of the SGB and decreases further at the tip of the RGB.
+\par All throughout this process, the star have yet to settle in a new equilibrium configuration for secondary elements. While this happens, the Helium core continues to grow and shrinks down, thus heating up and making the external envelope expand once more.
+\par Opacity grows along with the radiative gradient, thus requiring the convective envelope to penetrate deeper into the star, eventually reaching the shell where Hydrogen is burned. Note that, apart from a scant few exceptional cases, convection never breaches into ignited shells. In fact, this is greatly "discouraged" from Ledoux's criterion (\ref{eq:ledouxcriterion}), since near the core there are quite extreme chemical gradients.
