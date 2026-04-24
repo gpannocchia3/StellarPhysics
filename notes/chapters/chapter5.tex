@@ -360,3 +360,124 @@ At odds with more massive stars, the transition to shell burning is not so fast 
 \par Starting from a mass of about $M_{\text{shell}}\sim 0.2M_{\odot}$, the shell thins down to $\sim 0.001M_{\odot}$ at the end of the SGB and decreases further at the tip of the RGB.
 \par All throughout this process, the star have yet to settle in a new equilibrium configuration for secondary elements. While this happens, the Helium core continues to grow and shrinks down, thus heating up and making the external envelope expand once more.
 \par Opacity grows along with the radiative gradient, thus requiring the convective envelope to penetrate deeper into the star, eventually reaching the shell where Hydrogen is burned. Note that, apart from a scant few exceptional cases, convection never breaches into ignited shells. In fact, this is greatly "discouraged" from Ledoux's criterion (\ref{eq:ledouxcriterion}), since near the core there are quite extreme chemical gradients.
+
+\section{Red Giant Branch}
+
+\par An important property of LMS stars during RGB evolution is the tight correlation between the surface luminosity and the mass of the electron degenerate Helium core. So important indeed that is has been bestowed a name, the \emph{He core mass-luminosity relation} ($M_{\text{c,He}}-L$), which is essentially summed up in the following line 
+\begin{equation}
+    L_{\text{H}} \propto M_{\text{c,He}}
+    \label{eq:coremass-luminosity relation}
+\end{equation}
+The physical rationale behind this expression is that the surface luminosity in this stage is almost entirely provided by the H-burning shell and its thermal properties, while, in turn, the nuclear burning rate are only determined by the mass and the radius of the star's Helium core.
+\par The thermal properties of the envelope have no effect on the burning shell, because the mean density within the core is very high, while in the envelope it is not. The pressure gradient just above the border of the core is so large that the pressure decreases by several orders of magnitude as one moves outwards from the burning shell. This is also the reason why mass loss from the stellar surface, incredibly efficient in the RGB phase, does not affect the nuclear burning, the Helium core and the stellar luminosity. Mass loss is, in this phase, almost purely stochastic, caused by the formation of acoustic waves, convective cells and the potentially strong magnetic pressure, which can all be contributing to an average mass loss of order 
+\begin{equation*}
+    \dot{M} \sim 10^{-9}-10^{-8}M_{\odot}\unit{yr}^{-1}
+\end{equation*}
+which can be roughly approximated as Gaussianely distributed.
+\par The star evolves along the RGB increasing the mass of the Helium core, hence its luminosity and its radius. The effective temperature, on the other hand, remains roughly constant because of the H$^{-}$ opacitive channel: The overall temperature in the envelope decreases, hence the electron density decreases along with the H$^{-}$ opacity, thus regulating the changes in surface temperature.
+\par For LMS stars the RGB is rather long\footnote{Although, you should commit this to memory, the RGB duration is not at all comparable to the MS phase. The life times in SGB and RGB for LMS stars are of order $10^{8}\unit{yr}$, which are about 100 times smaller than the average MS timescale for this stars.}, because they have low masses and are also relatively cold, so they need more time to reach the temperature needed for Helium burning. During this phase, the contraction of the core, on top of heating the whole structure, also induces the core to progressively degenerate.
+\par This can potentially result in a problem: Stars with masses $M<0.5M_{\odot}$ will never ignite Helium and will be slowly cooling, turning into pure-Helium white dwarves.
+\par This is also supported by the fact that once the envelope thins down to about $\sim 0.06M_{\odot}$ the Hydrogen shell shuts down, completely stopping the burning because the shell is too cold. The star will be thus contracting a bit and will eventually depart from RGB. On timescales longer than the actual age of the Universe, the white dwarf remnant will settle into a thermal equilibrium with the CMB.
+\par When (and if) Helium is ignited in the core, a star will be sitting at the "tip" of the red giant branch (TRGB). Here, the mass of the core is essentially unchanged, while, as we've mentioned, the total mass might be significantly different because of severe mass loss processes.
+\subsection{First Dredge Up}
+As convection penetrates deeper into the star, some of the He produced during the central H-burning phase is mixed in. Therefore, the surface abundance of He monotonically increases until the convection reaches its maximum penetration: This phase is called the \emph{first dredge up}.
+\begin{figure}[h!]
+    \centering 
+    \includegraphics[width=0.7\textwidth]{img/heliumconvection.png}
+    \caption{The behavior with time of the the base of the outer convective envelope and of the Helium core mass for a $0.8M_{\odot}$ star. Credits: \cite{2005essp.book.....S}.}
+    \label{fgr:heliumconvection}
+\end{figure}
+\par Other chemical species involved in the H-burning are also mixed in, such as $\element{He}{3}{2}$ and the CNO elements. The major results are the Nitrogen overabundance on the surface ($\sim 100\%$ increase) and Carbon and Oxygen seeing their average surface abundance  reduced ($\sim 30\%$ decrease for Carbon and a very slight change of the abundance for Oxygen).
+\par Along the RGB (for both low-mass stars and more massive objects) the H-burning shell moves steadily towards more external mass layers that contain fresh Hydrogen, and the lower boundary of the envelope convection recedes towards the surface without overlapping with the shell. As the convective boundary recedes, a chemical discontinuity is left at the layer of maximum inward penetration of the envelope convection zone (cfr. Fig.\ref{fgr:hydrogenduabundance}).
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.7\textwidth]{img/hydrogenduabundance.png}
+    \caption{Hydrogen abundance profile within a $0.8M_{\odot}$ star, after the first dredge up. The bottom end of the convective envelope at its maximum extension corresponds to the abundance discontinuity at $M_{r} \sim 0.26$. Credits: \cite{2005essp.book.....S}.}
+    \label{fgr:hydrogenduabundance}
+\end{figure}
+\par When the H-burning shell encounters this discon- tinuity, the rate at which the star climbs the RGB temporarily drops and even reverses for a while. This behaviour is due to the change in the H-burning efficiency caused by the increase of Hydrgoen abundance, hence decrease of the mean molecular weight. In short, the star pops out of its former equilibrium condition.
+\begin{figure}[h!]
+    \centering 
+    \includegraphics[width=0.7\textwidth]{img/rgbbump.png}
+    \caption{The HRD of the same $0.8M_{\odot}$ star from previous figures. The inset shows the trend of surface luminosity with the effective temperature when the H-burning shell crosses the chemical discontinuity produced by the first dredge up. The point along the evolutionary track corresponding to the first dredge up is marked with an open circle. Credits: \cite{2005essp.book.....S}.}
+    \label{fgr:rgbbump}
+\end{figure}
+\par After the shell source has crossed the discontinuity, the mean molecular weight remains at a fixed value\footnote{Recall that the envelope was fully mixed by the convection.} and the surface luminosity grows monotonically with increasing core mass. As a consequence, the star will cross three times the same luminosity interval (see Fig.\ref{fgr:rgbbump}), and hence we can predict an increase of the star counts in this luminosity interval: The so-called \emph{RGB bump}. The time spent during the RGB Bump phase is a significant fraction ($\sim 20\%$) of the total RGB lifetime.
+\par Please note that the effectiveness of the first dredge up is closely related to the mixing length efficiency which, you should recall, regulates the relevance of convection. Usually, the $\alpha_{ML}$ parameter is adjusted so to match the color of the RGB, thus introducing changes in the temperature gradient.
+
+\subsection{Helium Flash}
+
+We've seen that until the core meets the conditions to ignite Helium, its mass will be steadily increasing as long as Hydrogen is burned in shells. It won't be surprising then that the density of the core will be also increasing. The gravitational energy generation will thus be positive in the core. However, we should not forget that photons may interact with the surrounding hot plasma, producing neutrinos, which are likely to be escaping the structure without interacting\footnote{Their free mean path is, after all, usually quite larger than the average stellar radius.} and subtract energy to the star. Within the core then the sum of energy production contributions might be negative
+\begin{equation*}
+    \epsilon_{g}+\epsilon_{\nu} < 0 \implies \der{L_{r}}{M_{r}} < 0
+\end{equation*}
+so that in this region a \emph{temperature inversion} develops, and the temperature maximum is no longer at the center, but rather in a shell. This also suggests us that Helium will be initially ignited off-center.
+\par An important point concerning the evolution of low-mass stars along the RGB is related to the electron degeneracy. During the RGB evolution the He core mass increases, its central density increases, and also the degree of electron degeneracy becomes increasingly stronger, causing a large decrease of the conductive opacity in the He core. This makes the conductive energy transport very efficient and, in turn, increases the cooling of the central portion of the He core. In spite of the energy losses from the core associated with the neutrino flux and electron conduction, the maximum temperature in the core increases monotonically.
+\par This is because with growing $M_{\text{c,He}}$ the core contracts and the associated gravitational energy release heats up the layers below the H-burning shell, where the transition from degenerate to non-degenerate matter takes place and, indeed, the whole He core. When the maximum temperature reaches a value $\approx 10^{8}\unit{K}$, He-burning is ignited. This occurs when the mass of the core is equal to $M_{\text{c,He}}\sim 0.48-0.50M_{\odot}$, almost regardless of the initial total mass. This is a consequence of the fact that stars in this mass range develop very similar electron degeneracy levels.
+\par Due to the highly degenerate state, the nuclear burning in the Helium core is unstable and this causes a thermal runaway at the tip of the RGB: The \emph{Helium flash}. This marks the end of RGB evolutionary phase.
+\par In the core, Helium is under conditions of very strong, partially relativistic electron degeneracy. We have already shown that under such thermal conditions, the gas pressure is not sensitive to temperature changes. When a nuclear burning ignites in a non-degenerate core, the new energy source causes a temperature increase and correspondingly, a pressure increase; to maintain hydrostatic equilibrium the core expands and cools, and this expansion prevents the continuous increase of the energy generation.
+\par The same does not hold in the case of an electron degenerate core; the initial temperature rise is not followed by an immediate expansion so the rate at which the He-burning reactions ($3\alpha$ reactions) occur increases dramatically, with a continuous increase of the temperature, a thermal runaway.
+\par During this runaway, there is a huge production of nuclear energy; in a few seconds an amount of energy of the order of $10^{10}L_{\odot}$ is produced. However, almost none of this energy reaches the stellar surface, as it is absorbed by the surrounding non-degenerate layers. The expansion of the layers just outside the shell where He-burning ignites is the first factor which contributes to the moderation of the Helium flash strength. The second factor is that convection sets in, a consequence of the large energy flux, and this dilutes the produced energy over progressively larger mass.
+\par The initial temperature rise at constant density helps to remove the electron degeneracy at the point where Helium ignites. The degeneracy of the inner regions is subsequently removed through a series of much lower strength secondary flashes, until the Helium burning eventually reaches the star centre.
+\par Note that during the flashes about 5\% of the Helium in the core is turned into Carbon. The whole evolutionary phase from the start of the main Helium flash to the beginning of the core He-burning phase lasts about $\sim 1 \unit{Myr}$.
+\par Now, for UMS stars, something a bit different happens.
+\par If you recall, higher mass stars enter the RGB phase with a relatively large Helium core\footnote{With respect to LMS stars, of course.} and are already quite hot. This means that they won't be enjoying for long their stay in the RGB phase, for the conditions for He-burning won't take long to be met.
+\begin{figure}[h!]
+    \centering 
+    \includegraphics[width=0.7\textwidth]{img/heliumcore.png}
+    \caption{(a) The behaviour of the mass of the Helium core and (b) of the surface luminosity at the onset of He-burning as a function of the stellar mass for two selected initial chemical compositions. Credits: \cite{2005essp.book.....S}.}
+    \label{fgr:heliumcore}
+\end{figure}
+\par Take a look at Fig.\ref{fgr:heliumcore}. The value of $M_{\text{c,He}}$ does not depend strongly on the stellar mass for masses lower than $\sim 1.8M_{\odot}$ at solar chemical composition (this limit depends strongly on the adopted chemical composition, significantly decreasing with decreasing metallicity and/or increasing He content). In fact, all stars with a mass below this limit develop very similar levels of electron degeneracy within the He core, and the mass of the He core has to reach almost the same value before He-burning ignites.
+\par When the stellar mass value exceeds this limit, the electron degeneracy in the core is at a lower level as a consequence of the larger temperatures and lower densities. This has the effect that the luminosity of the tip of the RGB is almost constant for masses below the quoted limit, and strongly decreases at larger masses.
+\par After a minimum has been attained, the value of McHe starts to increase again with increasing total mass (the electron degeneracy is by now removed from the core) as a consequence of the increasing mass of the convective core during the core H-burning phase. The significant changes in the properties of the RGB, which are expected in stellar systems as a consequence of the differences of the age, and in turn of the masses evolving along the RGB, is called \emph{RGB phase transition}.
+\par Star with Helium core masses higher than the RGB transition mass will be non degenerate and will thus spend less time in the RGB phase.
+\par Note, however, that more massive stars have a shorter lifespan. Therefore, the luminosity extension of the RGB will be consequently shorter. More importantly, for these stars Helium is ignited without a flash, for there's only partial or no degeneracy at all to remove. Still, the luminosity at ignition will be proportional to the mass of the core.
+
+\subsection{The Tip of the Red Giant Branch}
+
+The tip of the RGB marks the evolutionary phase corresponding to He-burning ignition through the He flash, and this occurs when the He core mass has reached a well-defined value. This means that the luminosity of the tip is in general a function of the Helium core mass at the Helium flash. Any parameter affecting the size of the Helium core at ignition affects the luminosity of the tip: For example, if the Helium core mass at the flash increases, the brightness of the RGB tip also increases.
+
+\begin{tcolorbox}[enhanced,attach boxed title to top center={yshift=-3mm,yshifttext=-1mm},
+colback=blue!5!white,colframe=blue!75!black,colbacktitle=blue!80!black,
+title=Helium and Metals Dependence,
+boxed title style={size=small,colframe=blue!50!black}]
+    An increase in the initial Helium content increases the interior temperatures of a star through the increase in the mean molecular weight; this, in turn, decreases the electron degeneracy level in the He core during the RGB evolutionary phase. As a result the star ignites Helium at a lower core mass and the luminosity of the tip of the RGB decreases. 
+    $$ Y\uparrow\; T\uparrow\; M_{\text{TRGB}}\downarrow $$
+    With increasing metallicity, for a fixed Helium content and stellar mass, the core mass at the Helium flash decreases. This is because at a higher metallicity the H-burning in the shell is more efficient; as a consequence the growth and, in turn, heating of the He core is faster. In this way the thermal conditions for igniting He are reached at a lower Helium core mass. 
+    $$ Z\uparrow\; \bar{\kappa}\uparrow\;T\downarrow\; M_{\text{TRGB}}\uparrow$$
+    The luminosity of the tip of the RGB is not affected by changes in the efficiency of superadiabatic convection. This is because the thermal stratification within the core does not depend on the thermodynamical properties of the outer envelope.
+\end{tcolorbox}
+\par Globular clusters, although rather well-populatd, are often unable to display the TRGB (or the Helium flash) in a HR-diagram, given the short duration of the phase compared, for example, to the MS or the RGB.
+\par On the other hand, the TRGB is very extended for low mass stars, thus becoming potentially really useful to date ancient stellar populations. As we'll have the pleasure to see in the last chapter of these notes, in astrophysics determining distance of objects of interest is often an Herculean task, which is customarily made easier\footnote{The definition of "easy" is rather bland in cases like these.} with the introduction of \emph{standard candles}. A condition for some phenomenon to be a good standard candle is that it has to be independent of the objects age.
+\par Regarding the TRGB, this is usually true for lower mass stars. As we've seen, the bolometric luminosity of the TRGB is determined by the mass of the core at the Helium flash, once the initial chemical composition is fixed. Since
+low-mass stars ignite Helium all with similar core masses (slightly increasing for decreasing initial mass) the bolometric magnitude of the TRGB changes by a few hundredths of magnitudes in the age range between $\sim 4\unit{Gyr}$ and $12-14\unit{Gyr}$.
+\par When approaching the RGB phase transition the magnitude of the TRGB increases sharply, since $L$ decreases, due to the lifting of the electron
+degeneracy in the core, that causes Helium ignition to occur at significantly smaller core masses. On the other hand, once age is fixed, the magnitude of the tip decreases for increasing metallicity, in spite of the decrease of the Helium core mass at the TRGB. The net effect is that, for ages larger than $\sim 4 \unit{Gyr}$, $M_{\text{bol}}^{\text{TRGB}} \propto -0.19 [\text{Fe}/\text{H}]$ for metallicities well below solar, with an almost negligible dependence on the age.
+\par Considering now the TRGB magnitude in various photometric systems for ages
+above $\sim 4\unit{Gyr}$, one notices that in the I-band the dependence of the TRGB brightness on [Fe/H] is minimized. In fact
+\begin{equation*}
+    \der{M_{\text{bol}}^{\text{TRGB}}}{[\text{Fe}/\text{H}]} \propto -0.19
+\end{equation*}
+and from empirical determinations of bolometric corrections for bright RGB stars in globular clusters we obtain that
+\begin{equation*}
+    \der{BC_{I}}{(V-I)} = -0.243
+\end{equation*}
+For $[\text{Fe}/\text{H}] >-0.7$ the dependence of $M_{I}^{\text{TRGB}}$ on [Fe/H] becomes very large so it cannot be used safely as a standard candle.
+\par The first step towards obtaining distances is the detection of the TRGB. From what we know about stellar evolution, one expects TRGB stars basically to overlap with AGB\footnote{\emph{Asymptotic Giant Branch}. We'll deal with this phase in the following.} objects, that populate the color-magnitude diagram from below the TRGB level up to magnitudes brighter than the TRGB. However, AGB evolutionary times are shorter than RGB ones, and the luminosity function of bright red stars in an old SSP is expected to show a discontinuity in correspondence of the TRGB location. The position of this discontinuity marks the level at which the contribution of the longer-lived (in comparison with AGB objects) RGB stars vanishes, and corresponds to the TRGB magnitude.
+
+\subsection{Theoretical Clusters: Isochrones}
+
+The theoretical color-magnitude diagram for a simple stellar population (like, for example, a stellar cluster) is called an \emph{isochrone}.
+\par The computation of an isochrone is conceptually very simple: Consider a set of evolutionary tracks of stars with the same initial chemical composition and various initial masses; different points along an individual track correspond to different values of the time $t'$ and the same initial mass.
+\par An isochrone of age $t$ is simply the line in the HR-diagram that connects the points belonging to the various tracks where $t=t'$. This means that when we move along an isochrone, time is constant whereas the value of the initial mass of the star populating the isochrone at each point is changing.
+\par Once an isochrone of a given age and initial chemical composition is computed from stellar evolution tracks, it can be transferred to an observational color-magnitude diagram by applying to each point a set of appropriate bolometric corrections.
+\begin{figure}[h!]
+    \centering 
+    \includegraphics[width=0.7\textwidth]{img/isochrones.png}
+    \caption{HRD of selected stellar evolutionary tracks (dashed lines) with the same initial solar chemical composition and the labelled masses. The heavy solid lines display two isochrones for the same chemical composition and ages of $600\unit{Myr}$ (the brighter sequence) and $10\unit{Gyr}$. Credits: \cite{2005essp.book.....S}.}
+    \label{fgr:isochrones}
+\end{figure}
+\par It is clear from Fig.\ref{fgr:isochrones} that the mass of the objects evolving at a given location along an isochrone increases when moving towards more advanced phases. This increase is due to the fact that lower masses age more slowly, and at a given time they are less evolved than higher-mass objects.
+\par Another important property is that the isochrone MS is populated by a large range of masses (the lower limit being the minimum possible stellar mass) whereas the mass evolving along the RGB and successive phases is approximately constant, given that the isochrone stays very close to the evolutionary track of the mass at the MS end-point (the TO).
+\par In short, if we increase the age of the cluster, we should expect to see less masssive stars at TO (and, consequently, fainter stars). This means that the TO can be used as a very precise age indicator for clusters, with a low dependence on the physical inputs received by the star.
