@@ -480,4 +480,89 @@ The theoretical color-magnitude diagram for a simple stellar population (like, f
 \end{figure}
 \par It is clear from Fig.\ref{fgr:isochrones} that the mass of the objects evolving at a given location along an isochrone increases when moving towards more advanced phases. This increase is due to the fact that lower masses age more slowly, and at a given time they are less evolved than higher-mass objects.
 \par Another important property is that the isochrone MS is populated by a large range of masses (the lower limit being the minimum possible stellar mass) whereas the mass evolving along the RGB and successive phases is approximately constant, given that the isochrone stays very close to the evolutionary track of the mass at the MS end-point (the TO).
-\par In short, if we increase the age of the cluster, we should expect to see less masssive stars at TO (and, consequently, fainter stars). This means that the TO can be used as a very precise age indicator for clusters, with a low dependence on the physical inputs received by the star.
+\par In short, if we increase the age of the cluster, we should expect to see less masssive stars at TO (and, consequently, fainter stars). This means that the TO can be used as a very precise age indicator for clusters, with a low dependence on the physical inputs received by the star. To use the TO as an age indicator you first have to find an independent way to determine the distance of the cluster. Once you've done that you can:
+\begin{enumerate}
+    \item Measure the magnitude of the TO in some band;
+    \item Connect it to the age of the cluster using the theoretical relation between $M_{x}^{TO}$-age (with $x$ some band) and thus find the age of the cluster.
+\end{enumerate}
+Differently from globular clusters, which are usually nice and dandy, open clusters display a "parallel" track to the MS, which is that of the unresolved binaries: The fluxes of the two members of the binary get summed (thus the vertical shift in luminosity), while their masses will follow some kind of distribution that displaces the binary in color as well.
+\par You can take as a rule of thumb the following chain of implications
+\begin{equation*}
+    \text{age}\uparrow \implies M_{\text{TO}}\downarrow\;L_{\text{TO}}\downarrow
+\end{equation*}
+Note, however, that decreasing the age of the considered cluster leads to an extension in luminosity of the reconstructed MS, but, as you can see in Fig.\ref{fgr:isochrones}, the morphology of the isochrone is significantly different.
+
+\subsection{Microscopic Diffusion}
+
+As we've mentioned somewhere in the above, the various elements' abundances can suffer severe changes along the radial direction because of diffusive mechanisms such convection, gravitational sedimentation, temperature gradients and osmosis (concentration gradients). If several chemical species are present in the stellar gas, the net effect is to change the chemical stratification and therefore it is potentially important for the study of stellar evolution.
+\par Pressure, temperature and chemical abundance gradients are the driving forces behind atomic diffusion. A pressure gradient and a temperature gradient tend to push the heavier elements in the direction of increasing pressure and increasing temperature, whereas the resulting concentration gradient tends to oppose the above processes.
+\par The chemical evolution of the mass fraction $X_{i}$ of an element $i$ at a given mass layer $M_{r}$ due to atomic diffusion can be written as 
+\begin{equation*}
+    \der{X_{i}}{t} = \frac{\text{d}}{\text{d}M_{r}}\left(4\pi\rho^{2}X_{i}\omega_{i}\right)
+\end{equation*}
+where $\omega_{i}$ is some diffusive velocity for the $i$-th chemical species and is thus defined
+\begin{equation*}
+    \omega_{i} = D_{p}(i)\parder{p}{r}+D_{T}(i)\parder{T}{r}+D_{c}(i)\parder{c_{i}}{r}
+\end{equation*}
+where $c_{i}$ is the concentration of the $i$-th species. The three $D$ coefficients are obtained, for a given chemical and physical profile, by imposing the conditions of mass, momentum and energy conservation, together with charge neutrality.
+\par For example, because of gravitational sedimentation, Helium and metals generally sink deeper into the stellar interiors on a timescale of about $\sim 1\unit{Gyr}$, while Hydrogen tends to rise to the surface.
+\par While sedimentation of heavy elements can only affect stars of mass in the range\footnote{Merely because of timescales involved. Massive stars won't live long enough to experiment appreciable changes in their evolution because of the gravitational sedimentation of, say, Helium, whilst it might be particularly relevant for lighter stars.} $M \lesssim 1.2M_{\odot}$, the displacement of Hydrogen is mass independent and affects equally all stars. Let us not forget that convective motions have not suddenly vanished. Convection is actually a very good inhibitor of diffusive mechanisms, as the mixing timescales associated to convection are typically shorter than the diffusive ones.
+\par In general, we've seen that the lower the total mass, the longer the star stays in the MS, and the larger the convective envelope manages to get. Because of this fact, diffusive mechanisms are able to peak in "effectiveness" in stellar interior for masses of about $\sim 0.8M_{\odot}$.
+\par Is this the end of the story? Of course not. In the Sun, which is usually our preferential reference object, it has been observed that certain abundances aren't matching with the observations, for example at the \emph{tachocline}\footnote{"\emph{The tachocline is the transition region of stars of more than 0.3 solar masses, between the radiative interior and the differentially rotating outer convective zone.}"}, where we have to assume the presence of additional mixing mechanisms instead of considering only diffusion.
+\par For example, during the SGB stars are expanding, and convective envelopes penetrate deeper into the stellar structure, on top of growing more opaque and larger. This means that convective motions can bring to the surface Helium and metals, while the surface abundance of Lithium usually drops\footnote{This is because there is virtuallt no $\element{Li}{7}{3}$ in the stellar interiors, since it was completely burned in the PMS phase. As soon as the fresh Lithium from the surface is brought deeper into the star, it is immediately burned. Hence the drop.}.
+\par What effects does this have on the star? There are mainly three:
+\begin{enumerate}
+    \item $X_{c}\downarrow\;\tau_{\text{MS}}\downarrow\;L_{\text{TO}}\downarrow$;
+    \item $Y_{c}\uparrow\;\mu_{c}\uparrow\;T_{c}\uparrow\;L_{\text{TO}}\uparrow\;\tau_{\text{MS}}\downarrow$;
+    \item $X_{\text{sup}}\uparrow\;\bar{\kappa}\uparrow\;L_{\text{TO}}\downarrow\;\tau_{\text{MS}}\uparrow$.
+\end{enumerate}
+so there are two effects working to reduce the luminosity at turn-off (and one to increase it) and two effects working to reduce the permanence in the MS. The final result is thus
+\begin{equation*}
+    L_{\text{TO}}\downarrow\;\tau_{\text{MS}}\downarrow
+\end{equation*}
+Assuming the presence of diffusive mechanisms, the abundance of Helium at ignition in the external convective envelope drops, as a consequence
+\begin{equation*}
+    Y_{\text{HB}}\downarrow \implies L_{\text{H}}\downarrow\;M_{c,\text{He}}^{\text{Flash}}\uparrow
+\end{equation*}
+since a longer RGB phase is needed. On the other hand, this would mean that the star would start the RGB phase hotter than without diffusion. The first effect, however, is dominant.
+\par Another phenomenon working, this time, against diffusion is \emph{radiative levitation}. Radiative levitation is an additional transport mechanism caused by the interaction of photons with the gas particles, which acts selectively on different atoms and ions. In simple terms, since within the star a net energy flux (albeit locally small, to preserve local thermodynamical equilibrium) is directed towards the surface, photons provide an upward "push" to the gas particle with which they interact, effectively reducing the gravitational acceleration. Since we are dealing with interactions of photons with gas particles, it is clear that the efficiency of radiative levitation is related to the opacity of the stellar matter, in particular to the monochromatic opacity, and increases for increasing temperature (more energetic photons). The effect of levitation on the chemical abundances is simply an additional contribution to $\omega_{i}$. Radiative levitation tends to increase the surface abundances, sometimes even increasing them \emph{too much}.
+\par What is usually done by those who think it might be worth spending their time watching their evolutive code run for an unfathomable amount of time is to consider an additional contribution caused by turbulence\footnote{Hah! Who would have ever imagined?}, which, most of the time, isn't really worth the trouble.
+\par In general, within a convective region, the convective velocity is always much larger than the contributions of atomic diffusion and radiative levitation, so that the rehomogenization due to convection always prevails over atomic diffusion and radiative levitation. It's clear, however, that there must exist competitive mechanisms that are able to effectively inhibit both diffusion \emph{and} radiative levitation.
+
+\section{The Helium Burning Phase}
+
+Let us first consider the Helium burning phase for lower mass stars. Nuclear reactions relevant for this phase have already been discussed in a past chapter (Chapter \ref{ch:iv}), so in the following I'm going to assume the reader is somewhat familiar with the nuclear reaction that are going on.
+
+\subsection{Central Burning - LMS Stars}
+
+As we've already mentioned, during the RGB phase stars are affected by stochastic mass losses that can be roughly described by a Gaussian-like distribution. If the mass loss is not too severe, LMS stars manage to reach the TRGB and flash with a total mass that is approximately unchanged. But even if it weren't, it is worth pointing out that the luminosity of the TRGB depends only on the mass of the Helium core, which is never even affected by the mass losses of the external layers.
+\par After the flash (and all the secondary flashes that might have occurred), Helium burning resumes in a more placid and quiescent way. Note that LMS stars never stop burning Hydrogen in shells, even when Helium is burning in the core.
+\par The total luminosity of the star can be then considered as made of two contributions
+\begin{equation*}
+    L_{\text{tot}} = L_{\text{He}} + L_{\text{H}}
+\end{equation*}
+Technically, Helium is burned in a smaller fraction of the core, but since the core is convective\footnote{It has to be. The energy production rate of the $3\alpha$ reaction is proportional to $T^{41}$, meaning that huge radiative gradients are possibly involved.} Helium is \emph{de facto} burned in the whole core. There is, however, a little shell of Helium just outside the convective core, that lacking the temperature to ignite, will remain inert until further notice.
+\par At this stage, only the $3\alpha$ and the $\element{C}{12}{6}+\element{He}{4}{2}$ reactions are active, and the luminosity due to Helium burning is clearly the dominant contribution. Now, since $L_{\text{He}}\propto M_{c,\,\text{He}}$ and all LMS stars get to the Helium flash with the same core mass, this stars will all have the same luminosity but different effective temperatures, which depend on the star's extension and hence on their total mass.
+\par This defines an almost horizontal locus in the HR-diagram\footnote{It is important to notice that the Horizontal branch will be almost horizontal only when expressed in terms of luminosity and not in some magnitude band.} that is called \emph{Horizontal Branch}: The lowest mass envelopes are located in the hottest part of the branch, the location moving to cooler values with increasing envelope mass.
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.7\textwidth]{img/envelopemass.png}
+    \caption{(a) The HR-diagram of the ZAHB for different values of the metallicity but the same RGB star progenitor, with $M=0.8M_{\odot}$. (b) The corresponding trend of the envelope mass as a function of their effective temperature. Solid dots in both (a) and (b) mark the location of selected ZAHB models. Credits: \cite{2005essp.book.....S}.}
+    \label{fgr:envelopemass}
+\end{figure}
+\par Equilibrium models that burn He in a chemically homogeneous core, and H in a shell with chemical stratification similar to the one at onset of the Helium flash (in some sense this is equivalent to saying that the CNO elements are at their equilibrium in the H-burning shell) are called \emph{Zero Age Horizontal Branch} (ZAHB) models.
+\par The Horizontal Branch is only approximately horizontal because of the different masses the external envelope might have in different stars. In fact, a more massive envelope would induce an higher contribution to the total luminosity from shell Hydrogen burning and an overall increase of the luminosity: More massive stars are then a little brighter.
+\par Once in the HB, evolution is clearly not stopping. As Helium is burned, the star contracts and heat up. This time, only small variations are needed, for the high temperature dependence of the $3\alpha$ does all the heavy-lifting. Note that although the contribution of Helium throughout this phase is unmistakably the dominant one, the energy produced per burned Helium nucleus is
+\begin{equation*}
+    \epsilon_{\text{He}} \propto \epsilon_{\text{H}}
+\end{equation*}
+and the associated burning timescales are 
+\begin{equation*}
+    \tau_{\text{He}} \sim \frac{\tau_{\text{H}}}{100}
+\end{equation*}
+This is caused in particular by two facts: 
+\begin{enumerate}
+    \item The luminosity of the ZAHB is higher than the typical luminosity during the MS;
+    \item The region where the burning is happening during ZAHB is smaller than it was during MS.
+\end{enumerate}
+The timescales for Helium burning would be even shorter if not for the constant support coming from the shell Hydrogen burning, that partly refills the core with fresh Helium and shoulders part of the needed energy production.
