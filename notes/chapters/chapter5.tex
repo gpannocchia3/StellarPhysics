@@ -566,3 +566,115 @@ This is caused in particular by two facts:
     \item The region where the burning is happening during ZAHB is smaller than it was during MS.
 \end{enumerate}
 The timescales for Helium burning would be even shorter if not for the constant support coming from the shell Hydrogen burning, that partly refills the core with fresh Helium and shoulders part of the needed energy production.
+\par After the first dredge up the reaction products of the CN-NO (bi)cycle were brought to the surface. Note, however, that the sum of their relative abundances must remain approximately constant
+\begin{equation*}
+    X_{\text{C}}+X_{\text{O}}+X_{\text{N}} \sim \text{const.} \quad X_{\text{C}}\downarrow\;X_{\text{O}}\downarrow\;X_{\text{N}}\uparrow
+\end{equation*}
+
+\subsubsection{Dependence on the Various Physical Parameters}
+
+With respect to other evolutionary phases, the HB doesn't span a great range in luminosity, as its luminosity extension is about $\sim 0.1\unit{mag}$ wide. In view of the possible use of the ZAHB brightness as a distance indicator, it is important to know how the observational properties of the ZAHB react to any change in the most relevant parameters such asHhelium content, metal abundance and any additional (non-canonical) process which can change the mass size of the He core at He-ignition.
+\begin{itemize}
+    \item \emph{The He content}: for a fixed metallicity, an increase in the initial Helium content, $Y$, causes a decrease in $M_{c,\,\text{He}}$. This should cause a decrease in the ZAHB brightness. However, for ZAHB stars with massive enough envelopes and so with efficient H-burning in the shell, the increase of the envelope He abundance causes a large increase in the H-burning efficiency, counterbalancing the decrease of the ZAHB brightness due to the change in $M_{c,\,\text{He}}$.
+    \par As a final result, with increasing He abundance, the blue part of the ZAHB (populated by stars with low-mass envelopes) becomes fainter, and the red part brighter. For fixed total mass, the stars become slightly hotter
+        \begin{equation*}
+            Y\uparrow\;T_{c}\uparrow\;L_{\text{H}}^{\text{RGB}}\uparrow\;M_{c,\,\text{He}}^{F}\downarrow\; \implies L_{\text{H}}^{\text{ZAHB}}\uparrow
+        \end{equation*}
+        \begin{equation*}
+            \left(\parder{\log L_{\text{ZAHB}}/L_{\odot}}{Y}\right)_{M_{c}, Z} \sim 2.07
+        \end{equation*}
+    \item \emph{The metal abundance}: any increase in the metal abundance, at fixed Helium abundance, makes the ZAHB fainter. This occurrence is due to the combination of two effects: (1) the decrease of the value of $M_{c,\,\text{He}}$. at the He flash, (2) the increase of the envelope opacity. For fixed total mass, the increase of the envelope metallicity makes the ZAHB location cooler
+        \begin{equation*}
+            \left(\parder{\log L_{\text{ZAHB}}/L_{\odot}}{Z}\right)_{M_{c}, Y} \sim -0.04
+        \end{equation*}
+    \item \emph{Non-canonical processes}: there are many physical processes such as rotation and non-canonical mixing processes, commonly not accounted for in standard evolutionary computations, which can produced sizeable effects on the ZAHB properties. Regardless of the detailed physical description of the process, we can easily predict, at least qualitatively, the effect on the ZAHB by simply considering the effect on the parameters characterizing a ZAHB star. Any physical process able to delay the ignition of the He flash at the TRGB, such as rotation, will cause an increase of the He core mass and, on average, a decrease in the total mass. This is because mass loss along the RGB then has more time to work. As a consequence, the ZAHB location will be brighter and hotter
+        \begin{equation*}
+            \left(\parder{\log L_{\text{ZAHB}}/L_{\odot}}{M_{c,\,\text{He}}}\right)_{Z, Y} \sim 3.04
+        \end{equation*}
+\end{itemize}
+Clearly, the physical parameters we're accounting for are \emph{not} constant along the whole stellar structure, and are not constant for different temperature ranges. What is customarily done is considering an approximately flat region of the HB, which is incidentally overlapping with the RR-Lyrae region ($3.73 \lesssim \log T_{e} \lesssim 3.83-3.85$).
+\par At this point you might be wondering, can we use the ZAHB as a standard candle? As we've shown, we can determine the luminosity of the HB independently from the age of the (old) cluster we're observing: The mass of the core (within a reasonable range\footnote{cfr. with Fig.\ref{fgr:heliumcore}.}) is only weakly dependent on the total stellar mass, hence from the age of the cluster\footnote{This last implication strikes as odd until you recall that the mass we observe at the Turn Off is (approximately) the same that we're going to observe at the TRGB, whose luminosity is in turn only dependent on the mass of the Helium core that is only weakly dependent on the total mass. Conclusion: the luminosity at the TRGB is weakly dependent on age.}.
+\par Since the ZAHB is only weekly dependent on the age of the cluster, we can calibrate the difference in luminosity between the HB and the TO as a function of age: This is the so-called \emph{Vertical Method}. A change of age at a given [Fe/H] changes the value of $\Delta V$ through the change of the TO brightness; for increasing ages $\Delta V$ increases, because the TO gets dimmer. This method works well mainly in the V band (or photometric bands at a similar wavelength) where the ZAHB is mostly horizontal. As a rule of thumb you can remember
+\begin{equation}
+    \Delta V_{\text{TO}}^{\text{ZAHB}} \sim 0.1\unit{mag}\unit{Gyr}^{-1}
+    \label{eq:verticalmethod}
+\end{equation}
+\begin{figure}[h!]
+    \centering 
+    \includegraphics[width=0.7\textwidth]{img/verhormethod.png}
+    \caption{Graphical representation of the $\Delta V$ (vertical) and $ \Delta(B-V)$ (horizontal) age indicators for old SSPs.}
+    \label{fgr:verhormethod}
+\end{figure}
+\par Conversely, the \emph{horizontal method} for age determination involves the comparison of the observed and theoretical values of the quantity $ \Delta(B-V) = (B-V)_{\text{RGB}}-(B-V)_{\text{TO}}$, which corresponds to the color difference between the TO and the base of the RGB. This horizontal parameter is sensitive to age through the variation of $(B-V)_{\text{TO}}$ with $t$, given that the RGB color is unaffected by age for old populations.
+\par In order for this method to be of some use, however, we need an extremely high accuracy in both the observational determination and theoretical prediction of this quantity to keep the error on the estimated age low. Theoretical uncertainties (due to color transformations and treatment of superadiabatic convection) are surely higher than $0.01-0.02\unit{mag}$, and therefore the horizontal method is hardly used for absolute age determinations. We could still employ this horizontal method to determine age differences with respect to template clusters whose absolute age is well established using the $\Delta V$ technique.
+\par The number of stars populating the HB depends on the average mass loss during the RGB phase, potentially impacting what sections of the HB we're be able to observe. Generally, the most used model to schematize mass losses during the RGB is the \emph{Reimers model} which states
+\begin{equation}
+    \dot{M} = 4\power{10}{-13}\eta_{R}\cdot \frac{LR}{M}M_{\odot}\unit{yr}^{-1}
+    \label{eq:reimers_law}
+\end{equation}
+Given this model, all we have to do is essentially find the value of $\eta_{R}$ that most reproduces the observed morphology of the branch ($0.2\lesssim \eta_{R}\lesssim 0.8$). But the morphology of the HB doesn't depend only on the mass losses $\dot{M}$, but also on the metallic content of the considered cluster. At fixed age, there are three main effects we observe for increasing metallicity
+\begin{enumerate}
+    \item $Z\uparrow\;L_{\text{TRGB}}\uparrow\;\bar{\kappa}\uparrow\;T_{e}^{\text{RGB}}\downarrow\;R\uparrow \implies \langle M_{\text{HB}}\rangle \downarrow \implies $ the branch is more blue (at fixed $\eta_{R}$);
+    \item $Z\uparrow$ and if mass is fixed $\tau_{\text{MS}}\uparrow$, if age is fixed as well $M_{\text{TO}}\uparrow\;M_{\text{RGB}}\uparrow$ and at fixed $\eta$ we also have $\langle M_{\text{HB}}\rangle \uparrow \implies $ the HB is more red;
+    \item $Z\uparrow\;\bar{\kappa}\uparrow \implies$ more red HB, $Z\uparrow\;L_{\text{H}}\uparrow \implies$ more red HB
+\end{enumerate}
+This is why metallicity is sometimes called the \emph{first parameter} (age is the second). The "convolution" of all these effects results in a more red horizontal branch if we increase metallicity with fixed age and $\eta$.
+\par What if we now fix $\eta$ and $Z$ and let the age change?
+\begin{equation*}
+    \text{age}\uparrow\;M_{(TO)}\downarrow \implies M_{\text{RGB}}\downarrow\implies \langle M_{\text{HB}}\rangle \downarrow
+\end{equation*}
+hence the HB turns more blue.
+
+\subsection{Hot Flashers}
+
+If during the RGB phase mass losses are severe enough to reduce the Hydrogen shell under a mere $0.06M_{\odot}$, the unfortunate star will never reach the TRGB and will stray away from its original path, moving towards the cooling curve of pure Helium WD\footnote{We've somewhat introduced them a few pages above.}. Note, however, that if the star exits the RGB before flashing, it is possible that during the contration phase that is prior to the WD-cooling track, the core might heat up enough to ignite Helium. A series of flashes then brings the star back towards the ZAHB, but at a much higher temperature and at a lower luminosity that would have been expected had the star gone through the "standard" iter.
+\par These stars are known as \emph{hot flashers}. Several had been observed with really large differences in the abundance of Helium and Carbon, most likely induced by severe flashes that might extend up to the most external layers.
+\begin{figure}[h!]
+    \centering 
+    \includegraphics[width=0.7\textwidth]{img/hotflashers.png}
+    \caption{Evolutive trajectory for a "Hot Flasher" model. The * marks the Helium Flash ignition and the dashed line connects said point with the first quiescent burning model for Helium in the core. The following evolution in the quiescent Helium burning phase until the final cooling and settling into a CO WD is also shown. Credits: Unknown.}
+    \label{fgr:hotflashers}
+\end{figure}
+
+\subsection{Central Burning - UMS Stars}
+
+We now turn to considering the evolution of more massive stars along the RGB and beyond, when Helium is ignited in the core.
+\par Owing to the absent (or partial) electron degeneracy within the core, the onset of He-burning is not characterized by the Helium flash, as in low-mass stars. Helium is ignited when the central temperature reaches $\sim 10^{8}\unit{K}$ and central density $\approx 10^{4}\unit{g}\unit{cm{-3}}$; this occurrence terminates, and reverses the upward climb along the RGB.
+\par The star now begins an extended phase of He-burning in a steadily growing convective core. H-burning in a thin shell continues to provide the bulk of the surface luminosity, and so the mass size of the He core continues to grow during this evolutionary phase.
+\par The permanence of a UMS star in the RGB is positively correlated to the degeneracy of the core, a more degenerate core needing more time to have the degeneracy removed so that Helium can be ignited. Note that when ignition happens, the total mass of the star will be (roughly) the same that it was at TO\footnote{Properly speaking, we should refer to the mass at the overall contraction. That said, the same argument we've presented for LMS stars holds: Mass losses are essentially stochastic and only marginally impact the total mass.}. The core He-burning lifetime is of the order of $\sim 20\%$ of the core H-burning lifetime, and it is $\sim 22\unit{Myr}$ for a $5M_{\odot}$ star and $\sim 4\unit{Myr}$ for a $10M_{\odot}$ star of solar chemical composition. The duration of the core He-burning phase is fairly large when one considers that the star is approximately two orders of magnitude brighter than during the MS phase, and that the specific gain of energy (per unit of mass of burnt fuel) is one tenth of that for H-burning. This is due to the very large contribution to the energy budget provided by the H-burning shell.
+\par Consider now a stellar cluster. Since mass losses are essentially negligible, we'll find after the TRGB roughly $N_{\text{TRGB}}$ stars
+\begin{equation*}
+    N_{\text{TRGB}} = \frac{\tau_{\text{RGB}}}{\tau_{MS}}N_{\text{MS}} \ll N_{\text{MS}}
+\end{equation*}
+all with approximately the same mass. What earlier we've called HB is now confined in just a tiny region, which is called \emph{Helium clump} or \emph{red clump}.
+\begin{figure}[h!]
+    \centering 
+    \includegraphics[width=0.9\textwidth]{img/heclump.png}
+    \caption{On the left cartoon, theoretical isochrones for stellar clusters displaying the whole MS, SGB and RGB phases. The Helium clump and the Helium loop are also visible. On the right cartoon, zoom on the red clump, highlighting its dependence on age. Credits: Professor S. Degl'Innocenti and the PISA group.}
+    \label{fgr:heclump}
+\end{figure}
+\par For ages between $\sim0.5$ and $\sim4\unit{Gyr}$ the He-burning phase is usually a red clump of stars (not only for metal rich SSPs) close to the position of the (depopulated) RGB sequence, because the RGB evolution is very fast and stars lose a small amount of matter. When ages are below $\sim 0.5\unit{Gyr}$ the Helium burning phase moves progressively to the blue side of the CM-diagram, because stars describe increasingly larger loops to the blue, and the longer evolutionary times are when He-burning objects are close to the blue end of the loops.
+\begin{figure}[h!]
+    \centering 
+    \includegraphics[width=0.7\textwidth]{img/clumpage.png}
+    \caption{Magnitude in the Visual band of the red clump as a function of the age of the cluster. Note how only for ages higher than $\sim 1\unit{Gyr}$ the clump luminosity is approximately independent on the age. Credits: Professor S. Degl'Innocenti and the PISA group.}
+    \label{fgr:clumpage}
+\end{figure}
+\par This suggests us that the red clump cannot really be used as a standard candle, especially not for stars younger than $\sim 0.5\unit{Gyr}$ ($M\gtrsim 5M_{\odot}$). Take a look at Fig.\ref{fgr:blueloop}.
+\begin{figure}[h!]
+    \centering 
+    \includegraphics[width=0.7\textwidth]{img/blueloop.png}
+    \caption{The evolutionary track of a $5M_{\odot}$ model during the Hydrogen and He-burning phases. The different evolutionary stages discussed in the text are marked A-K. Credits: \cite{2005essp.book.....S}.}
+    \label{fgr:blueloop}
+\end{figure}
+\par Looking at the part of the track corresponding to the core He-burning phase (points E to I) one can easily note that after point F, the star moves from the RGB to the blue side of the HR-diagram. The bluest point, G is reached when the central abundance of He is $Y \sim 0.5$. During this period before point G, the energy release in the H-burning shell has been steadily increasing. The maximum efficiency is achieved at point G, where the fraction of energy produced by the $3\alpha$ reactions is of the order of $\sim 20\%$. After this point, the fraction of energy produced via H-burning decreases steadily.
+\par The model then comes back toward the Hayashi line, so performing a loop in the HR-diagram, the so called \emph{blue loop} (sometimes also called \emph{Helium loop}). At point H, the core abundance of He is $Y \sim 0.02$, while $L_{3\alpha}$ accounts for $\sim 33\%$ of the energy produced by nuclear burning. At point K, the fraction of energy produced by the core He-burning process is $\sim 60\%$.
+The importance of the blue loop stems from the fact that it occurs during a long-lasting evolutionary phase, in which the star has a large probability of being observed.
+\par This strongly extremized evolution is due to the severe contractions of the external envelope, which serves to increase the effective temperature of the star. The star then brings itself towards lower effective temperatures mainly for two reasons: The central Helium is greatly diminished (inducing a core contraction and a successive bloating of the envelope) or the active Hydrogen shell encounters the abundance discontinuity, which might have sunk deep enough into the structure.
+\begin{figure}[h!]
+    \centering 
+    \includegraphics[width=0.6\textwidth]{img/loopmetallicity.png}
+    \caption{The HRD of evolutionary tracks of a $7M_{\odot}$ star for various values of the metallicity but with the same value for the initial He content. Credits: \cite{2005essp.book.....S}.}
+    \label{fgr:loopmetallicity}
+\end{figure}
+\par It is not surprising that determining the age of a cluster from looking at the blue loop is a huge mess. Thankfully, there's a region of the HR-diagram that partially overlap with the blue loop which is of crucial importante for age estimations and distance estimations, called the \emph{instability strip}. Here are located the \emph{Cepheids variables}, that are stars affected by stable radial oscillations that induce periodic changes in brightness. For clarity purposes, however, we'll talk about variable stars in Chapter \ref{ch:vii}. 
