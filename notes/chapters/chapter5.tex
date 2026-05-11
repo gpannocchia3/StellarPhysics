@@ -830,3 +830,147 @@ Between two consecutive thermal pulses, some $\element{C}{13}{6}$ is created at 
     \item The value adopted for the free parameter $\alpha_{ML}$ in the mixing length theory. This affects the efficiency of convection in the envelope and, in turn, fixes the radius of the solar model.
 \end{itemize}
 Clearly, the model will aim to reproduce the observed properties within present day uncertainties, which, for some measurement in particular, are still rather large.
+
+\section{Pulsating Variable Stars}
+
+When stars cross a number of well-defined regions in the HR-diagram, they are affected by stable radial pulsations. As a consequence, they change their brightness periodically and become variable stars. These peculiar regions of the HRD are called \emph{instability strips}. The instability strip we'll consider in the following is related to the two most important classes of radially pulsating stars, the \emph{RR-Lyrae stars} and the \emph{Classical Cepheid}. These represent probably the most important standard candles for Population II and Population I stellar systems, respectively.
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.7\textwidth]{img/variables.png}
+    \caption{Location in the HRD of various pulsating stars. Cepheids, RR-Lyrae and $\delta$-Scuti stars are located in a nearly vertical instability strip. The Long Period Variables are outside the strip.}
+    \label{fgr:variables}
+\end{figure}
+\par In either case, the pulsation involves only the more external layers of the star without affecting their interiors and the energy generation efficiency.
+\par Detailed analysis showed that the Helium and Hydrogen ionization zones located near the surface (the total mass above the base of the He-ionization zone is only $\approx 10^{-7}M_{\odot}$ in a RR-Lyrae variable) are responsible for driving the pulsations, during which the stellar luminosity for an RR-Lyrae star can vary by a factor of two and the radius can change by $\approx 20\%$.
+\par These ionization zones have to contain a sufficient fraction of the mass of the star in order to drive the pulsations efficiently, therefore they cannot be too close to the low-density surface layers; this explain the existence of the hot boundary of the instability strip, given that increasing the stellar $T_{\text{eff}}$ moves the ionization regions towards the surface. On the other hand, when the stellar $T_{\text{eff}}$ becomes sufficiently low, envelope convection sets in and the varying-opacity mechanism is no longer able to drive the pulsation efficiently; this is the reason for the existence of the cool boundary of the instability strip.
+\par During a contraction, the physical properties are changing in the following way 
+\begin{equation*}
+    \chi\downarrow\;n_{e}\uparrow\;T\sim\text{const.}\;\rho\uparrow\implies \bar{\kappa}\uparrow\;L\downarrow
+\end{equation*}
+where all symbols have their usual meaning aside from $\chi$, that here refers to the ionization fraction of the layer. During the contraction, the external regions absorb the energy released from the compression and heat up, thus producing a pressure able to bloat up the region. The produced energy is then used to make atoms and electrons recombine, which has the effect to lower the electron density $n_{e}\downarrow$ and the opacity $\bar{\kappa}\downarrow$. The star is thus able to cool down, contract and repeat the cycle.
+\par Note that the luminosity of the star is increasing only as long as the effective temperature remains approximately constant, so that as soon as it begins to drop (when the star expands) luminosity decreases as well. This is why the point of maximum luminosity corresponds (roughly) to the point of maximum effective temperature rather than to the point of maximum spatial extension. A more detailed analysis would also tell you that it is also corresponding to the point where the star has maximum radial expansion velocity.
+\par With what timescale does this oscillation occur? Radial contractions are essentially free-fall collapses at heart, and so it would be logical to assume the process to follow the dynamical timescale given by the free-fall time (\ref{eq:ff_timescale}) which is proportional to $\tau_{ff}\propto \rho^{-1/2}$, and hence to $\tau_{ff}\propto R^{3/2}M^{-1/2}$. Recall now how we've defined the luminosity
+\begin{equation*}
+    L = 4\pi R^{2}\sigma T_{\text{eff}}^{4}
+\end{equation*} 
+We can invert it to find the radius and obtain for the free-fall time this important dependence
+\begin{equation}
+    P \propto \tau_{ff} \propto L^{3/4}M^{-1/2}T_{\text{eff}}^{-3} \propto \sqrt{\frac{R}{g}}
+    \label{eq:pulsationalperiod}
+\end{equation}
+where we've introduced the surface gravity $g \propto M/R^{2}$. The existence of this relation, connecting an empirical quantity such as the period of pulsation, with a structural property such as the mean stellar density, highlights the importance of stellar pulsations to stellar evolution theory; the analysis of radial pulsations provides a formidable tool for investigating stars, even more so since the measurement of the pulsating period isn't affected by possibly troublesome factors such as distance and reddening.
+\par As a rule of thumb, you might want to remember the following properties that directly descend from (\ref{eq:pulsationalperiod})
+\begin{align*}
+    & L\uparrow\implies P\uparrow \quad T_{\text{eff}}\uparrow\implies P\downarrow \quad M\uparrow\implies P\downarrow\\
+    & Z\uparrow\;\bar{\kappa}\uparrow\implies T_{\text{eff}}\downarrow\;L\downarrow\;M_{\text{strip}}\downarrow\\
+    &Y\uparrow\;L\uparrow\implies T_{\text{eff}}\uparrow\implies M_{\text{strip}}\uparrow
+\end{align*}
+
+\begin{figure}[h!]
+    \centering 
+    \includegraphics[width=0.9\textwidth]{img/variablestable.png}
+\end{figure}
+
+\subsection{RR-Lyrae Variables}
+
+RR-Lyrae variable stars are found where the instability strip meets the horizontal branch, in a narrow region where the luminosity extension is fairly limited. RR Lyrae are then low-mass stars, which are crossing the instability strip during their core He-burning phase.
+\par These variables have periods in the range $0.2-0.9\unit{days}$ and light curve\footnote{\emph{NdA}: The trend of the luminosity with time.} amplitudes between $0.2-1.6\unit{mag}$ in the B photometric band. They are classified into two groups: the \emph{ab type} variables, characterized by asymmetric light curves of large amplitude, and \emph{c type} variables with nearly sinusoidal light curves and small amplitude. The ab type RR Lyrae pulsate in the \emph{fundamental mode}, and c type variables in the \emph{first overtone mode}. There exists also a third group, the \emph{d type} RR Lyrae, pulsating simultaneously in both modes.
+\par The hottest, blue edge, of the instability strip is located at an effective temperature of the order of $\sim 7200\unit{K}$ at the ZAHB luminosity level, a value which slightly decreases with increasing stellar luminosity. The reason for the existence of a blue edge (and of its change in effective temperature when increasing the luminosity) has to do with the fact that, for a given mass and luminosity, as the surface temperature increases, there is progressively less mass above the ionization zones and, in turn, their contribution to the pulsational driving decreases.
+\par he red side of the instability strip is limited by the so-called red edge, located at $T_{\text{eff}} \sim 5900\unit{K}$, whose existence is related to the presence of envelope convection in the stars; being an efficient energy transport mechanism, it acts to quench the process of pulsation.
+\par It is also worth noting that both the width and the topology of the RR-Lyrae instability strip is marginally dependent on the stellar metallicity, at least in the heavy element abundance range appropriate for the old galactic stellar systems which host RR-Lyrae variables.
+\par The most up-to-date relation between the quantities concurring to determine the (fundamental) pulsation period of an RR-Lyrae is 
+\begin{align*}
+    \log P_{f} &= 11.242 +0.841\log\left(\frac{L}{L_{\odot}}\right)-0.679\log\left(\frac{M}{M_{\odot}}\right)-3.410\log T_{\text{eff}}\\
+    &-0.007\log Z
+\end{align*}
+while the period of the first overtone can be expressed in terms of the period of the fundamental as 
+\begin{equation*}
+    \log P_{FO} = \log P_{f} -0.13
+\end{equation*}
+
+\subsection{Classical Cepheids Variables}
+
+From the point of view of stellar evolution Classical Cepheids (or Type I Cepheids) are intermediate-mass stars going through the stage of core He-burning. The evolutionary tracks of intermediate-mass stars can cross the instability strip up to three times. All stars cross the Cepheid instability strip during their expansion toward the Red Giant configuration, at the point of exhaustion of Hydrogen in the core, but this crossing is so rapid that there is almost no chance to observe a star pulsating as a Cepheid variable in this stage. So the Cepheid behavior can be observed only for those stars that experience a blue loop, extended enough to cross the pulsational instability strip.
+\par Classical Cepheids are very bright objects, with intrinsic luminosity in the range $\sim 300-25000 L_{\odot}$. Their pulsational periods are mainly confined to the range $1-50\unit{days}$, with a few extreme examples of up to $250\unit{days}$.
+\par Both the shape and location of the Cepheid instability strip are significantly affected by metallicity\footnote{Typically, the larger the metallicity, the cooler and steeper is the location of the instability strip on the HRD.}. For Cepheid variables as well, it is possible to derive pulsational relations connecting the period to the stellar mass, luminosity and effective temperature. At a fixed luminosity and mass, decreasing the effective temperature produces (according to this relation) an increase in the pulsational period. Since an increase of the metallicity has the effect of shifting the Cepheid instability strip towards a lower effective tem- perature, and therefore longer periods, one should expect that the period-luminosity relation for Cepheid variables depends on metallicity.
+\par The existence of this correlation can easily be understood by considering the dependence of the pulsational period on stellar luminosity, mass and effective temperature, and the prediction of evolution theory that there is, for a set chemical composition, a tight relation between the mass and surface luminosity of stars at the beginning of the core He-burning phase. As a consequence, for any set chemical composition, the brightness of a Cepheid variable is a function of its period and effective temperature.
+
+\subsubsection*{Classical Cepheids as Standard Candles}
+
+A very important technique that can be applied to gauge the distance of young SSP makes use of the Cepheid period-luminosity $P-L$ relationships, whenever a number of Cepheid variable stars is detected in the SSP under scrutiny. The typical age range of SSPs harboring Cepheid stars is between $\approx 10-100\unit{Myr}$.
+\par As already discussed, Cepheid stars show well-defined relationships between their average intrinsic luminosity along a pulsation period (hence average absolute magnitudes in various wavelength bands) and the period itself. The main idea of this method is to measure the periods (from their observed light curves) of the Cepheid stars in the observed SSP and fit these values to a standard $P-L$ relationship of the kind
+\begin{equation}
+    M_{A} = a\log P + b
+\end{equation}
+for the photometric band $A$ employed. The use of $P-L$ relationships in two (or more) different photometric bands allows one to determine simultaneously the distance modulus and extinction as we've already discussed somewhere in an earlier chapter.
+\par The preferred photometric band employed is the K band (in the IR range) where the variation in magnitude due to metallicity are roughly compensated for by bolometric corrections. A further advantage is that the K-band is also negligibly affected by interstellar extinction. As a general rule, the value of the $P-L$ slope becomes more negative moving towards longer wavelength filters, and the dispersion decreases.
+\par Under these circumstances, stars roughly align along a line in the $F_{K}-P$ plane, from which you can easily obtain the distance through the distance modulus.
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.9\textwidth]{img/variablespm.png}
+    \caption{Dispersion of the $P-L$ curve for various photometric bands. Note of the infrared K band and the W band (which is a band optimized for the purpose) are the narrower of the ones considered.}
+    \label{fgr:variablespm}
+\end{figure}
+
+\newpage
+\section{Termination of the AGB Phase: Final Destiny}
+
+\begin{quote}
+    \emph{And now, the end is near...}
+    \begin{flushright}
+        Frank Sinatra, \emph{My Way}\footnote{The more I read the lyrics of this song, the more I realize you could easily transpose the whole meaning of the song to be referring to stars.}
+    \end{flushright}
+\end{quote}
+
+Before diving head-on into all the possible ending points of a star's life, it is perhaps sensible to spend a couple of line to introduce some concepts that are perhaps a little bit overdue now.
+\begin{itemize}
+    \item \emph{Massive Stars}: We call massive stars those that end the RGB phase with a fully non-degenerate He-core and that don't develop a degenerate CO core during AGB. These stars, in the range $$M \gtrsim 10M_{\odot} = M_{\text{up}}'$$ will do all the burning we've described somewhere in Chapter \ref{ch:iv} up to Iron, only to later die as Type II SNe;
+    \item \emph{Intermediate mass Stars}: We call intermediate mass stars those that have a non-degenerate He-core during the RGB but with a degenerate CO-core during AGB. These stars have masses in the range $$M_{\text{RGB}}^{\text{TR}}\lesssim M/M_{\odot} \lesssim M_{\text{UP}}'$$
+    \item \emph{Low Mass Stars}: We call low mass stars those in the range\footnote{Note that they partially overlap with UMS stars.} $$0.3\lesssim M/M_{\odot} \lesssim M_{\text{RGB}}^{\text{TR}}$$
+    \item \emph{Very Low Mass Stars}: We call low mass stars those in the range $$0.08\lesssim M/M_{\odot}\lesssim 0.3$$ which are the stars that are fully convective during MS.
+\end{itemize} 
+Once the star settles into the thermally pulsating phase, in principle it can experience a huge number of thermal pulses, the number being limited only by the mass of the H-rich envelope or by the mass of the CO core.
+\par If the CO-core mass exceeds the value $\sim 1.4M_{\odot}$ (the so-called Chandrasekhar mass limit) the ignition of Carbon burning can occur (at $T \sim 7-8\power{10}{8}\unit{K}$, which requires $M \gtrsim M_{\text{up}}$) and this marks the end of the AGB phase.
+\par In reality, due to mass loss during the late AGB, we do not really expect that any star will reach the Chandrasekhar limit, as a consequence of the increase of the mass of the CO-core during the late AGB evolution, and ignite Carbon.
+
+\subsection{Low Mass Stars}
+
+It is now worth discussing briefly the evolution of low-mass stars from the end of the late AGB phase to the beginning of the following evolutionary phase, i.e. the white dwarf (WD) stage. As a consequence of radial pulsations (or any other mechanisms) the star loses a lot of its mass during the brightest part of the AGB. Once the mass of the H-rich envelope decreases below a critical value, the remnant star evolves rapidly towards hotter effective temperatures.
+\par It continues to burn Hydrogen in a thin shell until the bluest point along its evolutionary track at almost constant luminosity. At this point, H-burning is switched off and both the H-rich envelope and He-rich layer contract rapidly. Depending on thermal conditions of the envelope, different evolutionary channels can be followed:
+\begin{enumerate}
+    \item Nuclear burning definitively dies out and the remnant cools as a white dwarf;
+    \item Heating of the He-rich layers leads to an He-burning thermonuclear runaway in the He shell, the consequence of which is to carry the star back to the AGB. This is the so called born-again AGB scenario. During the subsequent quiescent He-burning phase, the star evolves to the blue side of the HRD on a timescale approximately three times longer than that of the previous shell H-burning phase. At the end of this, the star becomes a white dwarf\footnote{Note that we've already talked about this in a previous section. I'm merely repeating it here because it is fitting of this section.};
+    \item If heating of the H-rich envelope induces an H-burning thermonuclear runaway, the stellar remnant becomes a \emph{self-induced nova}. To outline the final fate of a self-induced nova is not an easy task, due to the difficulties encountered in the numerical simulations.
+    \par That said, it is possible to make some predictions: (a) if the process is very violent and dynamic, this can produce the ejection of the whole H-rich envelope and so the star becomes a white dwarf with no trace of Hydrogen on its surface; (b) if the process is only mildly dynamical and only a small portion of the H-rich envelope is lost, the mass of this envelope will be decreased by nuclear burning. After a phase of quiescent H-burning, the star will start to cool down the white dwarf cooling sequence.
+    \par It is possible that another H flash event occurs leading to a further reduction through nuclear burning of the H-rich envelope mass. This process could, in principle, be reiterated many times until there is too little Hydrogen left to burn. During the subsequent WD evolution, even a very modest wind could cause the loss of this layer.
+\end{enumerate}
+Once again, it is worth mentioning that the evolutionary path followed by a star from the end of the AGB to the beginning of the cooling phase along the WD sequence is the one corresponding to the formation of Planetary Nebulae.
+
+\subsection{Carbon Ignition}
+
+\par As we've mentioned, only stars with masses larger than $M_{\text{UP}}$ are able to ignite Carbon, with $M_{\text{UP}}$ corresponding to the largest mass at which the electron degeneracy of the CO-core is high enough to prevent carbon ignition. Such mass is strongly dependent on the star's metallicity\footnote{At solar metallicity $Z\sim 10^{-4}$, $M_{\text{UP}} \sim 8M_{\odot}$, while for higher metallicity, say $Z\sim 10^{-3}$, the needed mass is lower $M_{\text{UP}} \sim 6M_{\odot}$.}.
+\par If the star is not massive enough, the core degenerates (intermediate mass stars) and it undergoes a process alike that of low mass stars during the RGB: The mass of the CO-core steadily increases as long as Helium is burned in shells, increasing its density, but energy is subtracted by escaping neutrinos that may induce a temperature inversion, so that the maximum of the temperature is no longer at the center of the core.
+\par For stars in the range $M_{\text{UP}} \lesssim M \lesssim M_{\text{UP}}'$ Carbon is ignited with a flash, \emph{off-center}, in a strongly degenerate environment. The relevant reactions for Carbon burning were already introduced in Chapter \ref{ch:iv}, so you already know that Neon, Magnesium and Sodium are produced (aside from a large quantity of inert Oxygen that was already in the core from the He-burning phase). Most of $\element{Na}{23}{11}$ is combined with protons to form $\element{Mg}{24}{12}$. When Carbon is depleted the core will thus be made mainly of Oxygen, Neon and a rather smaller percentage of Magnesium. Star with the mass in the range we're considering, however, are not able to ignite Oxygen. So what happens?
+\par There are two main scenarios to consider, but for both we have to recall something that might have seemed like a mention en passant. Carbon ignition occurs off-center. This is crucial. It means that, \emph{potentially}, Carbon burning might never reach the center of the star.
+\par If the star is able to lose enough mass to be stripped of the little envelope it still held, it can turn into a WD with an Oxygen-Neon core or, if mass losses are less severe, into a stranger WD with a CO-core and a layer of Oxygen, Neon and Magnesium, which can be rather problematic for studies concerning SN Ia.
+\par If mass losses do not prevent nuclear burning from happening, the density of the core might favor electronic captures on nuclei and the formation of neutrons\footnote{This would happen before the core reaches the Chandrasekhar limit mass.}. This would have the effect of reducing the pressure that supported the star, facilitating the collapse of the core, that might ignite nuclear burning so violently to destroy the whole star. This type of SN is called \emph{electron capture Supernova}. 
+\par ECSNe should have rather different characteristics from those of normal Type II SNe (which are already rather varied), and its existence has been often questioned. Apparently, one had been detected in 2018.
+\begin{tcolorbox}[enhanced,attach boxed title to top center={yshift=-3mm,yshifttext=-1mm},
+colback=blue!5!white,colframe=blue!75!black,colbacktitle=blue!80!black,
+title=Supernovae Classification,
+boxed title style={size=small,colframe=blue!50!black}]
+    Supernovae are broadly distinguished into two main categories and many sub-categories depending on observational properties of their emission spectrum.
+    \begin{itemize}
+        \item Type I: Do not present Hydrogen lines in the spectrum;
+        \item Type II: Present Hydrogen lines in the spectrum because some was retained in the external layers of the envelope.
+    \end{itemize}
+\end{tcolorbox}
+
+\subsection{Non-Carbon Ignition}
+
+For stars with masses lower than $M_{\text{UP}}$ the ignition of Carbon is not possible, and their evolutionary path is once more determined by how much severe are mass losses.
+\par If mass losses are high enough to shut down the shell He-burning, they do end up ending their lives as CO-cored white dwarves that will be cooling down for a long time. Otherwise, thermal pulses continue, feeding the core with more and more Carbon until it reaches Chandrasekhar's limit mass.
+\par While the CO core mass increases because of the He-burning in the shell, it also contracts and becomes denser. The release of gravitational energy should heat the core, but the increasing densities in the core strongly favor neutrino energy losses, and the central portion of the core cools. However, with increasing CO core mass, the nuclear burning of Carbon is activated. When, and if, the CO core mass approaches the Chandrasekhar limit, $\epsilon_{C}$ becomes comparable to $\epsilon_{\nu}$. Ultimately, the Carbon burning energy release will overcome the neutrino energy losses, and a thermonuclear runaway occurs.
+\par If this thermonuclear runaway occurs at the center of the star, we expect an explosive process that would cause its complete destruction (the so-called \emph{Carbon Deflagration SN}). In the case where the Carbon burning starts in a shell far enough from the center, after one or more  flashes Carbon burning quietly settles in the center of the star. The final fate of these stars is eventually to experience thermal pulses at a very high luminosity and finally to become white dwarfs with a degenerate O-Ne core.
+\par Whether a star can develop an electron degenerate CO core of the order of the Chandrasekhar mass during its evolution along the AGB, depends not only on its initial mass but also on the efficiency of mass losses along the previous evolutionary phases. But in the real world, mass losses significantly reduces the stellar mass so that very few, if any, stars with mass around $M_{\text{UP}}$ (or slightly larger) are able to reach the conditions for the ignition of Carbon.
+\par At present day, no Carbon deflagration SNe have been observed.
