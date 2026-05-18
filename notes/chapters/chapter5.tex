@@ -1090,4 +1090,117 @@ At this point we might wonder, are Type II SNe enough to produce all elements he
 
 \section{White Dwarves}
 
-Coming soon.
+As discussed in the previous sections, stars with initial masses up\footnote{The precise value depends on the initial chemical composition and the extension of the overshoot from the convective cores during the previous evolutionary phases.} to $M\sim 6-8M_{\odot}$ lose all their envelope during the thermal pulses and continue the evolution with an electron degenerate core made almost exclusively of Carbon and Oxygen (whose stratification is determined by the nuclear transformations of the previous evolutionary phase) plus a residual non-degenerate envelope, with thickness of about $10^{-2}M_{\text{tot}}$, where $M_{\text{tot}}$ is the total mass of the white dwarf (WD). No nuclear energy processes are active, since temperatures are not high enough, and the stars evolve at approximately constant radius and decreasing luminosity.
+\par As a first approximation, we may assume them to be entirely supported by the pressure of non-relativistically degenerate electrons, so that $p \propto \rho^{5/3}$. From the Lane-Emden equation (\ref{eq:lane_emden}) we could find in principle a mass-radius relationship
+\begin{equation}
+    R = 0.012M^{-1/3}\left(\frac{\mu_{e}}{2}\right)^{-5/3}
+\end{equation}
+with $M$ and $R$ in terms of the correspondent solar unity. For the WD we're going to consider, we may assume $\mu_{e}\sim 2$.
+\par Your typical WD, as we've mentioned, is that which ends up with a CO-core, as well with a thin shell of Helium ($\sim 1\%M_{\odot}$) and a residual of the H-rich envelope ($\sim 10^{-4}M_{\odot}$). Once the WD is formed, since no nuclear burning are active, it will start to cool down with approximately the same radius, since the only part that can effectively contract is the ionic (non-degenerate) component, which is minoritary.
+\par Before moving on, let us just briefly point out that for WD the density scales with the mass squared
+\begin{equation*}
+    \rho \propto M^{2}
+\end{equation*}
+which can potentially be a problem with our initial approximation of a non-relativistic degenerate gas. In the real world, in fact, our approximation would hold only up to $\sim 0.6M_{\odot}$ (which, incidentally, is about the same mass of your average CO-WD).
+\begin{figure}[h!]
+    \centering 
+    \includegraphics[width=0.6\textwidth]{img/massradiuswd.png}
+    \caption{Comparison of the theoretical mass-radius relationship predicted by theoretical models with observations. With more recent data (perhaps those of the GAIA DR3) you could probably do better than this. But still-Credits: \cite{2005essp.book.....S}.}
+\end{figure}
+\par For larger masses\footnote{This is the case, for example, of Ne-O white dwarves.}, the stellar structure is partially supported by relativistic degenerate pressure and so we cannot use the easy politropic expression $p \propto \rho^{5/3}$, nor that for a fully relativistic gas $p \propto \rho^{4/3}$. An EoS able to describe this mixed configuration was found \emph{analytically} by that madlad that was Chandrasekhar, but we won't talk about that. Just that in case of degenerate gass which is not fully relativistic, the following approximate relation holds
+\begin{equation}
+    R \approx 0.0012R_{\odot}\left[\left(\frac{M_{Ch}}{M}\right)^{2/3}-\left(\frac{M}{M_{Ch}}\right)^{2/3}\right]^{-1/2}
+\end{equation}
+\par Due to our imperfect knowledge of the mass-loss processes during the AGB phase (and, more generally, along all the various evolutionary phases) we cannot exactly predict the final WD mass produced by a progenitor with a given initial total mass M. In general, the CO core mass at the beginning of the late-AGB phase is a reasonable approximation since you do not expect a large increase of the core during the thermal pulses. 
+\par Still, even with its relatively low mass, the core has a very large thermal capacity, which continuously heats up the surrounding envelope. The transferred energy is then radiated away, inducing a cooling in the star.
+\begin{figure}[h!]
+    \centering 
+    \includegraphics[width=0.8\textwidth]{img/wdcoolingcurve.png}
+    \caption{HRD location of WD evolutionary tracks for different values of the white dwarf's mass compared with previous evolutionary phases. Credits: \cite{2005essp.book.....S}.}
+    \label{fgr:wdcoolingcurve}
+\end{figure}
+\par The cooling occurs in regions of the HR-diagram that are at constant radius, and so WD are expected to align diagonally as shown in Fig.\ref{fgr:wdcoolingcurve}.
+\par These general properties of WDs are also valid when one takes into account the existence of the thin non-degenerate envelope. Different thicknesses of the envelope change the mass-radius relationship slightly at a given WD mass, but the effect is largely a second-order effect. Instead, when studying the evolution with time of the WD luminosities, the envelope plays a fundamental role, as we will see below.
+\par According to the virial theorem, a star with a degenerate electron component and ideal ions radiates the thermal energy of the ions and lowers its temperature. The evolution of a WD is therefore often labelled as a cooling process, and we are now going to obtain an approximate relationship for the evolution of the WD luminosity with time.
+\par But before moving on, let us briefly recall how the various WD are formed.
+\begin{itemize}
+    \item CO-WD: are those stars with original mass larger than $M_{\text{UP}}$ that never manage to ignite Carbon (and consequently, neither Oxygen). They have masses roughly equal to $\langle M \rangle \sim 0.55-0.6M_{\odot}$;
+    \item Ne-O-WD: as per the above, but with the difference that these stars ignite Carbon but not Oxygen. Note that only stars that ignite Carbon very far off-center are able to turn into Ne-O WDs. At this stage they're composed of 65\% Oxygen and 25\% Neon. Ne-O WD have a higher molecular weight in the envelope $\mu_{i}\uparrow$, which implies a lower density of ions $n_{i}\downarrow$ and then a lower energy to radiate away $E_{\text{th}}\downarrow$, even though they have larger masses overall. They have masses typically in the range $1 \lesssim M/M_{\odot} \lesssim 1.2$;
+    \item He-WD: they are what remains of massive stars from RGB that experienced too-severe mass losses and never made it to Helium ignition. As so, they have very low masses, in the range $0.15 \lesssim M/M_{\odot}\lesssim 0.5$, and since they're molecular weight is lower, their thermal energy is higher. These class of WDs populate the tail of the MS for low mass stars.
+\end{itemize}
+
+\subsection{WD Age-Luminosity Curve}
+
+We consider first the non-degenerate envelope and suppose it is radiative, so that the energy of the envelope is given by 
+\begin{equation}
+    E_{\text{th}} = \frac{3}{2}kT n_{i} \approx \frac{3}{2}kT\frac{M}{\mu_{i}m_{\text{H}}}
+    \label{eq:envelope_energy}
+\end{equation}
+and that the opacity in the envelope is à la Kramer, so $\bar{\kappa} = \kappa_{0}\rho T^{-3.5}$. We're going to assume that in the envelope the total mass and luminosity have already been achieved, and that the gas there follows the perfect gas EoS. If we divide the equation of hydrostatic equilibrium (with $r$ as independent variable) by the equation of radiative transport we obtain
+\begin{equation}
+    p\diff{p} = \frac{4ac}{3}\frac{4\pi}{\kappa_{0}}\frac{GMk}{L\mu m_{\text{H}}}T^{3.5}\diff{T}
+    \label{eq:pressuretemp-WD}
+\end{equation}
+This equation can easily be integrated from the surface to a generic point within the envelope using as surface boundary conditions $p \sim 0$ and $T \sim 0$, and assuming the luminosity $L$ is constant throughout the envelope and equal to the surface value. The integration provides $p$ as a function of $T$ plus constants. After using the ideal gas EoS to replace $p$ with $\rho$ we finally obtain
+\begin{equation}
+    \rho = \left(\frac{32\pi ac G\mu m_{\text{H}}}{8.5\cdot 3\kappa_{0}Lk}\right)T^{3.25}
+\end{equation}
+We consider the base of the envelope, i.e. the transition point to the electron degenerate interior, to be the point where the degenerate electron pressure equals the pressure of the ideal electron gas in the envelope (ions are an ideal gas at both sides of this transition point). This means that at the interface (the values of density and temperature at this point are denoted with the subscript b, $\mu_{e}$ is the electron molecular weight of the degenerate core)
+\begin{equation}
+    \frac{\rho_{b}kT_{b}}{\mu_{e}m_{\text{H}}} = 1.0036\power{10}{13}\left(\frac{\rho_{b}}{\mu_{e}}\right)^{5/3}
+\end{equation}
+which we can use to solve for the luminosity in the previous equation, thus finding
+\begin{equation}
+    \frac{L}{L_{\odot}} = 6.4\power{10}{-3}\frac{\mu}{\mu_{e}^{2}}\frac{M}{M_{\odot}}\frac{1}{\kappa_{0}}T_{b}^{3.5}
+    \label{eq:wd-templum}
+\end{equation}
+This temperature $T_{b}$ at the transition from degenerate core to envelope is approximately equal to the temperature at the centre. In fact, due to the very low opacity of degenerate electrons the core is practically isothermal.
+\par These simple properties of WD stars allow one to determine a good approximation of their cooling law easily. The virial theorem applied to degenerate objects tells us that the energy radiated away by a WD is equal to the rate of decrease of the thermal energy of its ions (we neglect here any contribution from the non-degenerate envelope). But the luminosity is 
+\begin{equation*}
+    L = -\der{E_{\text{th}}}{t} \quad L\propto MT^{7/2} \implies \alpha T^{7/2} = \der{T}{t}\left(\frac{3k}{2\mu_{i}m_{\text{H}}}\right)
+\end{equation*}
+which we can integrate right away substituing the value of $E_{\text{th}}$ we've obtained earlier. The integration of this equation between an initial time $t_{0}$ (when the WD stage starts) and a generic time $t$ provides
+\begin{equation}
+    t-t_{0} = \frac{3k}{5\alpha \mu_{i}m_{\text{H}}}(T^{-5/2}-T_{0}^{-5/2})
+\end{equation}
+where $T_{0}$ is the temperature of the core at $t_{0}$ and $T$ the temperature at time $t$. When the WD has cooled down significantly, $T_{0} \gg T$ and therefore
+\begin{equation}
+    \Delta t = \frac{3k}{5\alpha\mu_{i}m_{\text{H}}}T^{-5/2}
+\end{equation}
+Inverting the luminosity-temperature relation (\ref{eq:wd-templum}) and plugging in the temperature as a function of the luminosity in the latter equation, we obtain 
+\begin{equation}
+    \Delta t \propto \left(\frac{L}{M}\right)^{-5/7}\approx \frac{4.5\power{10}{7}}{\mu_{i}}\left(\frac{L}{L_{\odot}}\frac{M_{\odot}}{M}\right)^{-5/7}
+    \label{eq:mestellaw}
+\end{equation}
+This approximated cooling law is called \emph{Mestel law} and shows for example that higher WD masses evolve more slowly; this is easy to understand in terms of more ionic thermal energy stored because of the higher mass. Also, increasing the ionic molecular weight at a given $M$ decreases the evolutionary times, since there are less ions in the star. This simple law predicts cooling ages of the order of $\sim 1\unit{Gyr}$ when $L \approx 0.001L_{\odot}$.
+\par Although the Mestel law is a good zero-order approximation of the real WD cooling law, complete models are more complicated. For once, we should in principle account for a) corrections to the degenerate electron EoS since the temperature is $T \neq 0$, b) what is it of the ions all-throughout the cooling.
+\par To derive the Mestel law, ions have been approximated with an ideal gas with $c_{V} = 3k/2$ per particle. The specific heat $c_{V}$ is obviously a crucial quantity for the determination of the cooling time, and we will now see that the simple approximation of the ideal gas is not good when the core cools down. Due to the steady decrease of the temperature, the ions in the core tend to move less freely because the Coulomb interactions play an increasingly major role in determining their thermal properties. For this purpose, it's useful to introduce the quantity
+\begin{equation}
+    \Gamma = \frac{kZ^{2}e^{2}}{dkT} \quad d = \frac{1}{\left(\frac{4\pi}{3}n_{i}\right)^{1/3}}
+\end{equation}
+where $d_{i}$ is the average distance between the ions. During the cooling the core gets cooler whereas the density is almost constant, hence $\Gamma$ increases. When $\Gamma$ becomes larger than 1 the ions tend to behave like a liquid, and with still decreasing temperatures, approaching $\Gamma \sim 180$, they form a periodic lattice structure that minimizes their total energy. This latter phenomenon is called crystallization, and when $\Gamma > 180$ ions behave like a solid.
+\par The major change to our easy toy-model is in the specific heat. In fact, if temperature drops under the Debye temperature 
+\begin{equation}
+    \Theta_{D} \propto 4\power{10}{3}\rho^{1/2}\unit{K}
+    \label{eq:debyetemp}
+\end{equation}
+quantum corrections to the specific heat become very relevant.
+\par In full quantistic regime $C_{V}\propto T^{3}$. There are, however, two other major effects. The first one is the release of latent heat during the crystallization process, which amounts to roughly $\sim kT$ per ion. This means that during the core crystallization extra energy is released, first at the centre and then at progressively more external core layers.
+\par This latent heat (that in a full stellar evolution computation is included as an additional term to the energy generation coefficient $\epsilon$) slows down the cooling of the WD with respect to the Mestel law, given that it is an extra energy contribution to the ionic energy budget.
+\par There is an additional energy release during the crystallization process, due to the phenomenon of \emph{chemical separation}. The physical principle behind this phenomenon is that, given a CO binary mixture with a given abundance ratio $X_{\text{C}}/X_{\text{O}}$ in the gas and liquid phase, at crystallization the same abundance ratio cannot be maintained, because the two elements are not fully miscible in the solid phase. And so an instability due to the chemical gradients arises, and the whole region becomes convective.
+\par If you recall, some time ago, we've given an expression for the production rate of gravitational energy\footnote{Since I'm not a monster, I'll spare you the trouble of looking for it.}
+\begin{equation}
+    \epsilon_{G} = -T\left[\partial_{p}S\Big|_{T,\mu}\dot{p} + \partial_{T}S\Big|_{p,\mu}\dot{T}+\partial_{\mu}S\Big|_{T,p}\dot{\mu}\right]
+    \label{eq:gravprodrate}
+\end{equation}
+the contribution we're interested here is the exactly the last one, which here is non-negligible. Clearly, thanks to these two new mechanisms, the cooling times of WD might be sensibly different from those predicted by (\ref{eq:mestellaw}), since in both cases we introduce either modifications to the energy that can be released (specific heat via crystallization) or to the rate that the energy is radiated away\footnote{Actually, we should also keep in mind that in the more inner regions, there might be a non-negligible production of plasma-neutrinos, introducing yet another channel for energy dissipation.} (gravitational energy production rate via chemical gradient instability).
+\par On a conclusive note, please notice that because of diffusive mechanisms and gravitational sedimentation, we're usually unable to see metallic lines in the atmosphere of WDs. Depending on the WD, even Helium might be subject to sedimentation. Three classes of WD are usually introduced:
+\begin{itemize}
+    \item If Hydrogen lines are present in the atmosphere, the WD is said to be a DA type (but for a whole series of reason, it could be that its type might change);
+    \item If the spectrum is Helium-dominated, the WD is said to be a DB type;
+    \item If the spectrum is \emph{approximately} a continuum, the WD is said to be DC type.
+\end{itemize}
+\par At this point, I believe I can put down my imaginary pen and let my wonderful four readers find out the rest\footnote{Just kidding. There are still plenty of things that would be worth at least mentioning, but the course of Stellar Physics ends here, with 61 footnotes and a little bit shy of 200 pages.}.
+\begin{flushright}
+    \emph{The End?}
+\end{flushright}
