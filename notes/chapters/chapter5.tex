@@ -403,6 +403,16 @@ As convection penetrates deeper into the star, some of the He produced during th
     \label{fgr:rgbbump}
 \end{figure}
 \par After the shell source has crossed the discontinuity, the mean molecular weight remains at a fixed value\footnote{Recall that the envelope was fully mixed by the convection.} and the surface luminosity grows monotonically with increasing core mass. As a consequence, the star will cross three times the same luminosity interval (see Fig.\ref{fgr:rgbbump}), and hence we can predict an increase of the star counts in this luminosity interval: The so-called \emph{RGB bump}. The time spent during the RGB Bump phase is a significant fraction ($\sim 20\%$) of the total RGB lifetime.
+
+\begin{tcolorbox}[enhanced,attach boxed title to top center={yshift=-3mm,yshifttext=-1mm},
+colback=blue!5!white,colframe=blue!75!black,colbacktitle=blue!80!black,
+title=Various Dependences of the RGB Bump Luminosity,
+boxed title style={size=small,colframe=blue!50!black}]
+    $$ Y\uparrow\; T\uparrow\;\bar{\kappa}\downarrow\implies M_{\text{CE}}\downarrow\;L_{\text{Bump}}\downarrow$$ 
+    $$ Z\uparrow\; \bar{\kappa}\uparrow\;T\downarrow\;T_{\text{eff}}\downarrow\implies M_{\text{CE}}\uparrow\;L_{\text{Bump}}\downarrow$$
+    $$ M\downarrow\;T\downarrow\;T_{\text{eff}}\downarrow\;\bar{\kappa}\uparrow\implies M_{\text{CE}}\uparrow\;L_{\text{Bump}}\downarrow$$
+\end{tcolorbox}
+
 \par Please note that the effectiveness of the first dredge up is closely related to the mixing length efficiency which, you should recall, regulates the relevance of convection. Usually, the $\alpha_{ML}$ parameter is adjusted so to match the color of the RGB, thus introducing changes in the temperature gradient.
 
 \subsection{Helium Flash}
@@ -430,7 +440,14 @@ so that in this region a \emph{temperature inversion} develops, and the temperat
 \end{figure}
 \par Take a look at Fig.\ref{fgr:heliumcore}. The value of $M_{\text{c,He}}$ does not depend strongly on the stellar mass for masses lower than $\sim 1.8M_{\odot}$ at solar chemical composition (this limit depends strongly on the adopted chemical composition, significantly decreasing with decreasing metallicity and/or increasing He content). In fact, all stars with a mass below this limit develop very similar levels of electron degeneracy within the He core, and the mass of the He core has to reach almost the same value before He-burning ignites.
 \par When the stellar mass value exceeds this limit, the electron degeneracy in the core is at a lower level as a consequence of the larger temperatures and lower densities. This has the effect that the luminosity of the tip of the RGB is almost constant for masses below the quoted limit, and strongly decreases at larger masses.
-\par After a minimum has been attained, the value of McHe starts to increase again with increasing total mass (the electron degeneracy is by now removed from the core) as a consequence of the increasing mass of the convective core during the core H-burning phase. The significant changes in the properties of the RGB, which are expected in stellar systems as a consequence of the differences of the age, and in turn of the masses evolving along the RGB, is called \emph{RGB phase transition}.
+\par After a minimum has been attained, the value of $M_{\text{c,He}}$ starts to increase again with increasing total mass (the electron degeneracy is by now removed from the core) as a consequence of the increasing mass of the convective core during the core H-burning phase. The significant changes in the properties of the RGB, which are expected in stellar systems as a consequence of the differences of the age, and in turn of the masses evolving along the RGB, is called \emph{RGB phase transition}.
+\begin{tcolorbox}[enhanced,attach boxed title to top center={yshift=-3mm,yshifttext=-1mm},
+colback=blue!5!white,colframe=blue!75!black,colbacktitle=blue!80!black,
+title=Helium and Metals Dependence of the RGB Transition Mass,
+boxed title style={size=small,colframe=blue!50!black}]
+    $$ Y\uparrow\; T\uparrow\;M_{\text{RGB}}^{\text{TR}}\downarrow $$ 
+    $$ Z\uparrow\; \bar{\kappa}\uparrow\;T\downarrow\;M_{\text{RGB}}^{\text{TR}}\uparrow$$
+\end{tcolorbox}
 \par Star with Helium core masses higher than the RGB transition mass will be non degenerate and will thus spend less time in the RGB phase.
 \par Note, however, that more massive stars have a shorter lifespan. Therefore, the luminosity extension of the RGB will be consequently shorter. More importantly, for these stars Helium is ignited without a flash, for there's only partial or no degeneracy at all to remove. Still, the luminosity at ignition will be proportional to the mass of the core.
 
@@ -440,12 +457,12 @@ The tip of the RGB marks the evolutionary phase corresponding to He-burning igni
 
 \begin{tcolorbox}[enhanced,attach boxed title to top center={yshift=-3mm,yshifttext=-1mm},
 colback=blue!5!white,colframe=blue!75!black,colbacktitle=blue!80!black,
-title=Helium and Metals Dependence,
+title=Helium and Metals Dependence of the TRGB,
 boxed title style={size=small,colframe=blue!50!black}]
     An increase in the initial Helium content increases the interior temperatures of a star through the increase in the mean molecular weight; this, in turn, decreases the electron degeneracy level in the He core during the RGB evolutionary phase. As a result the star ignites Helium at a lower core mass and the luminosity of the tip of the RGB decreases. 
-    $$ Y\uparrow\; T\uparrow\; M_{\text{TRGB}}\downarrow $$
+    $$ Y\uparrow\; T\uparrow\;L_{\text{H}}\uparrow\; M_{\text{TRGB}}\downarrow L_{\text{tip}}\downarrow $$
     With increasing metallicity, for a fixed Helium content and stellar mass, the core mass at the Helium flash decreases. This is because at a higher metallicity the H-burning in the shell is more efficient; as a consequence the growth and, in turn, heating of the He core is faster. In this way the thermal conditions for igniting He are reached at a lower Helium core mass. 
-    $$ Z\uparrow\; \bar{\kappa}\uparrow\;T\downarrow\; M_{\text{TRGB}}\uparrow$$
+    $$ Z\uparrow\; \bar{\kappa}_{\text{CNO}}\uparrow\;L_{\text{H}}\uparrow\;M_{\text{c, He}}\downarrow\;L_{\text{tip}}\uparrow$$
     The luminosity of the tip of the RGB is not affected by changes in the efficiency of superadiabatic convection. This is because the thermal stratification within the core does not depend on the thermodynamical properties of the outer envelope.
 \end{tcolorbox}
 \par Globular clusters, although rather well-populatd, are often unable to display the TRGB (or the Helium flash) in a HR-diagram, given the short duration of the phase compared, for example, to the MS or the RGB.
@@ -573,7 +590,7 @@ The timescales for Helium burning would be even shorter if not for the constant 
 
 \subsubsection{Dependence on the Various Physical Parameters}
 
-With respect to other evolutionary phases, the HB doesn't span a great range in luminosity, as its luminosity extension is about $\sim 0.1\unit{mag}$ wide. In view of the possible use of the ZAHB brightness as a distance indicator, it is important to know how the observational properties of the ZAHB react to any change in the most relevant parameters such asHhelium content, metal abundance and any additional (non-canonical) process which can change the mass size of the He core at He-ignition.
+With respect to other evolutionary phases, the HB doesn't span a great range in luminosity, as its luminosity extension is about $\sim 0.1\unit{mag}$ wide. In view of the possible use of the ZAHB brightness as a distance indicator, it is important to know how the observational properties of the ZAHB react to any change in the most relevant parameters such as Helium content, metal abundance and any additional (non-canonical) process which can change the mass size of the He core at He-ignition.
 \begin{itemize}
     \item \emph{The He content}: for a fixed metallicity, an increase in the initial Helium content, $Y$, causes a decrease in $M_{c,\,\text{He}}$. This should cause a decrease in the ZAHB brightness. However, for ZAHB stars with massive enough envelopes and so with efficient H-burning in the shell, the increase of the envelope He abundance causes a large increase in the H-burning efficiency, counterbalancing the decrease of the ZAHB brightness due to the change in $M_{c,\,\text{He}}$.
     \par As a final result, with increasing He abundance, the blue part of the ZAHB (populated by stars with low-mass envelopes) becomes fainter, and the red part brighter. For fixed total mass, the stars become slightly hotter
