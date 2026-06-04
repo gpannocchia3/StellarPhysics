@@ -2,16 +2,16 @@
 
 \section{Introduction} 
 
-Most observed stars, including the Sun, are powered by thermonuclear fusion. This term denotes nuclear reactions induced by the thermal motion of the ions, wherby lighter nuclei comnine to form a heavier one.
+Most observed stars, including the Sun, are powered by thermonuclear fusion. This term denotes nuclear reactions induced by the thermal motion of the ions, wherby lighter nuclei combine to form a heavier one.
 \par If the combined mass of the interacting nuclei is larger than the mass of the produced nucleus, the mass difference is converted into energy according to the famous (to the point of being obnoxious) Einstein's relation.
-\par The mass difference between the interacting protons and the product of their interaction stems for the properties of the nuclear binding energy $E_{B}$, which is the energy required to separate nucleons against their mutual attraction due to nuclear forces, and is essentially a measure of the stability of the nucleus.
+\par The mass difference between the interacting protons and the product of their interaction stems from the properties of the nuclear binding energy $E_{B}$, which is the energy required to separate nucleons against their mutual attraction due to nuclear forces, and is essentially a measure of the stability of the nucleus.
 \begin{figure}[h!]
     \centering 
     \includegraphics[width=0.7\textwidth]{img/bindingenergy.svg.png}
     \caption{Binding energy per nucleon for a selection of nuclides. The nuclide with the highest value, $^{62}\text{Ni}$, is noted.}
     \label{fgr:bindingenergy}
 \end{figure}
-\par The binding energy per nucleon, shown in Fig.\ref{fgr:bindingenergy} is a most interesting quantitiy; its value increases with $A$ first steeply, then more gently, until it reaches a maximum of $8.79\,\text{MeV}$ around $A=56$, which corresponds to $^{56}\text{Fe}$, and then drops slowly for heavier nucleons.
+\par The binding energy per nucleon, shown in Fig.\ref{fgr:bindingenergy} is a most interesting quantity: Its value increases with $A$ first steeply, then more gently, until it reaches a maximum of $8.79\,\text{MeV}$ around $A=56$, which corresponds to $^{56}\text{Fe}$, and then drops slowly for heavier nucleons.
 \par Most people claim, for reasons we'll soon find out, that Iron nuclei are the most stable ones, while it's false. It's actually $^{62}\text{Ni}$ nuclei that claim this figurative top position.
 \par Elements up to Iron (read: Nichel) will therefore produce energy by thermonuclear fusion, whereas for higher values of $A$ it is the splitting of heavier nuclei into ligther ones (\emph{nuclear fission}) that does the deed.
 \par We'll now focus on the determination of the nuclear energy generation coefficient.
@@ -26,9 +26,9 @@ in which the target nucleus A interacts with the particle b and forms nucleus C 
     r = N_{A}N_{b}\int_{0}^{\infty}v\sigma(v)f(v)\,\text{d}v = \frac{N_{A}N_{b}}{1+\delta_{Ab}}\langle \sigma v \rangle
     \label{eq:reactionrate}
 \end{equation}
-where $\delta_{Ab}$ is a Kronecker delta. By recalling that the mass fraction of a generic element $k$ is given by 
+where $\delta_{Ab}$ is a Kronecker delta. Recalling that the mass fraction of a generic element $k$ is given by 
 \begin{equation*}
-    X_{k} = \frac{N_{k}m_{\text{H}A_{k}}}{\rho}
+    X_{k} = \frac{N_{k}m_{\text{H}}A_{k}}{\rho}
 \end{equation*}
 we get the following expression for the reaction rate per unit mass
 \begin{equation}
@@ -44,8 +44,8 @@ with $Q_{Ab}$ being the amount of energy released by a single reaction. The valu
     \label{eq:qvalue}
 \end{equation}
 Often nuclear masses are expressed in atomic mass units, and \cite{2005essp.book.....S} points out that is worth recalling that $931.494\,\text{MeV}$ is the amount of energy associated with one mass unit ($1.6605\cdot 10^{-24}\,\text{g}$). Moreover, if a positron is produced by the nuclear reaction, it is customary to add to $Q_{Ab}$ its annihilation energy, whereas, in the case neutrinos are produced, their energy has to be subtracted from the total energy production budget.
-\par In order to determine $\epsilon_{N}$ we still have to discuss how $\langle \sigma v \rangle$ can be determined. Matter involved in nuclear reactions is well approximated by a fully ionize perfect gas, and the particle velocities and kinetic energies follow the well-known Maxwellian distribution. 
-\par If the individual particles have a maxwell velocity distribution, it is possible to show that their relative velocities $v$ will also follow the same distribution. Since the corresponding kinetic energy is $E = \mu v^{2}/2$, where $\mu$ is the reduced mass of the interacting particles, the expression for $\langle \sigma v \rangle$ thus becomes
+\par In order to determine $\epsilon_{N}$ we still have to discuss how $\langle \sigma v \rangle$ can be determined. Matter involved in nuclear reactions is well approximated by a fully ionized perfect gas, and the particle velocities and kinetic energies follow the well-known Maxwellian distribution. 
+\par If the individual particles have a Maxwellian velocity distribution, it is possible to show that their relative velocities $v$ will also follow the same distribution. Since the corresponding kinetic energy is $E = \mu v^{2}/2$, where $\mu$ is the reduced mass of the interacting particles, the expression for $\langle \sigma v \rangle$ thus becomes
 \begin{equation*}
     \langle \sigma v \rangle = \left(\frac{8}{\pi \mu}\right)^{1/2}\frac{1}{(kT)^{3/2}}\int_{0}^{\infty}\sigma(E)E e^{-E/kT}\,\text{d}E
 \end{equation*}
@@ -78,7 +78,7 @@ Through this miracle, nuclear fusion can happen at temperatures much lower than 
     S(E) = \sigma(E) E e^{+b/E^{1/2}}
     \label{eq:astrophysicalfactor}
 \end{equation}
-called \emph{astrophysical factor}, that is mainly sensitive to the nuclear contribution to the cross section. We may now rewrite the equation for $\langle \sigma v \rangle$ by including $S(E)$
+called \emph{astrophysical factor}, that is mainly sensitive to the nuclear contribution to the cross section. We may now rewrite the equation for $\langle \sigma v \rangle$ including $S(E)$
 \begin{equation}
     \langle \sigma v \rangle = \left(\frac{8}{\mu\pi}\right)^{1/2}\frac{1}{(kT)^{3/2}}\int_{0}^{\infty}S(E)\exp\left(-\frac{E}{kT}-\frac{b}{\sqrt{E}}\right)\,\text{d}E
     \label{eq:averagenuclearcs}
@@ -90,7 +90,7 @@ In many cases of astrophysical relevance, the so-called non-resonant reactions, 
     \caption{Illustration of the location and shape of the Gamow peak (not to scale) as compared with $e^{-E/kT}$ and $e^{-b/\sqrt{E}}$.}
     \label{fgr:gamowpeak}
 \end{figure}
-\par Their product, shown in Fig.\ref{fgr:gamowpeak}, produces a strongly peaked curve, with a maximum at the so-called \emph{Gamow peak}, which also represents the most efficience energy for the nuclear reaction to occur.
+\par Their product, shown in Fig.\ref{fgr:gamowpeak}, produces a strongly peaked curve, with a maximum at the so-called \emph{Gamow peak}, which also represents the most efficient energy for the nuclear reaction to occur.
 \par The energy $E_{0}$ of the peak is 
 \begin{equation}
     E_{0} = \left(\frac{bkT}{2}\right)^{2/3} \approx 0.122\left(\frac{\mu}{m_{\text{H}}}\right)^{1/3}(Z_{A}Z_{b})^{2/3}\left(\frac{T}{10^{9}\,\text{K}}\right)^{2/3}\,\text{MeV}
@@ -101,7 +101,7 @@ and the FWHM $\Delta E_{0}$ is given by
     \Delta E_{0} \sim 0.237 \left(\frac{Z_{A}^{2}Z_{b}^{2}\mu}{m_{\text{H}}}\right)^{1/6}\left(\frac{T}{10^{9}\,\text{K}}\right)^{5/6}\,\text{MeV}
     \label{eq:gamowfwhm}
 \end{equation}
-It is in the Gamow peak energy range that S(E) needs to be known in order to derive the reaction rate. Unfortunately, this energy range is at least a factor of 10 lower than the energies at which stellar reactions can be produced in laboratories; therefore, all we're able to do is extrapolate the measured $S(E)$ values to much lower energies if an empirical determination of $S(E)$ is sought.
+It is in the Gamow peak energy range that $S(E)$ needs to be known in order to derive the reaction rate. Unfortunately, this energy range is at least a factor of 10 lower than the energies at which stellar reactions can be produced in laboratories; therefore, all we're able to do is extrapolate the measured $S(E)$ values to much lower energies if an empirical determination of $S(E)$ is sought.
 \par As mentioned somewhere in the above, the astrophysical factor is often a slowly varying function of energy, and (\ref{eq:averagenuclearcs}) is usually solved considering a second-order Taylor expansion for $S$ and $e^{-b/\sqrt{E}}$ around $E_{0}$. If we approximate the exponential term as a Gaussian function\footnote{It is actually not a bad approximation, but the curve is slightly skewed, so we'll have to make some corrections afterwards.} 
 \begin{equation*}
     I_{\text{max}} \approx \exp\left(-\frac{E}{kT}-\sqrt{\frac{E_{G}}{E}}\right) \implies I_{\text{max}} \approx I(E_{0})
@@ -125,7 +125,7 @@ with
     \label{eq:effectiveastrofactor}
 \end{equation}
 The values for the astrophysical factor and its derivaties are obtained either from laboratory measurements (with the aforementioned limitations) or from theoretical quantum mechanical computations.
-\par Let's see how can we deduce the (approximate) temperature dependence. Say $T_{0}$ a reference temperature, which may be the temperature for which the burning of a particular element is possible.
+\par Let's see how we can deduce the (approximate) temperature dependence. Say $T_{0}$ a reference temperature, which may be the temperature for which the burning of a particular element is possible.
 \par We've shown that in general, the energy at Gamow's peak is dependent on the temperature 
 \begin{equation*}
     E_{0} = \left(\frac{bkT}{2}\right)^{2/3} \quad b = \frac{(2\mu)^{1/2}\pi e^{2}Z_{A}Z_{b}}{\hbar}
@@ -134,7 +134,7 @@ Let us expand (\ref{eq:averagenuclearcs}) around our reference temperature in th
 \begin{equation*}
     \langle \sigma v \rangle_{T} \approx  \langle \sigma v \rangle_{T_{0}}\left(\frac{T}{T_{0}}\right)^{\nu}
 \end{equation*} 
-Taking the logarithms of both memebers
+Taking the logarithms of both members
 \begin{equation*}
     \ln( \langle \sigma v \rangle_{T}) \approx \ln( \langle \sigma v \rangle_{T_{0}})+\nu\ln\left(\frac{T}{T_{0}}\right)
 \end{equation*}
@@ -173,8 +173,9 @@ For example, consider a reaction from the $\text{ppI}$ chain
 \begin{equation*}
     p+p \to D + e^{+}+\bar{\nu}_{e} \implies \langle \sigma v \rangle\propto T^{4}
 \end{equation*}
+
 \subsection{Resonant Reactions}
-So far we've been focusing on reactions for which the astrophysical factor (\ref{eq:astrophysicalfactor}) was slowly varying with energy, the so-called \emph{non-resonant reactions}. We've mentioned before that given two reactants, multiple products are possible, depending on the nature of the interaction (elastic, anelastic, etc).
+So far we've been focusing on reactions whose astrophysical factor (\ref{eq:astrophysicalfactor}) was slowly varying with energy, the so-called \emph{non-resonant reactions}. We've mentioned before that given two reactants, multiple products are possible, depending on the nature of the interaction (elastic, anelastic, etc).
 \begin{align*}
     \text{A}+\text{b} \to \text{C}^{*} &\to \text{A}+\text{b} \; (\text{elastic scattering})\\
                   &\to \text{A}+\text{b}^{*}\; (\text{anelastic scattering})\\
@@ -196,12 +197,12 @@ where $\lambda$ is the De-Broglie wavelength
     \lambda = \frac{h}{\sqrt{2\mu E}}
     \label{eq:debrogliewavelength}
 \end{equation}
-and $\Gamma_{1}$ is the probability amplitude of forming the compound nucleus, which is also equal to its decay probability; $\Gamma_{2}$ is the probability amplitude of decaying in the products of the reaction (say D, e), while $\Gamma$ is the width of the excited level responsible of the resonance. Note that $\Gamma$ is proportional to the total lifetime $\tau$ of the excited state according to 
+and $\Gamma_{1}$ is the probability amplitude of forming the compound nucleus, which is also equal to its decay probability; $\Gamma_{2}$ is the probability amplitude of decaying in the products of the reaction (say D, $e$), while $\Gamma$ is the width of the excited level responsible of the resonance. Note that $\Gamma$ is proportional to the total lifetime $\tau$ of the excited state according to 
 \begin{equation}
     \Gamma = \frac{h}{2\pi\tau}
     \label{eq:branchingfraction}
 \end{equation}
-and $\Gamma_{1}$, $\Gamma_{2}$ have a similar definition, but considering the lifetime for the decay of the compound nucleus into the original interacting particles A+b, and into the products D+e, respectively. In teh case of heavy compound nuclei many resonances are present in the range of stellar energies.
+and $\Gamma_{1}$, $\Gamma_{2}$ have a similar definition, but considering the lifetime for the decay of the compound nucleus into the original interacting particles A+b, and into the products D+e, respectively. In the case of heavy compound nuclei many resonances are present in the range of stellar energies.
 \par On the other hand, the factor $\omega$ is related to the spin of the reactants and to the (total) angular momentum of the compound nucleus
 \begin{equation*}
     \omega = \frac{2J+1}{(2J_{A}+1)(2J_{b}+1)}
@@ -261,7 +262,7 @@ Albeit small, this effect is not at all negligible. From the definition (\ref{eq
 \begin{equation*}
     \frac{\sigma(E+U_{e})}{\sigma(E)} = \frac{E}{E+U_{e}}\frac{S(E+U_{e})}{S(e)}\exp\left(-\frac{2\pi Z_{A}Z_{b}e^{2}\sqrt{\mu}}{\hbar\sqrt{2(E+U_{e})}}+\frac{2\pi Z_{A}Z_{b}e^{2}\sqrt{\mu}}{\hbar\sqrt{2E}}\right)
 \end{equation*}
-which, since $U_{e} \ll E$, we can Taylor-expand. First of all we can notice that the first two ratios are, at linear order, of order unity. Then, expanding the square root, we obtain
+which, since $U_{e} \ll E$, we can Taylor-expand. First of all we can notice that the first two ratios out of the exponential are, at linear order, of order unity. Then, expanding the square root, we obtain
 \begin{equation*}
     f \approx \exp\left(\frac{\pi Z_{A}Z_{b}e^{2}\sqrt{\mu}}{\hbar\sqrt{2E}}\frac{U_{e}}{E}\right)
 \end{equation*}
@@ -282,7 +283,7 @@ In the inner regions of the stellar plasma, the density is quite large, meaning 
     \frac{Z_{1}Z_{2}e^{2}}{akT} \gg 1
     \label{eq:strongshielding}
 \end{equation}
-In such a scenario we can imagine that ions are so far away from each other that there's effectively only one ion per electronic cloud. This is a condition that can be verifying only at very high densities, which are not those typical of the regions where nuclear reactions are active.
+In such a scenario we can imagine that ions are so far away from each other that there's effectively only one ion per electronic cloud. This is a condition that can be verified only at very high densities, which are not those typical of the regions where nuclear reactions are active.
 \par In stars, strong shielding is typical of regions where electrons are degenerate, but generally it's much more probable that, in regions of active fusion, the shielding is \emph{weak} (which is exactly the opposite of the strong shielding we mentioned before) or an intermediate scenario that is known as \emph{intermediate shielding}, which can be addressed only through numerical simulations.
 \par Consider a \emph{weak shielding} scenario, where the positions of ions is only slightly skewed with respect to the global absence of electric fields. Generally, the distance between the electronic cloud and a bare nucleus $R$ is much larger than the distance among ions $a$.
 \par In the surrounding of the target ion A with positive charge $Z_{A}$, there's going to be a non-zero electric field, which is going to induce a different distribution of ions and electrons from that that would be giving a vanishing net charge. In general we can write 
