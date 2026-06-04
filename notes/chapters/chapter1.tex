@@ -3,7 +3,7 @@
 \chapter{Astrophysics' Building Blocks}\label{ch:i}
 
 \section{Introduction}
-As per the name of this chapter, we're going to introduce a series of important quantities and concepts that are going to be particularly useful later on, for this first introductory part I'm going to follow \cite{choudhuri}, §1.
+As per the name of this chapter, we're going to introduce a series of important quantities and concepts that are going to be particularly useful later on. For this first introductory part I'm going to follow \cite{choudhuri}, §1.
 \par For expressing astrophysical measurements, it should be clear that the units that we customarily use for our everyday life wouldn't be doing a really good job. For example, most of the times, it isn't particularly convient to have masses expressed in grams or kilograms, for the masses we'll be usually concerned with are so large that saying that a star weighs $10^{33}\,\text{g}$ isn't particularly insightful, since we don't have an everyday-life object to compare it with.
 \par What often happens in astrophysics is that masses are usually expressed in terms of \emph{solar masses} $M_{\odot}$, which has value
 \begin{equation}
@@ -29,7 +29,7 @@ As the Earth moves around the Sun, the "nearby" stars seem to change their posit
     \label{fgr:stellarparallax}
 \end{figure} 
 \par Let us consider a star on the polar axis of the Earth's orbit at a distance $d$ from the center of the orbit. The angle $p$ in the picture is half of the angle by which this star appears to shift with the annual motion of the Earth on the distant stars' plane.
-\par With simple geometrical considerations, if we assume Earth's orbit to be circular\footnote{Actually, it is not. Earth's orbital eccentricity is roughly $e = 0.017$, which is sufficiently small to let us approximate it as circular.}, then we can write the following relation
+\par With simple geometrical considerations, if we assume Earth's orbit to be circular\footnote{Actually, it is not. But Earth's orbital eccentricity is roughly $e = 0.017$, which is sufficiently small to let us approximate it as circular.}, then we can write the following relation
 \begin{equation*}
     \tan(p) = \frac{1\,\text{AU}}{d} \approx p
 \end{equation*}
@@ -103,7 +103,7 @@ and the phase space density of states (per unit volume)
 \begin{equation*}
 	\rho(\nu)\,\text{d}\nu = \frac{4\pi h g \nu^{3}}{c^{3}}\,\text{d}\nu
 \end{equation*}
-from which deducing the expression from internal energy is straightforward. Remembering $g=2$ is the quantum degeneracy of photons, a simple moltiplication of the previous expressions yields
+from which deducing the expression from internal energy is straightforward. Recalling $g=2$ is the quantum degeneracy of photons, a simple moltiplication of the previous expressions yields
 \begin{equation*}
 	U_{\nu}\,\text{d}\nu = \frac{8\pi h}{c^{3}}\frac{\nu^{3}}{\exp(h\nu/kT)-1}\,\text{d}\nu
 \end{equation*}
@@ -170,7 +170,15 @@ this way of specifying brightness has the advantage of being closely connected w
 Note that the uniqueness of the definition of brightness temperature relies on the monotonicity property of Planck‘s law. Also note that, in general, the brightness temperature is a function of $\nu$.
 \subsubsection*{Color Temperature}
 Often a spectrum is measured to have a shape more or less of blackbody form, but not necessarily of the proper absolute value. For example, by measuring $F_{\nu}$, from an unresolved source we cannot find $I_{\nu}$, unless we know the distance to the source and its physical size.
-\par By fitting the data to a blackbody curve without regard to vertical scale, a color temperature $T_{c}$, is obtained. Often the “fitting” procedure is nothing more than estimating the peak of the spectrum and applying Wien’s displacement law to find a temperature.
+\par By fitting the data to a blackbody curve without regard to vertical scale, a color temperature $T_{c}$, is obtained. Often the “fitting” procedure is nothing more than estimating the peak of the spectrum and applying Wien’s displacement law to find a temperature
+\begin{equation}
+    \lambda_{\text{peak}} = \frac{b}{T}
+	\label{eq:wien_dl}
+\end{equation}
+with $b$ a known constant of value\footnote{The reported value is the one presented in the most recent release of the Particle Data Group\cite{ParticleDataGroup2024}. The value is calculated from exact values, and is thus exact to the number of decimal places given.} 
+\begin{equation}
+    b = 2.897771955\cdot 10^{-3}\,\text{m}\cdot\text{K}
+\end{equation}
 \subsubsection*{Effective Temperature}
 The effective temperature of a source $T_{eff}$ is derived from the total amount of flux, integrated over all frequencies, radiated at the source. We obtain $T_{eff}$ by equating the actual flux $F$ to the flux of a blackbody at temperature $T_{eff}$
 \begin{equation}
@@ -190,7 +198,7 @@ When coming down to determining the properties of a star, there are two quantiti
     \phi = \frac{L}{4\pi r^{2}} \quad \text{erg}\cdot\text{s}^{-1}\cdot\text{cm}^{-2}
     \label{eq:flux}
 \end{equation}
-The flux, however, doesn't tel us much about the characteristics of the star, differently from the luminosity. But since what we can measure are fluxes, it is then crucial that we find a way to accurately measure distances so to infer the luminosity of an object.
+The flux, however, doesn't tell us much about the characteristics of the star, differently from the luminosity. But since what we can measure are fluxes, it is then crucial that we find a way to accurately measure distances so to infer the luminosity of an object.
 \par Since ancient times, mankind has always tried to measure the brightness of stars. The efforts of those that came before us are nowadays crystallized in a quantities that is still in use: The \emph{magnitude}.
 \par The concept of magnitude is strictly related to the way the human eye was believed to perceive the differences in intensities.
 \par Hypparchus, back in ancient Greece, classified all stars into six classes according to their apparent brightness. This classes went from class I, the brightest stars, to class VI, the less bright. According to Hypparchus, the brightest and faintest stars had an apparent brightness that is in the ratio of 100.
@@ -214,14 +222,14 @@ More often than not, it is customary to measure magnitudes in given wavelengths'
     m-M = 5\log_{10}\left(\frac{d}{10\,[\text{pc}]}\right)
     \label{eq:absolutemagnitude}
 \end{equation}
-The difference $m-M$ is often called \emph{distance module} (DM) and is sometimes used as an indirect way to express a distance.
+The difference $m-M$ is often called \emph{distance module} (DM) and is used as an indirect way to express a distance.
 \par For classifying stars according to their color it's often used the so-called UBV photometric system (from \emph{Ultraviolet}, \emph{Blue}, \emph{Visual}), also called the Johnson system (or Johnson-Morgan system), which makes use of filters so that the mean wavelengths of response functions (at which magnitudes are measured to mean precision) are $364\, \text{nm}$ for U, $442\, \text{nm}$ for B, $540\, \text{nm}$ for V.
 \par Given this setup, we can easily calculate the magnitudes, say, in the Blue and Visible light-bands, so that the relative magnitudes are
 \begin{equation*}
     m_{B}-m_{V} = -2.5\log_{10}\left(\frac{F_{B}}{F_{V}}\right) := B-V
 \end{equation*}
 where $B-V$ is said \emph{color index}.
-\par When passing through interstellar dust\footnote{The interstellar dust, which is usually referred to as ISM, consists in small particles of silicates, graphite, amorphous carbon, ices and organical mixtures of size $10^{-2}-1\,\mu\text{m}$} the intensity of radiation gets modified. The dust that makes the ISM absorbs light in the V-UV bands to later re-emit it as InfraRed radiation or scatters the "short" wavelength, producing a net-effect that essentially "increases" the wavelength of the incoming radiation and decreases its intensity.
+\par When passing through interstellar dust\footnote{The interstellar dust, which is usually referred to as ISM, consists in small particles of silicates, graphite, amorphous carbon, ices and organical mixtures of size $10^{-2}-1\,\mu\text{m}$} the intensity of radiation gets modified. The dust that makes the ISM absorbs light in the V-UV bands to later re-emit it as InfraRed (IR) radiation or scatters the "short" wavelength, producing a net effect that essentially "increases" the wavelength of the incoming radiation and decreases its intensity.
 \par These two phenomena are known as \emph{reddening} (do not confuse it with \emph{redshift}) and \emph{extinction}.
 \par The absolute magnitude in the, say, blue and visible bands, will thus be modified
 \begin{align*}
@@ -238,7 +246,8 @@ where $E[B-V] = A_{B}-A_{V}$ is the extinction. Within our galaxy, the ratio of 
 \end{equation*}
 
 \section{Elements abundances}
-Observing the spectrum emitted by stars we may expect, a bit naively, to observe a blackbody spectrum, but that isn't quite the case. As we'll have the chance to discuss later on, the radiation field produced by stars is only approximately equal to a blackbody function in the inner regions of stars.
+
+Observing the spectrum emitted by stars we might expect, a bit naively, to observe a blackbody spectrum, but that isn't quite the case. The radiation field produced by stars is only approximately equal to a blackbody function in the inner regions of stars.
 \begin{figure}[h!]
 	\centering 
 	\includegraphics[width=0.8\textwidth]{img/1920px-EffectiveTemperature_300dpi_e.png}
@@ -246,8 +255,14 @@ Observing the spectrum emitted by stars we may expect, a bit naively, to observe
 	Credits: Unknown source.}
 	\label{fgr:solarbb}
 \end{figure}
-\par Although a tad annoying for the characterization of the radiation field, this deviation from ideal behavior allows us to infer the chemical composition of stars!
+\par Although a tad annoying for the characterization of the radiation field, this deviation from ideal behavior is what allows us to infer the chemical composition of stars!
 \par Deviation from blackbody behavior in fact is usual to take the form of \emph{emission} and \emph{absorption} lines in the spectrum, which tend to stick out like sore thumbs. Clearly, different elements (and different species of the same element) will produce very different lines, allowing us to reconstruct the chemical composition of the photosphere, which is the region where the photons we observe are coming from.
+\begin{figure}[h!]
+	\centering 
+	\includegraphics[width=0.7\textwidth]{img/vegalinesspec.pdf}
+	\caption{Absorption lines in the spectrum of Vega as measured with an Alpy600 spectrograph. Credits: Group 8.}
+	\label{fgr:vegalines}
+\end{figure}
 \par For our purposes, we'll be interested in the \emph{original} chemical composition of a star rather than its actual, or future, value, so that that is shed of the modifications induced by ongoing nuclear reactions.
 \par At this point, you may be objecting: Isn't the effect of nuclear reactions relevant only in the inner regions of stars?
 \par As often happens in Physics, the correct answer is "It depends." Can we take for granted that the chemical composition we see in the photosphere is the same as the original one?
@@ -263,7 +278,7 @@ A matter we're going to be most interested in discussing is the provenience of t
 	\caption{Comparison bewteen the recommended abundances by \cite{2021A&A...653A.141A} in present-day solar photosphere and CI chondrites. Most elements agree well, with the exception of the highly volatile elements, which are depleted in meteorites, and Li, which has been largely destroyed in the Sun due to nuclear burning. Credits: \cite{2021A&A...653A.141A}.}
 	\label{fgr:chondrites-photsphere}
 \end{figure}
-\par Since elements are (on avergae) produced essentially via the same producedures, we may expect to measure a constant ratio between the various abundances of elements. Consider for example Fig.\ref{fgr:universalcurveabundances}.
+\par Since elements are (on average) produced essentially via the same procedures, we may expect to measure a constant ratio between the various abundances of elements. Consider for example Fig.\ref{fgr:universalcurveabundances}.
 \par First of all: As anticipated, light metals have a relatively low abundance, which is consistent with them being burned for the sake of producing lighter elements (Hydrogen and Helium) which have above-average abundance.
 \begin{figure}[h!]
 	\centering
@@ -273,7 +288,7 @@ A matter we're going to be most interested in discussing is the provenience of t
 \end{figure}
 \par Similarly, the heavier elements which are produced by $\alpha$-particles capture have roughly the same relative abundance, dropping off only when crossing the peak of Iron. The formation of elements with $Z > 26$ can happen only with proton/neutron capture on the nucleus, which is a fairly rare process that can occur only in the late evolutionary stages of massive stars.
 \par As we have anticipated somewhere above, to model the evolution of a star, it's important to know the original chemical composition of the cluster the star was born from. You can think of it as "setting" the starting conditions for your system. In particular, it is of crucial importance to determine the primordial abundance of Helium.
-\par For this purpose, blue galaxies hosting very bright, massive stars have been observed, where it's possible to study the recombination lines of Helium in metal-poor $\text{H}_{\text{II}}$ regions. A very recent study (Aver et al., 2026 \cite{aver2026lbtymathrmpprojectiv}) determined up to a precision of 0.5\% the primordial helium abundance
+\par For this purpose, blue galaxies hosting very bright, massive stars have been observed, where it's possible to study the recombination lines of Helium in metal-poor $\text{H}_{\text{II}}$ regions. A very recent study \cite{aver2026lbtymathrmpprojectiv} determined up to a precision of 0.5\% the primordial Helium abundance
 \begin{equation*}
 	\text{Y}_{\text{p}} = 0.2458 \pm 0.0013
 \end{equation*}
@@ -295,13 +310,15 @@ where we've defined $N_{i} = X_{i}/A_{i}m_{\text{H}}$. From this definition is o
 	[\text{Fe}\,|\,\text{H}] \approx \log_{10}\left[\frac{(\frac{\text{Z}}{1-\text{Y}})_{*}}{(\frac{\text{Z}}{X})_{\odot}}\right] = \log_{10}(\text{Z}_{*})-\log_{10}(1-\text{Y}_{*}) - \log_{10}\left(\frac{\text{Z}}{X}\right)_{\odot}
 	\label{fe/h_metallicity}
 \end{equation}
-which can be inverted to obtain an expression of the form $\log_{10}(\text{Z}_{*}) \sim [\text{Fe}\,|\,\text{H}]^{-1.85}_{-1.77}$, where we're assuming $\text{Y}\sim\text{Y}_{\odot}\approx 0.24$. The subscript comes from the estimate of \cite{2022A&A...661A.140M} (Magg et al, 2022), while the superscript comes from the estimate of \cite{2021A&A...653A.141A} (Asplund et al, 2021) of the solar metallicity.
+which can be inverted to obtain an expression of the form $\log_{10}(\text{Z}_{*}) \sim [\text{Fe}\,|\,\text{H}]^{-1.85}_{-1.77}$, where we're assuming $\text{Y}\sim\text{Y}_{\odot}\approx 0.24$. The subscript comes from the estimate of \cite{2022A&A...661A.140M}, while the superscript comes from the estimate of \cite{2021A&A...653A.141A} of the solar metallicity.
 \par Similarly, we can define the \emph{alpha-enhancement} as 
 \begin{equation}
 	[\alpha\,|\,\text{Fe}] = \log_{10}\left[\frac{(N_{\alpha}/N_{\text{Fe}})_{*}}{(N_{\alpha}/N_{\text{Fe}})_{\odot}}\right]
 \end{equation}
 which, on average, evaluates to $[\alpha\,|\,\text{Fe}] \sim 0.3$ for stars in galactic halos.
+
 \subsection{Initial Mass Function (IMF)}
+
 As we mentioned somewhere above, stars are born in clusters. During the arduous process that is stacking bit after bit of Hydrogen (along with Helium and whatever the star my found in the cluster) to build its own body, it's clear that we cannot reasonably expect all stars to be born with the same masses, just like you wouldn't expect your brother/sister to weigh just as much as you did when you were born.
 \par What we experimentally observe is a \emph{distribution of mass} in the cluster, influenced by every little fluctuation occuring in a cluster.
 \par It is worth to notice, however, that the distribution we usually refer to as IMF (\emph{Initial Mass Function}) is not the \emph{Present Day Mass Function}, which gives the statistic of the masses of stars as seen at present day. That the two distributions must be different is evident if you consider more massive stars: These, that would appear in the IMF, \emph{would not} appear in the PDMF, because they are most likely dead. Using stellar evolution models, however, it is possible to pass from a given IMF to the PDMF.
@@ -328,6 +345,7 @@ so less massive stars will be favored with respect to heavier stars.
 \par For the moment, although we know that it shouldn't actually be the case, we're observing a \emph{constant} IMF in galaxies, clusters and so on. Just recently, we're discovering that, luckily for us, our prediction of non-constancy is verified when you take into account regions with a high star formation rate and not too low metallicity.
 
 \subsection{Stellar Trivia}
+
 In this subsection I'm going to anticipate some of the subjects that are going to be the main interest of many among the following chapters.
 \par Starting from dimensional considerations only (which, however, requires that you know the equations describing stellar structures), you can easily show that more massive stars are hotter and have a higher luminosity, hence them having a shorter lifespan. You may argue that more massive stars have more "fuel" to burn, thus "cancelling out" the effect of a higher luminosity.
 \par Although that is technically true, it doesn't take into account the fact that (effective) temperature is positively correlated with the mass of a star. That means that more massive stars are generally hotter, which in turn pumps up the efficiency of nuclear reactions\footnote{Nuclear reactions in stars can be shown to present a power-law dependency on the temperature, scaling at least as $T^{4}$.}. This means that more fuel gets burned to balance the collapse caused by gravitational pulls.
@@ -339,7 +357,7 @@ In this subsection I'm going to anticipate some of the subjects that are going t
 \begin{itemize}
 	\item \emph{PopI Stars}: These are typically young, blue stars, which are very bright and with a high metallicity content. They're found in open clusters.
 	\item \emph{PopII Stars}: These are typically old, reddish stars, which aren't particularly bright and have a low metallicity content. They're found in globular clusters.
-	\item \emph{PopIII Stars}: Allegedly, this population of star should be the first one to form after the Big Bang. As so, its metallicity content should be virtually zero. This would imply that they should have large masses\footnote{In fact, they should be massive enough to leave behind, after their death, an intermediate mass black hole.} and be very bright. As you might imagine, PopIII star wouldn't live for long.
+	\item \emph{PopIII Stars}: Allegedly, this population of stars should be the first one to form after the Big Bang. As so, its metallicity content should be virtually zero. This would imply that they should have large masses\footnote{In fact, they should be massive enough to leave behind, after their death, an intermediate mass black hole.} and be very bright. As you might imagine, PopIII star wouldn't live for long.
 \end{itemize} 
 
 \subsubsection*{Thick Disk}
