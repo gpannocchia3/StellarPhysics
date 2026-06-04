@@ -377,7 +377,7 @@ For typical solar values, given the Debye radius we've found earlier, we'd obtai
 \section{Fusion Reactions}
 
 Before we even begin looking into what happens when a star enters the longest stage of their evolution cycle, the main sequence, we'll consider briefly the reactions occurring in the phase known as \emph{pre-main sequence}.
-\par As you should already know a star, whose nuclear reactions have yet to start, will balance the energy loss through their intrinsic luminosity depleting gravitational energy. This means that, as the star shrinks, it heats up, thus radiating away more energy and cooling down, ready to repeat the cycle over and over.
+\par As you should already know, a star, whose nuclear reactions have yet to start, will balance the energy loss through their intrinsic luminosity depleting gravitational energy. This means that, as the star shrinks, it heats up, thus radiating away more energy and cooling down, ready to repeat the cycle over and over.
 \par When temperature gets high enough ($\sim 10^{6}\,\text{K}$), the combustion of the so-called \emph{light elements} starts. The first that starts burning is Deuterion, which is already scarce ($X_{D,\odot}^{\text{in}}\sim 2-4\cdot 10^{-5}$) and gets burned quickly
 \begin{equation*}
     ^{2}_{1}\text{D} + ^{1}_{1}\text{p} \to ^{3}_{2}\text{He} + \gamma
@@ -387,11 +387,11 @@ For temperatures just a little higher (respectively $2\cdot 10^{6}\,\text{K}$ an
     \element{Li}{6}{3}+\element{p}{1}{1}&\to\element{He}{3}{2}+\element{He}{4}{2}\\
     \element{Li}{7}{3}+\element{p}{1}{1}&\to 2\,\element{He}{4}{2}
 \end{align*}
-Clearly, the ignition temperatures we've given are only approximative since they actually depend on the element abundance and density of the star. One thing in particular is curious about $\element{Li}{7}{3}$. Only 1\% of the abundance we observe in a Sun-like star (which is already not a lot, $X_{^{7}\text{Li}}\sim 10^{-8}$) is produced during the BBN (\emph{Big Bang Nucleosynthesis}). On average it is only burned in stars, while it's produced through \emph{spallation on nuclei by cosmic rays}
+Clearly, the ignition temperatures we've given are only approximative since they actually depend on the element abundance and density of the star. One thing in particular is curious about $\element{Li}{7}{3}$: Only 1\% of the abundance we observe in a Sun-like star (which is already not a lot, $X_{^{7}\text{Li}}\sim 10^{-8}$) is produced during the BBN (\emph{Big Bang Nucleosynthesis}). On average it is only burned in stars, while it's produced through \emph{spallation on nuclei by cosmic rays}
 \begin{equation*}
     \element{He}{4}{2}+\element{C}{12}{6}\to \element{Li}{7}{3}+2\,\element{He}{4}{2}+\element{p}{1}{1}
 \end{equation*}
-\par On top of this other reactions involving Berillium and Boron can be occurring, if temperatures get high enough. For Berillium, assuming a temperature of at least $T\sim 3.5\cdot 10^{6}\unit{K}$
+\par On top of this, other reactions involving Berillium and Boron can be occurring if temperatures get high enough. For Berillium, assuming a temperature of at least $T\sim 3.5\cdot 10^{6}\unit{K}$
 \begin{align*}
     \element{Be}{9}{4}+\element{p}{1}{1}&\to\element{He}{4}{2}+\element{Li}{6}{3}\\
     &\to \element{Be}{8}{4}+\element{D}{2}{1}\to 2\,\element{He}{4}{2}+\element{D}{2}{1}
@@ -407,12 +407,12 @@ and has an overall initial abundance of $X_{^{9}\text{Be}}\sim 10^{-10}$.
     \element{B}{10}{5}+\element{p}{1}{1}&\to \element{He}{4}{2}+\element{Be}{7}{4}
 \end{align*}
 It's curious to know that the abundance of $^{11}\text{B}$ is four larger than $^{10}\text{B}$.
-\par During the star's evolution along the Hayashi track (see Chapter \ref{ch:v}), the star increases its temperature due to the virial theorem, a radiative core will form at the center and grow in mass as the star evolves. When the radiative core appears, the star is no longer fully convective; this happens when 
+\par During the star's evolution along the Hayashi track (see Chapter \ref{ch:v}), the star increases its temperature due to the virial theorem, and a radiative core will form at the center and grow in mass as the star evolves. When the radiative core appears, the star is no longer fully convective; this happens when 
 \begin{equation*}
     \nabla_{\text{rad}}<\nabla_{\text{amb}}
 \end{equation*}
-and the star will move out of the Hayashi track. The reactions we've presented are not relevant from the point of view of energy production, not even in this stage, but reduce practically to zero the abundances the abundances of the light elements involved (and do not appreciably affect the abundances of the elements they produce).
-\par If the stars were fully convective during this stage, we would have a complete depletion of Lithium and Deuterium at the surface, since matter in a convective star is always well mixed. However, as we've mentioned en passant, the convective region will start to shrink, eventually; if the convective region is confined to the external and cooler region before all the *\textbf{insert light element here}* reservoir bas been destroyed in fully convective phase, some remaining nuclei will still be present in the convective envelope.
+and the star will move out of the Hayashi track. The reactions we've presented are not relevant from the point of view of energy production, not even in this stage, but reduce practically to zero the abundances of the light elements involved (and do not appreciably affect the abundances of the elements they produce).
+\par If the stars were fully convective during this stage, we would have a complete depletion of Lithium and Deuterium at the surface, since matter in a convective star is always well mixed. However, as we've mentioned en passant, the convective region will start to shrink, eventually; if the convective region is confined to the external and cooler region before all the *\textbf{insert light element here}* reservoir has been destroyed during the fully convective phase, some remaining nuclei will still be present in the convective envelope.
 \par This means that the resulting surface abundances of these light elements depend on the interplay between the increase of the stellar temperature, the resulting efficiency of the nuclear reactions involed and the timescale for the shrinking of the convective envelope.
 \par As a rule of thumb, we can say that, once the chemical composition is fixed, larger masses will have lower surface depletion of light elements, and the depletion increases along with the star's metallicity.
 \par If this is the case, then why $\element{Li}{6}{3}$ is only 1\% as abundant as theory predicts for Sun-like stars? Good question, we don't know. Apparently, it just continues to get burned also when the star enters the main sequence.
@@ -420,7 +420,7 @@ and the star will move out of the Hayashi track. The reactions we've presented a
 \subsection{Hydrogen Burning: pp-chain}
 The H-burning mechanism is essentially the nuclear fusion of four protons into one $\element{He}{4}{2}$ nucleus, garnished with two positrons and two electronic neutrinos.
 \par The energy production for the whole set of reaction we'll be going through in a moment can be shown to amount to $27.7\unit{MeV}$, only decreasing to $26.1\unit{MeV}$ if we consider the energy subtracted by neutrinos. In any case, this amount of energy is still 10 times larger than that produced in any other nuclear reaction process occurring in stars.
-\par Assuming burning of all protons into Helium you'd produce (in a Sun-like star) $E\sim 6.5\cdot 10^{57}\unit{MeV}$. Since the luminosity of the Sun is $L_{\odot}\sim 2.5\cdot 10^{39}\unit{MeV}\unit{s}^{-1}$, you'd obtain a timescale for nuclear burning of $\tau_{\text{nuc}} \sim 10^{11}\unit{yr}$. Accounting for the fact that only 10\% of the total Hydrogen is burned in the center, you get a more realistic timescale of $\tau_{\text{nuc}} \sim 10^{10}\unit{yr}$.
+\par Assuming burning of all protons into Helium, you'd produce (in a Sun-like star) $E\sim 6.5\cdot 10^{57}\unit{MeV}$. Since the luminosity of the Sun is $L_{\odot}\sim 2.5\cdot 10^{39}\unit{MeV}\unit{s}^{-1}$, you'd obtain a timescale for nuclear burning of $\tau_{\text{nuc}} \sim 10^{11}\unit{yr}$. Accounting for the fact that only 10\% of the total Hydrogen is burned in the center, you get a more realistic timescale of $\tau_{\text{nuc}} \sim 10^{10}\unit{yr}$.
 \par The main channel of energy production in this phase is (for less-massive stars) the \emph{p-p chain}.
 \par The reaction networks involved in the so-called p-p chain are the following:
 \begin{align*}
@@ -443,10 +443,10 @@ The H-burning mechanism is essentially the nuclear fusion of four protons into o
 & \element{He}{3}{2}+\element{p}{1}{1}\to \element{He}{4}{2}+e^{+}+\nu_{e}
 \end{align*}
 \par Although it seems rather hard to digest at first sight, it's actually much simpler than it looks.
-\par First of all, we know that these reactions can't possibly involve free neutrons, for there aren't any: Those few that had remained after the BBN have now decayed ($10^{10}\unit{yr}$ is much larger than $\sim 10\unit{min}$, isn't it?), so the only possiblity for our star to produce Deuterium is through Hydrogen burning, with a branching fraction $\Gamma_{\text{pp}}\sim 99.8\%$\footnote{Actually, there's another reaction able to produce Deuterium, which is $2\,\element{p}{1}{1}+e^{-}\to \element{D}{2}{1}+\nu_{e}$, which, you'll reckon, is quite unlikely to happen, since it's a three-body reaction on top of being mediated by electroweak interactions. The associated branching fraction is $\Gamma_{\text{pep}}\sim 0.2\%$}.
+\par First of all, we know that these reactions can't possibly involve free neutrons, for there aren't any: Those few that had remained after the BBN have now decayed ($10^{10}\unit{yr}$ is much larger than $\sim 10\unit{min}$, isn't it?), so the only possiblity for our star to produce Deuterium is through Hydrogen burning, with a branching fraction $\Gamma_{\text{pp}}\sim 99.8\%$\footnote{Actually, there's another reaction able to produce Deuterium, which is $2\,\element{p}{1}{1}+e^{-}\to \element{D}{2}{1}+\nu_{e}$, which, you'll reckon, is quite unlikely to happen, since it's a three-body reaction on top of being mediated by electroweak interactions. The associated branching fraction is $\Gamma_{\text{pep}}\sim 0.2\%$.}.
 \par The four reactions that we've presented are the four main ways $\element{He}{3}{2}$ can be used to eventually produce $\element{He}{4}{2}$. The first reaction in the ppI chain requires that protons experience a $\beta^{+}$ decay, and can only occur if the protons are brought together by a nuclear collision. This process is governed by \emph{weak} interactions and therefore has a low probability of occurring: Its nuclear cross section is in fact quite low ($\sigma_{\text{pp}}\sim 10^{-23}\unit{b}$).
 \par Until a higher temperature, roughly $8\cdot10^{6}\unit{K}$, is reached, the reactions producing $\element{He}{3}{2}$ are more frequent than those consuming it, and as a consequence the abundance of $\element{He}{3}{2}$ increases, only decreasing when successive reactions become effective. In a short time this element reaches an "equilibrium" abundance, which can be as high as earning it the title of \emph{pseudo-primary element}.
-\par The relative frequency of the ppII and ppIII depends strongly on temperature; in particular, the $\element{He}{3}{2}+\element{He}{4}{2}$ reaction becomes competitive with respect to $\element{He}{3}{2}+\element{He}{3}{2}$ for $T\approx 15\cdot 10^{6}\unit{K}$. The reason for it lays mainly in (\ref{eq:gamowprob}) and its dependence on the reduced mass $\mu$: the reduced mass of $\element{He}{3}{2}+\element{He}{4}{2}$ is larger than that of $\element{He}{3}{2}+\element{He}{3}{2}$, meaning that the probability of tunnelling through the potential barrier is higher for the latter.
+\par The relative frequency of the ppII and ppIII depends strongly on temperature; in particular, the $\element{He}{3}{2}+\element{He}{4}{2}$ reaction becomes competitive with respect to $\element{He}{3}{2}+\element{He}{3}{2}$ for $T\approx 15\cdot 10^{6}\unit{K}$. The reason for it lays mainly in (\ref{eq:gamowprob}) and its dependence on the reduced mass $\mu$: The reduced mass of $\element{He}{3}{2}+\element{He}{4}{2}$ is larger than that of $\element{He}{3}{2}+\element{He}{3}{2}$, meaning that the probability of tunnelling through the potential barrier is higher for the latter.
 \par As a rule of thumb, you may say that with increasing temperature the importance of the ppII and ppIII increases with respect to the ppI if there is a sufficient concentration of $\element{He}{4}{2}$.
 \par Key informations about our favorite energy production chains are summarized in Table \ref{tbl:pp}.
 \begin{table}[h!]
@@ -479,8 +479,8 @@ which we can convert in a flux we can measure on Earth simply dividing by an app
     \caption{Solar neutrino energy spectrum for the solar model BS05(OP). The uncertainties are taken from Table 8 of \cite{2005ApJ...621L..85B}.}
     \label{fgr:bahcallserenelli}
 \end{figure}
-\par The sharper amongst my readers will have surely noticed that there are some elements which are simultaneously involved in destruction and production processes (e.g., $\element{D}{2}{1}$ or $\element{He}{3}{2}$). These elements are usually called \emph{secondary elements}.
-\par It should come as no surprise that the variation of the abundance of element $i$ will depend on all the creation and destruction reactions involving that element\footnote{The general equation is quite long and convoluted, and I see no point into copying it here. The interested reader can refer to \cite{2005essp.book.....S}, §3.17, equation 3.39.}. If you recall how we've defined the reactoin rate (\ref{eq:reactionrate}), we can then say that the variation over time of the abundance (or number of particles) of a certain species will be 
+\par The sharpest amongst my readers have surely noticed that there are some elements which are simultaneously involved in destruction and production processes (e.g., $\element{D}{2}{1}$ or $\element{He}{3}{2}$). These elements are usually called \emph{secondary elements}.
+\par It should come as no surprise that the variation of the abundance of element $i$ will depend on all the creation and destruction reactions involving that element\footnote{The general equation is quite long and convoluted, and I see no point into copying it here. The interested reader can refer to \cite{2005essp.book.....S}, §3.17, equation 3.39.}. If you recall how we've defined the reaction rate (\ref{eq:reactionrate}), we can then say that the variation over time of the abundance (or number of particles) of a certain species will be 
 \begin{equation*}
     \dot{N}_{i} = r_{i}^{C}-r_{i}^{D}
 \end{equation*}
@@ -488,12 +488,12 @@ which we can convert in a flux we can measure on Earth simply dividing by an app
 \begin{equation*}
     \dot{N}_{\text{D}} = \frac{N_{p}N_{p}}{2}\langle \sigma v \rangle_{pp}-N_{\text{D}}N_{p}\langle \sigma v \rangle_{\text{D}p}
 \end{equation*}
-Equilibrium will be thus reached when $\dot{N}_{\text{D}} = 0$, so when
+Equilibrium will be reached when $\dot{N}_{\text{D}} = 0$, so when
 \begin{equation*}
     \frac{N_{\text{D}}}{N_{p}} = \frac{\langle \sigma v \rangle_{pp}}{2\langle \sigma v \rangle_{\text{D}p}}
 \end{equation*}
 What do we learn from this? The equilibrium abundance is \emph{directly proportional} to the creation rate and \emph{inversely proportional} to the destruction rate.
-\par It is evendent that if the abundance of $\element{D}{2}{1}$ is larger than its abundance at equilibrium, then the destruction process prevails over the production one, and the chemical abundance will tend to evolve quickly towards its equilibrium configuration.
+\par It is evident that if the abundance of $\element{D}{2}{1}$ is larger than its abundance at equilibrium, then the destruction process prevails over the production one, and the chemical abundance will tend to evolve quickly towards its equilibrium configuration.
 \par Under the assumption that $N_{\text{D}} \gg N_{\text{D}, \text{eq}}$ we can determine a timescale for the process, since the destruction process will be dominating
 \begin{equation}
     \der{N_{\text{D}}}{t} = -N_{\text{D}}N_{p}\langle \sigma v \rangle_{\text{D}p}
@@ -505,12 +505,12 @@ whose solution is of the type $N_{\text{D}} = N_{\text{D},0}\exp(-t/\tau)$, with
     \label{eq:deuteriontimescale}
 \end{equation}
 \par For typical temperatures at which the p-p chain is fully efficient, the value of $\tau$ is of the order of $1\unit{s}$, meaning the equilibrium configuration is reached quite hastily.
-\par From this we're learning also something else really important: With given initial conditions, the reaction chain can reach and (virtually) remain in equilibrium, but the reaction rate will be led by the slower reaction which (\ref{eq:deuteriontimescale}) tells us is that with the smaller cross section.
+\par From this we're learning also something else really important: With given initial conditions, the reaction chain can reach and (virtually) remain in equilibrium, but the reaction rate will be led by the slower reaction, which (\ref{eq:deuteriontimescale}) tells us is that with the smaller cross section.
 \par In the p-p chain, the reaction telling the time to the others is the very first one, which has, as we've seen, an abysmally small cross section
 \begin{equation*}
     \sigma_{\text{pp}}\sim 10^{-23}\unit{b} \quad S(0)_{pp}\sim 4.1\cdot 10^{-22}\unit{keV}\unit{b}^{-1}
 \end{equation*}
-which, for example, we can compare to the very following reaction, the one involving deuterion, that has $S(0)_{\text{D}p}\sim 2.1\cdot 10^{-4}\unit{keV}\unit{b}^{-1}$.
+which, for example, we can compare to the very following reaction, the one involving Deuterion, that has $S(0)_{\text{D}p}\sim 2.1\cdot 10^{-4}\unit{keV}\unit{b}^{-1}$.
 \par So there are 18 orders of magnitude of difference.
 \subsection{Hydrogen Burning: CN-NO}
 The CN-NO (bi)cycle is the combination of two independent cycles: The CN cycle and the NO cycle. The presence of some isotopes of Carbon, Nitrogen and Oxygen are necessary for either cycle to begin. Being both produced and destroyed during these cycles, those elements act as catalysts. The reaction networks involved are the following:
@@ -527,7 +527,7 @@ The CN-NO (bi)cycle is the combination of two independent cycles: The CN cycle a
 This branch of the cycle has to follow the timescale of $\element{N}{14}{7}+\element{p}{1}{1}\to \element{O}{15}{8}+\gamma$, which has the smaller cross section, followed by the first reaction of the cycle.
 \par In the CN cycle the isotopes of C and N act as catalysts, and so behave as secondary elements. As a consequence, the cycle can start almost from any reaction if the involved isotope is present, and during a complete loop around the cycle the isotope is consumed and then produced again.
 \par This, however, doesn't mean that the concentrations of the different isotopes will be unchanged as the final abundances depend strongly on the relative rates of the nuclear reactions in the cycle. Only at a high enough temperature ($T\approx 15\cdot 10^{6}\unit{K}$) will the isotopes achieve their equilibrium abundance.
-\par The branching ratio between the proton captures on $^{15}\text{N}$, producing respectively $^{16}\text{O}$ and $^{12}\text{C}$, is of the order of $10^{-4}$, thus the amount of $^{16}\text{O}$ produced is practically negligible. Nevertheless, for slightly higher temperatures ($T\approx 20\cdot 10^{6}\unit{K}$)the small production of $^{16}\text{O}$ unlocks a new branch for the cycle, one which transforms Oxygen into Nitrogen.
+\par The branching ratio between the proton captures on $^{15}\text{N}$, producing respectively $^{16}\text{O}$ and $^{12}\text{C}$, is of the order of $10^{-4}$, thus the amount of $^{16}\text{O}$ produced is practically negligible. Nevertheless, for slightly higher temperatures ($T\approx 20\cdot 10^{6}\unit{K}$) the small production of $^{16}\text{O}$ unlocks a new branch for the cycle, one which transforms Oxygen into Nitrogen.
 \begin{align*}
     & \text{\textbf{NO cycle}}\\
     & \element{N}{15}{7}+\element{p}{1}{1}\to \element{O}{16}{8}^{*}\to \element{O}{16}{8}+\gamma \;\; (\Gamma \sim 1\%)\\
@@ -537,7 +537,7 @@ This branch of the cycle has to follow the timescale of $\element{N}{14}{7}+\ele
     & \element{O}{17}{8}+\element{p}{1}{1}\to \element{F}{18}{9}^{*}\to \element{N}{14}{7}+\element{He}{4}{2} \;\; (\Gamma \sim 99\%)\\
     &\quad\quad\quad\quad\quad\quad\quad\;\;\to \element{F}{18}{9}+\gamma \quad \;\;\,(\Gamma \sim 1\%)
 \end{align*}
-\par It should be noticed that for a typical PopI chemical composition (i.e., about solar) the global amount of CNO elements is of order of 75\% of the total metallicity
+\par It should be noticed that for a typical PopI star chemical composition (i.e., about solar) the global amount of CNO elements is of order of 75\% of the total metallicity
 \begin{equation*}
     X_{\text{CNO}}\approx 0.75Z \quad \frac{X_{\text{O}}}{X_{\text{C}}} \approx 0.7
 \end{equation*}
@@ -559,7 +559,7 @@ Once the full CNO is operating, more than 95\% of the cycle's elements are conve
     & \element{F}{19}{9}+\element{p}{1}{1}\to \element{O}{16}{8}+\element{He}{4}{2}\\
     &\quad\quad\quad\;\,\;\;\to \element{Ne}{20}{10}+\gamma\\
 \end{align*}
-Until temperature raises even higher ($T\approx 25\cdot 10^{6}\unit{K}$) there is a \emph{leakage} on un-burned Neon from the star. Only in very massive MS-stars and during the AGB\footnote{\emph{Asymptotic Giant Branch}.} does a star suffice the necessary conditions to activate the Neon-Sodium cycle
+Until temperature rises even higher ($T\approx 25\cdot 10^{6}\unit{K}$) there is a \emph{leakage} of un-burned Neon from the star. Only in very massive MS-stars and during the AGB\footnote{\emph{Asymptotic Giant Branch}.} does a star suffice the necessary conditions to activate the Neon-Sodium cycle
 \begin{align*}
     & \text{\textbf{Ne-Na cycle}}\\
     & \element{Ne}{20}{10}+\element{p}{1}{1}\to \element{Na}{21}{11}+\gamma\\
@@ -567,7 +567,7 @@ Until temperature raises even higher ($T\approx 25\cdot 10^{6}\unit{K}$) there i
     & \element{Ne}{21}{10}+\element{p}{1}{1}\to \element{Na}{22}{11}+\gamma\\
     & \element{Na}{22}{11}+\element{p}{1}{1}\to \element{Mg}{23}{12}+\gamma\\
     & \element{Mg}{23}{12}\to \element{Na}{23}{11}+e^{+}+\nu_{e}\\
-    & \element{Na}{23}{11}+\element{p}{1}{1}\to \element{Mg}{24}{13}^{*} \to \element{Ne}{20}{10}+\element{He}{4}{2}\\
+    & \element{Na}{23}{11}+\element{p}{1}{1}\to \element{Mg}{24}{12}^{*} \to \element{Ne}{20}{10}+\element{He}{4}{2}\\
     &\quad\quad\quad\quad\quad\quad\quad\quad\,\;\;\to \element{Mg}{24}{12}+\gamma
 \end{align*}
 which reflects into an increase of the abundance of Sodium and a decrease in the abundance of Oxygen, the so-called \emph{Oxygen-Sodium anticorrelation}, which is a distinctive characteristic of most globular clusters. At $T\approx 50\cdot 10^{6}\unit{K}$, Magnesium is ignited, forming Aluminium
@@ -597,8 +597,8 @@ which reflects the so-called \emph{Magnesium-Aluminium anticorrelation}. This pr
 \par It's possible to show that the energy production rate scales with $\sim T^{4}$ for the p-p chain, and with $\sim T^{17}$ for the CNO bi-cycle. When temperature gets over $\sim 20\cdot 10^{6}\unit{K}$, the CNO takes over the p-p, as shown in Fig.\ref{fgr:cnopp}. At the end of the day, it all comes down to the mass of the star.
 \par \emph{Lower Main Sequence} stars (LMS), that have about solar chemical composition and are roughly in the range $M\lesssim 1.2M_{\odot}$, will burn Hydrogen through the p-p chain, as will do \emph{Very Low Mass Stars} (VLMS), which have masses $M\lesssim0.3M_{\odot}$ and are completely convective and very "cold".
 \par \emph{Upper Main Sequence} stars (UMS), that have masses $M\gtrsim 1.2M_{\odot}$ will be burning Hydrogen through the CNO bi-cycle.
-\par Note that as temperature climbs up to other heights\footnote{Poetical delirium.}, under conditions such as those found in novae and X-ray bursts, the rate of proton captures can exceed the rate of beta-decay, pushing the burning to the proton drip line.
-\par The essential idea is that a radioactive species will capture a proton before it can beta decay, opening new nuclear burning pathways that are otherwise inaccessible. Because of the higher temperatures involved, these catalytic cycles are typically referred to as the \emph{hot CNO cycles}. For example
+\par Note that as temperature climbs up to higher heights\footnote{Poetical delirium.} under conditions such as those found in novae and X-ray bursts, the rate of proton captures can exceed the rate of $\beta$-decay, pushing the burning to the proton drip line.
+\par The essential idea is that a radioactive species will capture a proton before it can $\beta$-decay, opening new nuclear burning pathways that are otherwise inaccessible. Because of the higher temperatures involved, these catalytic cycles are typically referred to as the \emph{hot CNO cycles}. For example
 \begin{align*}
     & \text{\textbf{HCNO I}}\\
     & \element{C}{12}{6}+\element{p}{1}{1}\to\element{N}{13}{7}+\gamma\\
@@ -608,6 +608,7 @@ which reflects the so-called \emph{Magnesium-Aluminium anticorrelation}. This pr
     & \element{O}{15}{8}\to\element{N}{15}{7}+e^{+}+\nu_{e}\\
     & \element{N}{15}{7}+\element{p}{1}{1}\to\element{C}{12}{6}+\element{He}{4}{2}
 \end{align*}
+
 \subsection{Helium Burning}
 All stars with initial total mass larger than $\sim 0.5M_{\odot}$ are able to attain, in their interiors, the thermal conditions required for the onset of Helium burning. Unlike during the Hydrogen burning, the physical process at work in stars of different masses during the main core He-burning stage are quite similar.
 \par The first and fundamental reaction in the He-burning process is the production of $^{12}\text{C}$ from the fusion of three Helium nuclei. This reaction is called the $3\alpha$ reaction. Since it's a three-body encounter, it has very low probability, and this reaction usually occurs in two separate steps 
