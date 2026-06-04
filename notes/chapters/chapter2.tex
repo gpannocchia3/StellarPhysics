@@ -3,9 +3,9 @@
 \section{Stellar Equilibrium Equations}
 
 In this chapter we're going to introduce and describe the so-called \emph{stellar equilibrium equations}, which account for the physical mechanisms that are interplaying within stellar structures, and compare it with what real-life observations tell us.
-\par The goal of stellar structure equations is making possible to predict instant after instant in every point of the star the value of each physical and chemical properties, so that once an initial condition is set, we're going to be virtually able to accurately determine the evoluition of those properties.
-\par On a first approximation, we can consider stars to be autogravitating mass conglomerates, for which the gravitational pull is evenly balanced by the pressure gradients (and possibly other forces) that set in within the star. Since gravity is a \emph{central force}, we can well expect the equilibrium configuration to be that of a sphere. This greatly simplifies the problem at hand, since from a three-dimensional configuration is reduced to a one-dimensional configuration by means of symmetry.
-\par The approximation of spherical symmetry allows us to formally decompose the star in a series of \emph{shells} of infinitesimal width $\text{d}r$, so that the physical properties of the star are approximately constant withing said shell. The quantities we'll be interested in considering are the pressure $p(r)$, the density $\rho(r)$, the temperature $T(r)$, the various relative abundances $X_{i}(r)$, the mass $M(r)$ (that is considered to be the mass contained in the sphere of radius $r$) and the luminosity $L(r)$ (the energy per unit time entering the shell at distance $r$ from the center of the star).
+\par The goal of stellar structure equations is making possible to predict instant after instant in every point of the star the value of each physical and chemical properties, so that once an initial condition is set, we're going to be virtually able to accurately determine the evolution of those properties.
+\par On a first approximation, we can consider stars to be autogravitating mass conglomerates, for which the gravitational pull is evenly balanced by the pressure gradients (and possibly other forces) that set in within the star. Since gravity is a \emph{central force}, we can well expect the equilibrium configuration to be that of a sphere. This greatly simplifies the problem at hand, since a three-dimensional configuration is reduced to a one-dimensional configuration by means of symmetry.
+\par The approximation of spherical symmetry allows us to formally decompose the star in a series of \emph{shells} of infinitesimal width $\text{d}r$, so that the physical properties of the star are approximately constant within said shell. The quantities we'll be interested in considering are the pressure $p(r)$, the density $\rho(r)$, the temperature $T(r)$, the various relative abundances $X_{i}(r)$, the mass $M(r)$ (that is considered to be the mass contained in the sphere of radius $r$) and the luminosity $L(r)$ (the energy per unit time entering the shell at distance $r$ from the center of the star).
 \par Given this notation, the mass found inside radius $r+\text{d}r$ should be $M(r)+\text{d}M$, where $\text{d}M$ can be identified with the mass of the infinitesimal spherical shell. Said $\rho(r)$ the density, then the mass of this shell is
 \begin{equation*}
 	\text{d}M = 4\pi r^{2}\rho\,\text{d}r
@@ -26,7 +26,7 @@ Note that (\ref{eq:massconservation}) is essentially a restating of the continui
 	\label{eq:critical_av}
 \end{equation}
 Note that depending on the mass and the radius of the star we're considering, critical velocities might get as high as $v_{c} \sim 300-600\,\text{km}/\text{s}$; for comparison, the equatorial velocity of the Sun is $v_{\odot}^{\text{eq}} \sim 2\, \text{km}/\text{s}$.
-\par To result in non-negligible effects, it is sufficient that the angular velocity gets as high as $\Omega_{\text{sup}} \gtrsim 0.5\Omega_{c}$; if, instead, $\Omega_{\text{sup}} \gtrsim 0.7\Omega_{c}$ you start observing deformations in the structure of the star, but this are fairly rare. As you may easily guess, these are problems that concern with the more massive stars, getting more and more relevant as the mass of the star gets bigger.
+\par To result in non-negligible effects, it is sufficient that the angular velocity gets as high as $\Omega_{\text{sup}} \gtrsim 0.5\Omega_{c}$; if, instead, $\Omega_{\text{sup}} \gtrsim 0.7\Omega_{c}$ you start observing deformations in the structure of the star, but these are fairly rare. As you may easily guess, these are problems that concern with the more massive stars, getting more and more relevant the bigger the star gets.
 \par About $20\%$ of the stars with mass in the range $10M_{\odot}\lesssim M \lesssim 19M_{\odot}$ (so typically stars of spectral class B or O) have velocities of order
 \begin{equation*}
 	150 < v_{\sin i} < 300-400\,\text{km}/\text{s}
@@ -41,12 +41,12 @@ Note that through Doppler effect, we're able to measure the velocity of objects 
 \begin{equation*}
 	\beta = \frac{p_{\text{gas}}}{p_{\text{mag}}} \sim 1 \; \text{with} \; \beta = \frac{8\pi p}{B^{2}}
 \end{equation*}
-that in turn would mean having magnetic fields as high as $B \approx 3000-5000\,\text{Gauss}$. In general they are not relevant, but there exist very rare cases such that of \emph{magnetic stars} of class $A_{p}$ or $B_{p}$, where the subscript "p" is to indicate particular lines in the spectrum of such stars. For comparison
+that in turn would mean having magnetic fields as high as $B \approx 3000-5000\,\text{G}$. In general they are not relevant, but there exist very rare cases such that of \emph{magnetic stars} of class $A_{p}$ or $B_{p}$, where the subscript "p" is to indicate particular lines in the spectrum of such stars. For comparison
 \begin{equation*}
-	\langle B \rangle _{\odot} \sim 0.5-4\,\text{Gauss} \; \text{vs} \; \langle B \rangle _{MS} \sim 1-30\,\text{kGauss}
+	\langle B \rangle _{\odot} \sim 0.5-4\,\text{G} \; \text{vs} \; \langle B \rangle _{MS} \sim 1-30\,\text{kG}
 \end{equation*}
 \par Magnetic fields that strong are assured to influence the external layers of such stars, inducing mixings that lead to a modification of the surface abundances.
-\par Another class of magnetic stars is that of \emph{magnetic white dwarves} that, although very rare, can reach magnetic fields of order $10^{6}-10^{9}\,\text{Gauss}$. Similarly, in \emph{magnetars} (magnetic neutron stars), magnetic fields can reach intensities of $10^{14}-10^{15}\,\text{Gauss}$.
+\par Another class of magnetic stars is that of \emph{magnetic white dwarves} that, although very rare, can reach magnetic fields of order $10^{6}-10^{9}\,\text{G}$. Similarly, in \emph{magnetars} (magnetic neutron stars), magnetic fields can reach intensities of $10^{14}-10^{15}\,\text{G}$.
 \par Note that in principle we're able to detect the presence of strong magnetic fields by studying the surface oscillation of the star, performing what's called \emph{asteroseismology}.
 
 \subsection{Free Fall Time}
@@ -75,7 +75,7 @@ thus, if we use $R^{3}/GM = 3/4\pi G\rho$
     \label{eq:ff_timescale}
 \end{equation}
 \par For the Sun, the free-fall timescale amounts to roughly $\tau_{ff} \sim 30\,\text{min}-1\,\text{h}$ depending on the calculation that has been used. So we can safely claim that the Sun is definitely not collapsing. What if, instead, it is exploding?\footnote{Read: expanding outwards.}
-\par To see that we can calculate the explosion time, sound time, or dynamical time as 
+\par To see that, we can calculate the explosion time, sound time, or dynamical time as 
 \begin{equation}
     \tau_{\text{sound}} = \frac{R}{c_{s}} \approx 0.5\,\text{Myr}\,\left(\frac{R}{0.1\,\text{pc}}\right)\left(\frac{0.2\,\text{km}\,\text{s}^{-1}}{c_{s}}\right)
     \label{eq:sound_time}
@@ -96,7 +96,7 @@ from which
 	}
 	\label{eq:mechanical_eq}
 \end{equation}
-A quick look at (\ref{eq:massconservation}) and (\ref{eq:mechanical_eq}) will convince you that we have more free variables (functions of the radial coordinate) than equations. This is one of the many cases in which the \emph{closure problem} pops out. To solve it we're gonna need to introduce an equation of state (EoS)
+A quick look at (\ref{eq:massconservation}) and (\ref{eq:mechanical_eq}) will convince you that we still have more free variables (functions of the radial coordinate) than equations. This is one of the many cases in which the \emph{closure problem} pops out. To solve it we're gonna need to introduce an equation of state (EoS)
 \begin{equation}
 	\boxed{
 		p = p(\rho, T, X, Y, X_{i})
@@ -114,8 +114,8 @@ with $K$ some constant and $\gamma$ some power that depends on the particular ga
 	p = nkT = \frac{\rho(r)}{\mu(r) m_{H}}kT(r)
 	\label{eq:perfectgas_eos}
 \end{equation}
-with $\mu(r)$ the \emph{mean molecular weight}, which clearly depends on the elements present in the star and their ionization state, which can (hopefully) inferred from considering Saha's equation (\ref{eq:saha}). In general it's not easy to determine the exact form of $\mu(r)$ so it is customary to consider the easy scenario of a \emph{completely ionized} star\footnote{People tend to say that a star is completely ionized when its temperature is at least $T > 10^{6\,\text{K}}$, although that's a completely arbitrary lower limit. For instance, heavier elements like Iron, which have electrons to spare, are completely ionized at much higher temperatures.}
-\par If we consier $X$ the relative abundance of Hydrogen, $Y$ the relative abundance of Helium and $X_{i}$ the relative abundance of the metal with $i$ so that $A>4$\footnote{Sorry $^{4}_{3}\text{He}$, you're too less abundant to be considered. But your time will come soon.}. If we consider the number of ions and electrons that complete ionization generates:
+with $\mu(r)$ the \emph{mean molecular weight}, which clearly depends on the elements present in the star and their ionization state, which can (hopefully) inferred from considering Saha's equation (\ref{eq:saha}). In general it's not easy to determine the exact form of $\mu(r)$ so it is customary to consider the easy scenario of a \emph{completely ionized} star\footnote{People tend to say that a star is completely ionized when its temperature is at least $T > 10^{6\,\text{K}}$, although that's a completely arbitrary lower limit. For instance, heavier elements like Iron, which have electrons to spare, are completely ionized at much higher temperatures.}.
+\par If we consier $X$ the relative abundance of Hydrogen, $Y$ the relative abundance of Helium and $X_{i}$ the relative abundance of the metal with $i$ so that\footnote{Sorry $^{4}_{3}\text{He}$, you're too less abundant to be considered. But your time will come soon.} $A>4$. If we consider the number of ions and electrons that complete ionization generates:
 \begin{itemize}
 	\item Hydrogen: \#ions $X/m_{H}$, \#electrons $X/m_{H}$;
 	\item Helium: \#ions $Y/4m_{H}$, \#electrons $2Y/4m_{H}$;
@@ -171,12 +171,12 @@ which is very small. But to actually check if the assumption of LTE is valid (if
 	\frac{\text{d}U}{U} = 4\frac{\text{d}T}{T} \sim 10^{-12}-10^{-11}
 \end{equation*}
 which means the deviation from isotropic (blackbody) behavior is negligibly small over the mean free path of photons, therefore allowing us to assume the LTE configuration. 
-\par We know, either through direct observation or because you've read the upcoming section about radiative transfer, that wherever is a temperature gradient there is also a radiative flux (along with a convective motion and electronic conduction)!
+\par We know, either through direct observation or because you've read the Appendix about radiative transfer, that wherever is a temperature gradient there is also a radiative flux (along with a convective motion and electronic conduction)!
 \par On a first approximation we may write
 \begin{equation*}
 	\frac{\text{d}T(r)}{\text{d}r}\Big|_{\text{rad}} \propto F(r)\bar{\kappa}
 \end{equation*}
-wnere $F$ is the flux we've defined in (\ref{eq:bolometricflux}) and $\bar{\kappa}$ is some average \emph{opacity}\footnote{Opacity is measured in $\text{cm}^{2}\,\text{g}^{-1}$.} that sums up the various interaction channels between matter and radiation. Note that in general it is frequency dependent\footnote{For a more rigorous definition see either the next chapter or \cite{1986rpa..book.....R}.}.
+where $F$ is the flux we've defined in (\ref{eq:bolometricflux}) and $\bar{\kappa}$ is some average \emph{opacity}\footnote{Opacity is measured in $\text{cm}^{2}\,\text{g}^{-1}$.} that sums up the various interaction channels between matter and radiation. Note that in general it is frequency dependent\footnote{For a more rigorous definition see either the next chapter or \cite{1986rpa..book.....R}.}.
 \par In the equation we've written above we're assuming that the transport of energy is carried out by radiation alone, which is essentially the temperature gradient that we'd observe if all the flux was transported by radiation.
 \par Taking a closer look to the micro-physics involved in absorption phenomena we learn that is possible to link the opacity to the mean free path of electrons
 \begin{equation*}
@@ -221,12 +221,12 @@ so that in general, if $F_{\text{rad}}\neq F_{\text{tot}}$, we can make a slight
 \begin{equation*}
 	\frac{\text{d}T(r)}{\text{d}r}\Big|_{\text{amb}} = -\frac{3\bar{\kappa}\rho}{4ac}\frac{1}{T^{3}}F_{\text{rad}}
 \end{equation*}
-If you want to see a slight more rigorous derivation of (\ref{eq:energytransport}), you may check the last part of the "Radiative Transfer" section.
+If you want to see a slight more rigorous derivation of (\ref{eq:energytransport}), you may check the last part of the "Radiative Transfer" Appendix.
 
 \subsection{Energy Production}
 
-Let us consider what happens if the stellar atmosphere was not constantly replenished with energy from the inner layers. How long would it take for the star to deplete completely the energy stored in the atmosphere.
-\par The average density of the outer layers of the atmosphere is $\rho^{\text{ext}_{\odot}}\sim 10^{-7}\,\text{g}\,\text{cm}^{-3}$. We can thus give an estimate of the mean free path $\lambda_{j}\sim (\rho\bar{\kappa})^{-1}\sim 100-300\,\text{km}$. We've made the (usually decent) approximation of opacity being dominated by photoelectric effect on $\text{H}^{-}$ ions, $\bar{\kappa} \approx 0.3\,\text{cm}^{2}\,\text{g}^{-1}$. Note that in these conditions, the width of the atmosphere is of the same order of the mean free path of photons.
+Let us consider what happens if the stellar atmosphere was not constantly replenished with energy from the inner layers. How long would it take for the star to deplete completely the energy stored in the atmosphere?
+\par The average density of the outer layers of the atmosphere is $\rho^{\text{ext}}_{\odot}\sim 10^{-7}\,\text{g}\,\text{cm}^{-3}$. We can thus give an estimate of the mean free path $\lambda_{j}\sim (\rho\bar{\kappa})^{-1}\sim 100-300\,\text{km}$. We've made the (usually decent) approximation of opacity being dominated by photoelectric effect on $\text{H}^{-}$ ions, $\bar{\kappa} \approx 0.3\,\text{cm}^{2}\,\text{g}^{-1}$. Note that in these conditions, the width of the atmosphere is of the same order of the mean free path of photons.
 \par We know the solar flux $F_{\odot} \sim 6 \cdot 10^{10}\,\text{erg}\,\text{cm}^{-2}\,\text{s}^{-1}$, as well as its temperature and pressure $T_{eff}\sim 6000\,\text{K}$, $p\approx 10^{5}\,\text{dyne}\,\text{cm}^{-2}$. The average number of particles is $n\sim 10^{17}\,\text{cm}^{-3}$, which can be integrated over the vertical direction to find an average number of photons per unit surface.
 \par The mean energy of photons can be expressed as $E_{p} = 3kT/2\sim 10^{-12}\,\text{erg}$. The energy per unit surface is thus $E_{s}\approx 10^{12}\,\text{erg}\,\text{cm}^{-2}$. Finally, we find that the energy stored in the atmosphere would be depleted in roughly
 \begin{equation*}
@@ -313,7 +313,7 @@ For stellar structures in hydrostatic equilibrium, for which only pressure and g
 	2\langle K \rangle_{\text{trasl}} + \langle \Omega \rangle = \frac{1}{2}\ddot{I} \approx 0
 	\label{eq:virialtheorem}
 \end{equation}
-\par This strikingly simple equation allows us to find some enlightning relations. Let us then consider a monoatomic perfect gas for which the equaipartition theorem grants us $\langle K \rangle = 3kT/2 = E_{th}$. The virial theorem thus implies
+\par This strikingly simple equation allows us to find some enlightning relations. Let us then consider a monoatomic perfect gas for which the equipartition theorem grants us $\langle K \rangle = 3kT/2 = E_{th}$. The virial theorem thus implies
 \begin{equation*}
 	E_{th} = -\frac{\Omega}{2} > 0 \implies E_{tot} = \frac{\Omega}{2}
 \end{equation*}
@@ -326,7 +326,7 @@ For stellar structures in hydrostatic equilibrium, for which only pressure and g
 	L = -\der{E_{tot}}{t} = -\frac{1}{2}\der{\Omega}{t} = \der{E_{th}}{t} > 0
 \end{equation*}
 From this we're learning that from the gravitational contraction, half the energy is dissipated through radiation, the other half is used to "fuel" the thermal content of the star (i.e., the star gets hotter).
-\par What if we relax the condition of the gas being monoatomic? The virial theorem (\ref{eq:virialtheorem}) still holds, but in general we can't say $\langle K \rangle = E_{th}$. The traslational (average) kinetic energy is still $\langle K \rangle = 3kT/2$, but now $E_{th} = l kT/2$, where $l$ is the number of degrees of freedom of the single gas element. It isn't particularly convenient to work with the degrees of freedom, so we're going to convert it to a more thermodynamically acceptable quantity, the adiabatix index $\gamma$. It is possible to show that
+\par What if we relax the condition of the gas being monoatomic? The virial theorem (\ref{eq:virialtheorem}) still holds, but in general we can't say $\langle K \rangle = E_{th}$. The traslational (average) kinetic energy is still $\langle K \rangle = 3kT/2$, but now $E_{th} = l kT/2$, where $l$ is the number of degrees of freedom of the single gas element. It isn't particularly convenient to work with the degrees of freedom, so we're going to convert it to a more thermodynamically acceptable quantity, the adiabatic index $\gamma$. It is possible to show that
 \begin{equation*}
 	\gamma = \frac{C_{p}}{C_{V}} = 1 + \frac{2}{l}
 \end{equation*}
@@ -343,7 +343,7 @@ from which
 	\Delta E_{tot} &= \frac{3\gamma -4}{3(\gamma -1)}\Delta\Omega\\
 	\Delta E_{th} &= -\frac{\Delta\Omega}{3(\gamma -1)}
 \end{align*}
-Since $\Delta\Omega$ is necessarily smaller than 0, we thus obtain a stability criterion for the star: A star can be stable if $\gamma > 4/3$. If such condition is not met, all the energy released by gravitational collapse is converted in thermal energy, thus resulting in instabilities.
+Since $\Delta\Omega$ is necessarily smaller than 0, we thus obtain a stability criterion for the star: A star can be stable if $\gamma > 4/3$. If such condition is not met, all the energy released by gravitational collapse is converted into thermal energy, thus resulting in instabilities.
 \par We can also extend the virial theorem to different equations of state if we allow for the translational kinetic energy to be written as $\langle K \rangle = \xi E_{th}$. Clearly, we have to assume that the coefficient $\xi$ is constant over the whole stellar structure. Repeating the same calculations as before (\emph{mutatis mutandis}, that is), virial theorem yields
 \begin{equation*}
 	E_{tot} = \frac{\xi - 1}{\xi}\Omega
@@ -380,7 +380,7 @@ which is much greater than the other dynamical times, but still not quite as lar
 
 \section{Qualitative Stellar Structure Relations}
 
-Now that we have the virial theorem at our disposal, we migth think of looking for very approximated expressions that can give us an idea of how physical properties in a star are interconnected. All quantities will be interpreted as \emph{averaged} quantities.
+Now that we have the virial theorem at our disposal, we might think of looking for very approximated expressions that can give us an idea of how physical properties in a star are interconnected. All quantities will be interpreted as \emph{averaged} quantities.
 \par Let us start with density and temperature. If we know $M$ and $R$, then
 \begin{equation*}
 	\Omega = -q\frac{GM^{2}}{R}
@@ -397,7 +397,7 @@ finding
 	\label{eq:temperature_density}
 \end{equation}
 This means that two stars with different masses must have different densities to achieve the same temperature! This will then reflect onto smaller stars having the higher densities.
-\par Upon a first approximation, the luminosity $L$ does not depend on the energy production rate $\epsilon$. If we butcher the equation of hydrostatic equilibrium a plug in the proportionalities of the density
+\par Upon a first approximation, the luminosity $L$ does not depend on the energy production rate $\epsilon$. If we butcher the equation of hydrostatic equilibrium and plug in the proportionalities of the density
 \begin{equation*}
 	p_{C} = \frac{M^{2}}{R^{4}}
 \end{equation*}
@@ -474,7 +474,7 @@ with $\phi$ some adimensional density profile with the following characteristics
 \begin{equation*}
     \lambda = \left[\frac{K\rho_{c}^{1/n-1}(n+1)}{4\pi G}\right]^{1/2}
 \end{equation*}
-eq.\ref{eq:proto_le} takes a much simpler and elegant form
+(\ref{eq:proto_le}) takes a much simpler and elegant form
 \begin{equation}
 	\boxed{
     \frac{1}{\xi^{2}}\partial_{\xi}(\xi^{2}\partial_{\xi}\phi) = -\phi^{n}
@@ -551,7 +551,7 @@ thus allowing us to solve for $\beta$ (since we've calculated $\rho_{C}$ and we 
 	\frac{1-\beta}{\mu \beta^{4}} = \frac{a\pi}{48}\frac{G^{3}M_{\odot}^{2}m_{\text{H}^{4}}}{k^{4}(-\xi^{2}\partial_{\xi}\phi)_{\xi_{0}}} = A
 	\label{eq:betafactor}
 \end{equation}
-which you can use also for sun-like stars. Given what we've found earlier we can substitute for $\beta \approx 0.998$, meaning that most of the pressure is due to raw gas pressure (and not from radiation); the value of $\beta$ coming from evolution models is $\beta\sim0.999$ which is in great agreement with our present approximated result.
+which you can use also for sun-like stars. Given what we've found earlier, we can substitute for $\beta \approx 0.998$, meaning that most of the pressure is due to raw gas pressure (and not from radiation); the value of $\beta$ coming from evolution models is $\beta\sim0.999$ which is in great agreement with our present approximated result.
 \par We can also calculate the central pressure $p_{C}\sim 1.2\cdot 10^{17}\,\text{dyne}/\text{cm}^{2}$ and the central temperature $T_{C}\sim 1.6\cdot 10^{7}\,\text{K}$.
 \par Similarly to what we've done in (\ref{eq:politropic_mass}), we can calculate the mass within a sphere of radius $r$. The expression is almost identical
 \begin{equation}
@@ -634,14 +634,14 @@ thus reducing the equations to equations for the powers of $x$ and $y$, whose su
 
 Matter inside the stars is never at rest, but usually the movements of the gas elements are small, random perturbations around their equilibrium positions. Under certain conditions, these small random perturbations can trigger large-scale motions that involve sizable fractions of the total stellar mass. These large-scale motions are called \emph{convection}. Hot elements may rise to the top, thereby transporting energy from the hottest to the coolest regions, where they cool and then fall down as cold material.
 \par In order to include convective transport in the stellar model computation we'll need to find a criterion for the onset of convection, and the expression of the temperature gradient in a convection zone. Note that the treatment of convections in the stellar interior is extremely complicated and needs the introduction of various approximations. This stems from the fact that the flow of gas in a stellar convective region is turbulent, in the sense that the velocity and all the other properties of the flow vary in a random and chaotic way.
-\par The random nature of tyrbulence precludes computation based on a complete description of the motion of all the fluid particles based on a solution of the Navier-stokes equations for the stellar fluid.
+\par The random nature of turbulence precludes computation based on a complete description of the motion of all the fluid particles based on a solution of the Navier-Stokes equations for the stellar fluid.
 \par In the following we're going to adapt an extremely simple model in which the gas flow is made of gas elements with a certain characteristic size, the same in all dimensions, that move by a certain mean free path before dissolving. All gas elements have the same physical properties at a given distance $r$ from the center.
 \input{chapters/bubble.tex}
 We're going to assume that the "bubble" always remains in \emph{pressure equilibrium} as it moves, which is a condition that is generally met for subsonic flows for which 
 \begin{equation*}
 	\tau_{d} \sim \frac{l}{c_{s}}\ll \frac{l}{v_{\text{bubble}}}
 \end{equation*}
-For example, in the Sun's convective regions, which extend approximately to 30\% of the total solar radius, the sound speed is roughly $2-5 \cdot 10^{2}\,\text{km}/\text{s}$, while the convective velocity is of order of a few meters per second. Note that only in the outskirts of the star the convective velocity gets high enough to give a little trouble to our initial assumption With some simple computations we are able to show that the time needed to roughly move across the convective region is of the order of a week, while the dynamic time is much smaller. Under these assumption, convective motions are unlikely to disturb too much the hydrostatic equilibrium condition.
+For example, in the Sun's convective regions, which extend approximately to 30\% of the total solar radius, the sound speed is roughly $2-5 \cdot 10^{2}\,\text{km}/\text{s}$, while the convective velocity is of order of a few meters per second. Note that only in the outskirts of the star the convective velocity gets high enough to give a little trouble to our initial assumption. With some simple computations we are able to show that the time needed to roughly move across the convective region is of the order of a week, while the dynamic time is much smaller. Under these assumptions, convective motions are unlikely to disturb too much the hydrostatic equilibrium condition.
 \par Moreover, we're going to assume that the bubble moves \emph{adiabatically}, so that there's no energy exchange with the surrounding fluid. As a further approximation we'all assume that the chemical composition of the star $\mu$ is constant along the bubble's motion.
 \par With reference to Fig.\ref{fgr:bubble}, we can expand to first order the temperature of the bubble and that of the surrounding fluid
 \begin{equation*}
@@ -706,7 +706,7 @@ which is called \emph{Ledoux Criterion}. Note that in this case it's much harder
 	\nabla_{\text{rad}} > \nabla_{\text{ad}} + \frac{\phi}{\mu}\nabla_{\mu}
 \end{equation*}
 \subsection{The Overshooting Problem}
-The \emph{overshooting problem} can be quite a nuisance if we want to calculate the spatial extension of the convective region of the star. To put it simply, in the convective region, the blob of gas will raise with non-zero velocity which, in turn, won't be magically disappearing as soon as it crosses the non-convective region. This causes the convective region to formally "expand" outwards. This can potentially impact significantly on the permanency of a star in the Main Sequence stage. If we want to address the increasing in size of the convective region, it is customary to introduce a new parameter $\beta_{ov}$ so that
+The \emph{overshooting problem} can be quite a nuisance if we want to calculate the spatial extension of the convective region of the star. To put it simply, in the convective region, the blob of gas will rise with non-zero velocity which, in turn, won't be magically disappearing as soon as it crosses the non-convective region. This causes the convective region to formally "expand" outwards. This can potentially impact significantly on the permanency of a star in the Main Sequence stage. If we want to address the increasing in size of the convective region, it is customary to introduce a new parameter $\beta_{ov}$ so that
 \begin{equation*}
 	l_{ov} = \beta_{ov}H_{p}
 \end{equation*}
@@ -754,7 +754,7 @@ This tells us that the adiabatic gradient is the maximum gradient that can set i
 
 In order to find what we're looking for (an approximate description of the convective gradient) we're going to need some simplifying assumptions:
 \begin{enumerate}
-	\item The theory behind mixing length is going to be a \emph{local}, so that this criterion can be applied on a "mesh perby mesh" basis to check its stability;
+	\item The theory behind mixing length is going to be a \emph{local}, so that this criterion can be applied on a "mesh by mesh" basis to check its stability;
 	\item The mean free path of the bubble we can parametrize as $l = \alpha_{ML}H_{p}$;
 	\item Small variations in temperature and density;
 	\item The variations induced by different shapes and sizes of the bubbles are negligible (this is usually not true, but their contribution enters as a second order correction).
@@ -824,7 +824,7 @@ Equating the two expressions we finally obtain
 Note that the factor $1/2$ within parentheses was introduced by \cite{2005essp.book.....S} when performing the integral of the force per unit volume. It is still not clear to me where that comes from, but I think it may be to address for some sort of average value for the density.
 
 \section{Opacity}
-As we might have mentioned somewhere in the above, the physical property known as \emph{opacity} is the collection of all the mechanisms of interaction between radiation and matter. A few important mechanisms are listed below 
+As we might have mentioned somewhere in the above, the physical property known as \emph{opacity} is the collection of all the mechanisms of interaction between radiation and matter. A few important mechanisms are listed below:
 \begin{itemize}
 	\item Scattering $e^{-}\gamma$: Since the average energy of particles in a star is generally such that $kT \ll m_{e}c^{2}\approx 0.511\,\text{MeV}$, the prevalent scattering channel is the \emph{Thomson scattering};
 	\item \emph{Inverse Bremsstrahlung}: also known as "braking radiation" is a channel of interaction that leaves an unbound particle unbound (Free-Free);
@@ -890,13 +890,14 @@ Since the effect produced by Compton scattering is small (but sometimes not negl
 \begin{equation*}
 	\sigma_{T, \text{corr}} = \left[1+0.35\left(\frac{T}{10^{9}\,\text{K}}\right)^{1/2}+0.73\left(\frac{T}{10^{9}\,\text{K}}\right)\right]^{-1}\sigma_{T}
 \end{equation*}
+
 \subsection{Inverse Bremsstrahlung}
 Another channel that is particularly important when BB and BF channels are quiescent\footnote{Oh my, what a fancy word I've found.}, is that of inverse Bremsstrahlung\footnote{Remember the capital "B" and the two "s", it's a German word (well, two, actually).}. Particle physicists usually manage to convince us that the \emph{differential cross-section} (read: velocity dependent) for inverse Bremsstrahlung is described by
 \begin{equation}
 	\der{\sigma_{FF}}{v_{e}} = \frac{4\pi}{3\sqrt{3}hc}\frac{Z^{2}e^{6}}{m_{e}^{2}}\frac{1}{v_{e}}\frac{1}{\nu^{3}}n_{e}f(v_{e})\bar{g}_{ff}(\nu, v_{e})
 	\label{eq:diFFerentialcrosssection}
 \end{equation}
-where here $Z$ is the electrical charge of the ion interacting with electrons, $f(v_{e})$ is some velocity distribution for electrons (typically a Maxwellian distribution) and $\bar{g}_{ff}$ is the \emph{Gaunt factor} a fancy numerical coefficient that we will approximate as roughly constant and of order unity in the following. Note that since there isn't an energy threshold for this opacity channel, in principle we have to take into account all possible species that might be contributing.
+where here $Z$ is the electrical charge of the ion interacting with electrons, $f(v_{e})$ is some velocity distribution for electrons (typically a Maxwellian distribution) and $\bar{g}_{ff}$ is the \emph{Gaunt factor}, a fancy numerical coefficient that we will approximate as roughly constant and of order unity in the following. Note that since there isn't an energy threshold for this opacity channel, in principle we have to take into account all possible species that might be contributing.
 \par If we take an average value for the velocity
 \begin{equation*}
 	\langle \frac{1}{v_{e}} \rangle = \left(\frac{2m_{e}}{\pi k T}\right)^{1/2}\propto \left(\frac{m_{e}}{T}\right)^{1/2}
@@ -914,11 +915,12 @@ To the cross section only the more abundant species will participate (so Hydroge
 \begin{equation*}
 	\kappa_{\nu,FF} \sim \frac{X}{m_{H}}\langle \sigma_{FF}(1,\nu) \rangle +\frac{Y}{4m_{H}}\langle \sigma_{FF}(2,\nu) \rangle
 \end{equation*}
-If we assume completely ionized matter (\ref{eq:electrondensitytotion}) and notice that $\sigma \propto T^{-1/2}\nu^{-3}\to T^{-3.5}$, then after computing the Rosseland mean opacity, we're left with 
+If we assume completely ionized matter (\ref{eq:electrondensitytotion}) and notice that $$\sigma \propto T^{-1/2}\nu^{-3}\to T^{-3.5}$$ then after computing the Rosseland mean opacity, we're left with 
 \begin{equation}
 	\bar{\kappa}_{FF} \sim 4\cdot 10^{22}(X+Y)(1+X)\rho T^{-3.5}
 	\label{eq:inversebremsstrahlungopacity}
 \end{equation}
+
 \subsection{Photoionization}
 Not surprisingly, for photoionization mechanisms to arise, it's necessary the presence of atoms with at least one bounded electron. Differently from the channels we've taken a look so far, photoionization is a threshold process. For it to happen, photons must have an energy at least equal to the ionization potential of the impinged atom. In general
 \begin{equation*}
@@ -951,7 +953,7 @@ in which we're going to consider only elements with $A\geq 6$, for Hydrogen and 
 \begin{equation*}
 	N_{e}\sim \frac{\rho}{m_{\text{H}}} \left(\frac{X+1}{2}\right)
 \end{equation*}
-so that pluggining in all the various definitions we obtain
+so that plugging in all the various definitions we obtain
 \begin{equation*}
 	\kappa_{bf}(\nu) = \sum_{A,n} \frac{4\pi^{2}e^{2}g}{3\sqrt{3}c\nu^{3}}\left(\frac{\chi_{n}^{2}}{m_{e}}\right)\frac{kT}{kT}\frac{X_{A}\rho(1+X)}{Am_{\text{H}}^{2}}\frac{nh\exp(\chi_{n}/kT)}{(2\pi m_{e}kT)^{3/2}}
 \end{equation*}
@@ -961,7 +963,7 @@ where we've used the definition of the ionization potential $\chi_{n}$ to elimin
 \end{equation*}
 If we consider only the energy level $n=1$ we may find that the opacity, leaving behind all numerical factors, is a function of 
 \begin{equation*}
-	\kappa_{bf}(\nu) \propto \left[\frac{\chi_{n}}{kT}\exp(\chi_{n}(kT)\left(\frac{kT}{h\nu}\right)^{3})\right]Z(1+X)\rho T^{-3.5}
+	\kappa_{bf}(\nu) \propto \left[\frac{\chi_{n}}{kT}\exp\left(\chi_{n}(kT)\left(\frac{kT}{h\nu}\right)^{3}\right)\right]Z(1+X)\rho T^{-3.5}
 \end{equation*}
 and the term within squared parentheses is approximately of order 1, since terms with $h\nu\sim kT$ will be weighed more when performing the Rosseland mean. If we restore all numerical factors and perform the aforementioned Rosseland mean, you'd find 
 \begin{equation}
@@ -969,10 +971,12 @@ and the term within squared parentheses is approximately of order 1, since terms
 	\label{eq:photoionizationopacity}
 \end{equation}
 which, as anticipated, has the same temperature and density dependencies as the free-free contribution.
+
 \subsubsection*{Level Jump}
-With \emph{level jump} we refer to the absorption of radiation by an electron bound to an ion that causes the electron to move from one bound state to a more energetic one. After the transition the electron will have to move down to the original bound state, for the ion has to return in equilibrium with the surroundings. The photon emitted during this de-excitation will have the same energy of the absorbed one, but it is re-emitted in a random direction.
+With \emph{level jump} we refer to the absorption of radiation by an electron bound to an ion that causes the electron to move from one bound state to a more energetic one. After the transition, the electron will have to move down to the original bound state, for the ion has to return in equilibrium with the surroundings. The photon emitted during this de-excitation will have the same energy of the absorbed one, but it is re-emitted in a random direction.
 \par This process necessarily involves photons of certain frequencies, corresponding to the energy differences between the initial and final bound state of the electron. Bound-bound processes can become important contributors to the total opacity for temperatures below $\sim 10^{6}\,\text{K}$.
 \par Since a formal discussion of bound-bound opacitive mechanisms would have to make use of Einstein's coefficients (and we would end up not finding a nice analitical solution, but rather statistics for the process) we'll skip right to the next opacitive channel.
+
 \subsection{Electron Conduction}
 As we might expect from its name, electron conduction is a \emph{diffusive process}, in the sense that it can be described by a diffusive equation of the form 
 \begin{equation*}
@@ -984,7 +988,7 @@ If electrons are non-degenerate, the cross section for conductive mechanisms is 
 \end{equation*}
 But things change rather dramatically if the gas becomes degenerate: The cross section for the process decreases and thus the mean free path for electrons raises considerably. For the purposes of our discussion, let us recall the Fermi momentum 
 \begin{equation}
-	p_{F} = \left(\frac{3n_{e}}{8\pi}\right)^{1/3}h \quad n_{e} = \frac{\rho}{\mu_{e}m_{\text{H}}}
+	p_{F} = \left(\frac{3n_{e}h^{3}}{8\pi}\right)^{1/3} \quad n_{e} = \frac{\rho}{\mu_{e}m_{\text{H}}}
 	\label{eq:fermimomentum}
 \end{equation}
 If diffusion is isotropic, we can assume the generalized Fick law to hold, and so 

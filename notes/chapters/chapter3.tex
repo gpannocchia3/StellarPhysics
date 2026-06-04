@@ -17,8 +17,8 @@
 
 \section{Fitting Method for Stellar Structures Integration}
 
-\par In principle, you could use an atmosphere model to describe more or less accurately the atmosphere of a star. However, it may also happen that you \emph{don't want} to use an atmosphere model but rather use an approximate model. In the present section, we're going to discuss a little bit of this can be done. Clearly, these rough calculation will hold, if approximately, only in small main sequence stars, which have "simpler" atmospheres.
-\par The procedure here described follows closely the discussion by (blank, at the moment I've yet to find someone talking about this). 
+\par In principle, you could use an atmosphere model to describe more or less accurately the atmosphere of a star. However, it may also happen that you \emph{don't want} to use an atmosphere model but rather use an approximate model. In the present section, we're going to discuss a little bit of how this can be done. Clearly, these rough calculation will hold, if approximately, only in small main sequence stars, which have "simpler" atmospheres.
+\par The procedure here described follows closely the discussion by \cite{2005essp.book.....S}. 
 \par Consider the equation for hydrostatic equilibrium. In the atmosphere, we're going to use as independent variable the optical depth $\tau$, so that
 \begin{equation*}
     \frac{\text{d}p}{\text{d}r} = \der{p}{r}\cdot\der{\tau}{r} = -\frac{GM_{r}\rho}{r^{2}}
@@ -54,7 +54,7 @@ where the coefficients are the product of a fitting procedure.
 \begin{equation*}
     p = p_{\text{gas}}+p_{\text{rad}}+p_{\text{turb}}
 \end{equation*}
-As you should know if you've attended the Fluid Dynamics or the Astrophysical Processes course, turbulence is one hell of a beast to deal with. To give you an idea of how much complex it is to even build a half-functioning model of turbulence, here's Werner Heisenberg's take on the subject\footnote{Yes, this is the same Werner Heisenberg that laid the foundations of Quantum Mechanics.}:
+As you should know if you've attended the Fluid Dynamics or the Astrophysical Processes course, turbulence is one hell of a beast to deal with. To give you an idea of how much complex it is to even build a half-functioning model of turbulence, here's Werner Heisenberg's take on the subject\footnote{Yes, this is the same Werner Heisenberg that has laid the foundations of Quantum Mechanics.}:
 \begin{quote}
    "\emph{When I meet God, I am going to ask him two questions: why relativity? And why turbulence? I really believe he will have an answer for the first}."
 \end{quote}
@@ -72,7 +72,7 @@ Our external boundary conditions are the star luminosity $L_{*}$ and the effecti
 \par Let's assume we're starting with a very small optical depth $\tau = \tau_{0} \ll 1$, so that the pressure (and the opacity) is small $p = \epsilon \ll 1$. So, assuming we're given an expression of the form $T = T(\tau, T_{\text{eff}})$, we can calculate $T$ plugging in our values for $\tau = \tau_{0}$ and $T_{\text{eff}}$.
 \par From the EoS, since we already knew $p = \epsilon$ and $T$ we've just calculated, we obtain the density $\rho$. At this point, using all of this and the chemical composition, we can calculate the mean opacity $\bar{\kappa}$ and put everything in the equation of hydrostatic equilibrium and check if our solution is self-consistent. If not, we re-iterate the process (changing our starting values for $\tau$ and $p$) until the solution satisfies hydrostatic equilibrium within a given precision.
 \par Now that we have all our varibles determined on the external boundary, we can start integrating towards the inner regions. To do so, derivatives in our equations become incremental ratios and we solve mesh after mesh until we reach the base of the atmosphere (the boundary with the sub-atmosphere).
-\par Integrating through the sub-atmosphere, we have to raccord the values of the $n$-th mesh of the region with the most external one of the stellar interior. So we'll have to match $p_{N}$, $\rho_{N}$, $T_{N}$, $L_{N}$ and $R_{N}$.
+\par Integrating through the sub-atmosphere, we have to joint the values of the $n$-th mesh of the region with the most external one of the stellar interior. So we'll have to match $p_{N}$, $\rho_{N}$, $T_{N}$, $L_{N}$ and $R_{N}$.
 \par As anticipated, in the stellar interior we're going to be integrating with respect to the mass $M_{r}$, and we'll be using as boundary conditions at the center of the star $\rho_{C}$, $p_{C}$, $L_{r} \approx 0$, $M_{r}\approx 0$.
 \par Consider the equivalent formulation for the equation of hydrostatic equilibrium
 \begin{equation*}
@@ -112,11 +112,11 @@ As mentioned in the passing at the end of last section, it is customary to use t
 \begin{equation*}
     f_{i,k} = \delta_{i,k} \neq 0
 \end{equation*}
-where $f_{i,k}$ is just a fancy way to indicate the $i$-th stellar equation in the $k$-th mesh and $\delta_{i,k}$ is the, hopefully small, result of the $i$-th equation in the $k$-th mesh. Clearly, at the first iteraction, it is going to be hard that it is vanishing as we'd like it to be. In fact, in general $\delta_{i,k}$ is a function of all the physical properties of the star in the $k$-th mesh and of the $(k+1)$-th mesh. We can express it as 
+where $f_{i,k}$ is just a fancy way to indicate the $i$-th stellar equation in the $k$-th mesh and $\delta_{i,k}$ is the, hopefully small, result of the $i$-th equation in the $k$-th mesh. Clearly, after the first iteraction, it is unlikely that it is vanishing as we'd like it to be. In fact, in general $\delta_{i,k}$ is a function of all the physical properties of the star in the $k$-th mesh and of the $(k+1)$-th mesh. We can express it as 
 \begin{equation*}
     \delta_{i,k} = \mathcal{F}(p_{k}, T_{k}, R_{k}, L_{k},p_{k+1}, T_{k+1}, R_{k+1}, L_{k+1})
 \end{equation*}
-What we're going to do is slightly changing the test-values for each mesh until $\delta_{i,k}$ is found within the desired accuracy. The change in $\delta_{i,k}$ can be expressed as the sum of all the variation induced by the little changes in parameters Said $X_{i}$ one of the physical properties, we can write
+What we're going to do is slightly changing the test-values for each mesh until $\delta_{i,k}$ is found within the desired accuracy. The change in $\delta_{i,k}$ can be expressed as the sum of all the variation induced by the little changes in parameters. Said $X_{i}$ one of the physical properties, we can write
 \begin{equation*}
     \Delta\delta_{i,k} = \sum_{j}\parder{\delta_{i,k}}{X_{j,k}}\Delta X_{j,k} + \sum_{j}\parder{\delta_{i,k}}{X_{j,k+1}}\Delta X_{j,k+1}
 \end{equation*}
