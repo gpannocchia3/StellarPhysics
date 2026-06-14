@@ -4,7 +4,7 @@
 
 \section{Introduction}
 As per the name of this chapter, we're going to introduce a series of important quantities and concepts that are going to be particularly useful later on. For this first introductory part I'm going to follow \cite{choudhuri}, §1.
-\par For expressing astrophysical measurements, it should be clear that the units that we customarily use for our everyday life wouldn't be doing a really good job. For example, most of the times, it isn't particularly convient to have masses expressed in grams or kilograms, for the masses we'll be usually concerned with are so large that saying that a star weighs $10^{33}\,\text{g}$ isn't particularly insightful, since we don't have an everyday-life object to compare it with.
+\par For expressing astrophysical measurements, it should be clear that the units that we customarily use for our everyday life wouldn't be doing a really good job. For example, most of the times, it isn't particularly convenient to have masses expressed in grams or kilograms, for the masses we'll be usually concerned with are so large that saying that a star weighs $10^{33}\,\text{g}$ isn't particularly insightful, since we don't have an everyday-life object to compare it with.
 \par What often happens in astrophysics is that masses are usually expressed in terms of \emph{solar masses} $M_{\odot}$, which has value
 \begin{equation}
     M_{\odot} = 1.99 \cdot 10^{33}\,\text{g}
@@ -42,6 +42,7 @@ if we assume $d$ to be much larger than an astronomic unit (which for all releva
 Obviously, for even larger distances the standard units are the \emph{kiloparsec} (roughly the measure of galactic sizes), the \emph{megaparsec} (the typical measure of galactic distances) and the \emph{gigaparsec} (the typical measure of the observable Universe).
 
 \section{Relevant quantities for radiative transfer}
+
 Although some books often start their description of radiatively relevant quantities from the definition of \emph{monochromatic energy} and \emph{monochromatic intensity}, I found that it is most misleading, since, in all but a few cases, what we experimentally measure are fundamentally \emph{fluxes}. 
 \par We shall then consider the \emph{monochromatic flux} $F_{\nu}$ ($\text{erg}\,\text{s}^{-1}\,\text{Hz}^{-1}\,\text{cm}^{-2}$) produced by some source passing through a small area $\text{d}A$ located somewhere in space. 
 \begin{figure}[h!]
@@ -94,6 +95,7 @@ where the quantity $I_{\nu}(\textbf{r}, t, \textbf{$\hat{k}$})$ is called the \e
 \end{definition}
 
 \subsection{Blackbody radiation}
+
 Even at an undergraduate level, we're all fairly familiar with \emph{blackbody radiation}. The easiest way to deduce the expression for the energy density of photons in \emph{thermal equilibrium} (STE) inside a cavity is by the means of statistical mechanics.
 \par Remember the Bose-Einstein distribution ($\mu = 0$)
 \begin{equation*}
@@ -155,9 +157,12 @@ the blackbody radiation assumes the much simpler form of
 	B_{\nu}^{W} = \frac{2h\nu^{3}}{c^{2}}\exp\left(-\frac{h\nu}{kT}\right)
 \end{equation*}
 This expression is known as Wien's Law.
+
 \subsection{Characteristic Temperatures}
 Starting from the blackbody spectrum we can give various definitions of temperature, that are going to be more and less useful when dealing with stars.
+
 \subsubsection*{Brightness Temperature}
+
 One way of characterizing brightness (specific intensity) at a certain frequency is to give the temperature of the blackbody having the same brightness at that frequency. That is, for any value $I_{\nu}$ we define $T_{b}(\nu)$ by the relation
 \begin{equation*}
     I_{\nu} = B_{\nu}(T_{b})   
@@ -168,18 +173,22 @@ this way of specifying brightness has the advantage of being closely connected w
     T_{b} = \frac{c^{2}}{2\nu k}I_{\nu} \quad h\nu/kT \ll 1
 \end{equation}
 Note that the uniqueness of the definition of brightness temperature relies on the monotonicity property of Planck‘s law. Also note that, in general, the brightness temperature is a function of $\nu$.
+
 \subsubsection*{Color Temperature}
+
 Often a spectrum is measured to have a shape more or less of blackbody form, but not necessarily of the proper absolute value. For example, by measuring $F_{\nu}$, from an unresolved source we cannot find $I_{\nu}$, unless we know the distance to the source and its physical size.
 \par By fitting the data to a blackbody curve without regard to vertical scale, a color temperature $T_{c}$, is obtained. Often the “fitting” procedure is nothing more than estimating the peak of the spectrum and applying Wien’s displacement law to find a temperature
 \begin{equation}
     \lambda_{\text{peak}} = \frac{b}{T}
 	\label{eq:wien_dl}
 \end{equation}
-with $b$ a known constant of value\footnote{The reported value is the one presented in the most recent release of the Particle Data Group\cite{ParticleDataGroup2024}. The value is calculated from exact values, and is thus exact to the number of decimal places given.} 
+with $b$ a known constant of value\footnote{The reported value is the one presented in the most recent release of the Particle Data Group \cite{ParticleDataGroup2024}. The value is calculated from exact values, and is thus exact to the number of decimal places given.} 
 \begin{equation}
     b = 2.897771955\cdot 10^{-3}\,\text{m}\cdot\text{K}
 \end{equation}
+
 \subsubsection*{Effective Temperature}
+
 The effective temperature of a source $T_{eff}$ is derived from the total amount of flux, integrated over all frequencies, radiated at the source. We obtain $T_{eff}$ by equating the actual flux $F$ to the flux of a blackbody at temperature $T_{eff}$
 \begin{equation}
     F = \int I_{\nu}\cos\theta \,\text{d}\nu\,\text{d}\Omega := \sigma T_{eff}^{4}
@@ -187,6 +196,7 @@ The effective temperature of a source $T_{eff}$ is derived from the total amount
 \end{equation}
 
 \section{Magnitude Scales}
+
 When coming down to determining the properties of a star, there are two quantities that shine a little brighter than the others: The luminosity and the flux.
 \par The luminosity of a star is generally defined as the power emitted by a given star over time (potentially over a given wavelength) and its expression is given by the relation
 \begin{equation}
@@ -199,9 +209,9 @@ When coming down to determining the properties of a star, there are two quantiti
     \label{eq:flux}
 \end{equation}
 The flux, however, doesn't tell us much about the characteristics of the star, differently from the luminosity. But since what we can measure are fluxes, it is then crucial that we find a way to accurately measure distances so to infer the luminosity of an object.
-\par Since ancient times, mankind has always tried to measure the brightness of stars. The efforts of those that came before us are nowadays crystallized in a quantities that is still in use: The \emph{magnitude}.
+\par Since ancient times, mankind has always tried to measure the brightness of stars. The efforts of those that came before us are nowadays crystallized in a quantity that is still in use: The \emph{magnitude}.
 \par The concept of magnitude is strictly related to the way the human eye was believed to perceive the differences in intensities.
-\par Hypparchus, back in ancient Greece, classified all stars into six classes according to their apparent brightness. This classes went from class I, the brightest stars, to class VI, the less bright. According to Hypparchus, the brightest and faintest stars had an apparent brightness that is in the ratio of 100.
+\par Hypparchus, back in ancient Greece, classified all stars into six classes according to their apparent brightness. These classes went from class I, the brightest stars, to class VI, the less bright. According to Hypparchus, the brightest and faintest stars had an apparent brightness that is in the ratio of 100.
 \par Let us consider a star with flux $F_{*}$ and some reference flux $F_{0}$. We define the \emph{apparent magnitude} as 
 \begin{equation*}
     m_{*} = x \log_{10}\left(\frac{F_{*}}{F_{0}}\right)
@@ -223,7 +233,7 @@ More often than not, it is customary to measure magnitudes in given wavelengths'
     \label{eq:absolutemagnitude}
 \end{equation}
 The difference $m-M$ is often called \emph{distance module} (DM) and is used as an indirect way to express a distance.
-\par For classifying stars according to their color it's often used the so-called UBV photometric system (from \emph{Ultraviolet}, \emph{Blue}, \emph{Visual}), also called the Johnson system (or Johnson-Morgan system), which makes use of filters so that the mean wavelengths of response functions (at which magnitudes are measured to mean precision) are $364\, \text{nm}$ for U, $442\, \text{nm}$ for B, $540\, \text{nm}$ for V.
+\par For classifying stars according to their color it's often used the so-called UBV photometric system (from \emph{Ultraviolet}, \emph{Blue}, \emph{Visual}), also called the Johnson system (or Johnson-Morgan system), which makes use of filters so that the mean wavelengths of response functions (at which magnitudes are measured to great precision) are $364\, \text{nm}$ for U, $442\, \text{nm}$ for B, $540\, \text{nm}$ for V.
 \par Given this setup, we can easily calculate the magnitudes, say, in the Blue and Visible light-bands, so that the relative magnitudes are
 \begin{equation*}
     m_{B}-m_{V} = -2.5\log_{10}\left(\frac{F_{B}}{F_{V}}\right) := B-V
@@ -256,16 +266,16 @@ Observing the spectrum emitted by stars we might expect, a bit naively, to obser
 	\label{fgr:solarbb}
 \end{figure}
 \par Although a tad annoying for the characterization of the radiation field, this deviation from ideal behavior is what allows us to infer the chemical composition of stars!
-\par Deviation from blackbody behavior in fact is usual to take the form of \emph{emission} and \emph{absorption} lines in the spectrum, which tend to stick out like sore thumbs. Clearly, different elements (and different species of the same element) will produce very different lines, allowing us to reconstruct the chemical composition of the photosphere, which is the region where the photons we observe are coming from.
+\par Deviation from blackbody behavior is in fact usual to take the form of \emph{emission} and \emph{absorption} lines in the spectrum, which tend to stick out like sore thumbs. Clearly, different elements (and different species of the same element) will produce very different lines, allowing us to reconstruct the chemical composition of the photosphere, which is the region where the photons we observe are coming from.
 \begin{figure}[h!]
 	\centering 
 	\includegraphics[width=0.7\textwidth]{img/vegalinesspec.pdf}
 	\caption{Absorption lines in the spectrum of Vega as measured with an Alpy600 spectrograph. Credits: Group 8.}
 	\label{fgr:vegalines}
 \end{figure}
-\par For our purposes, we'll be interested in the \emph{original} chemical composition of a star rather than its actual, or future, value, so that that is shed of the modifications induced by ongoing nuclear reactions.
+\par For our purposes, we'll be interested in the \emph{original} chemical composition of a star rather than its actual, or future, value, so the one that is shed of the modifications induced by ongoing nuclear reactions.
 \par At this point, you may be objecting: Isn't the effect of nuclear reactions relevant only in the inner regions of stars?
-\par As often happens in Physics, the correct answer is "It depends." Can we take for granted that the chemical composition we see in the photosphere is the same as the original one?
+\par As often happens in Physics, the correct answer is "might be." Can we take for granted that the chemical composition we see in the photosphere is the same as the original one?
 \par Generally, no. As we'll see, stars in a certain range of masses and in some evolutionary stage of their life may develope convective or radiative envelopes, and the answer to our question we can find once we determine which of the two is going to win.
 
 \subsection{Universal Curve of abundances}
@@ -319,9 +329,9 @@ which, on average, evaluates to $[\alpha\,|\,\text{Fe}] \sim 0.3$ for stars in g
 
 \subsection{Initial Mass Function (IMF)}
 
-As we mentioned somewhere above, stars are born in clusters. During the arduous process that is stacking bit after bit of Hydrogen (along with Helium and whatever the star my found in the cluster) to build its own body, it's clear that we cannot reasonably expect all stars to be born with the same masses, just like you wouldn't expect your brother/sister to weigh just as much as you did when you were born.
-\par What we experimentally observe is a \emph{distribution of mass} in the cluster, influenced by every little fluctuation occuring in a cluster.
-\par It is worth to notice, however, that the distribution we usually refer to as IMF (\emph{Initial Mass Function}) is not the \emph{Present Day Mass Function}, which gives the statistic of the masses of stars as seen at present day. That the two distributions must be different is evident if you consider more massive stars: These, that would appear in the IMF, \emph{would not} appear in the PDMF, because they are most likely dead. Using stellar evolution models, however, it is possible to pass from a given IMF to the PDMF.
+As we mentioned somewhere above, stars are born in clusters. During the arduous process that is stacking bit after bit of Hydrogen (along with Helium and whatever the star may found in the cluster) to build its own body, it's clear that we cannot reasonably expect all stars to be born with the same masses, just like you wouldn't expect your brother/sister to weigh just as much as you did when you were born.
+\par What we experimentally observe is rather a \emph{distribution of mass} in the cluster, influenced by every little fluctuation occuring in a cluster.
+\par It is worth to notice, however, that the distribution we usually refer to as IMF (\emph{Initial Mass Function}) is not the \emph{Present Day Mass Function}, which gives the statistic of the masses of stars as seen at present day. That the two distributions must be different is evident if you consider more massive stars: These, that would appear in the IMF, \emph{would not} appear in the PDMF, because odds are they are most likely dead. Using stellar evolution models, however, it is possible to pass from a given IMF to the PDMF.
 \par Evaluating the mass distribution of stars right away is a burdensome task, that, for all but a few rare cases\footnote{For example, one of the few systems we're able to "accurately" determine the mass of is that of spectroscopic binaries.}, proves to be quite impossible. For that reason, it is customary to study the distribution in luminosity, or, equivalently, the distribution in given magnitude bands.
 \par In fact, with a basic application of the chain rule, you can write
 \begin{equation}
@@ -351,7 +361,7 @@ In this subsection I'm going to anticipate some of the subjects that are going t
 \par Although that is technically true, it doesn't take into account the fact that (effective) temperature is positively correlated with the mass of a star. That means that more massive stars are generally hotter, which in turn pumps up the efficiency of nuclear reactions\footnote{Nuclear reactions in stars can be shown to present a power-law dependency on the temperature, scaling at least as $T^{4}$.}. This means that more fuel gets burned to balance the collapse caused by gravitational pulls.
 \par This phenomenon can be generally summarized under the name of \emph{stellar thermostate}: When a star expands, its density decreases, and so its temperature; the efficiency of nuclear reactions thus decreases until its evenly balanced by gravitational collapse. Conversely, if the gravitational pull is stronger, the star contracts and gets hotter, the efficiency of the nuclear reactions ramps up along with the luminosity, halting the collapse.
 \par This inspires our first, important deduction: If in a cluster stars are predominantely blue, the cluster must be young! Since more massive stars have a shorter lifespan, if the cluster was older, then we wouldn't be able to observe such stars.
-\par It's important to distinguish to kinds of clusters: \emph{Globular clusters} are generally old clusters found in galactic halos; they have little gas, no (recent) star formation and are generally arranged spherically symmetrically around the GC. In globular clusters would be logical to expect a lower metallicity, for a lower number of generations of stars might have followed one another in that region.
+\par It's important to distinguish two kinds of clusters: \emph{Globular clusters} are generally old clusters found in galactic halos; they have little gas, no (recent) star formation and are generally arranged spherically symmetrically around the GC. In globular clusters, it would be logical to expect a lower metallicity, for a lower number of generations of stars might have followed one another in that region.
 \par On the other hand \emph{open clusters} are now found in the galactic plane\footnote{Originally, they are likely to have formed in the halo, but their elliptic motion intersecting the GP have experienced numerous interactions with other stars and objects that have brought their trajectory to ultimately lie on the GP.}; they have much more gas available and there's continuous star formation. Generally, open clusters house a smaller number of stars, therefore allowing us to see only stars still in the \emph{main sequence} stage\footnote{The main sequence stage is an evolutionary stage of stars during which Hydrogen is burned in the core.}. In open clusters, it's sensible to expect a higher metallicity (with respect to globular clusters).
 \par As a further classification, astrophysicists are used to distinguish two (three) populations of stars, depending on their characteristics and the cluster they're found in:
 \begin{itemize}

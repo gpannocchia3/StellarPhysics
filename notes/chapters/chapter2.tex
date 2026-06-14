@@ -52,8 +52,8 @@ that in turn would mean having magnetic fields as high as $B \approx 3000-5000\,
 \subsection{Free Fall Time}
 
 \par Our initial claim was that for the majority of their life, stars are in \emph{hydrostatic equilibrium}, in a configuration where pressure gradients are evenly matching the collapse forces. But can we be so sure that a star is, as a matter of fact, in equilibrium?
-\par We know, for example, that the Sun has been stable on timescales of at least a couple hundred years. On top of that, looking at the Milky way we can find billions of stars with characteristics similar to those of the Sun but in different stages of their life, so that we might have an idea of the whole life cycle of our dearest yellow dwarf.
-\par From those observations, we learn that the Sun must have been stable for times of the order of millions of years. Of course, to make sure it is indeed in hydrostatic equilibrium, we should compare with the \emph{dynamical timescales} the observation timescales over which we can safely claim that its characteristics (e.g., the luminosity and the radius) haven't changed.
+\par We know, for example, that the Sun has been stable on timescales of at least a couple hundred years. On top of that, looking at the Milky Way we can find billions of stars with characteristics similar to those of the Sun but in different stages of their life, so that we might have an idea of the whole life cycle of our dearest yellow dwarf.
+\par From those observations, we learn that the Sun must have been stable for a time of the order of millions of years. Of course, to make sure it is indeed in hydrostatic equilibrium, we should compare with the \emph{dynamical timescales} the observation timescales over which we can safely claim that its characteristics (e.g., the luminosity and the radius) haven't changed.
 \par Let's consider a spherically symmetric star with constant density. In presence of gravity alone, we can write 
 \begin{equation*}
 	\ddot{r} = -\frac{GM}{r^{2}}
@@ -92,7 +92,7 @@ In the last section we showed that is fair for us to assume that stars are in \e
 from which 
 \begin{equation}
 	\boxed{
-		\frac{\text{d}P}{\text{d}r} = -\frac{GM_{r}}{r^{2}}
+		\frac{\text{d}P}{\text{d}r} = -\frac{GM_{r}\rho}{r^{2}}
 	}
 	\label{eq:mechanical_eq}
 \end{equation}
@@ -123,7 +123,7 @@ with $\mu(r)$ the \emph{mean molecular weight}, which clearly depends on the ele
 \end{itemize}
 so that the total number of particles (per unit volume) is just
 \begin{equation}
-	n = \left[2X+\frac{3Y}{4}+\sum_{i=4}^{N}\left(\frac{X_{i}}{A_{i}}+\frac{Z_{i}X_{i}}{A_{i}}\right)\right]\frac{\rho}{m_{H}}
+	n = \left[2X+\frac{3Y}{4}+\sum_{i=4}^{N}\left(\frac{X_{i}}{A_{i}}+\frac{Z_{i}X_{i}}{A_{i}}\right)\right]\frac{\rho}{m_{\text{H}}}
 	\label{eq:completeionization_species}
 \end{equation}
 \par If we consider the following approximation for (\ref{eq:completeionization_species})
@@ -140,13 +140,13 @@ where we've introduced the \emph{metallicity} $Z$.
 \begin{equation*}
 	\mu_{i}^{-1} = 2X + \frac{3Y}{4} +\sum_{i = 4}^{N}\frac{X_{i}}{A_{i}}
 \end{equation*}
-and consider an average charge for the mixture of elements $\bar{Z}$, so that $n_{e} = \bar{Z}n_{i} \approx \bar{Z}\rho/\mu_{i}m_{H}$. From this we can define the mean molecular weight of electrons as 
+and consider an average charge for the mixture of elements $\bar{Z}$, so that $n_{e} = \bar{Z}n_{i} \approx \bar{Z}\rho/\mu_{i}m_{\text{H}}$. From this we can define the mean molecular weight of electrons as 
 \begin{equation*}
-	\frac{\mu_{i}}{\bar{Z}} \to n_{e} = \frac{\rho}{\mu_{e}m_{H}}
+	\frac{\mu_{i}}{\bar{Z}} \to n_{e} = \frac{\rho}{\mu_{e}m_{\text{H}}}
 \end{equation*}
 \par If we plug this all back in the EoS for the perfect gas 
 \begin{equation*}
-	p_{\text{gas}} = nkT = (n_{e}+n_{i})kT = \frac{\rho k T}{m_{h}}\left(\frac{1}{\mu_{i}}+\frac{1}{\mu_{e}}\right)
+	p_{\text{gas}} = nkT = (n_{e}+n_{i})kT = \frac{\rho k T}{m_{\text{H}}}\left(\frac{1}{\mu_{i}}+\frac{1}{\mu_{e}}\right)
 \end{equation*}
 we conclude
 \begin{equation}
@@ -225,8 +225,8 @@ If you want to see a slight more rigorous derivation of (\ref{eq:energytransport
 
 \subsection{Energy Production}
 
-Let us consider what happens if the stellar atmosphere was not constantly replenished with energy from the inner layers. How long would it take for the star to deplete completely the energy stored in the atmosphere?
-\par The average density of the outer layers of the atmosphere is $\rho^{\text{ext}}_{\odot}\sim 10^{-7}\,\text{g}\,\text{cm}^{-3}$. We can thus give an estimate of the mean free path $\lambda_{j}\sim (\rho\bar{\kappa})^{-1}\sim 100-300\,\text{km}$. We've made the (usually decent) approximation of opacity being dominated by photoelectric effect on $\text{H}^{-}$ ions, $\bar{\kappa} \approx 0.3\,\text{cm}^{2}\,\text{g}^{-1}$. Note that in these conditions, the width of the atmosphere is of the same order of the mean free path of photons.
+Let us consider what happens if the stellar atmosphere was not constantly replenished with energy from the inner layers. How long would it take for the star to deplete completely the energy stored in the atmosphere? The average density of the outer layers of the atmosphere is $\rho^{\text{ext}}_{\odot}\sim 10^{-7}\,\text{g}\,\text{cm}^{-3}$. We can thus give an estimate of the mean free path $\lambda_{j}\sim (\rho\bar{\kappa})^{-1}\sim 100-300\,\text{km}$.
+\par We've made the (usually decent) approximation of opacity being dominated by photoelectric effect on $\text{H}^{-}$ ions, $\bar{\kappa} \approx 0.3\,\text{cm}^{2}\,\text{g}^{-1}$. Note that in these conditions, the width of the atmosphere is of the same order of the mean free path of photons.
 \par We know the solar flux $F_{\odot} \sim 6 \cdot 10^{10}\,\text{erg}\,\text{cm}^{-2}\,\text{s}^{-1}$, as well as its temperature and pressure $T_{eff}\sim 6000\,\text{K}$, $p\approx 10^{5}\,\text{dyne}\,\text{cm}^{-2}$. The average number of particles is $n\sim 10^{17}\,\text{cm}^{-3}$, which can be integrated over the vertical direction to find an average number of photons per unit surface.
 \par The mean energy of photons can be expressed as $E_{p} = 3kT/2\sim 10^{-12}\,\text{erg}$. The energy per unit surface is thus $E_{s}\approx 10^{12}\,\text{erg}\,\text{cm}^{-2}$. Finally, we find that the energy stored in the atmosphere would be depleted in roughly
 \begin{equation*}
@@ -372,7 +372,7 @@ Separating variables and integrating, we find
 \end{equation}
 which is called \emph{Kelvin-Helmoltz timescale}. In short, it represents the time during which the stellar structure is able to sustain itself radiating away the energy generated from the gravitational shrinking.
 \par Note that we're implicitly assuming that the luminosity doesn't change while the star collapses, which is in general a very bad approximation.
-\par Under the approximation of homogeneous density $q = 3/5$, and the Kelvin-Helmoltz timescale is
+\par Under the approximation of homogeneous density $q = 3/5$, the Kelvin-Helmoltz timescale is
 \begin{equation*}
 	\tau_{KH} \approx 10\,\text{Myr}\,\left(\frac{M}{M_{\odot}}\right)^{2}\left(\frac{R_{\odot}}{R}\right)\left(\frac{L_{\odot}}{L}\right)
 \end{equation*}
@@ -431,7 +431,7 @@ without some kind of prescription for the energy production rate, this is as far
 \begin{equation*}
 	\epsilon \propto \rho^{m}T^{n}
 \end{equation*}
-with $m=1$ both in the case of energy production through the $\text{ppI}$ chain and the CN-NO chain. The two of them, however, have really different dependencies on the temperature: The $\text{ppI}$ scales as $\epsilon \propto T^{4}$, while the CN-NO as $\epsilon\propto T^{15}$. Plugging in the aforementioned expression, we finally find
+with $m=1$ both in the case of energy production through the $\text{ppI}$ chain and the CN-NO chain. The two of them, however, have really different dependencies on the temperature: The $\text{ppI}$ scales as $\epsilon \propto T^{4}$, while the CN-NO as $\epsilon\propto T^{15-17}$. Plugging in the aforementioned expression, we finally find
 \begin{equation}
 	\boxed{
 	\rho^{m+1} \propto T^{3-n}
@@ -506,7 +506,7 @@ where $p_{\text{tot}} = p_{\text{gas}}+p_{\text{rad}}$. This assumption follows 
 \begin{equation*}
 	1-\beta \sim \bar{\kappa}(r)\epsilon
 \end{equation*}
-This is the so called \emph{Eddington Approximation}: Since $\epsilon \propto \rho T^{4}$ (at least as far as Hydrogen burning in main sequence stars is concerned) and $\bar{\kappa}\propto \rho^{\alpha}T^{-3.5}$ (Kramer's law), their product will be approximately constant\footnote{Note that this is only approximately true for Sun-like stars which are burning Hydrogen in the Main Sequence stage.}. 
+This is the so called \emph{Eddington Approximation}: Since $\epsilon \propto \rho T^{4}$ (at least as far as Hydrogen burning in main sequence stars is concerned) and $\bar{\kappa}\propto \rho^{\alpha}T^{-3.5}$ (Kramers' law), their product will be approximately constant\footnote{Note that this is only approximately true for Sun-like stars which are burning Hydrogen in the Main Sequence stage.}. 
 \par Moreover
 \begin{equation*}
 	p_{\text{tot}} = p = p_{\text{gas}}+p_{\text{rad}} = \frac{\rho kT}{\mu m_{\text{H}}} + \frac{1}{3}aT^{4}
@@ -524,7 +524,7 @@ so that
 	p = \left[\frac{3}{a}\left(\frac{k}{\mu m_{\text{H}}}\right)^{4}\frac{1-\beta}{\beta^{4}}\right]^{1/3}\rho^{4/3}
 	\label{eq:solar_politropicequation}
 \end{equation}
-which is a politropic equation as requested. With reference to (\ref{eq:politropic}), this relation would have a politropic index $n=3$. Note that in this case, since we don't know $\beta$, we don't know the multiplicative factor, nor we have the absolute certainty of it being constant. For the moment, we'll consider an averaged molecular weight over the whole stellar structure\footnote{Note that generally the solar structure is divided into two regions, one where Hydrogen burning has happened (\emph{solar interior}: $X \sim 0.34$, $Y\sim 0.64$, $Z \sim 0.02$ and $\mu \approx 0.85$, assuming complete ionization) and one where it has not (\emph{external envelope}: $X \sim 0.70$, $Y\sim 0.28$, $Z \sim 0.02$ and $\mu \approx 0.62$, assuming complete ionization).}.
+which is a politropic equation as requested. With reference to (\ref{eq:politropic}), this relation would have a politropic index $n=3$. Note that in this case, since we don't know $\beta$, we don't know the multiplicative factor, nor we have the absolute certainty of it being constant. For the moment, we'll consider a molecular weight averaged over the whole stellar structure\footnote{Note that generally the solar structure is divided into two regions, one where Hydrogen burning has happened (\emph{solar interior}: $X \sim 0.34$, $Y\sim 0.64$, $Z \sim 0.02$ and $\mu \approx 0.85$, assuming complete ionization) and one where it has not (\emph{external envelope}: $X \sim 0.70$, $Y\sim 0.28$, $Z \sim 0.02$ and $\mu \approx 0.62$, assuming complete ionization).}.
 \par We still don't know the multiplicative constant, but we know both the mass and the radius of the Sun. We've shown in (\ref{eq:politropic_mass}) that if we know both the mass and the radius of a star we're able to infer its central density
 \begin{equation*}
 	 M = M(\beta, \rho_{C})= 4\pi \lambda^{3}\rho_{c}(-\xi^{2}\partial_{\xi}\phi)_{\xi_{0}} = M_{\odot}
@@ -548,10 +548,10 @@ which is about half of the best estimate we'd find using less approximate models
 \end{equation*}
 thus allowing us to solve for $\beta$ (since we've calculated $\rho_{C}$ and we can deduce the value of $\lambda = R_{\odot}/\xi_{0}$). The solution is not exactly trivial, and is shown in (\ref{eq:betafactor})
 \begin{equation}
-	\frac{1-\beta}{\mu \beta^{4}} = \frac{a\pi}{48}\frac{G^{3}M_{\odot}^{2}m_{\text{H}^{4}}}{k^{4}(-\xi^{2}\partial_{\xi}\phi)_{\xi_{0}}} = A
+	\frac{1-\beta}{\mu \beta^{4}} = \frac{a\pi}{48}\frac{G^{3}M_{\odot}^{2}m_{\text{H}}^{4}}{k^{4}(-\xi^{2}\partial_{\xi}\phi)_{\xi_{0}}} = A
 	\label{eq:betafactor}
 \end{equation}
-which you can use also for sun-like stars. Given what we've found earlier, we can substitute for $\beta \approx 0.998$, meaning that most of the pressure is due to raw gas pressure (and not from radiation); the value of $\beta$ coming from evolution models is $\beta\sim0.999$ which is in great agreement with our present approximated result.
+which you can use also for sun-like stars. Given what we've found earlier, we can substitute and find $\beta \approx 0.998$, meaning that most of the pressure is due to raw gas pressure (and not from radiation); the value of $\beta$ coming from evolution models is $\beta\sim0.999$, which is in great agreement with our present approximated result.
 \par We can also calculate the central pressure $p_{C}\sim 1.2\cdot 10^{17}\,\text{dyne}/\text{cm}^{2}$ and the central temperature $T_{C}\sim 1.6\cdot 10^{7}\,\text{K}$.
 \par Similarly to what we've done in (\ref{eq:politropic_mass}), we can calculate the mass within a sphere of radius $r$. The expression is almost identical
 \begin{equation}
@@ -625,7 +625,7 @@ and we also have the equation of state, so we have enough equations to solve thi
 	R:\;z = x^{z_{1}}y^{z_{2}} \quad & \quad L:\;s = x^{s_{1}}y^{s_{2}}\\
 	P:\;p = x^{p_{1}}y^{p_{2}} \quad & \quad T:\;t = x^{t_{1}}y^{t_{2}}
 \end{align*}
-thus reducing the equations to equations for the powers of $x$ and $y$, whose sum must necessary be equal to zero (by simple means of dimensional analysis). You can read an example of solution right below (or in any book that deals with self-similar solutions for stellar structures)
+thus reducing the equations to equations for the powers of $x$ and $y$, whose sum must necessarily be equal to zero (by simple means of dimensional analysis). You can read an example of solution right below (or in any book that deals with self-similar solutions for stellar structures)
 \begin{equation*}
 	z_{1} = \frac{1}{2}(1+A) \quad A = \left[\frac{4\delta(1+a+\lambda\alpha)}{\nu+b-4-\lambda\delta}+4\alpha-3\right]^{-1}
 \end{equation*}
@@ -633,7 +633,7 @@ thus reducing the equations to equations for the powers of $x$ and $y$, whose su
 \section{Convective Transport}
 
 Matter inside the stars is never at rest, but usually the movements of the gas elements are small, random perturbations around their equilibrium positions. Under certain conditions, these small random perturbations can trigger large-scale motions that involve sizable fractions of the total stellar mass. These large-scale motions are called \emph{convection}. Hot elements may rise to the top, thereby transporting energy from the hottest to the coolest regions, where they cool and then fall down as cold material.
-\par In order to include convective transport in the stellar model computation we'll need to find a criterion for the onset of convection, and the expression of the temperature gradient in a convection zone. Note that the treatment of convections in the stellar interior is extremely complicated and needs the introduction of various approximations. This stems from the fact that the flow of gas in a stellar convective region is turbulent, in the sense that the velocity and all the other properties of the flow vary in a random and chaotic way.
+\par In order to include convective transport in the stellar model computation we'll need to find a criterion for the onset of convection, and the expression of the temperature gradient in a convection zone. Note that the treatment of convection in the stellar interior is extremely complicated and needs the introduction of various approximations. This stems from the fact that the flow of gas in a stellar convective region is turbulent, in the sense that the velocity and all the other properties of the flow vary in a random and chaotic way.
 \par The random nature of turbulence precludes computation based on a complete description of the motion of all the fluid particles based on a solution of the Navier-Stokes equations for the stellar fluid.
 \par In the following we're going to adapt an extremely simple model in which the gas flow is made of gas elements with a certain characteristic size, the same in all dimensions, that move by a certain mean free path before dissolving. All gas elements have the same physical properties at a given distance $r$ from the center.
 \input{chapters/bubble.tex}
@@ -705,7 +705,9 @@ which is called \emph{Ledoux Criterion}. Note that in this case it's much harder
 \begin{equation*}
 	\nabla_{\text{rad}} > \nabla_{\text{ad}} + \frac{\phi}{\mu}\nabla_{\mu}
 \end{equation*}
+
 \subsection{The Overshooting Problem}
+
 The \emph{overshooting problem} can be quite a nuisance if we want to calculate the spatial extension of the convective region of the star. To put it simply, in the convective region, the blob of gas will rise with non-zero velocity which, in turn, won't be magically disappearing as soon as it crosses the non-convective region. This causes the convective region to formally "expand" outwards. This can potentially impact significantly on the permanency of a star in the Main Sequence stage. If we want to address the increasing in size of the convective region, it is customary to introduce a new parameter $\beta_{ov}$ so that
 \begin{equation*}
 	l_{ov} = \beta_{ov}H_{p}
@@ -750,6 +752,7 @@ In short
 	}
 \end{equation*}
 This tells us that the adiabatic gradient is the maximum gradient that can set into a given structure (assuming $\delta_{\text{ad}}\approx 0$). What we still have to do is find the convective gradient in the external regions.
+
 \subsection{Mixing Length Theory}
 
 In order to find what we're looking for (an approximate description of the convective gradient) we're going to need some simplifying assumptions:
@@ -763,13 +766,13 @@ First and foremost, let us define the \emph{pressure scale height} $H_{p}$ as th
 \begin{equation*}
 	\frac{1}{H_{p}} = -\frac{1}{p}\der{p}{r} = -\der{\ln p}{r}
 \end{equation*}
-If we assume that all contribution to the pressure comes from the gas (and so we neglect other contributions, like radiation pressure), we can write  plug in the equation for hydrostatic equilibrium and find 
+If we assume that all contribution to the pressure comes from the gas (and so we neglect other contributions, like radiation pressure), we can plug in the equation for hydrostatic equilibrium and find 
 \begin{equation*}
 	H_{p} = \frac{p}{g\rho}
 \end{equation*}
 where $g$ is the local acceleration of gravity.
-\par Recall when we have first introduced the 1st Principle of Thermodynamics (\ref{eq:1stprinciple}). We assumed tht the temperature difference was proportional to the difference between the adiabiatic gradient and the ambient temperature gradient. It's clear that if the two gradients were the same, no heat would be released and no energy transport is possible. As we've mentioned before, when convection involved layers closer to the stellar surface, we cannot make the the simplifications we've used in last section.
-\par In this case we need to find a more complex expression for $\nabla_{\text{conv}}$. We start by enforcing the confition that at a given layer within the convective region the total energy flux is simply the sum of the flux carried by radiation and convection
+\par Recall when we have first introduced the 1st Principle of Thermodynamics (\ref{eq:1stprinciple}). We assumed tht the temperature difference was proportional to the difference between the adiabiatic gradient and the ambient temperature gradient. It's clear that if the two gradients were the same, no heat would be released and no energy transport is possible. As we've mentioned before, when convection involves layers closer to the stellar surface, we cannot make the the simplifications we've used in last section.
+\par In this case we need to find a more complex expression for $\nabla_{\text{conv}}$. We start by enforcing the condition that at a given layer within the convective region the total energy flux is simply the sum of the flux carried by radiation and convection
 \begin{equation}
 	F_{\text{tot}} = F_{\text{rad}}+F_{\text{conv}} \quad F_{\text{rad}} = -\frac{4acT^{3}}{3\bar{\kappa}\rho}\der{T}{r}
 	\label{eq:fluxesrecap}
@@ -888,10 +891,11 @@ Note that in general, for higher temperatures ($T>10^{8}\,\text{K}$), the Compto
 \end{equation}
 Since the effect produced by Compton scattering is small (but sometimes not negligible), people used to correct the Thomson scattering cross-section as such 
 \begin{equation*}
-	\sigma_{T, \text{corr}} = \left[1+0.35\left(\frac{T}{10^{9}\,\text{K}}\right)^{1/2}+0.73\left(\frac{T}{10^{9}\,\text{K}}\right)\right]^{-1}\sigma_{T}
+	\sigma_{T, \,\text{corr}} = \left[1+0.35\left(\frac{T}{10^{9}\,\text{K}}\right)^{1/2}+0.73\left(\frac{T}{10^{9}\,\text{K}}\right)\right]^{-1}\sigma_{T}
 \end{equation*}
 
 \subsection{Inverse Bremsstrahlung}
+
 Another channel that is particularly important when BB and BF channels are quiescent\footnote{Oh my, what a fancy word I've found.}, is that of inverse Bremsstrahlung\footnote{Remember the capital "B" and the two "s", it's a German word (well, two, actually).}. Particle physicists usually manage to convince us that the \emph{differential cross-section} (read: velocity dependent) for inverse Bremsstrahlung is described by
 \begin{equation}
 	\der{\sigma_{FF}}{v_{e}} = \frac{4\pi}{3\sqrt{3}hc}\frac{Z^{2}e^{6}}{m_{e}^{2}}\frac{1}{v_{e}}\frac{1}{\nu^{3}}n_{e}f(v_{e})\bar{g}_{ff}(\nu, v_{e})
