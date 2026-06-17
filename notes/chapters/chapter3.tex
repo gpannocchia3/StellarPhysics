@@ -11,7 +11,7 @@
 	p &= p(\rho, T, X, Y, X_{i})
 \end{align*}
 \par Those who are used to working with stellar structure equations are often solving them (numerically, of course) using different independent variables in the stead of the radial distance $r$.
-\par For example, in the inner regions of stars, where the mass isn't saturated, we may use the mass $M_{r}$ and express all the derivatives consequently. When the mass is saturated we have to switch to another varible, for example the pressure $p$ (the associated region is the \emph{sub-atmosphere}). As we move to the outskirts of the star, all relevant quantities will be saturated to their boundary value, and we have to switch to the \emph{optical depth} to parametrize the stellar structure equations (this is the case for the \emph{photosphere}).
+\par For example, in the inner regions of stars, where the mass isn't saturated, we may use the mass $M_{r}$ and express all the derivatives consequently. When the mass is saturated we have to switch to another variable, for example the pressure $p$ (the associated region is the \emph{sub-atmosphere}). As we move to the outskirts of the star, all relevant quantities will be saturated to their boundary value, and we have to switch to the \emph{optical depth} to parametrize the stellar structure equations (this is the case for the \emph{photosphere}).
 \par The interested reader may refer to \cite{choudhuri}, §3.3, to have an idea of how the boundary conditions are chosen and linked together.
 \par Let us now take a closer look at how the deed is done.
 
@@ -71,7 +71,7 @@ where $\beta \lesssim 1$ is a free parameter that has to be estimated to find an
 Our external boundary conditions are the star luminosity $L_{*}$ and the effective temperature $T_{\text{eff}}$. Note, however, that the former doesn't help us much at this stage, since it still doesn't enter our equations in the atmosphere.
 \par Let's assume we're starting with a very small optical depth $\tau = \tau_{0} \ll 1$, so that the pressure (and the opacity) is small $p = \epsilon \ll 1$. So, assuming we're given an expression of the form $T = T(\tau, T_{\text{eff}})$, we can calculate $T$ plugging in our values for $\tau = \tau_{0}$ and $T_{\text{eff}}$.
 \par From the EoS, since we already knew $p = \epsilon$ and $T$ we've just calculated, we obtain the density $\rho$. At this point, using all of this and the chemical composition, we can calculate the mean opacity $\bar{\kappa}$ and put everything in the equation of hydrostatic equilibrium and check if our solution is self-consistent. If not, we re-iterate the process (changing our starting values for $\tau$ and $p$) until the solution satisfies hydrostatic equilibrium within a given precision.
-\par Now that we have all our varibles determined on the external boundary, we can start integrating towards the inner regions. To do so, derivatives in our equations become incremental ratios and we solve mesh after mesh until we reach the base of the atmosphere (the boundary with the sub-atmosphere).
+\par Now that we have all our variables determined on the external boundary, we can start integrating towards the inner regions. To do so, derivatives in our equations become incremental ratios and we solve mesh after mesh until we reach the base of the atmosphere (the boundary with the sub-atmosphere).
 \par Integrating through the sub-atmosphere, we have to joint the values of the $n$-th mesh of the region with the most external one of the stellar interior. So we'll have to match $p_{N}$, $\rho_{N}$, $T_{N}$, $L_{N}$ and $R_{N}$.
 \par As anticipated, in the stellar interior we're going to be integrating with respect to the mass $M_{r}$, and we'll be using as boundary conditions at the center of the star $\rho_{C}$, $p_{C}$, $L_{r} \approx 0$, $M_{r}\approx 0$.
 \par Consider the equivalent formulation for the equation of hydrostatic equilibrium
@@ -100,7 +100,7 @@ where $X_{i}$ and $X_{e}$ represent some physical property of the star as comput
 \end{equation*}
 so that the difference between the inner pressure solution and the external pressure solution is
 \begin{equation*}
-    \Delta(p_{i}-p_{e}) = \left(\parder{p_{i}}{T_{C}}\right)\Delta T_{C} + \left(\parder{p_{i}}{p_{c}}\right)\Delta p_{C} - \left(\parder{p_{e}}{L}\right)\Delta L + \left(\parder{p_{e}}{T_{\text{eff}}}\right)\Delta T_{\text{eff}}
+    \Delta(p_{i}-p_{e}) = \left(\parder{p_{i}}{T_{C}}\right)\Delta T_{C} + \left(\parder{p_{i}}{p_{c}}\right)\Delta p_{C} - \left(\parder{p_{e}}{L}\right)\Delta L - \left(\parder{p_{e}}{T_{\text{eff}}}\right)\Delta T_{\text{eff}}
 \end{equation*}
 This variation must be able to cancel out the difference that we originally had in the fitting mesh. We're going to write similar expressions for all our variables. Sooner or later the procedure will hopefully converge and we'll find out the right boundary solutions.
 \par The procedure we've just described is able to solve stellar structure equations \emph{but} is not able to follow the "fine structure" of thinner structures within the star, for example a thin layer where Hydrogen is burned. This method serves just to build a first model of the star, paving the way for more complex and accurate methods, such as the one that is going to be described in the next section.

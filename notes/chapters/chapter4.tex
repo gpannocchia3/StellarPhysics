@@ -121,10 +121,10 @@ Once plugged in (\ref{eq:averagenuclearcs}), this provides
 \end{equation}
 with 
 \begin{equation}
-    \frac{S_{\text{eff}}}{S(E_{0})} = 1+\frac{5kT}{36E_{0}}+\frac{S'(E_{0})}{S(E_{0})}\left(E_{0}+\frac{35}{36}kT\right)+\frac{1}{2}\frac{S''(E_{0})}{S(E_{0})}\left(E_{0}^{2}+\frac{89}{36}kTE_{0}\right)
+    \frac{S_{\text{eff}}}{S(0)} = 1+\frac{5kT}{36E_{0}}+\frac{S'(0)}{S(0)}\left(E_{0}+\frac{35}{36}kT\right)+\frac{1}{2}\frac{S''(0)}{S(0)}\left(E_{0}^{2}+\frac{89}{36}kTE_{0}\right)
     \label{eq:effectiveastrofactor}
 \end{equation}
-The values for the astrophysical factor and its derivaties are obtained either from laboratory measurements (with the aforementioned limitations) or from theoretical quantum mechanical computations.
+The values for the astrophysical factor and its derivatives are obtained either from laboratory measurements (with the aforementioned limitations) or from theoretical quantum mechanical computations.
 \par Let's see how we can deduce the (approximate) temperature dependence. Say $T_{0}$ a reference temperature, which may be the temperature for which the burning of a particular element is possible.
 \par We've shown that in general, the energy at Gamow's peak is dependent on the temperature 
 \begin{equation*}
@@ -160,7 +160,7 @@ Now we can finally plug everything in the definition of $\nu$. Calculating
     \text{d}\ln\langle \sigma v \rangle_{T} = \text{d}\tau\left(\frac{2}{\tau}-1\right) \quad \text{d}\ln T = -\frac{3}{\tau}\text{d}\tau
 \end{equation*}
 \begin{equation*}
-    \nu = \der{\ln\langle \sigma v \rangle}{\ln T}\Big|_{T=T_{0}} = -\frac{2}{3}+\frac{\tau}{3}
+    \nu = \der{\ln\langle \sigma v \rangle}{\ln T}\Big|_{T=T_{0}} = -\frac{2}{3}+\frac{\tau(T_{0})}{3}
 \end{equation*}
 meaning that 
 \begin{equation}
@@ -260,7 +260,7 @@ The correction we've introduced is rather small, since $r_{N}/r_{A}\sim 10^{-5}$
 \end{equation}
 Albeit small, this effect is not at all negligible. From the definition (\ref{eq:shieldingfactor}) we can substitute the expressions for the cross sections (I'm dropping the b-subscript)
 \begin{equation*}
-    \frac{\sigma(E+U_{e})}{\sigma(E)} = \frac{E}{E+U_{e}}\frac{S(E+U_{e})}{S(e)}\exp\left(-\frac{2\pi Z_{A}Z_{b}e^{2}\sqrt{\mu}}{\hbar\sqrt{2(E+U_{e})}}+\frac{2\pi Z_{A}Z_{b}e^{2}\sqrt{\mu}}{\hbar\sqrt{2E}}\right)
+    \frac{\sigma(E+U_{e})}{\sigma(E)} = \frac{E}{E+U_{e}}\frac{S(E+U_{e})}{S(E)}\exp\left(-\frac{2\pi Z_{A}Z_{b}e^{2}\sqrt{\mu}}{\hbar\sqrt{2(E+U_{e})}}+\frac{2\pi Z_{A}Z_{b}e^{2}\sqrt{\mu}}{\hbar\sqrt{2E}}\right)
 \end{equation*}
 which, since $U_{e} \ll E$, we can Taylor-expand. First of all we can notice that the first two ratios out of the exponential are, at linear order, of order unity. Then, expanding the square root, we obtain
 \begin{equation*}
@@ -275,7 +275,7 @@ which becomes more and more relevant for lower energies of the center of mass, w
 \end{equation*}
 with $a$ the average distance between ions. We can invert the latter expression
 \begin{equation*}
-    a \sim \frac{1}{n_{i}^{1/3}} \sim \left(\frac{\mu_{i}n_{\text{H}}}{\rho}\right)^{1/3}
+    a \sim \frac{1}{n_{i}^{1/3}} \sim \left(\frac{\mu_{i}m_{\text{H}}}{\rho}\right)^{1/3}
 \end{equation*}
 In the inner regions of the stellar plasma, the density is quite large, meaning that the distance between two ions gets smaller.
 \par We can define \emph{strong shielding} the condition for which 
@@ -302,15 +302,15 @@ Instead, in the surrounding of each charged nucleus, there is a small, but non v
 Note that, despite the deviation from neutrality, the charge displacement is very small, so that the new numeric density of charges is not that much different from the one that grants neutrality.
 \par The total electronic density is now 
 \begin{equation*}
-    \rho = \sum_{i}Z_{i}e\bar{n}_{i}-e\bar{n}_{e} = \sum_{i}\left(-\frac{Z_{i}^{2}e^{2}\Phi\bar{n}_{i}}{kT}-\frac{e^{2}\Phi\bar{n}_{e}}{kT}\right)
+    \rho = \sum_{i}Z_{i}e n_{i}-en_{e} = \sum_{i}\left(-\frac{Z_{i}^{2}e^{2}\Phi\bar{n}_{i}}{kT}\right)-\frac{e^{2}\Phi\bar{n}_{e}}{kT}
 \end{equation*}
 where we've used the global neutrality condition. Let's manipulate this last expression a bit so to extract the distance of the electronic cloud (\emph{Debye radius})
 \begin{equation*}
-    n = \sum_{i}(\bar{n}_{e}+\bar{n}_{i}) \quad \text{at}\; \Phi = 0
+    n = \bar{n}_{e} + \sum_{i}\bar{n}_{i} \quad \text{at}\; \Phi = 0
 \end{equation*}
 and we introduce the quantity $\chi$ classically defined as 
 \begin{equation*}
-    \chi = \frac{\sum_{i}Z_{i}^{2}\bar{n}_{i}+n_{e}}{n}
+    \chi = \frac{\sum_{i}Z_{i}^{2}\bar{n}_{i}+\bar{n}_{e}}{n}
 \end{equation*}
 \par Substituting what we've just found we obtain
 \begin{equation*}
@@ -339,7 +339,7 @@ which can be solved for the electrostatic potential $\Phi$
 \end{equation*}
 If we expand it for $r/r_{D}\ll 1$ we find out that 
 \begin{equation}
-    \Phi \approx \frac{Z_{i}e}{r}-\frac{Z_{i}e}{r-{D}}
+    \Phi \approx \frac{Z_{i}e}{r}-\frac{Z_{i}e}{r_{D}}
 \end{equation}
 which can be interpreted as the potential generated by a charged ion corrected for the presence of an electronic charge at distance $r_{D}$. We can also define a \emph{Debye energy}
 \begin{equation}
@@ -365,7 +365,7 @@ Now, since $E_{D}\ll E_{0}$, we can neglect its contribution coming from the fac
 \end{equation*}
 where we can easily recognize the shielding factor $f$, which comprises essentially of the exponential 
 \begin{equation}
-    f = e^{E_{D}(kT)} \sim 1
+    f = e^{E_{D}/kT} \sim 1
     \label{eq:weakshieldingfactor}
 \end{equation}
 so that the shielded cross section is just a small correction on the non-shielded cross section
@@ -406,10 +406,10 @@ and has an overall initial abundance of $X_{^{9}\text{Be}}\sim 10^{-10}$.
     \element{B}{11}{5}+\element{p}{1}{1}&\to 3\,\element{He}{4}{2}\\
     \element{B}{10}{5}+\element{p}{1}{1}&\to \element{He}{4}{2}+\element{Be}{7}{4}
 \end{align*}
-It's curious to know that the abundance of $^{11}\text{B}$ is four larger than $^{10}\text{B}$.
+It's curious to know that the abundance of $^{11}\text{B}$ is four times larger than $^{10}\text{B}$.
 \par During the star's evolution along the Hayashi track (see Chapter \ref{ch:v}), the star increases its temperature due to the virial theorem, and a radiative core will form at the center and grow in mass as the star evolves. When the radiative core appears, the star is no longer fully convective; this happens when 
 \begin{equation*}
-    \nabla_{\text{rad}}<\nabla_{\text{amb}}
+    \nabla_{\text{rad}}<\nabla_{\text{ad}}
 \end{equation*}
 and the star will move out of the Hayashi track. The reactions we've presented are not relevant from the point of view of energy production, not even in this stage, but reduce practically to zero the abundances of the light elements involved (and do not appreciably affect the abundances of the elements they produce).
 \par If the stars were fully convective during this stage, we would have a complete depletion of Lithium and Deuterium at the surface, since matter in a convective star is always well mixed. However, as we've mentioned en passant, the convective region will start to shrink, eventually; if the convective region is confined to the external and cooler region before all the *\textbf{insert light element here}* reservoir has been destroyed during the fully convective phase, some remaining nuclei will still be present in the convective envelope.
@@ -419,7 +419,7 @@ and the star will move out of the Hayashi track. The reactions we've presented a
 
 \subsection{Hydrogen Burning: pp-chain}
 The H-burning mechanism is essentially the nuclear fusion of four protons into one $\element{He}{4}{2}$ nucleus, garnished with two positrons and two electronic neutrinos.
-\par The energy production for the whole set of reaction we'll be going through in a moment can be shown to amount to $27.7\unit{MeV}$, only decreasing to $26.1\unit{MeV}$ if we consider the energy subtracted by neutrinos. In any case, this amount of energy is still 10 times larger than that produced in any other nuclear reaction process occurring in stars.
+\par The energy production for the whole set of reaction we'll be going through in a moment can be shown to amount to $26.7\unit{MeV}$, only decreasing to $26.1\unit{MeV}$ if we consider the energy subtracted by neutrinos. In any case, this amount of energy is still 10 times larger than that produced in any other nuclear reaction process occurring in stars.
 \par Assuming burning of all protons into Helium, you'd produce (in a Sun-like star) $E\sim 6.5\cdot 10^{57}\unit{MeV}$. Since the luminosity of the Sun is $L_{\odot}\sim 2.5\cdot 10^{39}\unit{MeV}\unit{s}^{-1}$, you'd obtain a timescale for nuclear burning of $\tau_{\text{nuc}} \sim 10^{11}\unit{yr}$. Accounting for the fact that only 10\% of the total Hydrogen is burned in the center, you get a more realistic timescale of $\tau_{\text{nuc}} \sim 10^{10}\unit{yr}$.
 \par The main channel of energy production in this phase is (for less-massive stars) the \emph{p-p chain}.
 \par The reaction networks involved in the so-called p-p chain are the following:
@@ -432,7 +432,7 @@ The H-burning mechanism is essentially the nuclear fusion of four protons into o
 & \text{\textbf{ppII}} \; (T\sim 15\cdot 10^{6}\unit{K})\\
 & \element{He}{3}{2}+\element{He}{4}{2}\to \element{Be}{7}{4}+\gamma\\
 & \element{Be}{7}{4}+e^{-} \to \element{Li}{7}{3}+\nu_{e}\\
-& \element{Li}{7}{3}+\element{p}{1}{1}\to 2\,\element{He}{4}{2}\\
+& \element{Li}{7}{3}+\element{p}{1}{1}\to \element{Be}{8}{4}\to 2\,\element{He}{4}{2}\\
 & \\
 & \text{\textbf{ppIII}} \; (T\sim 20\cdot 10^{6}\unit{K})\\
 & \element{He}{3}{2}+\element{He}{4}{2}\to \element{Be}{7}{4}+\gamma\\
@@ -530,10 +530,11 @@ This branch of the cycle has to follow the timescale of $\element{N}{14}{7}+\ele
 \par The branching ratio between the proton captures on $^{15}\text{N}$, producing respectively $^{16}\text{O}$ and $^{12}\text{C}$, is of the order of $10^{-4}$, thus the amount of $^{16}\text{O}$ produced is practically negligible. Nevertheless, for slightly higher temperatures ($T\approx 20\cdot 10^{6}\unit{K}$) the small production of $^{16}\text{O}$ unlocks a new branch for the cycle, one which transforms Oxygen into Nitrogen.
 \begin{align*}
     & \text{\textbf{NO cycle}}\\
+    & \element{N}{14}{7}+\element{p}{1}{1}\to \element{O}{15}{8}+\gamma\\
+    & \element{O}{15}{8}\to \element{N}{15}{7}+e^{+}+\nu_{e}\\
     & \element{N}{15}{7}+\element{p}{1}{1}\to \element{O}{16}{8}^{*}\to \element{O}{16}{8}+\gamma \;\; (\Gamma \sim 1\%)\\
     & \element{O}{16}{8}+\element{p}{1}{1}\to \element{F}{17}{9}+\gamma\\
     & \element{F}{17}{9}\to \element{O}{17}{8}+e^{+}+\nu_{e}\\
-    & \element{O}{17}{8}+\element{p}{1}{1}\to \element{O}{15}{8}+\gamma\\
     & \element{O}{17}{8}+\element{p}{1}{1}\to \element{F}{18}{9}^{*}\to \element{N}{14}{7}+\element{He}{4}{2} \;\; (\Gamma \sim 99\%)\\
     &\quad\quad\quad\quad\quad\quad\quad\;\;\to \element{F}{18}{9}+\gamma \quad \;\;\,(\Gamma \sim 1\%)
 \end{align*}
@@ -600,7 +601,7 @@ which reflects the so-called \emph{Magnesium-Aluminium anticorrelation}. This pr
 \par Note that as temperature climbs up to higher heights\footnote{Poetical delirium.} under conditions such as those found in novae and X-ray bursts, the rate of proton captures can exceed the rate of $\beta$-decay, pushing the burning to the proton drip line.
 \par The essential idea is that a radioactive species will capture a proton before it can $\beta$-decay, opening new nuclear burning pathways that are otherwise inaccessible. Because of the higher temperatures involved, these catalytic cycles are typically referred to as the \emph{hot CNO cycles}. For example
 \begin{align*}
-    & \text{\textbf{HCNO I}}\\
+    & \text{\textbf{H-CNO I}}\\
     & \element{C}{12}{6}+\element{p}{1}{1}\to\element{N}{13}{7}+\gamma\\
     & \element{N}{13}{7}+\element{p}{1}{1}\to\element{O}{14}{8}+\gamma\\
     & \element{O}{14}{8}\to\element{N}{14}{7}+e^{+}+\nu_{e}\\
@@ -610,8 +611,9 @@ which reflects the so-called \emph{Magnesium-Aluminium anticorrelation}. This pr
 \end{align*}
 
 \subsection{Helium Burning}
+
 All stars with initial total mass larger than $\sim 0.5M_{\odot}$ are able to attain, in their interiors, the thermal conditions required for the onset of Helium burning. Unlike the Hydrogen burning stage, the physical processes at work in stars of different masses during the main core He-burning stage are quite similar.
-\par The first and fundamental reaction in the He-burning process is the production of $^{12}\text{C}$ from the fusion of three Helium nuclei. This reaction is called the $3\alpha$ reaction. Since it's a three-body encounter, it has very low probability, and this reaction usually occurs in two separate steps 
+\par The first and fundamental reaction in the He-burning process is the production of $^{12}\text{C}$ from the fusion of three Helium nuclei. This reaction is called the $3\alpha$ reaction. This reaction usually occurs in two separate steps
 \begin{align*}
     & \element{He}{4}{2}+\element{He}{4}{2}\to \element{Be}{8}{4}\\
     & \element{Be}{8}{4}+\element{He}{4}{2}\to\element{C}{12}{6}+\gamma
@@ -620,7 +622,7 @@ Also, temperature is now high enough to allow $\alpha$-captures on Carbon nuclei
 \begin{equation*}
     \element{C}{12}{6}+\element{He}{4}{2}\to \element{O}{16}{8}+\gamma
 \end{equation*}
-In a short time ($\sim 10^{-16}\unit{s}$), Berillium decays back into two $\alpha$ particles, thus making the probability of the second reaction extremely low. However, as the interior temperature climbs up, the probability of the second reaction increases, due to these combined effects:
+In a short time ($\sim 10^{-16}\unit{s}$), Berillium decays back into two $\alpha$ particles, thus making the probability of the second reaction extremely low and requiring longer timescales for the reaction to occur. However, as the interior temperature climbs up, the probability of the second reaction increases, due to these combined effects:
 \begin{itemize}
     \item the number of $\alpha+\alpha$ reactions increases, while the decay time for Berillium stands unchanged, thus significantly increasing the abundance of Berillium;
     \item the nuclear cross section of the second reaction strongly increases.
@@ -641,7 +643,9 @@ Since small stars which can achieve Helium burning can continue to do so for mil
     L_{\text{tot}} = L_{3\alpha}+L_{\text{C}-\alpha}
 \end{equation*}
 with the latter being slightly favored because it has a lower Helium consumption rate (only one $\alpha$ instead of 3), which allows the star to live longer.
+
 \subsubsection{Production of free neutrons}
+
 \par Other important reactions are given
 \begin{align*}
     &\element{O}{16}{8}+\element{He}{4}{2}\to \element{Ne}{20}{10}+\gamma\\
@@ -655,7 +659,7 @@ but the most notable feature of Helium burning is that the star is now able to p
     &\element{O}{18}{8}+\element{He}{4}{2}\to\element{Ne}{22}{10}+\gamma\\
     &\element{Ne}{22}{10}+\element{He}{4}{2}\to\element{Mg}{25}{12}++\element{n}{1}{0}
 \end{align*}
-For stars of solar metallicity, in which $Z_{\text{CNO}}\sim 0.01Z_{\odot}$, we'd have, for example, a flux of $7\power{10}{20}\,\text{neutrons}\unit{g}^{-1}$, but temperatures of order $3.0-3.5\power{10}{8}\unit{K}$ are needed. So, during the AGB phase, this chain of neutrons production is possible only for $M\gtrsim 3M_{\odot}$ (and dominant for $M\gtrsim5M_{\odot}$). Smaller stars produce free neutrons with a reaction involving Carbon 
+For stars of solar metallicity, in which $Z_{\text{CNO}}\sim 0.01Z_{\odot}$, we'd have, for example, a flux of $7\power{10}{20}\,\text{neutrons}\unit{g}^{-1}$, but temperatures of order $3.0-3.5\power{10}{8}\unit{K}$ are needed. So, during the AGB phase, this chain of neutron production is possible only for $M\gtrsim 3M_{\odot}$ (and dominant for $M\gtrsim5M_{\odot}$). Smaller stars produce free neutrons with a reaction involving Carbon 
 \begin{align*}
     & \element{C}{12}{6}+\element{p}{1}{1}\to\element{N}{13}{7}+\gamma\\
     & \element{N}{13}{7}\to \element{C}{13}{6}+e^{+}+\nu_{e}\\
@@ -769,14 +773,14 @@ We know that we can approximate $\dot{N}_{A} = -N_{A}(t)/\tau$ and, following it
 \end{equation*}
 Equating the two and solving for $\tau$
 \begin{equation}
-    \tau_{n} = \frac{1}{N_{n}\langle \sigma(v)v \rangle_{A+n}}
+    \tau_{n} = \frac{1}{N_{n}\langle \sigma(v) \rangle_{A+n}v_{T}}
     \label{eq:neutronictimescale}
 \end{equation}
-Note that in general the cross section $\langle \sigma(v)v \rangle_{A+n}$ is not constant with respect to $A$ because of the presence of stable nuclides, in correspondence to which there is a "depression".
+Note that in general the cross section $\langle \sigma(v)v \rangle_{A+n}$ is not constant with respect to $A$ because of the presence of stable nuclides, in correspondence to which there is a "depression" because of the completed internal quantum states.
 \par For s-processes, temperatures are those of Helium burning in shells, which are in the range $1-6\power{10}{8}\unit{K}$.
 \par As a reference nucleus we'll be taking $\element{Ba}{134}{56}$, which has a termal velocity $v_{T}\sim 3\power{10}{8}\unit{cm}\unit{s}^{-1}$ and a cross section $\sigma_{T}\sim 0.1\unit{b}$ at a temperature $T\sim 4\power{10}{8}\unit{K}$ ($kT=30\unit{keV}$). Thus
 \begin{equation*}
-    \sigma_{T}v_{T}\sim 3\power{10}{-7}\unit{cm}^{3}\unit{s}^{-1}
+    \sigma_{T}v_{T}\sim 3\power{10}{-17}\unit{cm}^{3}\unit{s}^{-1}
 \end{equation*}
 \par If we want to make sure that a capture is indeed a s-capture, then we have to require $\tau_{n}\gg \tau_{\beta}$, with $\tau_{\beta}$ and $\tau_{n}$ respectively the timescales for $\beta$-decays and neutronic captures. Since the average timescale for $\beta$-decays in these conditions is $\tau_{\beta}\sim 3\power{10}{8}\unit{s}$, the necessary neutron density is
 \begin{equation*}
