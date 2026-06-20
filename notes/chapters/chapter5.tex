@@ -27,7 +27,7 @@ which is the limit mass for a gravitationally bound system to be stable against 
 \par This is what usually happens unless the accretion conditions are particularly extreme. Another quantity that determines the evolution during the accretion stage is the fraction of kinetic energy that is transferred to the star from infalling matter. We'll call the fraction that is transferred to the hydrostatic core $\alpha_{\text{acc}}$.
 \par Now if $\alpha_{\text{acc}}\gtrsim 14\%$, the accretion is \emph{hot}, otherwise it's \emph{cold}. Stars with cold accretion have extreme accretion conditions: During the accretion, the protostar shrinks too much, leading to strikingly different characteristics from other stars that have formed normally.
 \par This characteristics, however, are in opposition to experimental observations, so some believe cold accretion isn't really a thing.
-\par We set the \emph{birth line}--when a protostar becomes effectively a star--at the moment when the protostar's accretion rate gets below $10^{-7}M_{\odot}\unit{yr}^{-1}$. After the birth line, the star ufficially enters the \emph{pre-main sequence} stage.
+\par We set the \emph{birth line}--when a protostar becomes effectively a star--at the moment when the protostar's accretion rate gets below $10^{-7}M_{\odot}\unit{yr}^{-1}$. After the birth line, the star ufficially enters the \emph{pre-main sequence} stage (PMS).
 \begin{figure}[h!]
     \centering 
     \includegraphics[width=0.9\textwidth]{img/1 - Birth.pdf}
@@ -51,7 +51,7 @@ which is the limit mass for a gravitationally bound system to be stable against 
 
 \section{Pre-Main Sequence}
 
-We've mentioned somewhere in the "few" introducing lines of this chapter that during the formation of a star, the yet-to-be protostar accretes matter from the surrounding molecular cloud. Such accretion might be distinguished into hot accretion or cold accretion\footnote{The latter in particular eems to be against experimental observations.}. Up until accretion stops, the luminosity of the star can be thought as made up of two terms
+We've mentioned somewhere in the "few" introducing lines of this chapter that during the formation of a star, the yet-to-be protostar accretes matter from the surrounding molecular cloud. Such accretion might be distinguished into hot accretion or cold accretion\footnote{The latter in particular seems to be against experimental observations.}. Up until accretion stops, the luminosity of the star can be thought as made up of two terms
 \begin{equation*}
     L_{\text{tot}} = L_{\text{acc}}+L_{\text{sup}}
 \end{equation*}
@@ -117,6 +117,7 @@ and since the effective temperature is constant along the track $R \sim L^{1/2}$
     L \propto t^{-2/3}
 \end{equation*}
 which is consistent with the star shrinking its radius along the track.
+
 \subsection{Analytical model}
 
 Although not particularly enticing, it is possible to find an analytical description for pre-MS stars. First of all we might describe the inner regions with a politropic equation
@@ -172,7 +173,7 @@ If we assume the pressure to be fixed by the request of the star to be in hydros
 \par When the radiative core appears, the star is no longer fully convective, and it has to depart from its Hayshi track; this departure moves the track towards higher $T_{\text{eff}}$ so that the Hayashi track acts as a rightmost boundary to the evolution of stars in a HR diagram. In fact, as we mentioned, a fully convective star \emph{has} to lie on the Hayashi track.
 \par This straying off the Hayashi track is almost horizontal when a sizeable radiative core is established, with a constant increase of the central temperature due to the virial theorem. This phase is sometimes known as \emph{Henyey phase}. Here nuclear reactions have yet to begin (or grow relevant, depends on the points of view), and stars present different trends for luminosity depending on their mass
 \begin{equation*}
-    L_{\text{LMS}}\propto T_{\text{eff}}^{0.8}M^{4.4} \quad L_{\text{UMS}}\propto M^{3}
+    L_{\text{LMS}}\propto T_{\text{eff}}^{0.8}M^{4.4} \quad L_{\text{UMS}}\propto \frac{M^{3}\mu^{-4}}{\bar{\kappa}}
 \end{equation*}
 Less massive stars (VLMS, $M\lesssim 0.3M_{\odot}$) have other problems since they keep being convective and therefore stick to the Hayashi track\footnote{Note that for stars in the range $M \lesssim 0.4M_{\odot}$ the $\element{He}{3}{2}$ becomes a pseudo-primary element, never reaching equilibrium.}.
 \par We define \emph{zero age main sequence} (ZAMS) the beginning of the MS, which has to be identified with the moment during which the star is entirely supported by Hydrogen burning and all secondary elements have reached equilibrium\footnote{Note that this might need a lot of time depending on the reaction cross sections. In the CN-NO bi-cycle, the main postponer of the beginning of MS is $\element{N}{14}{7}$, which has a tiny cross section.}.
@@ -231,7 +232,7 @@ For stars of about $1M_{\odot}$ in mass and solar composition, the end of the Ha
 \par Not surprisingly, as the stellar mass increases, the size of the convective core increases accordingly, as a consequence of the larger temperature in the interior which leads to a larger energy flux. In addition, for massive stars, the decrease of the adiabatic gradient due to the increasing contribution of radiation pressure has a significant impact on the dimensions of the convective core.
 \par At odds with LMS stars, UMS stars have a convective core and a radiative envelope. This is because the regions of partial ionization of Hydrogen and Helium are located too high up in the atmosphere (thus at too low a density) to affect the thermal properties of the envelope.
 \par There's a problem we've briefly mentioned when we were discussing about convective motion that now makes a grand return as strong and problematic as ever: The problem of overshooting. Overshooting\footnote{A quick reminder. The problem inherent with overshooting is that convective bubbles do not magically stop when trespassing the edge of the convective region, and thus the convective region "bleeds" a bit into the radiative one.} poses a significant limitation to the determination of the extension of MS luminosity.
-\par Let us now consider another major consequence of the presence of a convective core at the end of the central H-burning phase: When the abundance of Hydrogen inside the core drops below the 5\% threshold, the remaining amount of Hydrogen is not sufficient for providing the energy necessary to maintain the structure in equilibrium, and so the star begins to contract. During this evolutionary phase, called \emph{overall contraction}, the dominant energy source is gravitational, and so the evolutionary timescale is the Kelvin-Helmoltz.
+\par Let us now consider another major consequence of the presence of a convective core at the end of the central H-burning phase: When the abundance of Hydrogen inside the core drops below the 5\% threshold, the remaining amount of Hydrogen is not sufficient for providing the energy necessary to maintain the structure in equilibrium, and so the star begins to contract. During this evolutionary phase, called \emph{overall contraction}, the dominant energy source is gravitational, and so the evolutionary timescale is the Kelvin-Helmoltz ($\tau_{\text{OC}}\approx 10^{8}\unit{yr}$).
 \par After this point, while the central region contracts, the outer layers expand and this occurence produces an increase in the stellar radius and a cooling of the external layers. This drastically increases the opacity of the envelope.
 \par In massive stars, there is yet another phenomenon associated to convection which makes evolutionary properties near the end of core H-burning uncertain. When the abundance of Hydrogen in the core is significantly decreased, the convective core recedes, leaving behind a chemical abundance gradient. In the region outside the contracting core, the radiative flux increases as well as a consequence of the large energy flux produced by gravitational collapse, and therefore exceeds the adiabatic gradient.
 \par According to (\ref{eq:schwartzschildcriterion}), this region should become convective, but, if the region is mixed with the original convective core, its resulting Helium abundance should be larger than the initial one. Hence, as a consequence of opacity, the radiative gradient of these layers would decrease, inihibiting convection.
@@ -248,7 +249,7 @@ meaning that at fixed color index (i.e., at fixed effective temperature) stars w
 \begin{equation*}
     Z\uparrow\; \bar{\kappa}\uparrow \implies L\downarrow\;T_{\text{eff}}\downarrow
 \end{equation*}
-hence at fixed color index, more metallic stars will be more luminous than average.
+hence at fixed color index, more metallic stars will be more luminous than average\footnote{Please note that, in principle, an increase in metallicity should induce an increase in the molecular weight and thus an increase in temperature. Changes in metallicity are, however, often negligibly small, so the dominant effect is that of the increase in opacity, which implies a decrease in luminosity and $T_{\text{eff}}$.}.
 \par It should be expected that different stars will experience less severe temperature changes when trying to balance the effects of gravitational collapse. Consider for example a UMS. If the energy production rate is subpar with respect to the luminosity of the star, the structure will shrink, making temperatures increase. Since UMSs burn Hydrogen via the CN-NO cycle, which scales with high powers of the temperature, even a small change in central temperature would induce a large variation in the energy production rate.
 \par It is for this reason that the curve representing the central temperature dependence on the mass is more steep for LMSs and barely rising for UMSs, as pictorially depicted in Fig.\ref{fgr:masszams}.
 \begin{figure}[h!]
@@ -337,7 +338,7 @@ As we've seen, regardless of the H-burning mechanism at work during the MS phase
 \par Given that there is no burning inside the core and the temperature gradient is radiative (and rather small), its thermal stratification is isothermal.
 \par With a pure analytical approach, Schönberg and Chandrasekhar investigated the equilibrium conditions of such configuration, assuming ideal gas EoS. Since temperature is (approximately) no longer varying in the core, variations in pressure must be matched by variations in density.
 \par Note that the number of ions available to contribute to the density are significantly lower now that all the Hydrogen in the core has turned into Helium, thus presenting the star with the possibility of the equilibrium conditions not being met.
-\par Schönberg and Chandrasekhar found out that the maximum mass the core can have for the star to be in equilibrium is given by
+\par Schönberg and Chandrasekhar found out that the maximum mass an isothermal core can have for the star to be in equilibrium is given by
 \begin{equation}
     \left(\frac{M_{\text{core}}}{M_{\text{tot}}}\right)_{SC} = 0.37\left(\frac{\mu_{\text{env}}}{\mu_{\text{core}}}\right)^{2}
     \label{eq:sc_masslimit}
@@ -382,11 +383,11 @@ The physical rationale behind this expression is that the surface luminosity in 
 which can be roughly approximated as Gaussianely distributed.
 \par The star evolves along the RGB increasing the mass of the Helium core, hence its luminosity and its radius. The effective temperature, on the other hand, remains roughly constant because of the H$^{-}$ opacitive channel: The overall temperature in the envelope decreases, hence the electron density decreases along with the H$^{-}$ opacity, thus regulating the changes in surface temperature.
 \par For LMS stars the RGB is rather long\footnote{Although, you should commit this to memory, the RGB duration is not at all comparable to the MS phase. The life times in SGB and RGB for LMS stars are of order $10^{8}\unit{yr}$, which are about 100 times smaller than the average MS timescale for stars in this mass range.}, because they have low masses and are also relatively cold, so they need more time to reach the temperature needed for Helium burning. During this phase, the contraction of the core, on top of heating the whole structure, also induces the core to progressively degenerate.
-\par This can potentially result in a problem: Stars with masses $M<0.5M_{\odot}$ will never ignite Helium and will be slowly cooling, turning into pure-Helium white dwarves.
+\par This can potentially result in a problem: Stars with core masses $M_{c}^{\text{He}}<0.5M_{\odot}$ will never ignite Helium and will be slowly cooling, turning into pure-Helium white dwarves.
 \par This is also supported by the fact that once the envelope thins down to about $\sim 0.06M_{\odot}$ the Hydrogen shell shuts down, completely stopping the burning because the shell is too cold. The star will be thus contracting a bit and will eventually depart from RGB. On timescales longer than the actual age of the Universe, the white dwarf remnant will settle into a thermal equilibrium with the CMB.
 \par When (and if) Helium is ignited in the core, a star will be sitting at the "tip" of the red giant branch (TRGB). Here, the mass of the core is essentially unchanged, while, as we've mentioned, the total mass might be significantly different because of severe mass loss processes.
 
-\subsection{First Dredge Up}
+\subsection{First Dredge Up and RGB Bump}
 
 As convection penetrates deeper into the star, some of the He produced during the central H-burning phase is mixed in. Therefore, the surface abundance of He monotonically increases until the convection reaches its maximum penetration: This phase is called the \emph{first dredge up}.
 \begin{figure}[h!]
@@ -416,7 +417,7 @@ As convection penetrates deeper into the star, some of the He produced during th
 colback=blue!5!white,colframe=blue!75!black,colbacktitle=blue!80!black,
 title=Various Dependences of the RGB Bump Luminosity,
 boxed title style={size=small,colframe=blue!50!black}]
-    $$ Y\uparrow\; T\uparrow\;\bar{\kappa}\downarrow\implies M_{\text{CE}}\downarrow\;L_{\text{Bump}}\downarrow$$ 
+    $$ Y\uparrow\; T\uparrow\;\bar{\kappa}\downarrow\implies M_{\text{CE}}\downarrow\;L_{\text{Bump}}\uparrow$$ 
     $$ Z\uparrow\; \bar{\kappa}\uparrow\;T\downarrow\;T_{\text{eff}}\downarrow\implies M_{\text{CE}}\uparrow\;L_{\text{Bump}}\downarrow$$
     $$ M\downarrow\;T\downarrow\;T_{\text{eff}}\downarrow\;\bar{\kappa}\uparrow\implies M_{\text{CE}}\uparrow\;L_{\text{Bump}}\downarrow$$
 \end{tcolorbox}
@@ -545,7 +546,7 @@ so there are two effects working to reduce the luminosity at turn-off (and one t
 \begin{equation*}
     L_{\text{TO}}\downarrow\;\tau_{\text{MS}}\downarrow
 \end{equation*}
-Assuming the presence of diffusive mechanisms, the abundance of Helium at ignition in the external convective envelope drops, as a consequence
+Assuming the presence of diffusive mechanisms, the abundance of Helium at ignition (after the first dredge up) in the external convective envelope drops, as a consequence
 \begin{equation*}
     Y_{\text{HB}}\downarrow \implies L_{\text{H}}\downarrow\;M_{c,\text{He}}^{\text{Flash}}\uparrow
 \end{equation*}
@@ -579,7 +580,7 @@ Technically, Helium is burned in a smaller fraction of the core, but since the c
 \par The Horizontal Branch is only approximately horizontal because of the different masses the external envelope might have in different stars. In fact, a more massive envelope would induce an higher contribution to the total luminosity from shell Hydrogen burning and an overall increase of the luminosity: More massive stars are then a little brighter.
 \par Once in the HB, evolution is clearly not stopping. As Helium is burned, the star contracts and heat up. This time, only small variations are needed, for the high temperature dependence of the $3\alpha$ does all the heavy-lifting. Note that although the contribution of Helium throughout this phase is unmistakably the dominant one, the energy produced per burned Helium nucleus is
 \begin{equation*}
-    \epsilon_{\text{He}} \propto \epsilon_{\text{H}}
+    \epsilon_{\text{He}} \sim \frac{\epsilon_{\text{H}}}{10}
 \end{equation*}
 and the associated burning timescales are 
 \begin{equation*}
@@ -612,7 +613,7 @@ With respect to other evolutionary phases, the HB doesn't span a great range in 
         \begin{equation*}
             \left(\parder{\log L_{\text{ZAHB}}/L_{\odot}}{Z}\right)_{M_{c}, Y} \sim -0.04
         \end{equation*}
-    \item \emph{Non-canonical processes}: there are many physical processes such as rotation and non-canonical mixing processes, commonly not accounted for in standard evolutionary computations, which can produced sizeable effects on the ZAHB properties. Regardless of the detailed physical description of the process, we can easily predict, at least qualitatively, the effect on the ZAHB by simply considering the effect on the parameters characterizing a ZAHB star. Any physical process able to delay the ignition of the He flash at the TRGB, such as rotation, will cause an increase of the He core mass and, on average, a decrease in the total mass. This is because mass loss along the RGB then has more time to work. As a consequence, the ZAHB location will be brighter and hotter
+    \item \emph{Non-canonical processes}: there are many physical processes such as rotation and non-canonical mixing processes, commonly not accounted for in standard evolutionary computations, which can produce sizeable effects on the ZAHB properties. Regardless of the detailed physical description of the process, we can easily predict, at least qualitatively, the effect on the ZAHB by simply considering the effect on the parameters characterizing a ZAHB star. Any physical process able to delay the ignition of the He flash at the TRGB, such as rotation, will cause an increase of the He core mass and, on average, a decrease in the total mass. This is because mass loss along the RGB then has more time to work. As a consequence, the ZAHB location will be brighter and hotter
         \begin{equation*}
             \left(\parder{\log L_{\text{ZAHB}}/L_{\odot}}{M_{c,\,\text{He}}}\right)_{Z, Y} \sim 3.04
         \end{equation*}
@@ -627,7 +628,7 @@ Clearly, the physical parameters we're accounting for are \emph{not} constant al
 \begin{figure}[h!]
     \centering 
     \includegraphics[width=0.7\textwidth]{img/verhormethod.png}
-    \caption{Graphical representation of the $\Delta V$ (vertical) and $ \Delta(B-V)$ (horizontal) age indicators for old SSPs.}
+    \caption{Graphical representation of the $\Delta V$ (vertical) and $ \Delta(B-V)$ (horizontal) age indicators for old SSPs. Credits: \cite{2005essp.book.....S}.}
     \label{fgr:verhormethod}
 \end{figure}
 \par Conversely, the \emph{horizontal method} for age determination involves the comparison of the observed and theoretical values of the quantity $ \Delta(B-V) = (B-V)_{\text{RGB}}-(B-V)_{\text{TO}}$, which corresponds to the color difference between the TO and the base of the RGB. This horizontal parameter is sensitive to age through the variation of $(B-V)_{\text{TO}}$ with $t$, given that the RGB color is unaffected by age for old populations.
@@ -644,7 +645,7 @@ Given this model, all we have to do is essentially find the value of $\eta_{R}$ 
     \item $Z\uparrow\;\bar{\kappa}\uparrow \implies$ more red HB, $Z\uparrow\;L_{\text{H}}\uparrow \implies$ more red HB
 \end{enumerate}
 This is why metallicity is sometimes called the \emph{first parameter} (age is the second). The "convolution" of all these effects results in a more red horizontal branch if we increase metallicity with fixed age and $\eta$.
-\par What if we now fix $\eta$ and $Z$ and let the age change?
+\par What if we now fix $\eta$ and $Z$ but let the age change?
 \begin{equation*}
     \text{age}\uparrow\;M_{(TO)}\downarrow \implies M_{\text{RGB}}\downarrow\implies \langle M_{\text{HB}}\rangle \downarrow
 \end{equation*}
@@ -733,7 +734,7 @@ Inside the convective core, the burning of Helium into Carbon strongly increases
 convection should be inhibited. What we observe, however, is that mixing happens either way.
 \par In HB structures, the outer region is by itself stable against convection and it is the convective core that induces a partial mixing in the surrounding regions. For this reason, the partial mixing phenomenon that occurs in HB stars is often called \emph{induced semi-convection}.
 \par The effects of semi-convection on the evolution of HB models are: (1) the evolutionary tracks perform more extended loops on the HRD, (2) the central He-burning phase lasts longer, since the star has a larger amount of fuel to burn, (3) the mass size of the He-depleted core at the He-exhaustion is larger.
-\par When the core abundance of He has been lowered by nuclear burning to about $Y \sim 0.05-0.10$, a convective instability can affect the convective core. In fact, when the core Helium abundance is lower than this limit, $\alpha$-captures by $\element{C}{12}{6}$ nuclei tend to overcome $\element{C}{12}{6}$ production by $3\alpha$ reactions, thus He-burning becomes mainly a $\element{C}{12}{6} + \alpha$ production of Oxygen, whose opacity is even larger than that of $\element{C}{12}{6}$. This causes an increase of the size of the semi-convective region and, in turn, fresh helium is transferred into the core, which is now nearly He-depleted. Even a small amount of Helium driven into the core becomes very important in comparison with the vanishing amount of Helium otherwise present in the core. This enrichment of the He abundance in the core succeeds in enhancing the rate of energy production by He-burning, and thus the luminosity increases, driving an increase in the radiative gradient. As a consequence, a phase of enlarged convection zone is started, the so-called \emph{breathing pulse}. After a pulse, the star adjusts to burning steadily in the core the fresh Helium driven there by the convection.
+\par When the core abundance of He has been lowered by nuclear burning to about $Y \sim 0.05-0.10$, a convective instability can affect the convective core. In fact, when the core Helium abundance is lower than this limit, $\alpha$-captures by $\element{C}{12}{6}$ nuclei tend to overcome $\element{C}{12}{6}$ production by $3\alpha$ reactions, thus He-burning becomes mainly a $\element{C}{12}{6} + \alpha$ production of Oxygen, whose opacity is even larger than that of $\element{C}{12}{6}$. This causes an increase of the size of the semi-convective region and, in turn, fresh Helium is transferred into the core, which is now nearly He-depleted. Even a small amount of Helium driven into the core becomes very important in comparison with the vanishing amount of Helium otherwise present in the core. This enrichment of the He abundance in the core succeeds in enhancing the rate of energy production by He-burning, and thus the luminosity increases, driving an increase in the radiative gradient. As a consequence, a phase of enlarged convection zone is started, the so-called \emph{breathing pulse}. After a pulse, the star adjusts to burning steadily in the core the fresh Helium driven there by the convection.
 \par The main effect of breathing pulses would be a 20\% increase in the duration of the HB, resulting in a larger mass for the CO-core\footnote{Please note that it is note a core of Carbon Monoxide, but a core of Carbon \emph{and} Oxygen.} which would in turn result in larger WDs (which would take longer to cool). The effectiveness of these breathing pulses should be in reality much lower than what evolutionary models are predicting.
 \par The ratio of evolutionary times between the subsequent Asymptotic Giant Branch phase (which we'll see shortly) and the HB is very sensitive to the occurrence of breathing pulses. From the observational point of view, the ratio of the star counts along these two phases, the so-called $R_{2}$ parameter, is a measure of the corresponding lifetime ratio 
 \begin{equation}
@@ -762,11 +763,11 @@ When the abundance of Helium becomes low enough, stellar tracks, regardless of t
     \label{fgr:carbonshellsml}
 \end{figure}
 \par In low-mass stars ($M\lesssim 2.5M_{\odot}$), the onset of the He-shell burning induces a temporary drop of the surface luminosity and the star crosses the same region of the HR-diagram three times (as during the RGB bump phase). Why?
-\par The conditions for shell-He ignition are of lower core density and temperature (with respect to the core-He burning). As a consequence, the luminosity because of He-burning decreases, while the luminosity of the H-shell increases (the shell heated up). Overall, the star heats up. While the star moves to more advanced stages, the luminosity of the He-shell increases once more, inducing the expansion of the adjacent layers, which in turn decreases the luminosity of the H-shell and the luminosity due to gravitational contraction. The total luminosity hence decreases. At a certain point, the total luminosity increases once more. As a consequence, there is a good probability of observing an AGB star during this phase, which is called the AGB clump; this is indeed the case in well-populated old galactic stellar systems.
+\par The conditions for shell-He ignition are of lower core density and temperature (with respect to the core-He burning). As a consequence, the luminosity because of He-burning decreases, while the luminosity of the H-shell increases (the shell heated up). Overall, the star heats up. While the star moves to more advanced stages, the luminosity of the He-shell increases once more, inducing the expansion of the adjacent layers, which in turn decreases the luminosity of the H-shell and the luminosity due to gravitational contraction. The total luminosity hence decreases. At a certain point, the total luminosity increases once more. As a consequence, there is a good probability of observing an AGB star during this phase, which is called the \emph{AGB clump}; this is indeed the case in well-populated old galactic stellar systems.
 \par Stars with larger masses ($M\gtrsim 2.5M_{\odot}$) don't clump up. Since they have a large, hot CO-core, the He-shell is already hot enough to effectively support the whole star's weight, and the star experiences only negligible variations in luminosity.
 \par The first part of the AGB phase is usually called \emph{early AGB}\footnote{Properly speaking, the beginning of the early AGB phase is marked when the star is completely supported by the burning of the He-shell.}. The EAGB lays along an isoconvective track to the left of the AGB, hence the name asymptotic. In this phase, the total luminosity of the star is proportional to the luminosity of the Helium shell (since the H-shell has been turned off), which, in turn, is proportional to the mass of the CO-core: The more massive the core, the more it heats up. The excess heat is transferred to the adjacent Helium shell which shines a little brighter.
 \par Please note that not all stars manage to transition to the AGB phase. Some never manage to expand the envelope and cool down and so never begin the climb up the AGB. This stars are sometimes called \emph{AGB-manqué} and do only the EAGB.
-\par While He-burning is progressively moving outwards inside the He core, and the mass of the CO core is increasing, an important convective episode occurs in stars more massive than $M \gtrsim 3-5M_{\odot}$, the precise limit being a function of the initial composition. In these stars, the large energy flux produced by the He-burning shell causes the base of the H-rich envelope to expand and cool, so that H-burning in the shell is immediately switched off.
+\par While He-burning is progressively moving outwards inside the He core, and the mass of the CO core is increasing, an important convective episode occurs in stars more massive than $M \gtrsim 3-5M_{\odot}$, the precise limit being a function of the initial composition. In these stars, the large energy flux produced by the shell He-burning causes the base of the H-rich envelope to expand and cool, so that H-burning in the shell is immediately switched off.
 \begin{figure}[h!]
     \centering
     \includegraphics[width=0.6\textwidth]{img/agb.png}
@@ -872,8 +873,8 @@ When stars cross a number of well-defined regions in the HR-diagram, they are af
 \begin{equation*}
     \chi\downarrow\;n_{e}\uparrow\;T\sim\text{const.}\;\rho\uparrow\implies \bar{\kappa}\uparrow\;L\downarrow
 \end{equation*}
-where all symbols have their usual meaning aside from $\chi$, that here refers to the ionization fraction of the layer. During the contraction, the external regions absorb the energy released from the compression and heat up, thus producing a pressure able to bloat up the region. The produced energy is then used to make atoms and electrons recombine, which has the effect to lower the electron density $n_{e}\downarrow$ and the opacity $\bar{\kappa}\downarrow$. The star is thus able to cool down, contract and repeat the cycle.
-\par Note that the luminosity of the star is increasing only as long as the effective temperature remains approximately constant, so that as soon as it begins to drop (when the star expands) luminosity decreases as well. This is why the point of maximum luminosity corresponds (roughly) to the point of maximum effective temperature rather than to the point of maximum spatial extension. A more detailed analysis would also tell you that it is also corresponding to the point where the star has maximum radial expansion velocity.
+where all symbols have their usual meaning aside from $\chi$, that here refers to the ionization fraction of the layer. During the contraction, the external regions absorb the energy released from the compression and heat up just slightly, since most of the energy is used to ionize the material. Thus, more energy is retained thanks to the increased opacity, and a pressure able to bloat up the region is produced. Similarly, the temperature decreases only a little, since most of the energy needed for the expansion is obtained through the recombination of ions and electrons from the formerly ionized nuclei; inevitably, the electron density decreases $n_{e}\downarrow$ and the opacity decreases as well $\bar{\kappa}\downarrow$. The star is thus able to cool down, contract and repeat the cycle.
+\par Note that the luminosity of the star is increasing only as long as the effective temperature remains approximately constant, so that as soon as it begins to drop (when the star expands over a certain threshold) luminosity decreases as well. This is why the point of maximum luminosity corresponds (roughly) to the point of maximum effective temperature rather than to the point of maximum spatial extension. A more detailed analysis would also tell you that it is also corresponding to the point where the star has maximum (absolute) radial expansion velocity.
 \par With what timescale does this oscillation occur? Radial contractions are essentially free-fall collapses at heart, and so it would be logical to assume the process to follow the dynamical timescale given by the free-fall time (\ref{eq:ff_timescale}) which is proportional to $\tau_{ff}\propto \rho^{-1/2}$, and hence to $\tau_{ff}\propto R^{3/2}M^{-1/2}$. Recall now how we've defined the luminosity
 \begin{equation*}
     L = 4\pi R^{2}\sigma T_{\text{eff}}^{4}
@@ -906,7 +907,7 @@ RR-Lyrae variable stars are found where the instability strip meets the horizont
 \par The most up-to-date relation between the quantities concurring to determine the (fundamental) pulsation period of an RR-Lyrae is 
 \begin{align*}
     \log P_{f} &= 11.242 +0.841\log\left(\frac{L}{L_{\odot}}\right)-0.679\log\left(\frac{M}{M_{\odot}}\right)-3.410\log T_{\text{eff}}\\
-    &-0.007\log Z
+    &+0.007\log Z
 \end{align*}
 while the period of the first overtone can be expressed in terms of the period of the fundamental as 
 \begin{equation*}
@@ -1019,6 +1020,7 @@ The evolution of stars more massive than $M_{\text{UP}}$ ($M_{\text{UP}}' \lesss
 \par The star then goes through the Oxygen-burning reactions that we mentioned in Chapter \ref{ch:iv}, leading, most notably, to a large abundance of Silicon. Core O-burning produces neutron-rich nuclei as a consequence of the large efficiency of weak interactions. The production of neutron-rich nuclei affect the so-called level of neutronization of the stellar matter, that is an indicator of how neutron rich the constituents of the gas are, and is related to the difference between the number density of neutrons and the number density of protons, both bound in nuclei and free. The higher the number density of neutrons with respect to protons, the higher the level of neutronization.
 \par When Oxygen is exhausted in the core and the central temperature attains values of order $\sim 2.3\power{10}{9}\unit{K}$ Silicon-burning can start. Once again, please note that during Silicon burning there's nothing burning: Silicon-burning does not occur predominantly as a nuclear fusion reaction, but it occurs as a chain of photodisintegrations and $\alpha$-additions that lead to the formation of heavier nuclei.
 \par At the exhaustion of Si in the core, the burning moves into a shell surrounding the Si-exhausted core. This Si-burning shell usually experiences recurrent convective episodes, the first ones always extending at most up to the border of the previous convective core. However, the final episode(s) can extend beyond the border of the former convective core. This occurrence is very important as the maximum extension of this convective region fixes the location of the boundary between the part of the star that has experienced a strong neutronization process (inside the boundary) and the one that has not been affected significantly (if any) by this process (outside the boundary). This boundary determines the mass of the Iron core: this is a fundamental quantity for the subsequent explosive phase, determining the mass within which the shockwave loses the largest part of its energy through the photo-disintegration of heavy elements.
+
 \begin{tcolorbox}[enhanced,attach boxed title to top center={yshift=-3mm,yshifttext=-1mm},
 colback=blue!5!white,colframe=blue!75!black,colbacktitle=blue!80!black,
 title=Nuclear Statistical Equilibrium (NSE),
@@ -1045,6 +1047,7 @@ The main consequence of the bulk neutralization of the core is that the material
 \par In the inner core, the density is so large that the neutrino diffusion velocity becomes less than the velocity of the collapse. Under these conditions, the neutrinos cannot leave the star, and are thus trapped. The point at which the neutrino diffusion velocity equals the velocity of the collapsing core is defined as the \emph{neutrino-trapping surface}: Below this point neutrinos are forced to deposit their own energy in the material, whereas in the more external layers they can diffuse outwards until they reach the so called \emph{neutrino photosphere}.
 \par This process is considered to be responsible for providing the outgoing shock wave with the energy necessary to produce an explosive event with the characteristics of a core-collapse, an alternative name to Classical Type II Supernova\footnote{The details of the shock propagation inside the structure are very complicated, due to the interplay between the neutrino energy flux and convection as well as the occurrence of mixing instabilities such as the Rayleigh-Taylor instability. It actually turns out that without considering a whole lot of other contributions, such as those mentioned above, the shockwave never exits the core.}.
 \par As the shockwave progresses to the external layers, it decreases their density and, consequently, their opacity, thus allowing the trapped neutrinos to escape. The neutronization process is no longer stalled, and actually resumes explosively. You should also note that the shockwave produced by the rebounding on the core is often energetic enough to nuclearly process external layers, inducing an explosive nucleosynthesis.
+
 \begin{tcolorbox}[enhanced,attach boxed title to top center={yshift=-3mm,yshifttext=-1mm},
 colback=blue!5!white,colframe=blue!75!black,colbacktitle=blue!80!black,
 title=Know Your Neutrinos,
@@ -1063,8 +1066,9 @@ boxed title style={size=small,colframe=blue!50!black}]
         \nu_{x} + e^{-} &\to \nu_{x} + e^{-}\\
         \nu_{x} + (Z,A) &\to \nu_{x} + (Z,A)
     \end{align*}
-    the last one in particular, that is scattering of neutrinos on nuclei, is the major source of neutrinos opacity. Moreover, note that under this set of extreme conditions, neutrinos are actually forced to thermalize with the surrounding matter. Also, note that at the temperatures and densities we're considering, the afore mentioned reactions go both the ways around, meaning that neutronization of the core might be stalled by the activation of the inverse reaction.
+    the last one in particular, that is scattering of neutrinos on nuclei, is the major source of neutrinos opacity. Moreover, note that under this set of extreme conditions, neutrinos are actually forced to thermalize with the surrounding matter. Also, note that at the temperatures and densities we're considering, the aforementioned reactions go both the ways around, meaning that neutronization of the core might be stalled by the activation of the inverse reaction.
 \end{tcolorbox}
+
 Roughly speaking, it is commonly estimated that stellar progenitors less massive than $\sim25M_{\odot}$ produce as a remnant a neutron star whose mass should be about that of the Iron core at the beginning of the core collapse. More massive stars should produce black holes.
 \par If the collapsing star produces a NS as a remnant, most of the gravitational energy is depleted as neutrinos. On average, the gravitational energy that is lost during the formation of a NS is
 \begin{equation*}
@@ -1159,7 +1163,7 @@ which can potentially be a problem with our initial approximation of a non-relat
 
 We consider first the non-degenerate envelope and suppose it is radiative, so that the energy of the envelope is given by 
 \begin{equation}
-    E_{\text{th}} = \frac{3}{2}kT n_{i} \approx \frac{3}{2}kT\frac{M}{\mu_{i}m_{\text{H}}}
+    E_{\text{th}} = \frac{3}{2}kT N_{i} \approx \frac{3}{2}kT\frac{M}{\mu_{i}m_{\text{H}}}
     \label{eq:envelope_energy}
 \end{equation}
 and that the opacity in the envelope is à la Kramers, so $\bar{\kappa} = \kappa_{0}\rho T^{-3.5}$. We're going to assume that in the envelope the total mass and luminosity have already been achieved, and that the gas there follows the perfect gas EoS. If we divide the equation of hydrostatic equilibrium (with $r$ as independent variable) by the equation of radiative transport we obtain
